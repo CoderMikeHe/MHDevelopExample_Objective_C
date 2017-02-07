@@ -75,5 +75,6 @@ pod 'MMMaterialDesignSpinner', '~> 0.2.3'
 #类似网易新闻的标签栏
 pod 'YZDisplayViewController', '~> 1.0.6'
 
-
+#刷新控件
+pod 'MJRefresh', '~> 3.1.12'
 end

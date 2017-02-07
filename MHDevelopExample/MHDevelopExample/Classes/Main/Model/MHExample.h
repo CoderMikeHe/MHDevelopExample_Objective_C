@@ -10,9 +10,9 @@
 
 @interface MHExample : NSObject
 /** 每段标题 */
-@property (copy, nonatomic) NSString *header;
+@property (copy , nonatomic) NSString *header;
 /** 每行标题 */
-@property (strong, nonatomic) NSArray *titles;
+@property (strong , nonatomic) NSArray *titles;
 /** 对应的控制器 */
-@property (assign, nonatomic) Class vcClass;
+@property (strong , nonatomic) NSArray *classes;
 @end

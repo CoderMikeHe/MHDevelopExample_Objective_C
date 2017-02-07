@@ -27,6 +27,7 @@ PODS:
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
   - MMMaterialDesignSpinner (0.2.3)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
+  - MJRefresh (~> 3.1.12)
   - MMMaterialDesignSpinner (~> 0.2.3)
   - ReactiveCocoa (= 2.5)
   - RMStore (~> 0.7.1)
@@ -92,6 +94,7 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MMMaterialDesignSpinner: 55c80b454f7928d0ed789cc3c456fa06bd6a2f16
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RMStore: 64ba13a9c040e3b7572765d169f77175cd3243e5
@@ -106,6 +109,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
 
-PODFILE CHECKSUM: 8853598211462a31b68d4d03f3bd63d4f730d65a
+PODFILE CHECKSUM: cb79ad8b81a9419a8118ddad910a868b8d6f123d
 
 COCOAPODS: 1.0.1
