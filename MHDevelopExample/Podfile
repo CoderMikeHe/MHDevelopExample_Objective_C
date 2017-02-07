@@ -1,0 +1,79 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+
+target 'MHDevelopExample' do
+
+#富文本
+pod 'YYText', '~> 1.0.5'
+
+#AutoLayout
+pod 'Masonry', '~> 1.0.1'
+
+#缓存tableViewCell的高度
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
+
+#字典转模型
+pod 'MJExtension', '~> 3.0.13'
+
+#颜色分类
+pod 'Colours', '~> 5.13.0'
+
+#根据颜色 生成一张图片
+pod 'UIImage+ImageWithColor', '~> 1.3'
+
+#HUD
+pod 'MBProgressHUD', '~> 1.0.0'
+
+#HUD
+pod 'SVProgressHUD', '~> 2.0.3'
+
+#侧滑手势
+pod 'FDFullscreenPopGesture', '~> 1.1'
+
+#数据库
+pod 'FMDB', '~> 2.6.2'
+
+#环形进度条
+pod 'DACircularProgress', '~> 2.3.1'
+
+#消息链
+pod 'ReactiveCocoa','2.5'
+
+#网络请求
+pod 'AFNetworking', '~> 3.1.0'
+
+#图片缓存
+pod 'SDWebImage', '~> 4.0.0-beta2'
+
+#UIView模糊
+pod 'FXBlurView', '~> 1.6.4'
+
+#WebSocket
+pod 'SocketRocket', '~> 0.5.1'
+
+#badgeValue
+pod 'WZLBadge', '~> 1.2.5'
+pod 'JSBadgeView', '~> 1.4.1'
+
+#文件压缩与解压
+pod 'SSZipArchive', '~> 1.6.2'
+
+#苹果内购
+pod 'RMStore', '~> 0.7.1'
+
+#YYImage
+pod 'YYImage', '~> 1.0.4'
+
+#webP
+pod 'YYImage/WebP'
+
+#菊花activity
+pod 'MMMaterialDesignSpinner', '~> 0.2.3'
+
+#类似网易新闻的标签栏
+pod 'YZDisplayViewController', '~> 1.0.6'
+
+
+end

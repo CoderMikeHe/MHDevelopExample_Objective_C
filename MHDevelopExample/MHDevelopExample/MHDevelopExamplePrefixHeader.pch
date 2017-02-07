@@ -1,0 +1,15 @@
+//
+//  MHDevelopExamplePrefixHeader.pch
+//  MHDevelopExample
+//
+//  Created by CoderMikeHe on 17/2/7.
+//  Copyright © 2017年 CoderMikeHe. All rights reserved.
+//
+
+#ifndef MHDevelopExamplePrefixHeader_pch
+#define MHDevelopExamplePrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MHDevelopExamplePrefixHeader_pch */
