@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3D3D48382E147C90FD55FE03 /* Pods_MHDevelopExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A0424108EDF4DD00FF9B94 /* Pods_MHDevelopExample.framework */; };
+		620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 620B4BFE1E4A1F6200266A72 /* MHDisplayController.m */; };
+		620B4C031E4A2A5A00266A72 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 620B4C021E4A2A5A00266A72 /* ViewPagerController.m */; };
 		627A95181E4968E0004A1ED2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A95171E4968E0004A1ED2 /* main.m */; };
 		627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A951A1E4968E0004A1ED2 /* AppDelegate.m */; };
 		627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A951D1E4968E0004A1ED2 /* MHExampleController.m */; };
@@ -47,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		620B4BFD1E4A1F6200266A72 /* MHDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHDisplayController.h; sourceTree = "<group>"; };
+		620B4BFE1E4A1F6200266A72 /* MHDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHDisplayController.m; sourceTree = "<group>"; };
+		620B4C011E4A2A5A00266A72 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
+		620B4C021E4A2A5A00266A72 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
 		627A95131E4968E0004A1ED2 /* MHDevelopExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHDevelopExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		627A95171E4968E0004A1ED2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		627A95191E4968E0004A1ED2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +125,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		620B4BF91E4A1EC900266A72 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				620B4BFA1E4A1EC900266A72 /* Controller */,
+				620B4BFB1E4A1EC900266A72 /* Model */,
+				620B4BFC1E4A1EC900266A72 /* View */,
+				620B4BFD1E4A1F6200266A72 /* MHDisplayController.h */,
+				620B4BFE1E4A1F6200266A72 /* MHDisplayController.m */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		620B4BFA1E4A1EC900266A72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		620B4BFB1E4A1EC900266A72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		620B4BFC1E4A1EC900266A72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		620B4C001E4A2A5A00266A72 /* ICViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				620B4C011E4A2A5A00266A72 /* ViewPagerController.h */,
+				620B4C021E4A2A5A00266A72 /* ViewPagerController.m */,
+			);
+			path = ICViewPager;
+			sourceTree = "<group>";
+		};
 		627A950A1E4968E0004A1ED2 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +278,7 @@
 		627A954D1E496C3F004A1ED2 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				620B4C001E4A2A5A00266A72 /* ICViewPager */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -320,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				627A95851E49B05C004A1ED2 /* Base */,
+				620B4BF91E4A1EC900266A72 /* Display */,
 				627A95651E49A4F0004A1ED2 /* BaiSiBuDeJie */,
 				627A95661E49A4F0004A1ED2 /* NetEaseNews */,
 			);
@@ -665,7 +715,9 @@
 				627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */,
 				627A95181E4968E0004A1ED2 /* main.m in Sources */,
 				627A95841E49AE5B004A1ED2 /* UIView+MHFrame.m in Sources */,
+				620B4C031E4A2A5A00266A72 /* ViewPagerController.m in Sources */,
 				627A957C1E49AE00004A1ED2 /* MHBackButton.m in Sources */,
+				620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

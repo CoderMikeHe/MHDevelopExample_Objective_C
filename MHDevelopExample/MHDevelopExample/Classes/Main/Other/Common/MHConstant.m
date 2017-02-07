@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 /** 百思不得姐 -顶部标题的高度 */
-CGFloat const MHTitilesViewH = 35;
+CGFloat const MHTitilesViewH = 44;
 /** 百思不得姐-顶部标题的Y */
 CGFloat const MHTitilesViewY = 64;
 

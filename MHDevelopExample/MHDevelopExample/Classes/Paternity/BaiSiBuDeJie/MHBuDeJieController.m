@@ -138,7 +138,8 @@
         button.mh_x = i * width;
         UIViewController *vc = self.childViewControllers[i];
         [button setTitle:vc.title forState:UIControlStateNormal];
-        //      [button layoutIfNeeded]; // 强制布局(强制更新子控件的frame)
+        // 强制布局(强制更新子控件的frame)
+        //[button layoutIfNeeded];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -146,10 +147,10 @@
         [titlesView addSubview:button];
         
         // 默认点击了第一个按钮
-        if (i == 0) {
+        if (i == 0)
+        {
             button.enabled = NO;
             self.selectedButton = button;
-            
             // 让按钮内部的label根据文字内容来计算尺寸
             [button.titleLabel sizeToFit];
             self.indicatorView.mh_width = button.titleLabel.mh_width;
@@ -173,6 +174,7 @@
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
     [self.view insertSubview:contentView atIndex:0];
+    
     contentView.contentSize = CGSizeMake(contentView.mh_width * self.childViewControllers.count, 0);
     self.contentView = contentView;
     

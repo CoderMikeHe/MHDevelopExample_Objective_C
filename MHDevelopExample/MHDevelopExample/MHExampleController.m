@@ -10,7 +10,7 @@
 #import "MHExample.h"
 #import "MHBuDeJieController.h"
 #import "MHNetEaseNewsController.h"
-
+#import "MHDisplayController.h"
 
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
@@ -29,6 +29,7 @@
 - (void)dealloc
 {
     //
+    MHDealloc;
 }
 
 - (void)viewDidLoad
@@ -64,11 +65,12 @@
          一、父子控制器
             1.1 仿百思不得姐
             1.2 仿网易新闻
+            1.3 使用YZDisplayViewController [https://github.com/iThinkerYZ/YZDisplayViewController]
          */
         MHExample *paternityExample = [[MHExample alloc] init];
         paternityExample.header = @"一、父子控制器";
-        paternityExample.titles = @[@"1.1 仿百思不得姐 - MHBuDeJieController",@"1.2 仿网易新闻 - MHNetEaseNewsController"];
-        paternityExample.classes = @[@"MHBuDeJieController",@"MHNetEaseNewsController"];
+        paternityExample.titles = @[@"1.1 仿百思不得姐 - MHBuDeJieController",@"1.2 仿网易新闻 - MHNetEaseNewsController",@"1.3 使用YZDisplayViewController框架 - MHDisplayController"];
+        paternityExample.classes = @[@"MHBuDeJieController",@"MHNetEaseNewsController",@"MHDisplayController"];
         [_examples addObject:paternityExample];
     }
     return _examples;
