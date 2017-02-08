@@ -1,0 +1,131 @@
+//
+//  MHCommentCell.m
+//  MHDevelopExample
+//
+//  Created by CoderMikeHe on 17/2/8.
+//  Copyright © 2017年 CoderMikeHe. All rights reserved.
+//
+
+#import "MHCommentCell.h"
+#import "MHCommentFrame.h"
+
+
+@interface MHCommentCell ()
+
+/** 文本内容 */
+@property (nonatomic , weak) YYLabel *contentLabel;
+
+@end
+
+@implementation MHCommentCell
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+}
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+}
+
+
++ (instancetype)cellWithTableView:(UITableView *)tableView
+{
+    static NSString *ID = @"CommentCell";
+    MHCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        
+    }
+    return cell;
+}
+
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self)
+    {
+        // 初始化
+        [self _setup];
+        
+        // 创建自控制器
+        [self _setupSubViews];
+        
+        // 布局子控件
+        [self _makeSubViewsConstraints];
+        
+    }
+    
+    return self;
+}
+
+
+
+
+#pragma mark - 公共方法
+- (void)setCommentFrame:(MHCommentFrame *)commentFrame
+{
+    _commentFrame = commentFrame;
+    
+    MHComment *comment = commentFrame.comment;
+    
+    // 赋值
+    self.contentLabel.frame = commentFrame.textFrame;
+    // 设置值
+    self.contentLabel.attributedText = comment.attributedText;
+
+}
+
+
+#pragma mark - 私有方法
+#pragma mark - 初始化
+- (void)_setup
+{
+    // 设置颜色
+    self.backgroundColor = MHColorFromHexString(@"#EEEEEE");
+    self.contentView.backgroundColor = MHColorFromHexString(@"#EEEEEE");
+}
+
+#pragma mark - 创建自控制器
+- (void)_setupSubViews
+{
+    // 文本
+    YYLabel *contentLabel = [[YYLabel alloc] init];
+    contentLabel.numberOfLines = 0 ;
+    contentLabel.textAlignment = NSTextAlignmentLeft;
+    [self.contentView addSubview:contentLabel];
+    self.contentLabel = contentLabel;
+}
+
+
+#pragma mark - 布局子控件
+- (void)_makeSubViewsConstraints
+{
+    
+}
+
+
+#pragma mark - override
+- (void)setFrame:(CGRect)frame
+{
+    frame.origin.x = MHVideoTopicAvatarWH+2*MHVideoTopicHorizontalSpace;
+    frame.size.width = MHMainScreenWidth - frame.origin.x - MHVideoTopicHorizontalSpace;
+    [super setFrame:frame];
+}
+
+#pragma mark - 布局子控件
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // 布局子控件
+    
+    
+}
+
+
+
+
+@end
