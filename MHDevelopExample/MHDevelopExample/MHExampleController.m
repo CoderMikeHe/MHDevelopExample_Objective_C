@@ -8,10 +8,13 @@
 
 #import "MHExampleController.h"
 #import "MHExample.h"
+// 父子控制器
 #import "MHBuDeJieController.h"
 #import "MHNetEaseNewsController.h"
 #import "MHDisplayController.h"
+// 微信朋友圈评论回复
 #import "MHTopicOneController.h"
+#import "MHTopicTwoController.h"
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
@@ -75,15 +78,15 @@
         
         
         /**
-         二、仿微信朋友圈评论回复
+         二、仿微信朋友圈评论回复功能
          1.1 cell里面不嵌套UITableView
          1.2 cell里面嵌套UITableView
          1.3 仿优酷视频的评论回复
          */
         MHExample *commentExample = [[MHExample alloc] init];
-        commentExample.header = @"一、父子控制器";
-        commentExample.titles = @[@"1.1 cell里面不嵌套UITableView"];
-        commentExample.classes = @[@"MHTopicOneController"];
+        commentExample.header = @"二、仿微信朋友圈评论回复功能";
+        commentExample.titles = @[@"1.1 cell里面不嵌套UITableView",@"1.2 cell里面嵌套UITableView"];
+        commentExample.classes = @[@"MHTopicOneController",@"MHTopicTwoController"];
         [_examples addObject:commentExample];
     }
     return _examples;

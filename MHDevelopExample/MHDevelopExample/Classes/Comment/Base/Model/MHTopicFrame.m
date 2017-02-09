@@ -30,6 +30,9 @@
 /** height*/
 @property (nonatomic , assign) CGFloat height;
 
+/** tableViewFrame cell嵌套tableView用到 本人有点懒 ，公用了一套模型 */
+@property (nonatomic , assign ) CGRect tableViewFrame;
+
 @end
 
 
@@ -98,18 +101,26 @@
     self.textFrame = (CGRect){{textX , textY} , {textLimitSize.width, textH}};
     
     
+    
+    CGFloat tableViewX = textX;
+    CGFloat tableViewY = CGRectGetMaxY(self.textFrame);
+    CGFloat tableViewW = textLimitSize.width;
+    CGFloat tableViewH = 0;
     // 评论数据
-    if (topic.comments>0) {
-        
+    if (topic.comments>0)
+    {
         for (MHComment *comment in topic.comments)
         {
             MHCommentFrame *commentFrame = [[MHCommentFrame alloc] init];
             commentFrame.maxW = textLimitSize.width;
             commentFrame.comment = comment;
             [self.commentFrames addObject:commentFrame];
+            
+            tableViewH += commentFrame.cellHeight;
         }
     }
     
+    self.tableViewFrame = CGRectMake(tableViewX, tableViewY, tableViewW, tableViewH);
     // 自身高度
     self.height = CGRectGetMaxY(self.textFrame);
 

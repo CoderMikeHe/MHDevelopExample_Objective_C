@@ -1,22 +1,17 @@
 //
-//  MHTopicOneController.m
+//  MHTopicTwoController.m
 //  MHDevelopExample
 //
-//  Created by CoderMikeHe on 17/2/8.
+//  Created by CoderMikeHe on 17/2/9.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
 //
 
-
-
-
-#import "MHTopicOneController.h"
+#import "MHTopicTwoController.h"
 #import "MHTopicFrame.h"
-#import "MHTopicHeaderView.h"
-#import "MHTopicFooterView.h"
-#import "MHCommentCell.h"
+#import "MHTopicCell.h"
 #import "MHUserInfoController.h"
 
-@interface MHTopicOneController () <UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate>
+@interface MHTopicTwoController ()<UITableViewDelegate,UITableViewDataSource , MHTopicCellDelegate>
 
 /** MHTopicFrame 模型 */
 @property (nonatomic , strong) NSMutableArray *topicFrames;
@@ -30,9 +25,10 @@
 /** textString */
 @property (nonatomic , copy) NSString *textString;
 
+
 @end
 
-@implementation MHTopicOneController
+@implementation MHTopicTwoController
 
 - (void)dealloc
 {
@@ -57,7 +53,7 @@
     
     // 监听通知中心
     [self _addNotificationCenter];
-
+    
 }
 #pragma mark - 公共方法
 
@@ -200,7 +196,7 @@
 #pragma mark - 设置导航栏
 - (void)_setupNavigationItem
 {
-    self.title = @"评论回复 Demo1";
+    self.title = @"评论回复 Demo2";
 }
 
 #pragma mark - 设置子控件
@@ -214,7 +210,7 @@
 // 创建tableView
 - (void)_setupTableView
 {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -225,7 +221,7 @@
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.top.and.right.equalTo(self.view);
     }];
-
+    
 }
 
 
@@ -253,111 +249,48 @@
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.topicFrames.count;
+
+    return 1;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.commentFrames.count;
+    return self.topicFrames.count;
 }
 
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MHCommentCell *cell = [MHCommentCell cellWithTableView:tableView];
-    MHTopicFrame *topicFrame = self.topicFrames[indexPath.section];
-    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
-    cell.commentFrame = commentFrame;
+    MHTopicCell *cell = [MHTopicCell cellWithTableView:tableView];
+    cell.backgroundColor = MHRandomColor;
+    MHTopicFrame *topicFrame = self.topicFrames[indexPath.row];
+    cell.topicFrame = topicFrame;
     cell.delegate = self;
     return cell;
 }
 
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    MHTopicHeaderView *headerView = [MHTopicHeaderView headerViewWithTableView:tableView];
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    headerView.topicFrame = topicFrame;
-    headerView.delegate = self;
-    return headerView;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    MHTopicFooterView *footerView = [MHTopicFooterView footerViewWithTableView:tableView];
-    [footerView setSection:section allSections:self.topicFrames.count];
-    return footerView;
-}
-
-
-
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MHTopicFrame *topicFrame = self.topicFrames[indexPath.section];
-    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
-    return commentFrame.cellHeight;
+    MHTopicFrame *topicFrame = self.topicFrames[indexPath.row];
+    
+    if (topicFrame.tableViewFrame.size.height==0) {
+        return topicFrame.height+topicFrame.tableViewFrame.size.height;
+    }else{
+        return topicFrame.height+topicFrame.tableViewFrame.size.height+MHVideoTopicVerticalSpace;
+    }
+    
 }
 
-
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.height;
-}
-
-
-- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.commentFrames.count>0? MHVideoTopicVerticalSpace:MHGlobalBottomLineHeight;
-}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    MHTopicFrame *topicFrame = self.topicFrames[indexPath.section];
-    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
-    
-    MHUser *fromUser = commentFrame.comment.fromUser;
-    
-    MHLog(@"这里回复 -- :%@",fromUser.nickname);
-    /**
-     * 这里点击事件自行根据自己UI处理
-     *
-     */
 }
 
 
-#pragma mark - MHCommentCellDelegate
-- (void)commentCell:(MHCommentCell *)commentCell didClickedUser:(MHUser *)user
-{
-    MHUserInfoController *userInfo = [[MHUserInfoController alloc] init];
-    userInfo.user = user;
-    [self.navigationController pushViewController:userInfo animated:YES];
-}
-
-#pragma mark - MHTopicHeaderViewDelegate
-- (void) topicHeaderViewDidClickedUser:(MHTopicHeaderView *)topicHeaderView
-{
-    MHUserInfoController *userInfo = [[MHUserInfoController alloc] init];
-    userInfo.user = topicHeaderView.topicFrame.topic.user;
-    [self.navigationController pushViewController:userInfo animated:YES];
-}
-
-- (void) topicHeaderViewForClickedMoreAction:(MHTopicHeaderView *)topicHeaderView
-{
-    /**
-     * 这里点击事件自行根据自己UI处理
-     *
-     */
-    MHLog(@"---点击更多按钮---");
-    
-}
-
-- (void) topicHeaderViewForClickedThumbAction:(MHTopicHeaderView *)topicHeaderView
+#pragma mark - MHTopicCellDelegate
+- (void)topicCellForClickedThumbAction:(MHTopicCell *)topicCell
 {
     /**
      * 这里点击事件自行根据自己UI处理
@@ -366,9 +299,46 @@
     MHLog(@"---点击👍按钮---");
 }
 
-- (void) topicHeaderViewDidClickedTopicContent:(MHTopicHeaderView *)topicHeaderView
+- (void)topicCellForClickedMoreAction:(MHTopicCell *)topicCell
 {
-    MHLog(@"这里评论 -- :%@的帖子",topicHeaderView.topicFrame.topic.user.nickname);
+    /**
+     * 这里点击事件自行根据自己UI处理
+     *
+     */
+    MHLog(@"---点击更多按钮---");
+}
+
+- (void) topicCellDidClickedTopicContent:(MHTopicCell *)topicCell
+{
+    MHLog(@"这里评论 -- :%@的帖子",topicCell.topicFrame.topic.user.nickname);
+    /**
+     * 这里点击事件自行根据自己UI处理
+     *
+     */
+}
+
+- (void) topicCellDidClickedUser:(MHTopicCell *)topicCell
+{
+    MHUserInfoController *userInfo = [[MHUserInfoController alloc] init];
+    userInfo.user = topicCell.topicFrame.topic.user;
+    [self.navigationController pushViewController:userInfo animated:YES];
+}
+
+- (void) topicCell:(MHTopicCell *)topicCell didClickedUser:(MHUser *)user
+{
+    MHUserInfoController *userInfo = [[MHUserInfoController alloc] init];
+    userInfo.user = user;
+    [self.navigationController pushViewController:userInfo animated:YES];
+}
+
+- (void) topicCell:(MHTopicCell *)topicCell didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MHTopicFrame *topicFrame = topicCell.topicFrame;
+    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
+    
+    MHUser *fromUser = commentFrame.comment.fromUser;
+    
+    MHLog(@"这里回复 -- :%@",fromUser.nickname);
     /**
      * 这里点击事件自行根据自己UI处理
      *

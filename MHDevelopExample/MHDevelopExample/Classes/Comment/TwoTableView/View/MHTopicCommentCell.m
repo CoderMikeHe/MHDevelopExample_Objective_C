@@ -1,38 +1,34 @@
 //
-//  MHCommentCell.m
+//  MHTopicCommentCell.m
 //  MHDevelopExample
 //
-//  Created by CoderMikeHe on 17/2/8.
+//  Created by CoderMikeHe on 17/2/9.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
 //
 
-#import "MHCommentCell.h"
+#import "MHTopicCommentCell.h"
 #import "MHCommentFrame.h"
 
-
-@interface MHCommentCell ()
+@interface MHTopicCommentCell ()
 
 /** 文本内容 */
 @property (nonatomic , weak) YYLabel *contentLabel;
 
 @end
 
-@implementation MHCommentCell
+@implementation MHTopicCommentCell
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
 }
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
-
-
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
     static NSString *ID = @"CommentCell";
-    MHCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    MHTopicCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         
@@ -75,7 +71,7 @@
     self.contentLabel.frame = commentFrame.textFrame;
     // 设置值
     self.contentLabel.attributedText = comment.attributedText;
-
+    
 }
 
 
@@ -104,8 +100,8 @@
         // 利用KVC获取UserInfo 其实可以在MHComment模型里面利用 通知告知控制器哪个用户被点击了
         YYTextHighlight *highlight = [containerView valueForKeyPath:@"_highlight"];
         
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(commentCell:didClickedUser:)]) {
-            [weakSelf.delegate commentCell:weakSelf didClickedUser:highlight.userInfo[MHCommentUserKey]];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(topicCommentCell:didClickedUser:)]) {
+            [weakSelf.delegate topicCommentCell:weakSelf didClickedUser:highlight.userInfo[MHCommentUserKey]];
         }
         
         
@@ -118,27 +114,6 @@
 {
     
 }
-
-
-#pragma mark - override
-- (void)setFrame:(CGRect)frame
-{
-    frame.origin.x = MHVideoTopicAvatarWH+2*MHVideoTopicHorizontalSpace;
-    frame.size.width = MHMainScreenWidth - frame.origin.x - MHVideoTopicHorizontalSpace;
-    [super setFrame:frame];
-}
-
-#pragma mark - 布局子控件
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    // 布局子控件
-    
-    
-}
-
-
 
 
 @end

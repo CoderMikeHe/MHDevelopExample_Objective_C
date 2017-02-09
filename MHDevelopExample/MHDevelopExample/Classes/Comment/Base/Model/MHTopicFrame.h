@@ -29,7 +29,7 @@
 /** 话题内容frame */
 @property (nonatomic , assign , readonly) CGRect textFrame;
 
-/** height */
+/** height 这里只是 整个话题占据的高度 */
 @property (nonatomic , assign , readonly) CGFloat height;
 
 
@@ -37,7 +37,14 @@
 @property (nonatomic , strong ) NSMutableArray *commentFrames;
 
 
+/** tableViewFrame cell嵌套tableView用到 本人有点懒 ，公用了一套模型 */
+@property (nonatomic , assign , readonly) CGRect tableViewFrame;
+
+
 /** 话题模型 */
 @property (nonatomic , strong) MHTopic *topic;
+
+
+
 
 @end

@@ -1,16 +1,16 @@
 //
-//  MHTopicHeaderView.m
+//  MHTopicCell.m
 //  MHDevelopExample
 //
-//  Created by CoderMikeHe on 17/2/8.
+//  Created by CoderMikeHe on 17/2/9.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
 //
 
-#import "MHTopicHeaderView.h"
+#import "MHTopicCell.h"
 #import "MHTopicFrame.h"
+#import "MHTopicCommentCell.h"
 
-
-@interface MHTopicHeaderView ()
+@interface MHTopicCell()< UITableViewDelegate , UITableViewDataSource,MHTopicCommentCellDelegate >
 
 /** 头像 */
 @property (nonatomic , weak) MHImageView *avatarView;
@@ -33,32 +33,46 @@
 /** 文本内容 */
 @property (nonatomic , weak) YYLabel *contentLabel;
 
+/** UITableView */
+@property (nonatomic , weak) UITableView *tableView;
+
+/** 分割线 */
+@property (nonatomic , weak) MHDivider *divider;
 
 @end
 
 
-@implementation MHTopicHeaderView
+@implementation MHTopicCell
 
-+ (instancetype)topicHeaderView
+- (void)awakeFromNib
 {
-    return [[self alloc] init];
+    [super awakeFromNib];
 }
 
-+ (instancetype)headerViewWithTableView:(UITableView *)tableView
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    static NSString *ID = @"TopicHeader";
-    MHTopicHeaderView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:ID];
-    if (header == nil) {
-        // 缓存池中没有, 自己创建
-        MHLog(@"....创建表头...");
-        header = [[self alloc] initWithReuseIdentifier:ID];
+    [super setSelected:selected animated:animated];
+}
+
+
++ (instancetype)cellWithTableView:(UITableView *)tableView
+{
+    static NSString *ID = @"TopicCell";
+    MHTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    return header;
+    return cell;
 }
 
-- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self)
+    {
         // 初始化
         [self _setup];
         
@@ -67,7 +81,9 @@
         
         // 布局子控件
         [self _makeSubViewsConstraints];
+        
     }
+    
     return self;
 }
 
@@ -104,6 +120,10 @@
     self.contentLabel.frame = topicFrame.textFrame;
     self.contentLabel.attributedText = topic.attributedText;
     
+    // 刷新评论tableView
+    self.tableView.frame = topicFrame.tableViewFrame;
+    [self.tableView reloadData];
+    
 }
 
 
@@ -111,6 +131,7 @@
 #pragma mark - 初始化
 - (void)_setup
 {
+    // 设置颜色
     self.contentView.backgroundColor = [UIColor whiteColor];
 }
 
@@ -193,6 +214,26 @@
     contentLabel.textTapAction = ^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect) {
         [weakSelf _contentTextDidClicked];
     };
+
+    // UITableView
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.bounces = NO;
+    tableView.scrollEnabled = NO;
+    tableView.showsVerticalScrollIndicator = NO;
+    tableView.showsHorizontalScrollIndicator = NO;
+    tableView.backgroundColor = [UIColor whiteColor];
+    [self.contentView addSubview:tableView];
+    self.tableView = tableView;
+    
+    
+    // 分割线
+    MHDivider *divider = [MHDivider divider];
+    self.divider = divider;
+    [self.contentView addSubview:divider];
+ 
 }
 
 
@@ -202,39 +243,92 @@
     
 }
 
+
+#pragma mark - override
+
+
+#pragma mark - 布局子控件
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // 布局子控件
+    self.divider.frame = CGRectMake(0, self.mh_height-MHGlobalBottomLineHeight, self.mh_width, MHGlobalBottomLineHeight);
+    
+}
+
+
 #pragma mark - 事件处理
 
 - (void)_thumbBtnDidClicked:(UIButton *)sender
 {
     sender.enabled = NO;
     self.topicFrame.topic.thumb = YES;
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(topicHeaderViewForClickedThumbAction:)]) {
-        [self.delegate topicHeaderViewForClickedThumbAction:self];
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicCellForClickedThumbAction:)]) {
+        [self.delegate topicCellForClickedThumbAction:self];
     }
-    
+
 }
 
 - (void)_moreBtnDidClicked:(UIButton *)sender
 {
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(topicHeaderViewForClickedMoreAction:)]) {
-        [self.delegate topicHeaderViewForClickedMoreAction:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicCellForClickedMoreAction:)]) {
+        [self.delegate topicCellForClickedMoreAction:self];
     }
 }
 
 - (void)_avatarOrNicknameDidClicked
 {
-
-    if (self.delegate && [self.delegate respondsToSelector:@selector(topicHeaderViewDidClickedUser:)]) {
-        [self.delegate topicHeaderViewDidClickedUser:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicCellDidClickedUser:)]) {
+        [self.delegate topicCellDidClickedUser:self];
     }
 }
 
+
 - (void)_contentTextDidClicked
 {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(topicHeaderViewDidClickedTopicContent:)]) {
-        [self.delegate topicHeaderViewDidClickedTopicContent:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicCellDidClickedTopicContent:)]) {
+        [self.delegate topicCellDidClickedTopicContent:self];
+    }
+}
+
+
+#pragma mark - UITableViewDelegate , UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.topicFrame.commentFrames.count;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MHTopicCommentCell *cell = [MHTopicCommentCell cellWithTableView:tableView];
+    MHCommentFrame *commentFrame = self.topicFrame.commentFrames[indexPath.row];
+    cell.commentFrame = commentFrame;
+    cell.delegate = self;
+    return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MHCommentFrame *commentFrame = self.topicFrame.commentFrames[indexPath.row];
+    return commentFrame.cellHeight;
+}
+
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicCell:didSelectRowAtIndexPath:)]) {
+        [self.delegate topicCell:self didSelectRowAtIndexPath:indexPath];
+    }
+}
+
+#pragma mark - MHTopicCommentCellDelegate
+- (void) topicCommentCell:(MHTopicCommentCell *)topicCommentCell didClickedUser:(MHUser *)user
+{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(topicCell:didClickedUser:)]) {
+        [self.delegate topicCell:self didClickedUser:user];
     }
 }
 

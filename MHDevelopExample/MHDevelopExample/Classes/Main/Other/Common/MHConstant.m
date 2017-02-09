@@ -45,9 +45,12 @@ CGFloat const MHVideoCommentVerticalSpace = 7.0f;
 
 /** 文本行高 */
 CGFloat const  MHVideoCommentContentLineSpacing = 10.0f;
-/** 评论假数据 */
+
+/** 评论假数据的id */
 NSString * const MHVideoAllCommentsId = @"MHVideoAllCommentsId" ;
 
+/** 评论用户的key */
+NSString * const MHCommentUserKey = @"MHCommentUserKey";
 
 
 

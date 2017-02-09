@@ -129,3 +129,5 @@ UIKIT_EXTERN CGFloat const  MHVideoCommentContentLineSpacing;
 UIKIT_EXTERN NSString * const MHVideoAllCommentsId ;
 
 
+/** 评论用户的key */
+UIKIT_EXTERN NSString * const MHCommentUserKey ;

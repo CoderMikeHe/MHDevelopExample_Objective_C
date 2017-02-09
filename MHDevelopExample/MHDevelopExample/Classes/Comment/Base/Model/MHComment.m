@@ -32,11 +32,21 @@
         mutableAttributedString.yy_font = MHVideoCommentTextFont;
         mutableAttributedString.yy_color = MHGlobalBlackTextColor;
         mutableAttributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
-        // 设置昵称颜色
-        [mutableAttributedString yy_setColor:MHGlobalGrayTextColor range:NSMakeRange(0, self.fromUser.nickname.length+1)];
         
-        NSRange range = [textString rangeOfString:[NSString stringWithFormat:@"%@:",self.toUser.nickname]];
-        [mutableAttributedString yy_setColor:MHGlobalGrayTextColor range:range];
+        NSRange fromUserRange = NSMakeRange(0, self.fromUser.nickname.length);
+        YYTextHighlight *fromUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
+        fromUserHighlight.userInfo = @{MHCommentUserKey:self.fromUser};
+        [mutableAttributedString yy_setTextHighlight:fromUserHighlight range:fromUserRange];
+        // 设置昵称颜色
+        [mutableAttributedString yy_setColor:MHGlobalOrangeTextColor range:NSMakeRange(0, self.fromUser.nickname.length)];
+        
+        
+        
+        NSRange toUserRange = [textString rangeOfString:[NSString stringWithFormat:@"%@:",self.toUser.nickname]];
+        YYTextHighlight *toUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
+        toUserHighlight.userInfo = @{MHCommentUserKey:self.toUser};
+        [mutableAttributedString yy_setTextHighlight:toUserHighlight range:toUserRange];
+        [mutableAttributedString yy_setColor:MHGlobalOrangeTextColor range:toUserRange];
         
         return mutableAttributedString;
         
@@ -49,8 +59,14 @@
         mutableAttributedString.yy_font = MHVideoCommentTextFont;
         mutableAttributedString.yy_color = MHGlobalBlackTextColor;
         mutableAttributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
+        
+        NSRange fromUserRange = NSMakeRange(0, self.fromUser.nickname.length+1);
         // 设置昵称颜色
-        [mutableAttributedString yy_setColor:MHGlobalGrayTextColor range:NSMakeRange(0, self.fromUser.nickname.length+1)];
+        [mutableAttributedString yy_setColor:MHGlobalOrangeTextColor range:fromUserRange];
+        
+        YYTextHighlight *fromUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
+        fromUserHighlight.userInfo = @{MHCommentUserKey:self.fromUser};
+        [mutableAttributedString yy_setTextHighlight:fromUserHighlight range:fromUserRange];
         
         return mutableAttributedString;
     }
