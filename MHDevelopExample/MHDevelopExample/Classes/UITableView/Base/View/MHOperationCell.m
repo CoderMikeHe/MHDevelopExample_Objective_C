@@ -35,7 +35,7 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-    
+    // 非编辑状态下 直接退出
     if (!self.isEditing) return;
     
     // 非修改系统选中图标样式
@@ -51,7 +51,7 @@
 - (void) setHighlighted:(BOOL)highlighted animated:(BOOL)animated
 {
     [super setHighlighted:highlighted animated:animated];
-    // 非编辑状态下
+    // 非编辑状态下 直接退出
     if (!self.isEditing) return;
     // 非修改系统选中图标样式
     if (!self.isModifySelectionStyle) return;
@@ -202,7 +202,7 @@
 }
 
 #pragma mark - 辅助属性
-/** 修改选中照片 */
+/** 修改选中按钮的样式 */
 - (void)_changeCellSelectedImage
 {
     // 利用KVC 设置color
@@ -213,7 +213,7 @@
             for (UIView *subview in view.subviews) {
                 
                 if ([subview isKindOfClass:[UIImageView class]]) {
-                    
+                    // MHGlobalOrangeTextColor :浅橙色
                     [subview setValue:MHGlobalOrangeTextColor forKey:@"tintColor"];
                 }
             }

@@ -438,17 +438,21 @@ static CGFloat const MHDeleteButtonHeight = 50.0f;
     cell.indexPath = self.dataSource[indexPath.row];
     
     // 是否修改系统的选中按钮的样式 默认是NO 即系统样式
-    cell.modifySelectionStyle = NO;
+    cell.modifySelectionStyle = YES;
     
-    
+ 
     return cell;
 }
 
 
-
+// 选中
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (tableView.isEditing) {
+        
+        // 获取cell编辑状态选中情况下的所有子控件
+//        NSArray *subViews = [[tableView cellForRowAtIndexPath:indexPath] subviews];
         NSIndexPath *indexPathM = self.dataSource[indexPath.row];
         if (![self.selectedDatas containsObject:indexPathM]) {
             [self.selectedDatas addObject:indexPathM];
@@ -456,7 +460,7 @@ static CGFloat const MHDeleteButtonHeight = 50.0f;
         [self _indexPathsForSelectedRowsCountDidChange:tableView.indexPathsForSelectedRows];
         return;
     }
-    
+
     
     
     MHOperationController *operation = [[MHOperationController alloc] init];
@@ -466,8 +470,7 @@ static CGFloat const MHDeleteButtonHeight = 50.0f;
     
 }
 
-
-
+// 取消选中
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.isEditing)
@@ -482,7 +485,7 @@ static CGFloat const MHDeleteButtonHeight = 50.0f;
 }
 
 
--(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView.isEditing) {
         // 多选
