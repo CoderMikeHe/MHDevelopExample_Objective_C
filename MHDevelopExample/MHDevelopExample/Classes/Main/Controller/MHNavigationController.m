@@ -77,7 +77,7 @@
     /**设置文字属性**/
     // 设置普通状态的文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    textAttrs[NSForegroundColorAttributeName] = MHGlobalBlackTextColor;
     textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:fontSize];
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowOffset =  CGSizeZero;
@@ -87,7 +87,7 @@
     
     // 设置高亮状态的文字属性
     NSMutableDictionary *highTextAttrs = [NSMutableDictionary dictionaryWithDictionary:textAttrs];
-    highTextAttrs[NSForegroundColorAttributeName] = MHColorFromHexString(@"#eeeeee");
+    highTextAttrs[NSForegroundColorAttributeName] = MHGlobalShadowBlackTextColor;
     [appearance setTitleTextAttributes:highTextAttrs forState:UIControlStateHighlighted];
     
     // 设置不可用状态(disable)的文字属性

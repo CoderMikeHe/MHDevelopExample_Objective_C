@@ -25,6 +25,13 @@
 		6226375D1E4AF925007F9360 /* NSString+MHSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6226375C1E4AF925007F9360 /* NSString+MHSize.m */; };
 		622637611E4B0325007F9360 /* MHWebImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 622637601E4B0325007F9360 /* MHWebImageTool.m */; };
 		622637651E4B08E1007F9360 /* NSObject+MHRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 622637641E4B08E1007F9360 /* NSObject+MHRandom.m */; };
+		6229906F1E4D4CC500E0890E /* MHDeleteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6229906E1E4D4CC500E0890E /* MHDeleteController.m */; };
+		622990761E4D4D5100E0890E /* MHSelectsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 622990751E4D4D5100E0890E /* MHSelectsController.m */; };
+		622990791E4D4DAF00E0890E /* MHOperationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 622990781E4D4DAF00E0890E /* MHOperationCell.m */; };
+		6229907C1E4D503800E0890E /* MHTitleRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6229907B1E4D503800E0890E /* MHTitleRightButton.m */; };
+		6229907F1E4D504800E0890E /* MHTitleLeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6229907E1E4D504800E0890E /* MHTitleLeftButton.m */; };
+		622990821E4DAEBF00E0890E /* MHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 622990811E4DAEBF00E0890E /* MHButton.m */; };
+		622990851E4E2D4500E0890E /* MHOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 622990841E4E2D4500E0890E /* MHOperationController.m */; };
 		625B739D1E4C4AB7006A8E86 /* MHUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B739C1E4C4AB7006A8E86 /* MHUserInfoController.m */; };
 		625B73B51E4C4BA6006A8E86 /* MHTopicTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B73AE1E4C4BA6006A8E86 /* MHTopicTwoController.m */; };
 		625B73B61E4C4BA6006A8E86 /* MHTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B73B21E4C4BA6006A8E86 /* MHTopicCell.m */; };
@@ -106,6 +113,20 @@
 		622637631E4B08E1007F9360 /* NSObject+MHRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MHRandom.h"; sourceTree = "<group>"; };
 		622637641E4B08E1007F9360 /* NSObject+MHRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MHRandom.m"; sourceTree = "<group>"; };
 		622637661E4B0994007F9360 /* NSObject+MH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MH.h"; sourceTree = "<group>"; };
+		6229906D1E4D4CC500E0890E /* MHDeleteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHDeleteController.h; sourceTree = "<group>"; };
+		6229906E1E4D4CC500E0890E /* MHDeleteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHDeleteController.m; sourceTree = "<group>"; };
+		622990741E4D4D5100E0890E /* MHSelectsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHSelectsController.h; sourceTree = "<group>"; };
+		622990751E4D4D5100E0890E /* MHSelectsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHSelectsController.m; sourceTree = "<group>"; };
+		622990771E4D4DAF00E0890E /* MHOperationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHOperationCell.h; sourceTree = "<group>"; };
+		622990781E4D4DAF00E0890E /* MHOperationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHOperationCell.m; sourceTree = "<group>"; };
+		6229907A1E4D503800E0890E /* MHTitleRightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTitleRightButton.h; sourceTree = "<group>"; };
+		6229907B1E4D503800E0890E /* MHTitleRightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTitleRightButton.m; sourceTree = "<group>"; };
+		6229907D1E4D504800E0890E /* MHTitleLeftButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTitleLeftButton.h; sourceTree = "<group>"; };
+		6229907E1E4D504800E0890E /* MHTitleLeftButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTitleLeftButton.m; sourceTree = "<group>"; };
+		622990801E4DAEBF00E0890E /* MHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHButton.h; sourceTree = "<group>"; };
+		622990811E4DAEBF00E0890E /* MHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHButton.m; sourceTree = "<group>"; };
+		622990831E4E2D4500E0890E /* MHOperationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHOperationController.h; sourceTree = "<group>"; };
+		622990841E4E2D4500E0890E /* MHOperationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHOperationController.m; sourceTree = "<group>"; };
 		625B739B1E4C4AB7006A8E86 /* MHUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUserInfoController.h; sourceTree = "<group>"; };
 		625B739C1E4C4AB7006A8E86 /* MHUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUserInfoController.m; sourceTree = "<group>"; };
 		625B73AD1E4C4BA6006A8E86 /* MHTopicTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopicTwoController.h; sourceTree = "<group>"; };
@@ -362,6 +383,117 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
+		622990641E4D4C7B00E0890E /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				622990701E4D4CFB00E0890E /* Base */,
+				622990651E4D4C7B00E0890E /* Delete */,
+				622990691E4D4C7B00E0890E /* Selects */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		622990651E4D4C7B00E0890E /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				6229906D1E4D4CC500E0890E /* MHDeleteController.h */,
+				6229906E1E4D4CC500E0890E /* MHDeleteController.m */,
+				622990661E4D4C7B00E0890E /* Controller */,
+				622990671E4D4C7B00E0890E /* Model */,
+				622990681E4D4C7B00E0890E /* View */,
+			);
+			path = Delete;
+			sourceTree = "<group>";
+		};
+		622990661E4D4C7B00E0890E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		622990671E4D4C7B00E0890E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		622990681E4D4C7B00E0890E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		622990691E4D4C7B00E0890E /* Selects */ = {
+			isa = PBXGroup;
+			children = (
+				6229906A1E4D4C7B00E0890E /* Controller */,
+				6229906B1E4D4C7B00E0890E /* Model */,
+				6229906C1E4D4C7B00E0890E /* View */,
+				622990741E4D4D5100E0890E /* MHSelectsController.h */,
+				622990751E4D4D5100E0890E /* MHSelectsController.m */,
+			);
+			path = Selects;
+			sourceTree = "<group>";
+		};
+		6229906A1E4D4C7B00E0890E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6229906B1E4D4C7B00E0890E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6229906C1E4D4C7B00E0890E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		622990701E4D4CFB00E0890E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				622990711E4D4CFB00E0890E /* Controller */,
+				622990721E4D4CFB00E0890E /* Model */,
+				622990731E4D4CFB00E0890E /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		622990711E4D4CFB00E0890E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				622990831E4E2D4500E0890E /* MHOperationController.h */,
+				622990841E4E2D4500E0890E /* MHOperationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		622990721E4D4CFB00E0890E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		622990731E4D4CFB00E0890E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				622990771E4D4DAF00E0890E /* MHOperationCell.h */,
+				622990781E4D4DAF00E0890E /* MHOperationCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		625B73AB1E4C4BA6006A8E86 /* TwoTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +610,7 @@
 		627A95491E496C3F004A1ED2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				622990641E4D4C7B00E0890E /* UITableView */,
 				6226371E1E4AA881007F9360 /* Comment */,
 				627A95641E49A4F0004A1ED2 /* Paternity */,
 				627A954A1E496C3F004A1ED2 /* Main */,
@@ -608,12 +741,18 @@
 		627A95571E496C3F004A1ED2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6229907D1E4D504800E0890E /* MHTitleLeftButton.h */,
+				6229907E1E4D504800E0890E /* MHTitleLeftButton.m */,
+				6229907A1E4D503800E0890E /* MHTitleRightButton.h */,
+				6229907B1E4D503800E0890E /* MHTitleRightButton.m */,
 				627A957A1E49AE00004A1ED2 /* MHBackButton.h */,
 				627A957B1E49AE00004A1ED2 /* MHBackButton.m */,
 				6226374F1E4AEAD1007F9360 /* MHImageView.h */,
 				622637501E4AEAD1007F9360 /* MHImageView.m */,
 				622637521E4AED10007F9360 /* MHDivider.h */,
 				622637531E4AED10007F9360 /* MHDivider.m */,
+				622990801E4DAEBF00E0890E /* MHButton.h */,
+				622990811E4DAEBF00E0890E /* MHButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -955,8 +1094,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				627A95751E49A77E004A1ED2 /* MHNetEaseNewsController.m in Sources */,
+				622990791E4D4DAF00E0890E /* MHOperationCell.m in Sources */,
 				627A95831E49AE5B004A1ED2 /* UIView+MHExtension.m in Sources */,
 				627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */,
+				6229907F1E4D504800E0890E /* MHTitleLeftButton.m in Sources */,
 				625B73BE1E4C598C006A8E86 /* NSDateFormatter+Extension.m in Sources */,
 				627A955A1E496CF1004A1ED2 /* MHNavigationController.m in Sources */,
 				627A95721E49A694004A1ED2 /* MHBuDeJieController.m in Sources */,
@@ -965,6 +1106,8 @@
 				622637651E4B08E1007F9360 /* NSObject+MHRandom.m in Sources */,
 				6226375D1E4AF925007F9360 /* NSString+MHSize.m in Sources */,
 				627A956F1E49A615004A1ED2 /* MHViewController.m in Sources */,
+				622990851E4E2D4500E0890E /* MHOperationController.m in Sources */,
+				6229907C1E4D503800E0890E /* MHTitleRightButton.m in Sources */,
 				627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */,
 				622637581E4AF259007F9360 /* UIFont+MHExtension.m in Sources */,
 				627A95611E4973D2004A1ED2 /* MHConstant.m in Sources */,
@@ -990,7 +1133,10 @@
 				6226373C1E4AB8D4007F9360 /* MHTopicOneController.m in Sources */,
 				622637391E4AAD96007F9360 /* MHCommentFrame.m in Sources */,
 				620B4C031E4A2A5A00266A72 /* ViewPagerController.m in Sources */,
+				622990761E4D4D5100E0890E /* MHSelectsController.m in Sources */,
 				627A957C1E49AE00004A1ED2 /* MHBackButton.m in Sources */,
+				6229906F1E4D4CC500E0890E /* MHDeleteController.m in Sources */,
+				622990821E4DAEBF00E0890E /* MHButton.m in Sources */,
 				620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

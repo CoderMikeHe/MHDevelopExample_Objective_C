@@ -15,7 +15,10 @@
 // 微信朋友圈评论回复
 #import "MHTopicOneController.h"
 #import "MHTopicTwoController.h"
-
+// UITableView常见的使用场景
+#import "MHSelectsController.h"
+#import "MHDeleteController.h"
+//
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
 /** tableView */
@@ -68,10 +71,10 @@
          一、父子控制器
             1.1 仿百思不得姐
             1.2 仿网易新闻
-            1.3 使用YZDisplayViewController [https://github.com/iThinkerYZ/YZDisplayViewController]
+            1.3 使用YZDisplayViewController框架搭建网易新闻框架 [https://github.com/iThinkerYZ/YZDisplayViewController]
          */
         MHExample *paternityExample = [[MHExample alloc] init];
-        paternityExample.header = @"一、父子控制器";
+        paternityExample.header = @"一、父子控制器的使用";
         paternityExample.titles = @[@"1.1 仿百思不得姐",@"1.2 仿网易新闻 ",@"1.3 使用YZDisplayViewController框架搭建网易新闻框架"];
         paternityExample.classes = @[@"MHBuDeJieController",@"MHNetEaseNewsController",@"MHDisplayController"];
         [_examples addObject:paternityExample];
@@ -81,13 +84,27 @@
          二、仿微信朋友圈评论回复功能
          1.1 cell里面不嵌套UITableView
          1.2 cell里面嵌套UITableView
-         1.3 仿优酷视频的评论回复
+         1.3 仿优酷视频的评论回复 (TODO)
          */
         MHExample *commentExample = [[MHExample alloc] init];
-        commentExample.header = @"二、仿微信朋友圈评论回复功能";
+        commentExample.header = @"二、微信朋友圈评论回复功能";
         commentExample.titles = @[@"1.1 cell里面不嵌套UITableView",@"1.2 cell里面嵌套UITableView"];
         commentExample.classes = @[@"MHTopicOneController",@"MHTopicTwoController"];
         [_examples addObject:commentExample];
+        
+        
+        
+        /**
+         三、UITableView常见的使用场景
+         1.1 tableView的左滑删除功能
+         1.2 tableView的多选删除功能
+         1.3
+         */
+        MHExample *tableViewExample = [[MHExample alloc] init];
+        tableViewExample.header = @"三、UITableView常见的使用场景";
+        tableViewExample.titles = @[@"1.1 tableView的左滑删除功能",@"1.2 tableView的多选删除功能"];
+        tableViewExample.classes = @[@"MHDeleteController",@"MHSelectsController"];
+        [_examples addObject:tableViewExample];
     }
     return _examples;
 }
