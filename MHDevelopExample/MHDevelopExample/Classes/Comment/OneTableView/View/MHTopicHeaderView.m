@@ -181,10 +181,12 @@
     
     // 文本
     YYLabel *contentLabel = [[YYLabel alloc] init];
+    // 设置文本的额外区域，修复用户点击文本没有效果
     UIEdgeInsets textContainerInset = contentLabel.textContainerInset;
     textContainerInset.top = MHVideoTopicVerticalSpace;
     textContainerInset.bottom = MHVideoTopicVerticalSpace;
     contentLabel.textContainerInset = textContainerInset;
+    
     contentLabel.numberOfLines = 0 ;
     contentLabel.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:contentLabel];

@@ -178,7 +178,7 @@
             MHComment *comment = [[MHComment alloc] init];
             comment.commentId = [NSString stringWithFormat:@"%zd%zd",i,j];
             comment.creatTime = @"2017-01-07 18:18:18";
-            comment.text = @"你的孤独，虽败犹荣";
+            comment.text = [self.textString substringToIndex:[NSObject mh_randomNumber:0 to:30]];
             if (j%3==0) {
                 MHUser *toUser = self.users[[NSObject mh_randomNumber:0 to:5]];
                 comment.toUser = toUser;
