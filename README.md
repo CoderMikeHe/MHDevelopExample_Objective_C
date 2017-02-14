@@ -9,7 +9,7 @@
 ##### 使用
 - 本`Demo`利用`Cocoapods`管理第三方框架，若第一次使用本项目，请使用终端`cd`到如下图所示的文件夹，执行`pod install`命令即可。
 
-	![Usage@2x.png](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/tree/master/MHDevelopExample/SnapShot/Usage@2x.png)
+	![Usage.png](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/Usage.png)
 
 ##### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。
