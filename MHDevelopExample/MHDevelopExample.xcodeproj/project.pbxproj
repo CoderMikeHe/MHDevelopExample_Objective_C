@@ -32,6 +32,7 @@
 		6229907F1E4D504800E0890E /* MHTitleLeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6229907E1E4D504800E0890E /* MHTitleLeftButton.m */; };
 		622990821E4DAEBF00E0890E /* MHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 622990811E4DAEBF00E0890E /* MHButton.m */; };
 		622990851E4E2D4500E0890E /* MHOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 622990841E4E2D4500E0890E /* MHOperationController.m */; };
+		623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623D2A841E5298B30038BB9B /* MHYouKuController.m */; };
 		625B739D1E4C4AB7006A8E86 /* MHUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B739C1E4C4AB7006A8E86 /* MHUserInfoController.m */; };
 		625B73B51E4C4BA6006A8E86 /* MHTopicTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B73AE1E4C4BA6006A8E86 /* MHTopicTwoController.m */; };
 		625B73B61E4C4BA6006A8E86 /* MHTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B73B21E4C4BA6006A8E86 /* MHTopicCell.m */; };
@@ -127,6 +128,8 @@
 		622990811E4DAEBF00E0890E /* MHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHButton.m; sourceTree = "<group>"; };
 		622990831E4E2D4500E0890E /* MHOperationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHOperationController.h; sourceTree = "<group>"; };
 		622990841E4E2D4500E0890E /* MHOperationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHOperationController.m; sourceTree = "<group>"; };
+		623D2A831E5298B30038BB9B /* MHYouKuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuController.h; sourceTree = "<group>"; };
+		623D2A841E5298B30038BB9B /* MHYouKuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuController.m; sourceTree = "<group>"; };
 		625B739B1E4C4AB7006A8E86 /* MHUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUserInfoController.h; sourceTree = "<group>"; };
 		625B739C1E4C4AB7006A8E86 /* MHUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUserInfoController.m; sourceTree = "<group>"; };
 		625B73AD1E4C4BA6006A8E86 /* MHTopicTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTopicTwoController.h; sourceTree = "<group>"; };
@@ -256,6 +259,7 @@
 		6226371E1E4AA881007F9360 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
+				623D2A7F1E5298A40038BB9B /* YouKu */,
 				6226371F1E4AA881007F9360 /* Base */,
 				622637271E4AA881007F9360 /* OneTableView */,
 				625B73AB1E4C4BA6006A8E86 /* TwoTableView */,
@@ -490,6 +494,39 @@
 			children = (
 				622990771E4D4DAF00E0890E /* MHOperationCell.h */,
 				622990781E4D4DAF00E0890E /* MHOperationCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		623D2A7F1E5298A40038BB9B /* YouKu */ = {
+			isa = PBXGroup;
+			children = (
+				623D2A801E5298A40038BB9B /* Controller */,
+				623D2A811E5298A40038BB9B /* Model */,
+				623D2A821E5298A40038BB9B /* View */,
+				623D2A831E5298B30038BB9B /* MHYouKuController.h */,
+				623D2A841E5298B30038BB9B /* MHYouKuController.m */,
+			);
+			path = YouKu;
+			sourceTree = "<group>";
+		};
+		623D2A801E5298A40038BB9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		623D2A811E5298A40038BB9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		623D2A821E5298A40038BB9B /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1127,6 +1164,7 @@
 				622637541E4AED10007F9360 /* MHDivider.m in Sources */,
 				622637361E4AAD85007F9360 /* MHTopicFrame.m in Sources */,
 				627A95181E4968E0004A1ED2 /* main.m in Sources */,
+				623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */,
 				627A95841E49AE5B004A1ED2 /* UIView+MHFrame.m in Sources */,
 				6226372D1E4AAB50007F9360 /* MHTopic.m in Sources */,
 				625B73B61E4C4BA6006A8E86 /* MHTopicCell.m in Sources */,
