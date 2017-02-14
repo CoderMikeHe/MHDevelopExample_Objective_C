@@ -29,7 +29,7 @@
 		
 		- 效果图
 		
-			![效果图.gif](http://upload-images.jianshu.io/upload_images/1874977-1f992f9b17303c7e.gif?imageMogr2/auto-orient/strip)
+			![comment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/comment.gif)
 			
 		- 说明文档：[iOS实现微信朋友圈评论回复功能（一）](http://www.jianshu.com/p/395bac3648a7)
 		
@@ -37,7 +37,7 @@
 	* 利用UITableViewCell嵌套UITableView实现
 		- 效果图
 		
-			![效果图.gif](http://upload-images.jianshu.io/upload_images/1874977-62889b4502b380b4.gif?imageMogr2/auto-orient/strip)
+			![comment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/comment.gif)
 			
 		- 说明文档：[iOS实现微信朋友圈评论回复功能（二）](http://www.jianshu.com/p/733733fd042d)
 	
@@ -48,14 +48,14 @@
 	* UITableView的侧滑删除功能
 		- 效果图
 		
-			![效果图.gif](http://upload-images.jianshu.io/upload_images/1874977-f687924fac83d795.gif?imageMogr2/auto-orient/strip)
+			![tableView_del.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/tableView_del.gif)
 		
 		- 说明文档：[iOS UITableView删除功能](http://www.jianshu.com/p/4c53901062eb)
 		
 	* UITableView的的多选、删除功能
 		- 效果图
 			
-			![自定义样式效果图.gif](http://upload-images.jianshu.io/upload_images/1874977-c88c702962b5de0d.gif?imageMogr2/auto-orient/strip)
+			![tableView_sel.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/tableView_sel.gif)
 			
 		- 说明文档：[iOS UITableView 多选删除功能](http://www.jianshu.com/p/1d82befe9988)
 
