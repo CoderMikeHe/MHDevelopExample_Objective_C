@@ -9,8 +9,6 @@
 #import "NSDate+Extension.h"
 
 
-
-
 #define DATE_COMPONENTS (NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekOfMonth | NSCalendarUnitWeekOfYear |  NSCalendarUnitWeekday | NSCalendarUnitWeekdayOrdinal)
 
 
@@ -132,7 +130,7 @@
 
 
 /**
- *  返回固定的 当前时间 2016/8/10 14:43:45
+ *  返回固定的 当前时间 2016-8-10 14:43:45
  */
 + (NSString *)mh_currentTimestamp
 {
@@ -172,6 +170,14 @@
     result = [dateFormatter stringFromDate:self];
     
     return result;
+}
+
+/** 与当前时间的差距 */
+- (NSDateComponents *)mh_deltaWithNow
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    int unit = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    return [calendar components:unit fromDate:self toDate:[NSDate date] options:0];
 }
 
 @end

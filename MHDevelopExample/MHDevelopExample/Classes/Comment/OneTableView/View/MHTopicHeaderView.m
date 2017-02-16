@@ -91,7 +91,7 @@
     // 点赞
     self.thumbBtn.frame = topicFrame.thumbFrame;
     [self.thumbBtn setTitle:topic.thumbNumsString forState:UIControlStateNormal];
-    self.thumbBtn.enabled = !topic.isThumb;
+    self.thumbBtn.selected = topic.isThumb;
     
     // 更多
     self.moreBtn.frame = topicFrame.moreFrame;
@@ -149,7 +149,7 @@
     UIButton *thumbBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     thumbBtn.adjustsImageWhenHighlighted = NO;
     [thumbBtn setImage:MHImageNamed(@"comment_zan_nor") forState:UIControlStateNormal];
-    [thumbBtn setImage:MHImageNamed(@"comment_zan_high") forState:UIControlStateDisabled];
+    [thumbBtn setImage:MHImageNamed(@"comment_zan_high") forState:UIControlStateSelected];
     [thumbBtn setTitleColor:MHGlobalGrayTextColor forState:UIControlStateNormal];
     [thumbBtn setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
     [thumbBtn addTarget:self action:@selector(_thumbBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -208,9 +208,6 @@
 
 - (void)_thumbBtnDidClicked:(UIButton *)sender
 {
-    sender.enabled = NO;
-    self.topicFrame.topic.thumb = YES;
-    
     if (self.delegate && [self.delegate respondsToSelector:@selector(topicHeaderViewForClickedThumbAction:)]) {
         [self.delegate topicHeaderViewForClickedThumbAction:self];
     }

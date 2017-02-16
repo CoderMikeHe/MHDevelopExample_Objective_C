@@ -12,6 +12,9 @@
 
 @interface MHComment : NSObject
 
+/** 视频的id */
+@property (nonatomic , copy) NSString *mediabase_id;
+
 /** 评论、回复id */
 @property (nonatomic , copy) NSString * commentId;
 

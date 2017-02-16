@@ -160,6 +160,7 @@
 #pragma mark -  初始化数据，假数据
 - (void)_setupData
 {
+    NSDate *date = [NSDate date];
     // 初始化100条数据
     for (NSInteger i = 30; i>0; i--) {
         
@@ -168,7 +169,13 @@
         topic.topicId = [NSString stringWithFormat:@"%zd",i];
         topic.thumbNums = [NSObject mh_randomNumber:1000 to:100000];
         topic.thumb = [NSObject mh_randomNumber:0 to:1];
-        topic.creatTime = @"2017-01-07 18:18:18";
+        
+        // 构建时间假数据
+        NSTimeInterval t = date.timeIntervalSince1970 - 1000 *(30-i) - 60;
+        NSDate *d = [NSDate dateWithTimeIntervalSince1970:t];
+        NSDateFormatter *formatter = [NSDateFormatter mh_defaultDateFormatter];
+        NSString *creatTime = [formatter stringFromDate:d];
+        topic.creatTime = creatTime;
         topic.text = [self.textString substringFromIndex:[NSObject mh_randomNumber:0 to:self.textString.length-1]];
         topic.user = self.users[[NSObject mh_randomNumber:0 to:9]];
         
@@ -177,7 +184,7 @@
         for (NSInteger j = 0; j<commentsCount; j++) {
             MHComment *comment = [[MHComment alloc] init];
             comment.commentId = [NSString stringWithFormat:@"%zd%zd",i,j];
-            comment.creatTime = @"2017-01-07 18:18:18";
+            comment.creatTime = [NSDate mh_currentTimestamp];
             comment.text = [self.textString substringToIndex:[NSObject mh_randomNumber:0 to:30]];
             if (j%3==0) {
                 MHUser *toUser = self.users[[NSObject mh_randomNumber:0 to:5]];
@@ -364,6 +371,17 @@
      *
      */
     MHLog(@"---点击👍按钮---");
+    // 修改数据源方法
+    MHTopic *topic = topicHeaderView.topicFrame.topic;
+    topic.thumb = !topic.isThumb;
+    if (topic.isThumb) {
+        topic.thumbNums+=1;
+    }else{
+        topic.thumbNums-=1;
+    }
+    
+    // 刷新数据
+    [self.tableView reloadData];
 }
 
 - (void) topicHeaderViewDidClickedTopicContent:(MHTopicHeaderView *)topicHeaderView

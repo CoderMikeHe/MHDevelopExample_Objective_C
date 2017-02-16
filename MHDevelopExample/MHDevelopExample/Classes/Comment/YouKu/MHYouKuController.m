@@ -12,28 +12,68 @@
 #import "MHTopicFooterView.h"
 #import "MHCommentCell.h"
 #import "MHUserInfoController.h"
+#import "MHYouKuBottomToolBar.h"
+#import "MHYouKuTopicController.h"
 
 
-@interface MHYouKuController ()<UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate>
+@interface MHYouKuController ()<UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate,MHYouKuBottomToolBarDelegate,MHYouKuTopicControllerDelegate>
 
-/** MHTopicFrame 模型 */
-@property (nonatomic , strong) NSMutableArray *topicFrames;
+/** 顶部容器View   **/
+@property (nonatomic , strong) UIView *topContainer;
 
-/** UITableView */
-@property (nonatomic , weak) UITableView *tableView ;
+/** 底部容器View  **/
+@property (nonatomic , strong) UIView *bottomContainer;
 
-/** users */
-@property (nonatomic , strong) NSMutableArray *users;
+/** 话题控制器的容器View */
+@property (nonatomic , strong) UIView *topicContainer;
 
-/** textString */
-@property (nonatomic , copy) NSString *textString;
+/** Footer */
+@property (nonatomic , strong) UIButton *commentFooter;
+
+/** 返回按钮 **/
+@property (nonatomic , strong) MHBackButton *backBtn;
+
+/** tableView */
+@property (nonatomic , weak) UITableView *tableView;
+
+/** 视频toolBar **/
+@property (nonatomic , weak) MHYouKuBottomToolBar *bottomToolBar;
+
+/** 话题控制器 **/
+@property (nonatomic , weak) MHYouKuTopicController *topic;
+
+
+
+
+
+
+/** 视频id */
+@property (nonatomic , copy) NSString *mediabase_id;
+
 @end
 
 @implementation MHYouKuController
+
 - (void)dealloc
 {
     MHDealloc;
+    // 移除通知
+    [MHNotificationCenter removeObserver:self];
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+ 
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+}
+
 
 - (void)viewDidLoad
 {
@@ -41,17 +81,14 @@
     
     // 初始化
     [self _setup];
-    
-    // 初始化数据
-    [self _setupData];
-    
+
     // 设置导航栏
     [self _setupNavigationItem];
     
     // 设置子控件
     [self _setupSubViews];
     
-    // 监听通知中心
+     // 监听通知中心
     [self _addNotificationCenter];
     
 }
@@ -59,135 +96,65 @@
 
 
 #pragma mark - 私有方法
+
 #pragma mark - Getter
-- (NSMutableArray *)topicFrames
+
+- (UIView *)topContainer
 {
-    if (_topicFrames == nil) {
-        _topicFrames = [[NSMutableArray alloc] init];
+    if (_topContainer == nil) {
+        _topContainer = [[UIView alloc] init];
+        _topContainer.backgroundColor = [UIColor blackColor];
     }
-    return _topicFrames;
+    return _topContainer;
 }
 
-- (NSMutableArray *)users
+- (UIView *)bottomContainer
 {
-    if (_users == nil) {
-        _users = [[NSMutableArray alloc] init];
-        
-        MHUser *user0 = [[MHUser alloc] init];
-        user0.userId = @"1000";
-        user0.nickname = @"CoderMikeHe";
-        user0.avatarUrl = @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1206211006,1884625258&fm=58";
-        [_users addObject:user0];
-        
-        
-        MHUser *user1 = [[MHUser alloc] init];
-        user1.userId = @"1001";
-        user1.nickname = @"吴亦凡";
-        user1.avatarUrl = @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2625917416,3846475495&fm=58";
-        [_users addObject:user1];
-        
-        
-        MHUser *user2 = [[MHUser alloc] init];
-        user2.userId = @"1002";
-        user2.nickname = @"杨洋";
-        user2.avatarUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=413353707,3948222604&fm=58";
-        [_users addObject:user2];
-        
-        
-        MHUser *user3 = [[MHUser alloc] init];
-        user3.userId = @"1003";
-        user3.nickname = @"陈伟霆";
-        user3.avatarUrl = @"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3937650650,3185640398&fm=58";
-        [_users addObject:user3];
-        
-        
-        MHUser *user4 = [[MHUser alloc] init];
-        user4.userId = @"1004";
-        user4.nickname = @"张艺兴";
-        user4.avatarUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1691925636,1723246683&fm=58";
-        [_users addObject:user4];
-        
-        
-        MHUser *user5 = [[MHUser alloc] init];
-        user5.userId = @"1005";
-        user5.nickname = @"鹿晗";
-        user5.avatarUrl = @"https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=437161406,3838120455&fm=58";
-        [_users addObject:user5];
-        
-        
-        MHUser *user6 = [[MHUser alloc] init];
-        user6.userId = @"1006";
-        user6.nickname = @"杨幂";
-        user6.avatarUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1663450221,575161902&fm=58";
-        [_users addObject:user6];
-        
-        
-        MHUser *user7 = [[MHUser alloc] init];
-        user7.userId = @"1007";
-        user7.nickname = @"唐嫣";
-        user7.avatarUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1655233011,1466773944&fm=58";
-        [_users addObject:user7];
-        
-        
-        MHUser *user8 = [[MHUser alloc] init];
-        user8.userId = @"1008";
-        user8.nickname = @"刘亦菲";
-        user8.avatarUrl = @"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=3932899473,3078920054&fm=58";
-        [_users addObject:user8];
-        
-        
-        MHUser *user9 = [[MHUser alloc] init];
-        user9.userId = @"1009";
-        user9.nickname = @"林允儿";
-        user9.avatarUrl = @"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2961367360,923857578&fm=58";
-        [_users addObject:user9];
-        
+    if (_bottomContainer == nil) {
+        _bottomContainer = [[UIView alloc] init];
+        _bottomContainer.backgroundColor = [UIColor redColor];
     }
-    return _users;
+    return _bottomContainer;
 }
+
+// 返回按钮
+- (MHBackButton *)backBtn
+{
+    if (!_backBtn) {
+        _backBtn = [[MHBackButton alloc] init];
+        [_backBtn setImage:[UIImage imageNamed:@"player_back"] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+        [_backBtn addTarget:self action:@selector(_backBtnDidiClicked:) forControlEvents:UIControlEventTouchUpInside];
+        _backBtn.contentMode = UIViewContentModeCenter;
+    }
+    return _backBtn;
+}
+
+
+- (UIView *)topicContainer
+{
+    if (_topicContainer == nil) {
+        _topicContainer = [[UIView alloc] init];
+        _topicContainer.backgroundColor = [UIColor whiteColor];
+    }
+    return _topicContainer;
+}
+
 
 
 #pragma mark - 初始化
 - (void)_setup
 {
-    _textString = @"孤独之前是迷茫，孤独之后是成长；孤独没有不好，不接受孤独才不好；不合群是表面的孤独，合群了才是内心的孤独。那一天，在图书馆闲逛，书从中，这本书吸引了我，从那以后，睡前总会翻上几页。或许与初到一个陌生城市有关，或许因为近三十却未立而惆怅。孤独这个字眼对我而言，有着异常的吸引力。书中，作者以33段成长故事，描述了33种孤独，也带给了我们33次感怀。什么是孤独？孤独不仅仅是一个人，一间房，一张床。对未来迷茫，找不到前进的方向，是一种孤独；明知即将失去，徒留无奈，是一种孤独；回首来时的路，很多曾经在一起人与物，变得陌生而不识，这是一种孤独；即使心中很伤痛，却还笑着对身边人说，没事我很好，这也是一种孤独——第一次真正意识到，孤独与青春同在，与生活同在！孤独可怕吗？以前很害怕孤独，于是不断改变自己，去适应不同的人不同的事。却不曾想到，孤独也是需要去体验的。正如书中所说，孤独是你终将学会的相处方式。孤独，带给自己的是平静，是思考，而后是成长。于是开始懂得，去学会接受孤独，也接受内心中的自己，成长过程中的自己。我希望将来有一天，回首曾经过往时，可以对自己说，我的孤独，虽败犹荣！";
+    // 当前控制器 禁止侧滑 返回
+    self.fd_interactivePopDisabled = YES;
+    // hiden掉系统的导航栏
+    self.fd_prefersNavigationBarHidden = YES;
+    // 设置视频id 编号89757
+    _mediabase_id = @"89757";
+   
 }
 
 #pragma mark -  初始化数据，假数据
-- (void)_setupData
-{
-    // 初始化100条数据
-    for (NSInteger i = 30; i>0; i--) {
-        
-        // 话题
-        MHTopic *topic = [[MHTopic alloc] init];
-        topic.topicId = [NSString stringWithFormat:@"%zd",i];
-        topic.thumbNums = [NSObject mh_randomNumber:1000 to:100000];
-        topic.thumb = [NSObject mh_randomNumber:0 to:1];
-        topic.creatTime = @"2017-01-07 18:18:18";
-        topic.text = [self.textString substringFromIndex:[NSObject mh_randomNumber:0 to:self.textString.length-1]];
-        topic.user = self.users[[NSObject mh_randomNumber:0 to:9]];
-        
-        NSInteger commentsCount = [NSObject mh_randomNumber:0 to:15];
-        topic.commentsCount = commentsCount;
-        for (NSInteger j = 0; j<commentsCount; j++) {
-            MHComment *comment = [[MHComment alloc] init];
-            comment.commentId = [NSString stringWithFormat:@"%zd%zd",i,j];
-            comment.creatTime = @"2017-01-07 18:18:18";
-            comment.text = [self.textString substringToIndex:[NSObject mh_randomNumber:0 to:60]];
-            if (j%3==0) {
-                MHUser *toUser = self.users[[NSObject mh_randomNumber:0 to:5]];
-                comment.toUser = toUser;
-            }
-            
-            MHUser *fromUser = self.users[[NSObject mh_randomNumber:6 to:9]];
-            comment.fromUser = fromUser;
-            [topic.comments addObject:comment];
-        }
-        
-        [self.topicFrames addObject:[self _topicFrameWithTopic:topic]];
-    }
-}
 
 
 
@@ -196,30 +163,167 @@
 #pragma mark - 设置导航栏
 - (void)_setupNavigationItem
 {
-    self.title = @"评论回复 Demo1";
+    self.title = @"仿优酷视频的评论回复";
 }
 
 #pragma mark - 设置子控件
 - (void)_setupSubViews
 {
+    // 创建黑色状态条
+    [self _setupStatusBarView];
+    
+    // 创建顶部View
+    [self _setupTopContainerView];
+    
+    // 创建底部View
+    [self _setupBottomContainerView];
+    
+    
+    
+}
+
+// 创建statusBarView
+- (void)_setupStatusBarView
+{
+    UIView *statusBarView =  [[UIView alloc] init];
+    statusBarView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:statusBarView];
+    [statusBarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.and.top.equalTo(self.view);
+        make.height.mas_equalTo(20.0f);
+    }];
+    
+    // 创建视图view
+    [self _setupVideoBackgroundView];
+    
+    // 创建返回按钮
+    [self _setupBackButton];
+}
+
+// 初始化播放器View
+- (void)_setupTopContainerView
+{
+    [self.view addSubview:self.topContainer];
+    [self.topContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).with.offset(20);
+        make.left.right.equalTo(self.view);
+        make.height.mas_equalTo(self.topContainer.mas_width).multipliedBy(9.0f/16.0f);
+    }];
+}
+
+
+
+// 创建视频封面
+- (void)_setupVideoBackgroundView
+{
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.image = MHImageNamed(@"comment_loading_bgView");
+    [self.topContainer addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+}
+
+// 创建返回按钮
+- (void)_setupBackButton
+{
+    [self.topContainer addSubview:self.backBtn];
+    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.topContainer.mas_left).offset(20);
+        make.top.equalTo(self.topContainer).with.offset(0);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(44);
+    }];
+}
+
+
+// 底部View
+- (void)_setupBottomContainerView
+{
+    // 添加底部容器
+    [self.view addSubview:self.bottomContainer];
+    
+    // 布局
+    [self.bottomContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.topContainer.mas_bottom);
+        make.left.bottom.and.right.equalTo(self.view);
+    }];
+    
+    // 创建底部工具条
+    [self _setupBottomToolBar];
+    
     // 创建tableView
     [self _setupTableView];
+    
+    // 容器
+    [self _setupTopicContainer];
+    
+}
+
+// 创建底部工具条
+- (void)_setupBottomToolBar
+{
+    // 底部工具条
+    MHYouKuBottomToolBar *bottomToolBar = [[MHYouKuBottomToolBar alloc] init];
+    bottomToolBar.backgroundColor = [UIColor whiteColor];
+    bottomToolBar.delegate = self;
+    self.bottomToolBar = bottomToolBar;
+    [self.bottomContainer addSubview:bottomToolBar];
+    
+    // 布局工具条
+    [bottomToolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.and.right.equalTo(self.bottomContainer);
+        make.height.mas_equalTo(36.0f);
+    }];
+    
+    
+}
+
+
+// 初始化话题容器
+- (void)_setupTopicContainer
+{
+    // 容器
+    [self.bottomContainer addSubview:self.topicContainer];
+    
+    // 话题控制器
+    MHYouKuTopicController *topic = [[MHYouKuTopicController alloc] init];
+    topic.mediabase_id = self.mediabase_id;
+    topic.delegate = self;
+    [self.topicContainer addSubview:topic.view];
+    [self addChildViewController:topic];
+    [topic didMoveToParentViewController:self];
+    self.topic = topic;
+    
+    //
+    [self.topicContainer mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.and.right.equalTo(self.bottomContainer);
+        make.top.equalTo(self.bottomContainer.mas_bottom);
+        make.height.mas_equalTo(self.bottomContainer.mas_height);
+    }];
+    
+    // 布局
+    [topic.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
 }
 
 
 // 创建tableView
 - (void)_setupTableView
 {
+    // tableView
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:tableView];
+    [self.bottomContainer addSubview:tableView];
     self.tableView = tableView;
-    
+    // 布局
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.top.and.right.equalTo(self.view);
+        make.top.equalTo(self.bottomToolBar.mas_bottom);
+        make.left.bottom.and.right.equalTo(self.bottomContainer);
     }];
     
 }
@@ -232,8 +336,68 @@
     //
 }
 
+#pragma mark - 通知事件处理
+
+
+#pragma mark - 点击事件处理
+// 返回按钮点击
+- (void)_backBtnDidiClicked:(MHButton *)sender
+{
+    // 
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+// bottomToolBar的评论按钮点击
+- (void)_commentVideo
+{
+    // 显示话题控制器
+    [self _showTopicComment];
+    
+}
+
+
 
 #pragma mark - 辅助方法
+
+- (void)_showTopicComment
+{
+    [self.bottomContainer bringSubviewToFront:self.topContainer];
+    //
+    [self.topicContainer mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+    
+    // tell constraints they need updating
+    [self.view setNeedsUpdateConstraints];
+    
+    // update constraints now so we can animate the change
+    [self.view updateConstraintsIfNeeded];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)_hideTopicComment
+{
+    [self.topicContainer mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.and.right.equalTo(self.view);
+        make.top.equalTo(self.view.mas_bottom);
+        make.height.mas_equalTo(MHMainScreenHeight);
+    }];
+    
+    // tell constraints they need updating
+    [self.view setNeedsUpdateConstraints];
+    
+    // update constraints now so we can animate the change
+    [self.view updateConstraintsIfNeeded];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+
 /** topic --- topicFrame */
 - (MHTopicFrame *)_topicFrameWithTopic:(MHTopic *)topic
 {
@@ -249,127 +413,73 @@
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.topicFrames.count;
+    return 0;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.commentFrames.count;
+    return 0;
 }
 
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MHCommentCell *cell = [MHCommentCell cellWithTableView:tableView];
-    MHTopicFrame *topicFrame = self.topicFrames[indexPath.section];
-    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
-    cell.commentFrame = commentFrame;
-    cell.delegate = self;
-    return cell;
+    return nil;
 }
 
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+#pragma mark - MHYouKuBottomToolBarDelegate
+- (void) bottomToolBar:(MHYouKuBottomToolBar *)bottomToolBar didClickedButtonWithType:(MHYouKuBottomToolBarType)type
 {
-    MHTopicHeaderView *headerView = [MHTopicHeaderView headerViewWithTableView:tableView];
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    headerView.topicFrame = topicFrame;
-    headerView.delegate = self;
-    return headerView;
+    switch (type) {
+        case MHYouKuBottomToolBarTypeThumb:
+        {
+            //
+            MHLog(@"++ 点赞 ++")
+        }
+            break;
+        case MHYouKuBottomToolBarTypeComment:
+        {
+            // 评论
+            MHLog(@"++ 评论 ++")
+            [self _commentVideo];
+        }
+            break;
+        case MHYouKuBottomToolBarTypeCollect:
+        {
+            // 收藏
+            MHLog(@"++ 收藏 ++")
+        }
+            break;
+        case MHYouKuBottomToolBarTypeShare:
+        {
+            // 分享
+            MHLog(@"++ 分享 ++")
+        }
+            break;
+        case MHYouKuBottomToolBarTypeDownload:
+        {
+            // 下载
+            MHLog(@"++ 下载 ++")
+        }
+            break;
+        default:
+            break;
+    }
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+#pragma mark - MHYouKuTopicControllerDelegate
+- (void)topicControllerForCloseAction:(MHYouKuTopicController *)topicController
 {
-    MHTopicFooterView *footerView = [MHTopicFooterView footerViewWithTableView:tableView];
-    [footerView setSection:section allSections:self.topicFrames.count];
-    return footerView;
+    // 隐藏
+    [self _hideTopicComment];
 }
 
 
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - Override
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
-    MHTopicFrame *topicFrame = self.topicFrames[indexPath.section];
-    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
-    return commentFrame.cellHeight;
+    return UIStatusBarStyleLightContent;
 }
-
-
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.height;
-}
-
-
-- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    
-    MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.commentFrames.count>0? MHVideoTopicVerticalSpace:MHGlobalBottomLineHeight;
-}
-
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    MHTopicFrame *topicFrame = self.topicFrames[indexPath.section];
-    MHCommentFrame *commentFrame = topicFrame.commentFrames[indexPath.row];
-    
-    MHUser *fromUser = commentFrame.comment.fromUser;
-    
-    MHLog(@"这里回复 -- :%@",fromUser.nickname);
-    /**
-     * 这里点击事件自行根据自己UI处理
-     *
-     */
-}
-
-
-#pragma mark - MHCommentCellDelegate
-- (void)commentCell:(MHCommentCell *)commentCell didClickedUser:(MHUser *)user
-{
-    MHUserInfoController *userInfo = [[MHUserInfoController alloc] init];
-    userInfo.user = user;
-    [self.navigationController pushViewController:userInfo animated:YES];
-}
-
-#pragma mark - MHTopicHeaderViewDelegate
-- (void) topicHeaderViewDidClickedUser:(MHTopicHeaderView *)topicHeaderView
-{
-    MHUserInfoController *userInfo = [[MHUserInfoController alloc] init];
-    userInfo.user = topicHeaderView.topicFrame.topic.user;
-    [self.navigationController pushViewController:userInfo animated:YES];
-}
-
-- (void) topicHeaderViewForClickedMoreAction:(MHTopicHeaderView *)topicHeaderView
-{
-    /**
-     * 这里点击事件自行根据自己UI处理
-     *
-     */
-    MHLog(@"---点击更多按钮---");
-    
-}
-
-- (void) topicHeaderViewForClickedThumbAction:(MHTopicHeaderView *)topicHeaderView
-{
-    /**
-     * 这里点击事件自行根据自己UI处理
-     *
-     */
-    MHLog(@"---点击👍按钮---");
-}
-
-- (void) topicHeaderViewDidClickedTopicContent:(MHTopicHeaderView *)topicHeaderView
-{
-    MHLog(@"这里评论 -- :%@的帖子",topicHeaderView.topicFrame.topic.user.nickname);
-    /**
-     * 这里点击事件自行根据自己UI处理
-     *
-     */
-}
-
 
 @end

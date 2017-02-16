@@ -8,19 +8,44 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Masonry.h"
-#import "Colours.h"
-#import "YYText.h"
-#import "MHImageView.h"
-#import "MHDivider.h"
+
+// category
 #import "UIBarButtonItem+MHExtension.h"
 #import "UIView+MH.h"
 #import "UIFont+MHExtension.h"
 #import "NSString+MH.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "MHWebImageTool.h"
 #import "NSObject+MH.h"
+#import "Colours.h"
+#import "UIImage+MH.h"
+#import "UIViewController+MHDismissKeyboard.h"
+#import "UIViewController+MHHUD.h"
+#import "NSDate+Extension.h"
+#import "MBProgressHUD+MH.h"
+
+
+// tool
+#import "MHWebImageTool.h"
+#import "MHSingleton.h"
+#import "Masonry.h"
+
+// UIKit
 #import "MHButton.h"
+#import "YYText.h"
+#import "MHImageView.h"
+#import "MHDivider.h"
+#import "MHBackButton.h"
+
+// 模型
+#import "AppDelegate.h"
+
+
+
+/**
+ *  通知中心
+ */
+#define MHNotificationCenter [NSNotificationCenter defaultCenter]
+
 
 /**
  * 设置颜色
@@ -70,6 +95,22 @@ UIKIT_EXTERN CGFloat const MHGlobalBottomLineHeight;
  *  UIView 动画时长
  */
 UIKIT_EXTERN NSTimeInterval const MHAnimateDuration ;
+
+/**
+ *  全局控制器顶部间距 10
+ */
+UIKIT_EXTERN CGFloat const MHGlobalViewTopInset;
+
+/**
+ *  全局控制器左边间距 12
+ */
+UIKIT_EXTERN CGFloat const MHGlobalViewLeftInset;
+
+/**
+ *  全局控制器中间间距 10
+ */
+UIKIT_EXTERN CGFloat const MHGlobalViewInterInset;
+
 
 /**
  *  全局默认头像
@@ -133,3 +174,50 @@ UIKIT_EXTERN NSString * const MHVideoAllCommentsId ;
 
 /** 评论用户的key */
 UIKIT_EXTERN NSString * const MHCommentUserKey ;
+
+
+/** 评论高度 */
+UIKIT_EXTERN CGFloat const MHCommentHeaderViewHeight;
+
+/** 评论工具高度 */
+UIKIT_EXTERN CGFloat const MHCommentToolBarHeight    ;
+
+/** 最大字数 */
+UIKIT_EXTERN NSInteger const MHCommentMaxWords    ;
+
+/** 每页数据 */
+UIKIT_EXTERN NSUInteger const MHCommentMaxCount ;
+
+/** 弹出评论框View最小距离 */
+UIKIT_EXTERN CGFloat const MHTopicCommentToolBarMinHeight ;
+
+/** 弹出评论框View的除了编辑框的高度 */
+UIKIT_EXTERN CGFloat const MHTopicCommentToolBarWithNoTextViewHeight ;
+
+
+/** 视频评论成功的通知 */
+UIKIT_EXTERN NSString * const MHCommentSuccessNotification ;
+/** 视频评论成功Key */
+UIKIT_EXTERN NSString * const MHCommentSuccessKey ;
+
+/** 视频点赞成功的通知 */
+UIKIT_EXTERN NSString * const MHThumbSuccessNotification ;
+
+
+
+/** 视频评论回复成功的通知 */
+UIKIT_EXTERN NSString * const MHCommentReplySuccessNotification ;
+/** 视频评论回复成功Key */
+UIKIT_EXTERN NSString * const MHCommentReplySuccessKey ;
+
+/** 视频评论获取成功的事件 */
+UIKIT_EXTERN NSString * const MHCommentRequestDataSuccessNotification  ;
+/** 视频评论获取成功的事件 */
+UIKIT_EXTERN NSString * const MHCommentRequestDataSuccessKey  ;
+
+
+/** 弹出评论框View距离顶部的最小高度 */
+#define MHTopicCommentToolBarMinTopInset (MHMainScreenWidth * 9.0f/16.0f + 20)
+
+
+

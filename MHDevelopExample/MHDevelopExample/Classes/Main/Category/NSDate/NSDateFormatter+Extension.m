@@ -23,6 +23,6 @@
 
 + (instancetype)mh_defaultDateFormatter
 {
-    return [self mh_dateFormatterWithFormat:@"yyyy/MM/dd HH:mm:ss"];
+    return [self mh_dateFormatterWithFormat:@"yyyy-MM-dd HH:mm:ss"];
 }
 @end

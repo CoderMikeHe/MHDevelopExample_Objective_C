@@ -87,7 +87,7 @@
          */
         MHExample *commentExample = [[MHExample alloc] init];
         commentExample.header = @"二、微信朋友圈评论回复功能";
-        commentExample.titles = @[@"1.1 cell里面不嵌套UITableView",@"1.2 cell里面嵌套UITableView",@"1.3 仿优酷视频的评论回复"];
+        commentExample.titles = @[@"1.1 cell里面不嵌套UITableView",@"1.2 cell里面嵌套UITableView",@"1.3 仿优酷视频的评论回复 Doing....."];
         commentExample.classes = @[@"MHTopicOneController",@"MHTopicTwoController",@"MHYouKuController"];
         [_examples addObject:commentExample];
         
@@ -96,7 +96,6 @@
          三、UITableView常见的使用场景
          1.1 tableView的左滑删除功能
          1.2 tableView的多选删除功能
-         1.3
          */
         MHExample *tableViewExample = [[MHExample alloc] init];
         tableViewExample.header = @"三、UITableView常见的使用场景";

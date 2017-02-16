@@ -5,9 +5,9 @@
 //  Created by CoderMikeHe on 17/2/10.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
 /**
- _________________
- |  文字    |  图片  |
- -----------------
+___________________
+|  文字   |  图片   |
+-------------------
  */
 
 #import <UIKit/UIKit.h>

@@ -11,6 +11,8 @@
 #import "MHUser.h"
 
 @interface MHTopic : NSObject
+/** 视频的id */
+@property (nonatomic , copy) NSString *mediabase_id;
 
 /** 话题id */
 @property (nonatomic , copy) NSString * topicId;

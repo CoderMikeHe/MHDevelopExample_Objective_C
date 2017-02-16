@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MHTopic.h"
+#import "MHCommentReply.h"
 #import "MHCommentFrame.h"
 
 @interface MHTopicFrame : NSObject

@@ -9,6 +9,18 @@
 #import "MHComment.h"
 
 @implementation MHComment
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _mediabase_id = @"89757";
+    }
+    return self;
+}
+
+
 - (NSAttributedString *)attributedText
 {
     // 这个属性是  仿优酷视频评论，不是仿优酷的请自行忽略
@@ -16,11 +28,11 @@
         
         // 测试数据
         NSString *textString = [NSString stringWithFormat:@"%@",self.text];
+        
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
         mutableAttributedString.yy_font = MHVideoCommentTextFont;
         mutableAttributedString.yy_color = MHGlobalOrangeTextColor;
         mutableAttributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
-        
         return mutableAttributedString;
     }
     
