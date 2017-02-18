@@ -21,8 +21,21 @@
 
 ### 功能模块
 1. **父子控制器的使用**
-    * 仿百思不得姐的架构实现（TODO...）
+    * 仿百思不得姐的架构实现
+    
+    	- 效果图
+    		
+    		![BaiSiBuDeJie.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/BaiSiBuDeJie.gif)
+    		
+    	- 说明文档：（TOOD...）
+    	
     * 仿网易新闻的架构实现（TODO...）
+    
+    	- 效果图
+    	
+    		![NetEaseNews.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/NetEaseNews.gif)
+    	
+    	- 说明文档：（TOOD...）
   
 2. **仿微信朋友圈的评论回复功能**
 	* 利用UITableView的段头+Cell+段尾实现
@@ -41,7 +54,12 @@
 			
 		- 说明文档：[iOS实现微信朋友圈评论回复功能（二）](http://www.jianshu.com/p/733733fd042d)
 	
-	* 利用UITableView的段头+Cell+段尾实现优酷的视频的评论回复功能（TODO...）
+	* 利用UITableView的段头+Cell+段尾实现优酷的视频的评论回复功能
+		- 效果图
+	
+			![youkuComment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/youkuComment.gif)
+			
+		- 说明文档：（TOOD...）
 		
 	
 3. **UITableView的使用**

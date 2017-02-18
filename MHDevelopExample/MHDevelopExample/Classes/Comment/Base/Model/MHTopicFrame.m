@@ -58,28 +58,28 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
     // 头像
-    CGFloat avatarX = MHVideoTopicHorizontalSpace;
-    CGFloat avatarY = MHVideoTopicVerticalSpace;
-    CGFloat avatarW = MHVideoTopicAvatarWH;
-    CGFloat avatarH = MHVideoTopicAvatarWH;
+    CGFloat avatarX = MHTopicHorizontalSpace;
+    CGFloat avatarY = MHTopicVerticalSpace;
+    CGFloat avatarW = MHTopicAvatarWH;
+    CGFloat avatarH = MHTopicAvatarWH;
     self.avatarFrame = (CGRect){{avatarX , avatarY},{avatarW , avatarH}};
     
     // 布局更多
-    CGFloat moreW = MHVideoTopicMoreButtonW;
+    CGFloat moreW = MHTopicMoreButtonW;
     CGFloat moreX = width - moreW;
     CGFloat moreY = avatarY;
     CGFloat moreH = avatarH * .5f;
     self.moreFrame = CGRectMake(moreX, moreY, moreW, moreH);
     
     // 布局点赞按钮
-    CGFloat thumbW = topic.thumbNumsString?([topic.thumbNumsString mh_sizeWithFont:MHVideoTopicZanFont].width + 30):44;
+    CGFloat thumbW = topic.thumbNumsString?([topic.thumbNumsString mh_sizeWithFont:MHTopicThumbFont].width + 30):44;
     CGFloat thumbX = CGRectGetMinX(self.moreFrame) - thumbW;
     CGFloat thumbY = avatarY;
     CGFloat thumbH = moreH;
     self.thumbFrame = CGRectMake(thumbX, thumbY, thumbW, thumbH);
     
     // 昵称
-    CGFloat nicknameX = CGRectGetMaxX(self.avatarFrame)+MHVideoTopicHorizontalSpace;
+    CGFloat nicknameX = CGRectGetMaxX(self.avatarFrame)+MHTopicHorizontalSpace;
     CGFloat nicknameY = avatarY;
     CGFloat nicknameW = CGRectGetMinX(self.thumbFrame) - nicknameX;
     CGFloat nicknameH = moreH;
@@ -94,9 +94,9 @@
     
     // 内容
     CGFloat textX = nicknameX;
-    CGSize textLimitSize = CGSizeMake(width - textX - MHVideoTopicHorizontalSpace, MAXFLOAT);
+    CGSize textLimitSize = CGSizeMake(width - textX - MHTopicHorizontalSpace, MAXFLOAT);
     CGFloat textY = CGRectGetMaxY(self.nicknameFrame)+CGRectGetHeight(self.nicknameFrame);
-    CGFloat textH = [YYTextLayout layoutWithContainerSize:textLimitSize text:topic.attributedText].textBoundingSize.height+MHVideoTopicVerticalSpace+MHVideoTopicVerticalSpace;
+    CGFloat textH = [YYTextLayout layoutWithContainerSize:textLimitSize text:topic.attributedText].textBoundingSize.height+MHTopicVerticalSpace+MHTopicVerticalSpace;
     
     self.textFrame = (CGRect){{textX , textY} , {textLimitSize.width, textH}};
     

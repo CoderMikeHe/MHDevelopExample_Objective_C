@@ -9,7 +9,7 @@
 #import "MHViewController.h"
 
 
-@class MHYouKuTopicController;
+@class MHYouKuTopicController,MHYouKuCommentItem;
 
 @protocol MHYouKuTopicControllerDelegate <NSObject>
 
@@ -28,6 +28,7 @@
 
 /** 视频id */
 @property (nonatomic , copy) NSString *mediabase_id;
-
+/** 刷新评论数 */
+- (void) refreshCommentsWithCommentItem:(MHYouKuCommentItem *)commentItem;
 
 @end

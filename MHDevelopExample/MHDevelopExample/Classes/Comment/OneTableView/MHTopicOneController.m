@@ -318,7 +318,7 @@
 {
 
     MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.commentFrames.count>0? MHVideoTopicVerticalSpace:MHGlobalBottomLineHeight;
+    return topicFrame.commentFrames.count>0? MHTopicVerticalSpace:MHGlobalBottomLineHeight;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

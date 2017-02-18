@@ -27,14 +27,14 @@
     _comment = comment;
     
     // 文本内容
-    CGFloat textX = MHVideoCommentHorizontalSpace;
-    CGFloat textY = MHVideoCommentVerticalSpace;
+    CGFloat textX = MHCommentHorizontalSpace;
+    CGFloat textY = MHCommentVerticalSpace;
     CGSize  textLimitSize = CGSizeMake(self.maxW - 2 *textX, MAXFLOAT);
     CGFloat textH = [YYTextLayout layoutWithContainerSize:textLimitSize text:comment.attributedText].textBoundingSize.height;
     
     self.textFrame = (CGRect){{textX , textY} , {textLimitSize.width , textH}};
     
-    self.cellHeight = CGRectGetMaxY(self.textFrame) + MHVideoCommentVerticalSpace;
+    self.cellHeight = CGRectGetMaxY(self.textFrame) + MHCommentVerticalSpace;
 }
 
 @end

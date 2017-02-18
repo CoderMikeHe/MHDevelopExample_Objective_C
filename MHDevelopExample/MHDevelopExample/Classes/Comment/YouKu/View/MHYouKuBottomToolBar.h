@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class MHYouKuBottomToolBar;
+
+@class MHYouKuBottomToolBar,MHYouKuMedia;
 
 typedef NS_ENUM(NSUInteger, MHYouKuBottomToolBarType) {
     MHYouKuBottomToolBarTypeThumb = 10, // 点赞
@@ -33,5 +34,7 @@ typedef NS_ENUM(NSUInteger, MHYouKuBottomToolBarType) {
 /** 代理 */
 @property (nonatomic , weak) id <MHYouKuBottomToolBarDelegate> delegate;
 
+/** 模型 */
+@property (nonatomic , strong) MHYouKuMedia *media;
 
 @end

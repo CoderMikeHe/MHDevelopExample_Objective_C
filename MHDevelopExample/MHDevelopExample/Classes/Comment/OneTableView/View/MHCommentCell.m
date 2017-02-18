@@ -123,8 +123,8 @@
 #pragma mark - override
 - (void)setFrame:(CGRect)frame
 {
-    frame.origin.x = MHVideoTopicAvatarWH+2*MHVideoTopicHorizontalSpace;
-    frame.size.width = MHMainScreenWidth - frame.origin.x - MHVideoTopicHorizontalSpace;
+    frame.origin.x = MHTopicAvatarWH+2*MHTopicHorizontalSpace;
+    frame.size.width = MHMainScreenWidth - frame.origin.x - MHTopicHorizontalSpace;
     [super setFrame:frame];
 }
 

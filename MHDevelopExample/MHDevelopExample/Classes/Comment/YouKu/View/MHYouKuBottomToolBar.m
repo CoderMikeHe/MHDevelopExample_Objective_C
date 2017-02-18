@@ -8,11 +8,14 @@
 
 #import "MHYouKuBottomToolBar.h"
 #import "MHYouKuVerticalSeparateButton.h"
+#import "MHYouKuMedia.h"
 
 @interface MHYouKuBottomToolBar ()
 
+
+
 /** 点赞 */
-@property (nonatomic , weak) MHYouKuVerticalSeparateButton * likeBtn;
+@property (nonatomic , weak) MHYouKuVerticalSeparateButton * thumbBtn;
 
 /** 评论 **/
 @property (nonatomic , weak) MHYouKuVerticalSeparateButton *commentBtn;
@@ -37,7 +40,22 @@
 
 
 @implementation MHYouKuBottomToolBar
+#pragma mark - 公共方法
+- (void)setMedia:(MHYouKuMedia *)media
+{
+    _media = media;
+    
+    self.thumbBtn.selected = media.isThumb;
+    [self.thumbBtn setTitle:media.thumbNumsString forState:UIControlStateNormal];
+    
+    
+    [self.commentBtn setTitle:media.commentNumsString forState:UIControlStateNormal];
+    
+}
 
+
+
+#pragma mark - 私有方法
 
 #pragma mark - 懒加载
 - (NSMutableArray *)buttons
@@ -49,12 +67,6 @@
     return _buttons;
 }
 
-
-
-+ (instancetype)playerContentToolBar
-{
-    return [[self alloc] init];
-}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -83,8 +95,8 @@
 - (void)_setupSubViews
 {
     // 分享按钮
-    self.likeBtn = [self _setupButtonWithTitle:@"0" imageName:@"mh_thumb" selectedImageName:@"mh_thumb_sel" type:MHYouKuBottomToolBarTypeThumb];
-    [self.likeBtn showRightSeparate];
+    self.thumbBtn = [self _setupButtonWithTitle:@"0" imageName:@"mh_thumb" selectedImageName:@"mh_thumb_sel" type:MHYouKuBottomToolBarTypeThumb];
+    [self.thumbBtn showRightSeparate];
     
     // 评论
     self.commentBtn = [self _setupButtonWithTitle:@"0" imageName:@"mh_comment" selectedImageName:nil type:MHYouKuBottomToolBarTypeComment];

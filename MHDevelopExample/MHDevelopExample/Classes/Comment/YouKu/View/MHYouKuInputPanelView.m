@@ -488,7 +488,7 @@
 #pragma mark - 编辑框将要到那个高度
 - (void)_bottomToolBarWillChangeHeight:(CGFloat)toHeight
 {
-    // 需要加上 MHVideoTopicCommentToolBarWithNoTextViewHeight才是bottomToolBarHeight
+    // 需要加上 MHTopicCommentToolBarWithNoTextViewHeight才是bottomToolBarHeight
     toHeight = toHeight + MHTopicCommentToolBarWithNoTextViewHeight;
     
     if (toHeight < MHTopicCommentToolBarMinHeight || self.textView.attributedText.length == 0)
@@ -560,9 +560,7 @@
         // 把内容调回去
         [self.delegate inputPanelView:self attributedText:self.textView.text];
     }
-    //
-    self.bottomView.hidden = YES;
-    
+
     // 隐藏
     [self dismissByUser:YES];
 }
@@ -574,7 +572,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.35f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        //
+        // 从父控件移除
         [self removeFromSuperview];
         
     });

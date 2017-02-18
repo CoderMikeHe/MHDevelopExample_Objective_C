@@ -43,7 +43,7 @@
     // 布局子控件
     self.imageView.mh_x = self.imageOffsetX;
     
-    self.titleLabel.mh_x = self.imageView.mh_width + self.margin;
+    self.titleLabel.mh_x = CGRectGetMaxX(self.imageView.frame) + self.margin;
     
 }
 

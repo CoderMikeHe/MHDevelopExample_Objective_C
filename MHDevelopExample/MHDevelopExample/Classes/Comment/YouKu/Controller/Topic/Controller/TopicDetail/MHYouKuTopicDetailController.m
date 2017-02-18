@@ -49,6 +49,16 @@
     MHDealloc;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // fix:修改侧滑返回时 该界面的导航栏隐藏的bug 之前是写在_setup里面
+    self.fd_prefersNavigationBarHidden = NO;
+    
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -73,6 +83,9 @@
 
 
 #pragma mark - 私有方法
+
+#pragma mark - Getter
+
 - (NSMutableArray *)users
 {
     if (_users == nil) {
@@ -152,9 +165,26 @@
     return _users;
 }
 
+- (NSMutableArray *)commentFrames
+{
+    if (_commentFrames == nil) {
+        _commentFrames = [[NSMutableArray alloc] init];
+    }
+    return _commentFrames;
+}
 
-#pragma mark - 请求数据
-// 假数据
+
+
+#pragma mark - 初始化
+- (void)_setup
+{
+    _textString = @"孤独之前是迷茫，孤独之后是成长；孤独没有不好，不接受孤独才不好；不合群是表面的孤独，合群了才是内心的孤独。那一天，在图书馆闲逛，书从中，这本书吸引了我，从那以后，睡前总会翻上几页。或许与初到一个陌生城市有关，或许因为近三十却未立而惆怅。孤独这个字眼对我而言，有着异常的吸引力。书中，作者以33段成长故事，描述了33种孤独，也带给了我们33次感怀。什么是孤独？孤独不仅仅是一个人，一间房，一张床。对未来迷茫，找不到前进的方向，是一种孤独；明知即将失去，徒留无奈，是一种孤独；回首来时的路，很多曾经在一起人与物，变得陌生而不识，这是一种孤独；即使心中很伤痛，却还笑着对身边人说，没事我很好，这也是一种孤独——第一次真正意识到，孤独与青春同在，与生活同在！孤独可怕吗？以前很害怕孤独，于是不断改变自己，去适应不同的人不同的事。却不曾想到，孤独也是需要去体验的。正如书中所说，孤独是你终将学会的相处方式。孤独，带给自己的是平静，是思考，而后是成长。于是开始懂得，去学会接受孤独，也接受内心中的自己，成长过程中的自己。我希望将来有一天，回首曾经过往时，可以对自己说，我的孤独，虽败犹荣！";
+    
+    self.fd_prefersNavigationBarHidden = NO;
+    
+}
+
+#pragma mark -  假数据
 - (void)_setupData
 {
     NSInteger count = self.topicFrame.topic.commentsCount;
@@ -173,7 +203,7 @@
         comment.fromUser = fromUser;
         [comments addObject:comment];
     }
-
+    
     NSArray *newCommentFrames = [[MHTopicManager sharedManager] commentFramesWithComments:comments];
     
     // 将新数据插入到旧数据的最前面
@@ -190,59 +220,8 @@
     
 }
 
-- (void)_loadNewData
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.35f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [self.tableView.mj_header endRefreshing];
-        // 刷新数据
-        [self.tableView reloadData];
-    });
-}
-
-- (void)_loadMoreData
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.35f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        [self.tableView.mj_footer endRefreshing];
-        // 刷新数据
-        [self.tableView reloadData];
-    });
-}
 
 
-#pragma mark - 事件处理
-- (void)_commentBtnDidClicked:(MHYouKuCommentButton *)sender
-{
-    // 评论跳转到评论
-    MHCommentReply *commentReply =  [[MHTopicManager sharedManager] commentReplyWithModel:self.topicFrame.topic];
-    // 回复
-    [self _replyCommentWithCommentReply:commentReply];
-}
-
-
-- (void)_thumbBtnDidClicked:(UIButton *)sender
-{
-    // 评论
-    [self _thumb];
-}
-
-#pragma mark - Getter
-- (NSMutableArray *)commentFrames
-{
-    if (_commentFrames == nil) {
-        _commentFrames = [[NSMutableArray alloc] init];
-    }
-    return _commentFrames;
-}
-
-
-
-#pragma mark - 初始化
-- (void)_setup
-{
-    _textString = @"孤独之前是迷茫，孤独之后是成长；孤独没有不好，不接受孤独才不好；不合群是表面的孤独，合群了才是内心的孤独。那一天，在图书馆闲逛，书从中，这本书吸引了我，从那以后，睡前总会翻上几页。或许与初到一个陌生城市有关，或许因为近三十却未立而惆怅。孤独这个字眼对我而言，有着异常的吸引力。书中，作者以33段成长故事，描述了33种孤独，也带给了我们33次感怀。什么是孤独？孤独不仅仅是一个人，一间房，一张床。对未来迷茫，找不到前进的方向，是一种孤独；明知即将失去，徒留无奈，是一种孤独；回首来时的路，很多曾经在一起人与物，变得陌生而不识，这是一种孤独；即使心中很伤痛，却还笑着对身边人说，没事我很好，这也是一种孤独——第一次真正意识到，孤独与青春同在，与生活同在！孤独可怕吗？以前很害怕孤独，于是不断改变自己，去适应不同的人不同的事。却不曾想到，孤独也是需要去体验的。正如书中所说，孤独是你终将学会的相处方式。孤独，带给自己的是平静，是思考，而后是成长。于是开始懂得，去学会接受孤独，也接受内心中的自己，成长过程中的自己。我希望将来有一天，回首曾经过往时，可以对自己说，我的孤独，虽败犹荣！";
-}
 
 #pragma mark - 设置导航栏
 - (void)_setupNavigationItem
@@ -262,9 +241,6 @@
     [self _setupCommentView];
 }
 
-
-
-
 // 创建tableView
 - (void)_setupTableView
 {
@@ -282,6 +258,7 @@
     
     // 下拉刷新控件
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(_loadNewData)];
+    header.automaticallyChangeAlpha = YES;
     tableView.mj_header = header;
     
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(_loadMoreData)];
@@ -383,8 +360,47 @@
 
 #pragma mark - 添加通知中心
 - (void)_addNotificationCenter
+{ 
+}
+
+
+#pragma mark - 请求数据
+
+- (void)_loadNewData
 {
-    //
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.35f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.tableView.mj_header endRefreshing];
+        // 刷新数据
+        [self.tableView reloadData];
+    });
+}
+
+- (void)_loadMoreData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.35f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.tableView.mj_footer endRefreshing];
+        // 刷新数据
+        [self.tableView reloadData];
+    });
+}
+
+
+#pragma mark - 事件处理
+- (void)_commentBtnDidClicked:(MHYouKuCommentButton *)sender
+{
+    // 评论跳转到评论
+    MHCommentReply *commentReply =  [[MHTopicManager sharedManager] commentReplyWithModel:self.topicFrame.topic];
+    // 回复
+    [self _replyCommentWithCommentReply:commentReply];
+}
+
+
+- (void)_thumbBtnDidClicked:(UIButton *)sender
+{
+    // 评论
+    [self _thumb];
 }
 
 
@@ -406,11 +422,11 @@
     // 刷新数据
     MHTopicHeaderView *headerView = (MHTopicHeaderView *)self.tableView.tableHeaderView;
     headerView.topicFrame = self.topicFrame;
-    
     // 刷新数据
     [MHNotificationCenter postNotificationName:MHThumbSuccessNotification object:nil];
     
 }
+
 
 /** 评论回复 */
 - (void)_replyCommentWithCommentReply:(MHCommentReply *)commentReply
@@ -618,5 +634,7 @@
     // 回复
     [self _replyCommentWithCommentReply:commentReply];
 }
+
+
 
 @end

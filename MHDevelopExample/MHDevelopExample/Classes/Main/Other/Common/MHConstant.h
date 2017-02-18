@@ -135,41 +135,41 @@ UIKIT_EXTERN CGFloat const MHTopicLabelAlpha;
 // 仿微信朋友圈评论和回复
 // 段头+cell+表头
 /**  话题头像宽高 */
-UIKIT_EXTERN CGFloat const MHVideoTopicAvatarWH ;
+UIKIT_EXTERN CGFloat const MHTopicAvatarWH ;
 /**  话题水平方向间隙 */
-UIKIT_EXTERN CGFloat const MHVideoTopicHorizontalSpace;
+UIKIT_EXTERN CGFloat const MHTopicHorizontalSpace;
 /**  话题垂直方向间隙 */
-UIKIT_EXTERN CGFloat const MHVideoTopicVerticalSpace ;
+UIKIT_EXTERN CGFloat const MHTopicVerticalSpace ;
 /**  话题更多按钮宽 */
-UIKIT_EXTERN CGFloat const MHVideoTopicMoreButtonW ;
+UIKIT_EXTERN CGFloat const MHTopicMoreButtonW ;
 
 
 /**  话题内容字体大小 */
-#define MHVideoTopicTextFont MHMediumFont(12.0f)
+#define MHTopicTextFont MHMediumFont(12.0f)
 /**  话题昵称字体大小 */
-#define MHVideoTopicNicknameFont MHMediumFont(10.0f)
+#define MHTopicNicknameFont MHMediumFont(10.0f)
 /**  话题点赞字体大小 */
-#define MHVideoTopicZanFont MHMediumFont(10.0f)
+#define MHTopicThumbFont MHMediumFont(10.0f)
 /**  话题时间字体大小 */
-#define MHVideoTopicCreateTimeFont MHMediumFont(10.0f)
+#define MHTopicCreateTimeFont MHMediumFont(10.0f)
 
 
 
 
 /**  评论水平方向间隙 */
-UIKIT_EXTERN CGFloat const MHVideoCommentHorizontalSpace ;
+UIKIT_EXTERN CGFloat const MHCommentHorizontalSpace ;
 /**  评论垂直方向间隙 */
-UIKIT_EXTERN CGFloat const MHVideoCommentVerticalSpace;
+UIKIT_EXTERN CGFloat const MHCommentVerticalSpace;
 
 /**  评论内容字体大小 */
-#define MHVideoCommentTextFont MHMediumFont(12.0f)
+#define MHCommentTextFont MHMediumFont(12.0f)
 
 /** 文本行高 */
-UIKIT_EXTERN CGFloat const  MHVideoCommentContentLineSpacing;
+UIKIT_EXTERN CGFloat const  MHCommentContentLineSpacing;
 
 
 /** 评论假数据 */
-UIKIT_EXTERN NSString * const MHVideoAllCommentsId ;
+UIKIT_EXTERN NSString * const MHAllCommentsId ;
 
 
 /** 评论用户的key */
@@ -220,4 +220,12 @@ UIKIT_EXTERN NSString * const MHCommentRequestDataSuccessKey  ;
 #define MHTopicCommentToolBarMinTopInset (MHMainScreenWidth * 9.0f/16.0f + 20)
 
 
+/** titleView高度 */
+UIKIT_EXTERN CGFloat const MHRecommendTitleViewHeight;
+/** 选集view高度 */
+UIKIT_EXTERN CGFloat const MHRecommendAnthologyViewHeight;
+/** 选集纯文本HeaderView高度 */
+UIKIT_EXTERN CGFloat const MHRecommendAnthologyHeaderViewHeight;
 
+/** 评论高度 */
+UIKIT_EXTERN CGFloat const MHRecommendCommentHeaderViewHeight;

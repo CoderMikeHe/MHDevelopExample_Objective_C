@@ -141,7 +141,7 @@
     // 头像
     MHImageView *avatarView = [MHImageView imageView];
     
-    avatarView.layer.cornerRadius = MHVideoTopicAvatarWH*.5f;
+    avatarView.layer.cornerRadius = MHTopicAvatarWH*.5f;
     // 这样写比较消耗性能
     avatarView.layer.masksToBounds = YES;
     
@@ -155,7 +155,7 @@
     // 昵称
     YYLabel *nicknameLable = [[YYLabel alloc] init];
     nicknameLable.text = @"";
-    nicknameLable.font = MHVideoTopicNicknameFont;
+    nicknameLable.font = MHTopicNicknameFont;
     nicknameLable.textAlignment = NSTextAlignmentLeft;
     nicknameLable.textColor = MHGlobalGrayTextColor;
     [self.contentView addSubview:nicknameLable];
@@ -174,7 +174,7 @@
     [thumbBtn setTitleColor:MHGlobalGrayTextColor forState:UIControlStateNormal];
     [thumbBtn setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
     [thumbBtn addTarget:self action:@selector(_thumbBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
-    thumbBtn.titleLabel.font = MHVideoTopicZanFont;
+    thumbBtn.titleLabel.font = MHTopicThumbFont;
     [self.contentView addSubview:thumbBtn];
     self.thumbBtn = thumbBtn;
     
@@ -190,7 +190,7 @@
     // 时间
     YYLabel *createTimeLabel = [[YYLabel alloc] init];
     createTimeLabel.text = @"";
-    createTimeLabel.font = MHVideoTopicNicknameFont;
+    createTimeLabel.font = MHTopicNicknameFont;
     createTimeLabel.textAlignment = NSTextAlignmentLeft;
     createTimeLabel.textColor = MHGlobalGrayTextColor;
     [self.contentView addSubview:createTimeLabel];
@@ -203,8 +203,8 @@
     // 文本
     YYLabel *contentLabel = [[YYLabel alloc] init];
     UIEdgeInsets textContainerInset = contentLabel.textContainerInset;
-    textContainerInset.top = MHVideoTopicVerticalSpace;
-    textContainerInset.bottom = MHVideoTopicVerticalSpace;
+    textContainerInset.top = MHTopicVerticalSpace;
+    textContainerInset.bottom = MHTopicVerticalSpace;
     contentLabel.textContainerInset = textContainerInset;
     contentLabel.numberOfLines = 0 ;
     contentLabel.textAlignment = NSTextAlignmentLeft;

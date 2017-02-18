@@ -71,7 +71,7 @@ MHSingletonM(Manager)
     
     for (MHComment *comment in comments) {
         MHCommentFrame *frame = [[MHCommentFrame alloc] init];
-        frame.maxW = (MHMainScreenWidth - MHVideoTopicHorizontalSpace *3 - MHVideoTopicAvatarWH);
+        frame.maxW = (MHMainScreenWidth - MHTopicHorizontalSpace *3 - MHTopicAvatarWH);
         // 传递微博模型数据，计算所有子控件的frame
         frame.comment = comment;
         [frames addObject:frame];

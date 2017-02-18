@@ -303,7 +303,7 @@
         if (topic.commentsCount>2) {
             // 设置假数据
             MHComment *comment = [[MHComment alloc] init];
-            comment.commentId = MHVideoAllCommentsId;
+            comment.commentId = MHAllCommentsId;
             comment.text = [NSString stringWithFormat:@"查看全部%zd条回复" , topic.commentsCount];
             // 添加假数据
             [topic.comments addObject:comment];

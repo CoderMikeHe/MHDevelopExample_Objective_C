@@ -18,7 +18,7 @@
 #import "MHYouKuTopicDetailController.h"
 #import "MHYouKuInputPanelView.h"
 #import "MHTopicManager.h"
-
+#import "MHYouKuCommentItem.h"
 @interface MHYouKuTopicController ()<UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate , MHYouKuInputPanelViewDelegate>
 
 /** MHTopicFrame 模型 */
@@ -79,7 +79,12 @@
     
 }
 #pragma mark - 公共方法
-
+/** 刷新评论数 */
+- (void) refreshCommentsWithCommentItem:(MHYouKuCommentItem *)commentItem
+{
+    // 刷新数据
+    [self.commentBtn setTitle:[NSString stringWithFormat:@"已有%zd条评论，快来说说你的感想吧",commentItem.commentCount] forState:UIControlStateNormal];
+}
 
 #pragma mark - 私有方法
 #pragma mark - Getter
@@ -231,6 +236,12 @@
     
     // 检查刷新状态
     [self _checkFooterStateWithNewTopics:self.topicFrames];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.25f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 保证数据的唯一性
+        [MHNotificationCenter postNotificationName:MHCommentRequestDataSuccessNotification object:nil userInfo:@{MHCommentRequestDataSuccessKey:self.topicFrames}];
+    });
+    
     
 }
 
@@ -562,7 +573,7 @@
     if (topic.commentsCount>2) {
         // 设置假数据
         MHComment *comment = [[MHComment alloc] init];
-        comment.commentId = MHVideoAllCommentsId;
+        comment.commentId = MHAllCommentsId;
         comment.text = [NSString stringWithFormat:@"查看全部%zd条回复" , topic.commentsCount];
         // 添加假数据
         [topic.comments addObject:comment];
@@ -617,6 +628,8 @@
         [self.tableView.mj_footer endRefreshing];
     }
 }
+
+
 
 
 
@@ -684,7 +697,7 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     MHTopicFrame *topicFrame = self.topicFrames[section];
-    return topicFrame.commentFrames.count>0? MHVideoTopicVerticalSpace:MHGlobalBottomLineHeight;
+    return topicFrame.commentFrames.count>0? MHTopicVerticalSpace:MHGlobalBottomLineHeight;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -699,12 +712,12 @@
     
     
     // 判断
-    if ([commentFrame.comment.commentId isEqualToString:MHVideoAllCommentsId]) {
+    if ([commentFrame.comment.commentId isEqualToString:MHAllCommentsId]) {
         // 跳转到更多评论
         MHYouKuTopicDetailController *topicDetail = [[MHYouKuTopicDetailController alloc] init];
         topicDetail.topicFrame = topicFrame;
         // push
-        [self.navigationController pushViewController:topicDetail animated:YES];
+        [self.parentViewController.navigationController pushViewController:topicDetail animated:YES];
         return;
     }
     
@@ -786,7 +799,7 @@
                 
                 // 设置假数据
                 MHComment *lastComment = [[MHComment alloc] init];
-                lastComment.commentId = MHVideoAllCommentsId;
+                lastComment.commentId = MHAllCommentsId;
                 lastComment.text = [NSString stringWithFormat:@"查看全部%zd条回复" , self.selectedTopicFrame.topic.commentsCount];
                 MHCommentFrame *lastCommentFrame =  [[MHTopicManager sharedManager] commentFramesWithComments:@[lastComment]].lastObject;
                 // 添加假数据

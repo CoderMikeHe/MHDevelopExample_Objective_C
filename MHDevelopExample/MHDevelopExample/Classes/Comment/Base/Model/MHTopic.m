@@ -39,7 +39,7 @@
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.text];
     attributedString.yy_font = MHFont(MHPxConvertPt(15.0f), NO);
     attributedString.yy_color = MHGlobalBlackTextColor;
-    attributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
+    attributedString.yy_lineSpacing = MHCommentContentLineSpacing;
     return attributedString;
 }
 

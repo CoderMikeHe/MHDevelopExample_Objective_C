@@ -24,15 +24,15 @@
 - (NSAttributedString *)attributedText
 {
     // 这个属性是  仿优酷视频评论，不是仿优酷的请自行忽略
-    if ([self.commentId isEqualToString:MHVideoAllCommentsId]) {
+    if ([self.commentId isEqualToString:MHAllCommentsId]) {
         
         // 测试数据
         NSString *textString = [NSString stringWithFormat:@"%@",self.text];
         
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHVideoCommentTextFont;
+        mutableAttributedString.yy_font = MHCommentTextFont;
         mutableAttributedString.yy_color = MHGlobalOrangeTextColor;
-        mutableAttributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
+        mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
         return mutableAttributedString;
     }
     
@@ -41,9 +41,9 @@
         // 有回复
         NSString *textString = [NSString stringWithFormat:@"%@回复%@: %@", self.fromUser.nickname, self.toUser.nickname, self.text];;
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHVideoCommentTextFont;
+        mutableAttributedString.yy_font = MHCommentTextFont;
         mutableAttributedString.yy_color = MHGlobalBlackTextColor;
-        mutableAttributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
+        mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
         
         NSRange fromUserRange = NSMakeRange(0, self.fromUser.nickname.length);
         YYTextHighlight *fromUserHighlight = [YYTextHighlight highlightWithBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.220]];
@@ -77,9 +77,9 @@
         // 没有回复
         NSString *textString = [NSString stringWithFormat:@"%@: %@", self.fromUser.nickname, self.text];
         NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
-        mutableAttributedString.yy_font = MHVideoCommentTextFont;
+        mutableAttributedString.yy_font = MHCommentTextFont;
         mutableAttributedString.yy_color = MHGlobalBlackTextColor;
-        mutableAttributedString.yy_lineSpacing = MHVideoCommentContentLineSpacing;
+        mutableAttributedString.yy_lineSpacing = MHCommentContentLineSpacing;
         
         NSRange fromUserRange = NSMakeRange(0, self.fromUser.nickname.length+1);
         // 设置昵称颜色

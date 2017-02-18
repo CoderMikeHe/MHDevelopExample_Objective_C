@@ -54,24 +54,24 @@ CGFloat const MHTopicLabelAlpha = 1.0f;
 // 仿微信朋友圈评论和回复
 // 段头+cell+表头
 /**  话题头像宽高 */
-CGFloat const MHVideoTopicAvatarWH = 30.0f ;
+CGFloat const MHTopicAvatarWH = 30.0f ;
 /**  话题水平方向间隙 */
-CGFloat const MHVideoTopicHorizontalSpace = 10.0f;
+CGFloat const MHTopicHorizontalSpace = 10.0f;
 /**  话题垂直方向间隙 */
-CGFloat const MHVideoTopicVerticalSpace = 10.0f ;
+CGFloat const MHTopicVerticalSpace = 10.0f ;
 /**  话题更多按钮宽 */
-CGFloat const MHVideoTopicMoreButtonW = 24.0f ;
+CGFloat const MHTopicMoreButtonW = 24.0f ;
 
 /**  评论水平方向间隙 */
-CGFloat const MHVideoCommentHorizontalSpace = 11.0f;
+CGFloat const MHCommentHorizontalSpace = 11.0f;
 /**  评论垂直方向间隙 */
-CGFloat const MHVideoCommentVerticalSpace = 7.0f;
+CGFloat const MHCommentVerticalSpace = 7.0f;
 
 /** 文本行高 */
-CGFloat const  MHVideoCommentContentLineSpacing = 10.0f;
+CGFloat const  MHCommentContentLineSpacing = 10.0f;
 
 /** 评论假数据的id */
-NSString * const MHVideoAllCommentsId = @"MHVideoAllCommentsId" ;
+NSString * const MHAllCommentsId = @"MHAllCommentsId" ;
 
 /** 评论用户的key */
 NSString * const MHCommentUserKey = @"MHCommentUserKey";
@@ -118,4 +118,14 @@ NSString * const MHCommentReplySuccessKey = @"MHCommentReplySuccessKey" ;
 NSString * const MHCommentRequestDataSuccessNotification = @"MHCommentRequestDataSuccessNotification" ;
 /** 视频评论获取成功的事件 */
 NSString * const MHCommentRequestDataSuccessKey = @"MHCommentRequestDataSuccessKey" ;
+
+
+/** titleView高度 */
+CGFloat const MHRecommendTitleViewHeight = 32.0f;
+/** 选集view高度 */
+CGFloat const MHRecommendAnthologyViewHeight = 44.0f;
+/** 选集纯文本HeaderView高度 */
+CGFloat const MHRecommendAnthologyHeaderViewHeight = 91.0f;
+/** 评论高度 */
+CGFloat const MHRecommendCommentHeaderViewHeight = 100.0f;
 

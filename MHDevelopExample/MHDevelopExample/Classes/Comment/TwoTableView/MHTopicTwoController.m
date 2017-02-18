@@ -285,7 +285,7 @@
     if (topicFrame.tableViewFrame.size.height==0) {
         return topicFrame.height+topicFrame.tableViewFrame.size.height;
     }else{
-        return topicFrame.height+topicFrame.tableViewFrame.size.height+MHVideoTopicVerticalSpace;
+        return topicFrame.height+topicFrame.tableViewFrame.size.height+MHTopicVerticalSpace;
     }
     
 }
