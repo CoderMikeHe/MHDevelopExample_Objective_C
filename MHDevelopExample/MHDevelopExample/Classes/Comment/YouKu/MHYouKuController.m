@@ -562,7 +562,6 @@
         return;
     }
     
-    
     if (topicFrame == self.selectedTopicFrame) {
         // 刷新组
         [self _reloadSelectedSectin];

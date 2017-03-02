@@ -9,5 +9,6 @@
 #import "MHViewController.h"
 
 @interface MHBuDeJieController : MHViewController
-
+/** 顶部的所有标签 */
+@property (nonatomic, weak , readonly) UIView *titlesView;
 @end

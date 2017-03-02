@@ -580,7 +580,7 @@
     }
     
     MHTopicFrame *topicFrame = [[MHTopicFrame alloc] init];
-    // 传递微博模型数据，计算所有子控件的frame
+    // 传递话题模型数据，计算所有子控件的frame
     topicFrame.topic = topic;
     return topicFrame;
 }

@@ -59,7 +59,7 @@
 	
 			![youkuComment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/youkuComment.gif)
 			
-		- 说明文档：（TOOD...）
+		- 说明文档：[iOS 实现优酷视频的评论回复功能](http://www.jianshu.com/p/feb14f4eee1c)
 		
 	
 3. **UITableView的使用**
