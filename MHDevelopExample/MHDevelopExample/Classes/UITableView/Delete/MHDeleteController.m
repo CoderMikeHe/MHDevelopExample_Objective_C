@@ -27,6 +27,11 @@
 
 @implementation MHDeleteController
 
+- (void)dealloc
+{
+    MHDealloc;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MHNavigationController.h"
+#import "MHExampleController.h"
+
+
 
 @interface AppDelegate ()
 /**
@@ -37,8 +41,19 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // 设置状态栏不隐藏
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[MHNavigationController alloc] initWithRootViewController:[[MHExampleController alloc] init]];
+    [self.window makeKeyAndVisible];
+    
+#if defined(DEBUG)||defined(_DEBUG)
+    [[JPFPSStatus sharedInstance] open];
+#endif
+    
     
     return YES;
 }

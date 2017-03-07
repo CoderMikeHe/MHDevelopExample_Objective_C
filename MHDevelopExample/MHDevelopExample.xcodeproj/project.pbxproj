@@ -72,7 +72,6 @@
 		627A95181E4968E0004A1ED2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A95171E4968E0004A1ED2 /* main.m */; };
 		627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A951A1E4968E0004A1ED2 /* AppDelegate.m */; };
 		627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A951D1E4968E0004A1ED2 /* MHExampleController.m */; };
-		627A95211E4968E0004A1ED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627A951F1E4968E0004A1ED2 /* Main.storyboard */; };
 		627A95311E4968E0004A1ED2 /* MHDevelopExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A95301E4968E0004A1ED2 /* MHDevelopExampleTests.m */; };
 		627A953C1E4968E0004A1ED2 /* MHDevelopExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A953B1E4968E0004A1ED2 /* MHDevelopExampleUITests.m */; };
 		627A955A1E496CF1004A1ED2 /* MHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A95591E496CF1004A1ED2 /* MHNavigationController.m */; };
@@ -239,7 +238,6 @@
 		627A951A1E4968E0004A1ED2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		627A951C1E4968E0004A1ED2 /* MHExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHExampleController.h; sourceTree = "<group>"; };
 		627A951D1E4968E0004A1ED2 /* MHExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHExampleController.m; sourceTree = "<group>"; };
-		627A95201E4968E0004A1ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		627A95271E4968E0004A1ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		627A952C1E4968E0004A1ED2 /* MHDevelopExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHDevelopExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		627A95301E4968E0004A1ED2 /* MHDevelopExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHDevelopExampleTests.m; sourceTree = "<group>"; };
@@ -924,7 +922,6 @@
 				627A951D1E4968E0004A1ED2 /* MHExampleController.m */,
 				627A95621E497824004A1ED2 /* Assets.xcassets */,
 				627A95491E496C3F004A1ED2 /* Classes */,
-				627A951F1E4968E0004A1ED2 /* Main.storyboard */,
 				627A95271E4968E0004A1ED2 /* Info.plist */,
 				627A95161E4968E0004A1ED2 /* Supporting Files */,
 			);
@@ -1377,7 +1374,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				627A95631E497824004A1ED2 /* Assets.xcassets in Resources */,
-				627A95211E4968E0004A1ED2 /* Main.storyboard in Resources */,
 				622E337C1E559701001FB056 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1559,17 +1555,6 @@
 			targetProxy = 627A95381E4968E0004A1ED2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		627A951F1E4968E0004A1ED2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				627A95201E4968E0004A1ED2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		627A953E1E4968E1004A1ED2 /* Debug */ = {

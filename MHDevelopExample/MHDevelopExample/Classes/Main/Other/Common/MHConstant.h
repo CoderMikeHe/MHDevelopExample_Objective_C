@@ -28,6 +28,8 @@
 #import "MHWebImageTool.h"
 #import "MHSingleton.h"
 #import "Masonry.h"
+#import "JPFPSStatus.h"
+
 
 // UIKit
 #import "MHButton.h"
