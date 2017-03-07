@@ -19,7 +19,10 @@
 // UITableView常见的使用场景
 #import "MHSelectsController.h"
 #import "MHDeleteController.h"
-//
+#import "MHUITableViewStyleGroupedBugController.h"
+
+
+
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
 /** tableView */
@@ -96,11 +99,12 @@
          三、UITableView常见的使用场景
          1.1 tableView的左滑删除功能
          1.2 tableView的多选删除功能
+         1.3 UITableViewStyleGrouped类型下，顶部留白的bug
          */
         MHExample *tableViewExample = [[MHExample alloc] init];
         tableViewExample.header = @"三、UITableView常见的使用场景";
-        tableViewExample.titles = @[@"1.1 tableView的左滑删除功能",@"1.2 tableView的多选删除功能"];
-        tableViewExample.classes = @[@"MHDeleteController",@"MHSelectsController"];
+        tableViewExample.titles = @[@"1.1 tableView的左滑删除功能",@"1.2 tableView的多选删除功能",@"1.3 UITableViewStyleGrouped类型下，顶部留白的bug"];
+        tableViewExample.classes = @[@"MHDeleteController",@"MHSelectsController",@"MHUITableViewStyleGroupedBugController"];
         [_examples addObject:tableViewExample];
     }
     return _examples;
@@ -196,5 +200,7 @@
     [self.navigationController pushViewController:vc animated:YES];
     
 }
+
+
 
 @end

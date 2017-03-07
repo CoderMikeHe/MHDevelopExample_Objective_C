@@ -23,6 +23,7 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - FXBlurView (1.6.4)
+  - JPFPSStatus (0.1)
   - JSBadgeView (1.4.1)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
@@ -63,6 +64,7 @@ DEPENDENCIES:
   - FDFullscreenPopGesture (~> 1.1)
   - FMDB (~> 2.6.2)
   - FXBlurView (~> 1.6.4)
+  - JPFPSStatus (~> 0.1)
   - JSBadgeView (~> 1.4.1)
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 1.0.0)
@@ -90,6 +92,7 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
+  JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -109,6 +112,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
 
-PODFILE CHECKSUM: cb79ad8b81a9419a8118ddad910a868b8d6f123d
+PODFILE CHECKSUM: d4b6b7de7ee6ec0099cba9ac7662c8344d2ebb17
 
 COCOAPODS: 1.0.1

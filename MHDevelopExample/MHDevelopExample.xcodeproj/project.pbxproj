@@ -61,6 +61,7 @@
 		622E33761E5595B5001FB056 /* MHYouKuInputPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 622E33751E5595B5001FB056 /* MHYouKuInputPanelView.m */; };
 		622E337B1E559701001FB056 /* MBProgressHUD+MH.m in Sources */ = {isa = PBXBuildFile; fileRef = 622E33791E559701001FB056 /* MBProgressHUD+MH.m */; };
 		622E337C1E559701001FB056 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 622E337A1E559701001FB056 /* MBProgressHUD.bundle */; };
+		622E60471E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 622E60461E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m */; };
 		623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623D2A841E5298B30038BB9B /* MHYouKuController.m */; };
 		625B739D1E4C4AB7006A8E86 /* MHUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B739C1E4C4AB7006A8E86 /* MHUserInfoController.m */; };
 		625B73B51E4C4BA6006A8E86 /* MHTopicTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B73AE1E4C4BA6006A8E86 /* MHTopicTwoController.m */; };
@@ -216,6 +217,8 @@
 		622E33781E559701001FB056 /* MBProgressHUD+MH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MH.h"; sourceTree = "<group>"; };
 		622E33791E559701001FB056 /* MBProgressHUD+MH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MH.m"; sourceTree = "<group>"; };
 		622E337A1E559701001FB056 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		622E60451E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUITableViewStyleGroupedBugController.h; sourceTree = "<group>"; };
+		622E60461E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHUITableViewStyleGroupedBugController.m; sourceTree = "<group>"; };
 		623D2A831E5298B30038BB9B /* MHYouKuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuController.h; sourceTree = "<group>"; };
 		623D2A841E5298B30038BB9B /* MHYouKuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuController.m; sourceTree = "<group>"; };
 		625B739B1E4C4AB7006A8E86 /* MHUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHUserInfoController.h; sourceTree = "<group>"; };
@@ -499,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				622990701E4D4CFB00E0890E /* Base */,
+				622E60411E6E4D0F003D9FD1 /* GroupStyleBug */,
 				622990651E4D4C7B00E0890E /* Delete */,
 				622990691E4D4C7B00E0890E /* Selects */,
 			);
@@ -745,6 +749,39 @@
 				622E337A1E559701001FB056 /* MBProgressHUD.bundle */,
 			);
 			path = "MBProgressHUD+MH";
+			sourceTree = "<group>";
+		};
+		622E60411E6E4D0F003D9FD1 /* GroupStyleBug */ = {
+			isa = PBXGroup;
+			children = (
+				622E60421E6E4D0F003D9FD1 /* Controller */,
+				622E60431E6E4D0F003D9FD1 /* Model */,
+				622E60441E6E4D0F003D9FD1 /* View */,
+				622E60451E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.h */,
+				622E60461E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m */,
+			);
+			path = GroupStyleBug;
+			sourceTree = "<group>";
+		};
+		622E60421E6E4D0F003D9FD1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		622E60431E6E4D0F003D9FD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		622E60441E6E4D0F003D9FD1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		623D2A7F1E5298A40038BB9B /* YouKu */ = {
@@ -1464,6 +1501,7 @@
 				622637361E4AAD85007F9360 /* MHTopicFrame.m in Sources */,
 				622BF5E71E56D59F004DFCA2 /* MHYouKuCommentItem.m in Sources */,
 				622E33471E553800001FB056 /* UIImage+MHCrop.m in Sources */,
+				622E60471E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m in Sources */,
 				622E33481E553800001FB056 /* UIImage+MHExtension.m in Sources */,
 				627A95181E4968E0004A1ED2 /* main.m in Sources */,
 				623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */,
