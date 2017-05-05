@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261309511E97801F0095BE0E /* RACBasicUseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261309501E97801F0095BE0E /* RACBasicUseController.m */; };
 		3D3D48382E147C90FD55FE03 /* Pods_MHDevelopExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A0424108EDF4DD00FF9B94 /* Pods_MHDevelopExample.framework */; };
 		6208770C1E5483DD00183F81 /* MHYouKuBottomToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208770B1E5483DD00183F81 /* MHYouKuBottomToolBar.m */; };
 		6208770F1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208770E1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m */; };
@@ -107,6 +108,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2613094F1E97801F0095BE0E /* RACBasicUseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACBasicUseController.h; sourceTree = "<group>"; };
+		261309501E97801F0095BE0E /* RACBasicUseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBasicUseController.m; sourceTree = "<group>"; };
 		6208770A1E5483DD00183F81 /* MHYouKuBottomToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuBottomToolBar.h; sourceTree = "<group>"; };
 		6208770B1E5483DD00183F81 /* MHYouKuBottomToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuBottomToolBar.m; sourceTree = "<group>"; };
 		6208770D1E549FE900183F81 /* MHYouKuVerticalSeparateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuVerticalSeparateButton.h; sourceTree = "<group>"; };
@@ -303,6 +306,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2613094D1E977FCC0095BE0E /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				2613094E1E977FFD0095BE0E /* RACBasicUse */,
+			);
+			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
+		2613094E1E977FFD0095BE0E /* RACBasicUse */ = {
+			isa = PBXGroup;
+			children = (
+				2613094F1E97801F0095BE0E /* RACBasicUseController.h */,
+				261309501E97801F0095BE0E /* RACBasicUseController.m */,
+			);
+			path = RACBasicUse;
+			sourceTree = "<group>";
+		};
 		620B4BF91E4A1EC900266A72 /* Display */ = {
 			isa = PBXGroup;
 			children = (
@@ -958,6 +978,7 @@
 		627A95491E496C3F004A1ED2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2613094D1E977FCC0095BE0E /* ReactiveCocoa */,
 				622990641E4D4C7B00E0890E /* UITableView */,
 				6226371E1E4AA881007F9360 /* Comment */,
 				627A95641E49A4F0004A1ED2 /* Paternity */,
@@ -1437,7 +1458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1478,6 +1499,7 @@
 				622E334A1E553800001FB056 /* UIImage+MHOrientation.m in Sources */,
 				622637301E4AABF8007F9360 /* MHUser.m in Sources */,
 				6226374D1E4AC61D007F9360 /* MHTopicFooterView.m in Sources */,
+				261309511E97801F0095BE0E /* RACBasicUseController.m in Sources */,
 				625B739D1E4C4AB7006A8E86 /* MHUserInfoController.m in Sources */,
 				6226374C1E4AC61D007F9360 /* MHCommentCell.m in Sources */,
 				622637331E4AAC10007F9360 /* MHComment.m in Sources */,

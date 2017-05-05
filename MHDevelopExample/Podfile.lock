@@ -25,6 +25,7 @@ PODS:
   - FXBlurView (1.6.4)
   - JPFPSStatus (0.1)
   - JSBadgeView (1.4.1)
+  - LxDBAnything (1.1.0)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - FXBlurView (~> 1.6.4)
   - JPFPSStatus (~> 0.1)
   - JSBadgeView (~> 1.4.1)
+  - LxDBAnything (~> 1.1.0)
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
@@ -94,6 +96,7 @@ SPEC CHECKSUMS:
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
+  LxDBAnything: 154a2ad1ae32e70355d886b5443260543bb60c71
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -112,6 +115,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
 
-PODFILE CHECKSUM: d4b6b7de7ee6ec0099cba9ac7662c8344d2ebb17
+PODFILE CHECKSUM: 0cd7936569d4bceeb62d77d292e56ab98ae840a5
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1.beta.1

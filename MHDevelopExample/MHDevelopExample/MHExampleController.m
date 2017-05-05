@@ -21,7 +21,7 @@
 #import "MHDeleteController.h"
 #import "MHUITableViewStyleGroupedBugController.h"
 
-
+//
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
@@ -41,12 +41,6 @@
     MHDealloc;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-}
-
 
 - (void)viewDidLoad
 {
@@ -60,9 +54,6 @@
     
     // 设置子控件
     [self _setupSubViews];
-    
-    // 监听通知中心
-    [self _addNotificationCenter];
     
 }
 #pragma mark - 公共方法
@@ -119,7 +110,7 @@
 #pragma mark - 初始化
 - (void)_setup
 {
-    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - 设置导航栏
@@ -154,14 +145,6 @@
     
 }
 
-
-
-
-#pragma mark - 添加通知中心
-- (void)_addNotificationCenter
-{
-    
-}
 
 
 
