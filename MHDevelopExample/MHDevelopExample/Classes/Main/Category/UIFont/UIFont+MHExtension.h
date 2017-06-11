@@ -26,8 +26,6 @@
 /** 极细体 */
 #define MHUltralightFont(__size__) [UIFont mh_fontForPingFangSC_UltralightFontOfSize:__size__]
 
-/** 中粗体 */
-#define MHSemiboldFont(__size__)   [UIFont mh_fontForPingFangSC_SemiboldFontOfSize:__size__]
 
 /** 纤细体 */
 #define MHThinFont(__size__)       [UIFont mh_fontForPingFangSC_ThinFontOfSize:__size__]
@@ -38,11 +36,16 @@
 
 
 // 该项目 主要使用以下三种字体
+// 该项目 主要使用以下三种字体
 // 中等
-#define MHMediumFont(__size__)     ((MHIOSVersion<9.0)?MHFont(__size__ , NO):[UIFont mh_fontForPingFangSC_RegularFontOfSize:__size__])
+#define MHMediumFont(__size__)     ((MHIOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_MediumFontOfSize:__size__])
 
 // 常规
-#define MHRegularFont(__size__)    [UIFont mh_fontForPingFangSC_RegularFontOfSize:__size__]
+#define MHRegularFont(__size__)    ((MHIOSVersion<9.0)?MHFont(__size__ , NO):[UIFont mh_fontForPingFangSC_RegularFontOfSize:__size__])
+
+/** 中粗体 */
+#define MHSemiboldFont(__size__)   ((MHIOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_SemiboldFontOfSize:__size__])
+
 
 
 

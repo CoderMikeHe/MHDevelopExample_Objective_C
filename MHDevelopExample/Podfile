@@ -16,6 +16,7 @@ pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
 
 #字典转模型
 pod 'MJExtension', '~> 3.0.13'
+pod 'YYModel'                           , '~> 1.0.4'
 
 #颜色分类
 pod 'Colours', '~> 5.13.0'
@@ -83,4 +84,10 @@ pod 'JPFPSStatus', '~> 0.1'
 
 #打印一切
 pod 'LxDBAnything', '~> 1.1.0'
+
+# view的圆角处理 避免离屏渲染
+# pod 'JMRoundedCorner'                   , '~> 1.2.1'
+pod 'HYBImageCliped'                    , '~> 2.2.4'
+pod 'ZYCornerRadius'                    , '~> 1.0.2'
+pod 'HJCornerRadius', :git => 'https://github.com/panghaijiao/HJCornerRadius.git'
 end

@@ -23,6 +23,8 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - FXBlurView (1.6.4)
+  - HJCornerRadius (0.0.1)
+  - HYBImageCliped (2.2.4)
   - JPFPSStatus (0.1)
   - JSBadgeView (1.4.1)
   - LxDBAnything (1.1.0)
@@ -55,8 +57,10 @@ PODS:
   - YYImage/Core (1.0.4)
   - YYImage/WebP (1.0.4):
     - YYImage/Core
+  - YYModel (1.0.4)
   - YYText (1.0.7)
   - YZDisplayViewController (1.0.6)
+  - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
@@ -65,6 +69,8 @@ DEPENDENCIES:
   - FDFullscreenPopGesture (~> 1.1)
   - FMDB (~> 2.6.2)
   - FXBlurView (~> 1.6.4)
+  - HJCornerRadius (from `https://github.com/panghaijiao/HJCornerRadius.git`)
+  - HYBImageCliped (~> 2.2.4)
   - JPFPSStatus (~> 0.1)
   - JSBadgeView (~> 1.4.1)
   - LxDBAnything (~> 1.1.0)
@@ -84,8 +90,19 @@ DEPENDENCIES:
   - WZLBadge (~> 1.2.5)
   - YYImage (~> 1.0.4)
   - YYImage/WebP
+  - YYModel (~> 1.0.4)
   - YYText (~> 1.0.5)
   - YZDisplayViewController (~> 1.0.6)
+  - ZYCornerRadius (~> 1.0.2)
+
+EXTERNAL SOURCES:
+  HJCornerRadius:
+    :git: https://github.com/panghaijiao/HJCornerRadius.git
+
+CHECKOUT OPTIONS:
+  HJCornerRadius:
+    :commit: 50e1c7463849862ef60ee3d711f433f9b25a45fb
+    :git: https://github.com/panghaijiao/HJCornerRadius.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -94,6 +111,8 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
+  HJCornerRadius: 0af191386b5f2e9c4465739b5db22c0acc52923b
+  HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
   LxDBAnything: 154a2ad1ae32e70355d886b5443260543bb60c71
@@ -112,9 +131,11 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
   WZLBadge: 16c08aa0a645e2591690f21cbcb410a3d878c7ac
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
+  ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 0cd7936569d4bceeb62d77d292e56ab98ae840a5
+PODFILE CHECKSUM: b76470711219a9a4c1d3ca41e512f8ef30619709
 
-COCOAPODS: 1.2.1.beta.1
+COCOAPODS: 1.2.1
