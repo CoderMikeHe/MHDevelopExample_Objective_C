@@ -547,12 +547,12 @@
 - (void) _send
 {
     if (self.textView.attributedText.length==0) {
-        [MBProgressHUD mh_showTopHint:@"回复内容不能为空"];
+        [MBProgressHUD mh_showTips:@"回复内容不能为空"];
         return;
     }
     
     if (self.textView.attributedText.length >MHCommentMaxWords) {
-        [MBProgressHUD mh_showTopHint:@"回复内容超过上限"];
+        [MBProgressHUD mh_showTips:@"回复内容超过上限"];
         return;
     }
     // 代理回调

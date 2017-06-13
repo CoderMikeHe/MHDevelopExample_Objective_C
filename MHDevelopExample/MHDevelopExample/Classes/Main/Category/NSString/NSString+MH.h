@@ -10,6 +10,7 @@
 #define NSString_MH_h
 
 #import "NSString+MHSize.h"
-
+#import "NSAttributedString+MHSize.h"
+#import "NSString+MHValid.h"
 
 #endif /* NSString_MH_h */

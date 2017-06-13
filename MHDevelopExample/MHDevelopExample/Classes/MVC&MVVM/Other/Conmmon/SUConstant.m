@@ -14,9 +14,12 @@ CGFloat const SUGlobalViewLeftOrRightMargin = 12;
 CGFloat const SUGlobalViewInnerMargin = 10;
 
 
-
-
-
+//// 登录的手机号
+NSString *const SULoginPhoneKey = @"SULoginPhoneKey";
+//// 登录的验证码
+NSString *const SULoginVerifyCodeKey = @"SULoginVerifyCodeKey";
+/// 搜索tips
+NSString *const SUSearchTipsText = @"输入你要找的宝贝";
 
 
 

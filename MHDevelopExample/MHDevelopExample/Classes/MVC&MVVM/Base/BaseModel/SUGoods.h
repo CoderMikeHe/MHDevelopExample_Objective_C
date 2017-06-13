@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SUGoodsImage.h"
+#import "SUModel.h"
 /** 商品运费类型 */
 typedef NS_ENUM(NSUInteger, SUGoodsExpressType) {
     SUGoodsExpressTypeFree = 0,   // 包邮
@@ -15,7 +16,7 @@ typedef NS_ENUM(NSUInteger, SUGoodsExpressType) {
     SUGoodsExpressTypeFeeding = 2,// 待议
 };
 
-@interface SUGoods : NSObject
+@interface SUGoods : SUModel
 /// === 商品相关 ===
 /// 商品ID
 @property (nonatomic, readwrite, copy) NSString * goodsId;

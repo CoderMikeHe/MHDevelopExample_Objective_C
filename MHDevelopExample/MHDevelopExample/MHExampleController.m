@@ -20,8 +20,9 @@
 #import "MHSelectsController.h"
 #import "MHDeleteController.h"
 #import "MHUITableViewStyleGroupedBugController.h"
+// MVC&MVVM
+#import "SULogin0Controller.h"
 
-//
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
@@ -103,6 +104,21 @@
         tableViewExample.titles = @[@"1.1 tableView的左滑删除功能",@"1.2 tableView的多选删除功能",@"1.3 UITableViewStyleGrouped类型下，顶部留白的bug"];
         tableViewExample.classes = @[@"MHDeleteController",@"MHSelectsController",@"MHUITableViewStyleGroupedBugController"];
         [_examples addObject:tableViewExample];
+        
+        
+        /**
+         四、MVC&MVVM等设计模式的使用
+         1.1 MVC的运用实践
+         1.2 MVVM Without ReactiveCococa的运用实践
+         1.3 MVVM With ReactiveCococa的运用实践
+         */
+        MHExample *designPatternsExample = [[MHExample alloc] init];
+        designPatternsExample.header = @"四、MVC&MVVM等设计模式的使用";
+        designPatternsExample.titles = @[@"1.1 MVC的运用实践",@"1.2 MVVM Without ReactiveCococa的运用实践",@"1.3 MVVM With ReactiveCococa的运用实践"];
+        designPatternsExample.classes = @[@"SULogin0Controller",@"SULogin0Controller",@"SULogin0Controller"];
+        [_examples addObject:designPatternsExample];
+        
+        
     }
     return _examples;
 }
@@ -184,8 +200,8 @@
     MHExample *example = self.examples[indexPath.section];
     
     NSString* vcClassString = example.classes[indexPath.row];
-    MHBuDeJieController *vc = [[NSClassFromString(vcClassString) alloc] init];
-    
+    UIViewController *vc = [[NSClassFromString(vcClassString) alloc] init];
+
     [self.navigationController pushViewController:vc animated:YES];
     
 }
