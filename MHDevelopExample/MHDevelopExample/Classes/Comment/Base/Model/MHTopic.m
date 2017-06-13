@@ -56,7 +56,7 @@
 - (NSString *)creatTime
 {
     NSDateFormatter *fmt = [NSDateFormatter mh_defaultDateFormatter];
-#warning 真机调试的时候，必须加上这句
+#warning CoderMikeHe: 真机调试的时候，必须加上这句
     fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     // 获得发布的具体时间
     NSDate *createDate = [fmt dateFromString:_creatTime];

@@ -130,53 +130,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    return;
-    
-    CGFloat currentContentOffsetY = scrollView.contentOffset.y + self.tableView.contentInset.top;
-    
-    NSLog(@"y---===   %f  %@   ++++  %f", scrollView.contentOffset.y+self.tableView.contentInset.top, NSStringFromCGRect(self.navigationController.navigationBar.frame),self.tableView.contentInset.top);
-    //
-    if (currentContentOffsetY <= 0) return;
-    
-    // navigationBar.maxY = 20;
-    // navigationBar.minY = -88;
-    // 计算
-    MHBuDeJieController *parentController = (MHBuDeJieController *)self.parentViewController;
-    
-    CGRect navigationBarFrame = self.navigationController.navigationBar.frame;
-    
-    CGRect titlesViewFrame = parentController.titlesView.frame;
-    
-    CGFloat navigationBarMinY = -navigationBarFrame.size.height-titlesViewFrame.size.height;
-    CGFloat navigationBarMaxY = 20;
-    
-    CGFloat offsetY = currentContentOffsetY - self.lastContentOffsetY;
-    MHLog(@"offsetY---  +++   %f",offsetY);
-    
-    // 计算值
-    CGFloat navigationBarY = navigationBarFrame.origin.y - offsetY;
-    
-    // 判断
-    if (navigationBarY>=navigationBarMaxY)
-    {
-        navigationBarY = navigationBarMaxY;
-    }else if (navigationBarY<=navigationBarMinY)
-    {
-        navigationBarY = navigationBarMinY;
-    }
-    
-    // 设置值
-    navigationBarFrame.origin.y = navigationBarY;
-    titlesViewFrame.origin.y = navigationBarY+navigationBarFrame.size.height;
-    parentController.titlesView.frame = titlesViewFrame;
-    self.navigationController.navigationBar.frame = navigationBarFrame;
-    
-    self.lastContentOffsetY = currentContentOffsetY;
-    
-}
 
 
 

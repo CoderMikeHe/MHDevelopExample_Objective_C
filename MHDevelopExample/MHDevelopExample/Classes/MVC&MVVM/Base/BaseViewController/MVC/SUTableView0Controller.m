@@ -39,9 +39,9 @@
     [super viewDidLoad];
     
     // config data
-    self.currentPage = 0;
+    self.page = 1;
     self.perPage = 20;
-    self.lastPage = 0;
+    self.lastPage = 1;
     
     // 设置子控件
     [self _su_setupSubViews];
@@ -127,7 +127,8 @@
             [weakSelf.tableView.mj_footer endRefreshing];
         }
         
-        if (self.currentPage>=self.lastPage) self.tableView.mj_footer.hidden = YES;
+        /// 最后一页隐藏加载控件
+        if (self.page>=self.lastPage) self.tableView.mj_footer.hidden = YES;
     });
 }
 

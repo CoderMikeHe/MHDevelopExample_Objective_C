@@ -9,7 +9,7 @@
 #import "SUGoods0Controller.h"
 #import "SUSearchBarView.h"
 #import "SDCycleScrollView.h"
-#import "SUGoods.h"
+#import "SUGoodsData.h"
 #import "SUBanner.h"
 
 
@@ -61,12 +61,11 @@
 /// 事件处理
 - (void)_dealAction
 {
-    /// 点击搜索框的事件
-//    @weakify(self);
+    /// 点击搜索框的事件：这里我就不跳转到搜索界面了  直接退出该界面
+    @weakify(self);
     self.titleView.searchBarViewClicked = ^ {
-//        @strongify(self);
-        
-        ///
+        @strongify(self);
+        [self.navigationController popToRootViewControllerAnimated:YES];
     };
     /// banner 视图被点击
     self.headerView.clickItemOperationBlock = ^(NSInteger currentIndex) {
@@ -84,11 +83,22 @@
 /// 下拉刷新
 - (void)tableViewDidTriggerHeaderRefresh
 {
+    /// page reset to 1
+    self.page = 1;
+    
+    /// config param
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:@(self.page) forKey:@"page"];
+    
     /// 请求商品数据
     /// 请求商品数据 模拟网络请求
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.75f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         /// 结束刷新
         [self tableViewDidFinishTriggerHeader:YES reload:YES];
+        
+        /// 获取数据
+        NSData *data = [NSData dataNamed:@"SUBannerData.data"];
+        
         
     });
     
@@ -118,7 +128,7 @@
 }
 
 //// 全局变量
-UIStatusBarStyle style_ = UIStatusBarStyleLightContent;
+UIStatusBarStyle style_ = UIStatusBarStyleDefault;
 BOOL statusBarHidden_ = NO;
 
 #pragma mark - UIScrollViewDelegate
@@ -137,7 +147,7 @@ BOOL statusBarHidden_ = NO;
         self.titleView.alpha = titleViewAlpha;
     }];
     
-    UIStatusBarStyle tempStyle = (offsetY >= self.headerView.mh_height)?UIStatusBarStyleDefault:UIStatusBarStyleLightContent;
+    UIStatusBarStyle tempStyle = (offsetY >= self.headerView.mh_height)?UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
     BOOL tempStatusBarHidden = (offsetY >= 0)?NO:YES;
     if ((tempStyle == style_) && (tempStatusBarHidden == statusBarHidden_)) {
     } else {

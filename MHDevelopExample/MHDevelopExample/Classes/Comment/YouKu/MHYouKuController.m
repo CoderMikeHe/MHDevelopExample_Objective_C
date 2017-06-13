@@ -27,7 +27,7 @@
 #import "MHYouKuInputPanelView.h"
 #import "MHYouKuTopicDetailController.h"
 
-@interface MHYouKuController ()<UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate,MHYouKuBottomToolBarDelegate,MHYouKuTopicControllerDelegate,MHYouKuAnthologyHeaderViewDelegate,MHYouKuCommentHeaderViewDelegate>
+@interface MHYouKuController ()<UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate,MHYouKuBottomToolBarDelegate,MHYouKuTopicControllerDelegate,MHYouKuAnthologyHeaderViewDelegate,MHYouKuCommentHeaderViewDelegate , MHYouKuInputPanelViewDelegate>
 
 /** 顶部容器View   **/
 @property (nonatomic , strong) UIView *topContainer;

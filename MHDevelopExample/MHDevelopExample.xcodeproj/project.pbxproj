@@ -40,6 +40,8 @@
 		260D8DC31EED9B0900B47B3D /* SULoginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 260D8DC21EED9B0900B47B3D /* SULoginInputView.xib */; };
 		260D8DCD1EEDA46700B47B3D /* SUViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8DCC1EEDA46700B47B3D /* SUViewModel.m */; };
 		260D8DD01EEDA4D100B47B3D /* SUTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8DCF1EEDA4D100B47B3D /* SUTableViewModel.m */; };
+		260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E2E671EEFBC7800A0A50D /* SUGoodsData.m */; };
+		260E2E6B1EEFBEAE00A0A50D /* SUGoodsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E2E6A1EEFBEAE00A0A50D /* SUGoodsFrame.m */; };
 		260F3BD91EEEF8A300ACF0D5 /* SUBannerData.data in Resources */ = {isa = PBXBuildFile; fileRef = 260F3BD81EEEF8A300ACF0D5 /* SUBannerData.data */; };
 		260F3BDC1EEEF91100ACF0D5 /* SUBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F3BDB1EEEF91100ACF0D5 /* SUBanner.m */; };
 		260F3BDF1EEF011A00ACF0D5 /* SUModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F3BDE1EEF011A00ACF0D5 /* SUModel.m */; };
@@ -210,6 +212,10 @@
 		260D8DCC1EEDA46700B47B3D /* SUViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUViewModel.m; sourceTree = "<group>"; };
 		260D8DCE1EEDA4D100B47B3D /* SUTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTableViewModel.h; sourceTree = "<group>"; };
 		260D8DCF1EEDA4D100B47B3D /* SUTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableViewModel.m; sourceTree = "<group>"; };
+		260E2E661EEFBC7800A0A50D /* SUGoodsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUGoodsData.h; sourceTree = "<group>"; };
+		260E2E671EEFBC7800A0A50D /* SUGoodsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUGoodsData.m; sourceTree = "<group>"; };
+		260E2E691EEFBEAE00A0A50D /* SUGoodsFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUGoodsFrame.h; sourceTree = "<group>"; };
+		260E2E6A1EEFBEAE00A0A50D /* SUGoodsFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUGoodsFrame.m; sourceTree = "<group>"; };
 		260F3BD81EEEF8A300ACF0D5 /* SUBannerData.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SUBannerData.data; sourceTree = "<group>"; };
 		260F3BDA1EEEF91100ACF0D5 /* SUBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBanner.h; sourceTree = "<group>"; };
 		260F3BDB1EEEF91100ACF0D5 /* SUBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBanner.m; sourceTree = "<group>"; };
@@ -486,6 +492,8 @@
 		260D8D6E1EED37CB00B47B3D /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
+				260E2E661EEFBC7800A0A50D /* SUGoodsData.h */,
+				260E2E671EEFBC7800A0A50D /* SUGoodsData.m */,
 				260D8D6F1EED37CB00B47B3D /* SUGoods.h */,
 				260D8D701EED37CB00B47B3D /* SUGoods.m */,
 				260D8D711EED37CB00B47B3D /* SUGoodsImage.h */,
@@ -727,6 +735,8 @@
 		2615EC931EEE368E00D6B473 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				260E2E691EEFBEAE00A0A50D /* SUGoodsFrame.h */,
+				260E2E6A1EEFBEAE00A0A50D /* SUGoodsFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1998,6 +2008,7 @@
 				622E33761E5595B5001FB056 /* MHYouKuInputPanelView.m in Sources */,
 				622990851E4E2D4500E0890E /* MHOperationController.m in Sources */,
 				2615ECB31EEE6ECE00D6B473 /* NSError+MHExtension.m in Sources */,
+				260E2E6B1EEFBEAE00A0A50D /* SUGoodsFrame.m in Sources */,
 				260D8D861EED37CB00B47B3D /* SUGoodsCell.m in Sources */,
 				6229907C1E4D503800E0890E /* MHTitleRightButton.m in Sources */,
 				260D8D881EED37CB00B47B3D /* SUGoodsHeaderView.m in Sources */,
@@ -2078,6 +2089,7 @@
 				2615EC8C1EEE30D500D6B473 /* SUTableView0Controller.m in Sources */,
 				620877151E54B33C00183F81 /* MHAccount.m in Sources */,
 				622BF5DB1E569130004DFCA2 /* MHYouKuMedia.m in Sources */,
+				260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */,
 				620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */,
 				6223CEE81E5423B300993A91 /* MHCommentReply.m in Sources */,
 			);
@@ -2219,6 +2231,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				WARNING_CFLAGS = (
+					"-Wno-ambiguous-macro",
+					"-Wno-documentation",
+				);
 			};
 			name = Debug;
 		};
@@ -2238,6 +2254,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				WARNING_CFLAGS = (
+					"-Wno-ambiguous-macro",
+					"-Wno-documentation",
+				);
 			};
 			name = Release;
 		};

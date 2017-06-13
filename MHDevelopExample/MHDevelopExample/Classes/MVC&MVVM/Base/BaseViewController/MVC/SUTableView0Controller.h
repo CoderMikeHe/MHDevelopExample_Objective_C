@@ -31,7 +31,7 @@
 
 
 /// 当前页
-@property (nonatomic, readwrite, assign) NSUInteger currentPage;
+@property (nonatomic, readwrite, assign) NSUInteger page;
 /// 每一页的数据
 @property (nonatomic, readwrite, assign) NSUInteger perPage;
 /// 最后一页

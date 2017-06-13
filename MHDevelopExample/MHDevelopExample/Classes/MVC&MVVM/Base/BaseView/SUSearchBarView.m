@@ -7,8 +7,7 @@
 //
 
 #import "SUSearchBarView.h"
-#import "BlocksKit.h"
-#import "BlocksKit+UIKit.h"
+
 
 
 @interface SUSearchBarView()

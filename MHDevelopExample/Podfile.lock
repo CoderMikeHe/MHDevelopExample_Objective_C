@@ -42,6 +42,41 @@ PODS:
   - HYBImageCliped (2.2.4)
   - JPFPSStatus (0.1)
   - JSBadgeView (1.4.1)
+  - libextobjc (0.4.1):
+    - libextobjc/EXTADT (= 0.4.1)
+    - libextobjc/EXTConcreteProtocol (= 0.4.1)
+    - libextobjc/EXTKeyPathCoding (= 0.4.1)
+    - libextobjc/EXTNil (= 0.4.1)
+    - libextobjc/EXTSafeCategory (= 0.4.1)
+    - libextobjc/EXTScope (= 0.4.1)
+    - libextobjc/EXTSelectorChecking (= 0.4.1)
+    - libextobjc/EXTSynthesize (= 0.4.1)
+    - libextobjc/NSInvocation+EXT (= 0.4.1)
+    - libextobjc/NSMethodSignature+EXT (= 0.4.1)
+    - libextobjc/RuntimeExtensions (= 0.4.1)
+    - libextobjc/UmbrellaHeader (= 0.4.1)
+  - libextobjc/EXTADT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4.1)
+  - libextobjc/UmbrellaHeader (0.4.1)
   - LxDBAnything (1.1.0)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
@@ -92,6 +127,7 @@ DEPENDENCIES:
   - HYBImageCliped (~> 2.2.4)
   - JPFPSStatus (~> 0.1)
   - JSBadgeView (~> 1.4.1)
+  - libextobjc (~> 0.4.1)
   - LxDBAnything (~> 1.1.0)
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 1.0.0)
@@ -136,6 +172,7 @@ SPEC CHECKSUMS:
   HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
+  libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   LxDBAnything: 154a2ad1ae32e70355d886b5443260543bb60c71
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -158,6 +195,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 5aa69353e25af900efc46119c61cbf40b12393d3
+PODFILE CHECKSUM: f24b8bd657928fb653e1ef6d8708cafeec5ce0a3
 
 COCOAPODS: 1.2.1

@@ -63,10 +63,16 @@
 - (IBAction)_loginBtnDidClicked:(UIButton *)sender {
     
     /// 验证手机号码 正确的手机号码
-    if (![NSString mh_isValidMobile:self.inputView.phoneTextField.text]) [MBProgressHUD mh_showTips:@"请输入正确的手机号码"];
+    if (![NSString mh_isValidMobile:self.inputView.phoneTextField.text]){
+        [MBProgressHUD mh_showTips:@"请输入正确的手机号码"];
+        return;
+    }
     
     /// 验证验证码 四位数字
-    if (![NSString mh_isPureDigitCharacters:self.inputView.verifyTextField.text] || self.inputView.verifyTextField.text.length != 4 ) [MBProgressHUD mh_showTips:@"验证码错误"];
+    if (![NSString mh_isPureDigitCharacters:self.inputView.verifyTextField.text] || self.inputView.verifyTextField.text.length != 4 ) {
+        [MBProgressHUD mh_showTips:@"验证码错误"];
+        return;
+    }
     
     //// 键盘掉下
     [self.view endEditing:YES];
