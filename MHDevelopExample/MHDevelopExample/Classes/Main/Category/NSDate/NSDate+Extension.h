@@ -68,4 +68,12 @@
 
 /** 与当前时间的差距 */
 - (NSDateComponents *)mh_deltaWithNow;
+
+
+
+//////////// MVC&MVVM的商品的发布时间的描述 ////////////
+- (NSString *)mh_string_yyyy_MM_dd;
+- (NSString *)mh_string_yyyy_MM_dd:(NSDate *)toDate;
+//////////// MVC&MVVM的商品的发布时间的描述 ////////////
+
 @end

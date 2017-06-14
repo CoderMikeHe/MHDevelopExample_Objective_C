@@ -17,7 +17,7 @@ static inline UIImage *const placeholderImage() {
 
 /** 占位头像 */
 static inline UIImage *const placeholderUserIcon() {
-    return [UIImage imageNamed:@"placeholder_user_icon"];
+    return [UIImage imageNamed:@"placeholder_icon"];
 }
 
 

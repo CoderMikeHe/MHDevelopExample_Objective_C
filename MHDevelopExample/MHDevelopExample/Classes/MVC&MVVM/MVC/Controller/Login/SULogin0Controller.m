@@ -9,6 +9,7 @@
 #import "SULogin0Controller.h"
 #import "SULoginInputView.h"
 #import "SUGoods0Controller.h"
+
 @interface SULogin0Controller ()
 
 /// 输入款的父类
@@ -19,6 +20,8 @@
 
 /// 输入框
 @property (nonatomic, readwrite, weak) SULoginInputView *inputView;
+/// 用户头像
+@property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
 
 
 @end
@@ -104,6 +107,10 @@
 - (void)_textFieldValueDidChanged:(UITextField *)sender
 {
     self.loginBtn.enabled = (self.inputView.phoneTextField.hasText && self.inputView.verifyTextField.hasText);
+    
+    /// 这里是假数据 模拟用户输入去本地数据库拉去数据
+    NSString *urlStr = [NSString mh_isValidMobile:self.inputView.phoneTextField.text]?[AppDelegate sharedDelegate].account.avatarUrl:nil;
+    [MHWebImageTool setImageWithURL:urlStr placeholderImage:placeholderUserIcon() imageView:self.userAvatar];
 }
 
 /// 填充数据

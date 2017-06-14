@@ -14,10 +14,44 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SUGoodsHeaderView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k38-LX-ZtN" userLabel="BaseView">
+                    <rect key="frame" x="0.0" y="10" width="375" height="59"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-7p-HMR" userLabel="Divider">
+                            <rect key="frame" x="12" y="58.5" width="351" height="0.5"/>
+                            <color key="backgroundColor" red="0.93333333330000001" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="uCQ-yI-C0q"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐商品" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mst-Yp-qsd">
+                            <rect key="frame" x="12" y="22" width="50" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.61176470589999998" green="0.63137254899999995" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="q4G-7p-HMR" secondAttribute="trailing" constant="12" id="GDK-WD-JzB"/>
+                        <constraint firstItem="q4G-7p-HMR" firstAttribute="leading" secondItem="k38-LX-ZtN" secondAttribute="leading" constant="12" id="NBg-Yb-F7b"/>
+                        <constraint firstItem="mst-Yp-qsd" firstAttribute="leading" secondItem="k38-LX-ZtN" secondAttribute="leading" constant="12" id="gAC-CY-ErC"/>
+                        <constraint firstItem="mst-Yp-qsd" firstAttribute="centerY" secondItem="k38-LX-ZtN" secondAttribute="centerY" id="n6M-nP-9l8"/>
+                        <constraint firstAttribute="bottom" secondItem="q4G-7p-HMR" secondAttribute="bottom" id="zyk-F4-E8s"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="k38-LX-ZtN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2uJ-BB-sgZ"/>
+                <constraint firstAttribute="bottom" secondItem="k38-LX-ZtN" secondAttribute="bottom" id="HdB-o6-P7a"/>
+                <constraint firstItem="k38-LX-ZtN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="gK2-cJ-QsN"/>
+                <constraint firstAttribute="trailing" secondItem="k38-LX-ZtN" secondAttribute="trailing" id="lVP-sn-Nv3"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="60" y="144"/>
+            <point key="canvasLocation" x="59.5" y="143.5"/>
         </view>
     </objects>
 </document>

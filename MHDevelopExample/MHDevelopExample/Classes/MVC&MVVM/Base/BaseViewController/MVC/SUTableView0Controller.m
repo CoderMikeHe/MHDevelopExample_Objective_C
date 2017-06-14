@@ -39,9 +39,12 @@
     [super viewDidLoad];
     
     // config data
-    self.page = 1;
-    self.perPage = 20;
-    self.lastPage = 1;
+    _page = 0;
+    _perPage = 20;
+    _lastPage = 0;
+    _shouldShowSections = NO;
+    _shouldPullUpToLoadMore = NO;
+    _shouldPullDownToRefresh = NO;
     
     // 设置子控件
     [self _su_setupSubViews];
@@ -128,7 +131,7 @@
         }
         
         /// 最后一页隐藏加载控件
-        if (self.page>=self.lastPage) self.tableView.mj_footer.hidden = YES;
+        self.tableView.mj_footer.hidden = (self.page>=2);
     });
 }
 
@@ -160,13 +163,15 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return self.dataSource ? self.dataSource.count : 1;
+
+    if (self.shouldShowSections) return self.dataSource ? self.dataSource.count : 1;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.dataSource[section] count];
+    if (self.shouldShowSections) return [self.dataSource[section] count];
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -174,7 +179,9 @@
     UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
     // fetch object
-    id object = self.dataSource[indexPath.section][indexPath.row];
+    id object = nil;
+    if (self.shouldShowSections) object = self.dataSource[indexPath.section][indexPath.row];
+    if (!self.shouldShowSections) object = self.dataSource[indexPath.row];
     
     /// bind model
     [self configureCell:cell atIndexPath:indexPath withObject:(id)object];
@@ -188,7 +195,6 @@
 {
     if (_dataSource == nil) {
         _dataSource = [[NSMutableArray alloc] init];
-        
     }
     return _dataSource;
 }

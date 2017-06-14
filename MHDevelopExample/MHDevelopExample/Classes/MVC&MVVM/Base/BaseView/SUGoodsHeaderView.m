@@ -10,12 +10,12 @@
 
 @implementation SUGoodsHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    /// Setting the background color on UITableViewHeaderFooterView has been deprecated. Please use contentView.backgroundColor instead.
+    self.contentView.backgroundColor = SUGlobalGrayBackgroundColor;
 }
-*/
 
 @end

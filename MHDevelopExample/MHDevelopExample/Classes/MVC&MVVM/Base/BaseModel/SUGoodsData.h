@@ -11,7 +11,7 @@
 @interface SUGoodsData : SUModel
 
 @property (nonatomic, readwrite, assign) NSInteger total;
-@property (nonatomic, readwrite, assign) NSInteger * perPage;
+@property (nonatomic, readwrite, assign) NSInteger perPage;
 @property (nonatomic, readwrite, assign) NSInteger currentPage;
 @property (nonatomic, readwrite, assign) NSInteger lastPage;
 @property (nonatomic, readwrite, assign) NSInteger from;

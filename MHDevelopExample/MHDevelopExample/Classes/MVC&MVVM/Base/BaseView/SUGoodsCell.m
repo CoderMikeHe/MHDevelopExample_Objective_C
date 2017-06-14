@@ -6,8 +6,15 @@
 //  Copyright © 2016年 曾维俊. All rights reserved.
 //
 
+//// 以下 MVC使用的场景，如果使用MVVM的请自行ignore
+#import "SUGoodsFrame.h"
+//// 以上 MVC使用的场景，如果使用MVVM的请自行ignore
+
+
 #import "SUGoodsCell.h"
 #import "SUGoodsImageCell.h"
+
+
 //#import "SUGoodsHomeItemViewModel.h"
 
 
@@ -48,8 +55,11 @@ UICollectionViewDataSource>
 /// 发布时间
 @property (weak, nonatomic) IBOutlet UILabel *publishTimeLabel;
 
-
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
+
+/// 点赞按钮
+@property (weak, nonatomic) IBOutlet UIButton *thumbBtn;
+
 
 /// viewModle
 //@property (nonatomic, readwrite, strong) SUGoodsHomeItemViewModel *viewModel;
@@ -62,24 +72,17 @@ UICollectionViewDataSource>
     [super setHighlighted:highlighted animated:animated];
     
     if (highlighted) {
-        /// fix 长按cell导致子控件背景色改变的bug
+        /// FIXED: 长按cell导致子控件背景色改变的bug
         self.extraFee.backgroundColor = SUGlobalPinkColor;
     }
-    
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 { 
     [super setSelected:selected animated:animated];
-
 }
 
-
-
-
-- (void)awakeFromNib {
+- (void)awakeFromNib{
     [super awakeFromNib];
-    // Initialization code
     /// 头像
     /// 这种方法不能设置BorderWidth
 //    self.userHeadImageView.layer.masksToBounds = NO;
@@ -87,94 +90,32 @@ UICollectionViewDataSource>
     /// 优化性能  避免离屏渲染
     [self.userHeadImageView zy_cornerRadiusRoundingRect];
     [self.userHeadImageView zy_attachBorderWidth:.5f color:MHColorFromHexString(@"#EBEBEB")];
-    
-    /// 昵称
-    self.userNameLabel.font = MHRegularFont_14;
-    self.userNameLabel.textColor = MHGlobalBlackTextColor;
-    
-    /// 发布时间
-    self.publishTimeLabel.font = MHRegularFont_12;
-    self.publishTimeLabel.textColor = MHColorFromHexString(@"#9CA1B2");
-    self.publishTimeLabel.backgroundColor = MHGlobalWhiteTextColor;
-    
-    /// 卖价
-    self.priceLabel.font = [UIFont systemFontOfSize:18];
-    self.priceLabel.textColor = MHColorFromHexString(@"#FC0000");
-    
-    /// 原价
-    self.oldPriceLabel.font = MHRegularFont_12;
-    self.oldPriceLabel.textColor = SUGlobalShadowGrayTextColor;
-    self.oldPriceLabel.backgroundColor  = [UIColor whiteColor];
-    
     /// 运费
     self.extraFee.backgroundColor = SUGlobalPinkColor;
     self.extraFee.textColor = [UIColor whiteColor];
+    self.extraFee.layer.cornerRadius = 2;
+#warning FIXME：需要优化，避免离屏渲染
+    self.extraFee.layer.masksToBounds = YES;
 
-    /// 宝贝数量
-    self.countLabel.font = MHRegularFont_12;
-    self.countLabel.textColor = MHColorFromHexString(@"9DA2B3");
-    self.countLabel.backgroundColor  = [UIColor whiteColor];
-    
-    /// 商品主题
-    self.goodsTitleLabel.font = MHMediumFont(15.0f);
-    self.goodsTitleLabel.backgroundColor = [UIColor whiteColor];
-    self.goodsTitleLabel.textColor = MHGlobalShadowBlackTextColor;
-    
-    /// 商品描述
-    self.contentLabel.backgroundColor  = [UIColor whiteColor];
-    self.contentLabel.font = MHRegularFont_14;
-    self.contentLabel.textColor = MHGlobalShadowBlackTextColor;
-    
-    /// 定位
-//    self.GPSBtn.setTitleColorSU(RGBV(0x9CA1B2), UIControlStateNormal).setFontSU(MHRegularFont_12);
-//    self.GPSBtn.backgroundColor = [UIColor whiteColor];
-// 
-//    [self.optimalProductCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([SUHomeCollectionViewCell class]) bundle:nil]
-//                        forCellWithReuseIdentifier:@"HomeCollectionViewCell"];
-//    self.optimalProductCollectionView.dataSource = self;
-//    self.optimalProductCollectionView.delegate = self;
-//    self.optimalProductCollectionView.contentInset = UIEdgeInsetsMake(0, , 0, APPLICATION_MARGIN);
-    
+    /// UICollectionView注册cell
+    [self.optimalProductCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([SUGoodsImageCell class]) bundle:nil]
+                        forCellWithReuseIdentifier:NSStringFromClass([SUGoodsImageCell class])];
+    self.optimalProductCollectionView.dataSource = self;
+    self.optimalProductCollectionView.delegate = self;
+    self.optimalProductCollectionView.contentInset = UIEdgeInsetsMake(0 , SUGlobalViewLeftOrRightMargin , 0, SUGlobalViewLeftOrRightMargin);
     self.flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.flowLayout.minimumLineSpacing = 10;
     CGFloat itemWH = 88.0f;
     self.flowLayout.itemSize = CGSizeMake(itemWH, itemWH);
-    
     self.optimalProductCollectionView.backgroundColor   = [UIColor whiteColor];
-    self.userNameLabel.backgroundColor                  = [UIColor whiteColor];
+
+    // ---add Action
+    //// 使用MVC 和 MVVM without RAC 的事件回调
+    [self _addActionDealForMVCOrMVVMWithoutRAC];
     
+    //// MVVM with RAC 的事件回调
+    [self _addActionDealForMVVMWithRAC];
     
-    self.userHeadImageView.backgroundColor              = [UIColor whiteColor];
-    self.replyBtn.backgroundColor                       = [UIColor whiteColor];
-    
-    
-    // --- Action
-//    @weakify(self);
-//    [[self.GPSBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-//     subscribeNext:^(UIButton *sender) {
-//         @strongify(self);
-//         ///
-//         NSLog(@"---位置被点击---");
-//         [self.viewModel.locationDidClickedSuject sendNext:self.viewModel];
-//     }];
-//    
-//    self.userHeadImageView.userInteractionEnabled = YES;
-//    UITapGestureRecognizer *avatarTapGr = [[UITapGestureRecognizer alloc] init];
-//    [self.userHeadImageView addGestureRecognizer:avatarTapGr];
-//    [avatarTapGr.rac_gestureSignal subscribeNext:^(id x) {
-//        NSLog(@"---头像被点击---");
-//        [self.viewModel.avatarDidClickedSuject sendNext:self.viewModel];
-//    }];
-// 
-//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] init];
-//    [self.optimalProductCollectionView addGestureRecognizer:singleTap];
-//    [singleTap.rac_gestureSignal subscribeNext:^(id x) {
-//        @strongify(self);
-//        NSLog(@"---UICollectionView---");
-//        [self.viewModel.pictureDidClickedSuject sendNext:self.viewModel];
-//    }];
-    
-    self.backgroundColor = [UIColor whiteColor];
 }
 
 
@@ -227,20 +168,160 @@ UICollectionViewDataSource>
 
 
 
+
+
+
+
+//// 以下 MVC使用的场景，如果使用MVVM的请自行ignore
+- (void)setGoodsFrame:(SUGoodsFrame *)goodsFrame{
+    _goodsFrame = goodsFrame;
+    SUGoods *goods = goodsFrame.goods;
+    
+    /// 商品头像
+    [MHWebImageTool setImageWithURL:goods.avatar placeholderImage:placeholderUserIcon() imageView:self.userHeadImageView];
+    self.realNameIcon.hidden = !goods.iszm;
+    
+    /// 用户昵称
+    self.userNameLabel.text = goods.nickName;
+    
+    /// 发布时间
+    self.publishTimeLabel.text = goods.goodsPublishTime;
+    
+    /// 商品价格
+    self.priceLabel.attributedText = goods.goodsPriceAttributedString;
+    self.priceLabel.frame = goodsFrame.priceLalelFrame;
+    
+    /// 商品原价
+    self.oldPriceLabel.attributedText = goods.goodsOPriceAttributedString;
+    self.oldPriceLabel.frame = goodsFrame.oPriceLalelFrame;
+    
+    /// 商品包邮 运费情况
+    self.extraFee.text = goods.freightExplain;
+    self.extraFee.frame = goodsFrame.freightageLalelFrame;
+    /// 商品图片
+    self.imageURLs = goods.imagesUrlStrings;
+
+    /// 商品数量
+    self.countLabel.text = [NSString stringWithFormat:@"数量 %@",goods.number];
+    
+    /// 主题
+    self.goodsTitleLabel.attributedText = goods.goodsTitleAttributedString;
+    
+    /// 描述
+    self.contentLabel.text = goods.goodsDescription;
+    
+    /// 区域
+    [self.GPSBtn setTitle:goods.locationAreaName forState:UIControlStateNormal];
+    
+    /// 回复数
+    [self.replyBtn setTitle:goods.messages forState:UIControlStateNormal];
+    
+    /// 点赞数
+    [self.thumbBtn setTitle:goods.likes forState:UIControlStateNormal];
+    self.thumbBtn.selected = goods.isLike;
+    
+}
+//// 以上 MVC使用的场景，如果使用MVVM的请自行ignore
+
+
+
+#pragma mark - 事件处理
+//// 以下 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
+/// 事件处理 我这里使用 block 来回调事件 （PS：大家可以自行决定）
+- (void)_addActionDealForMVCOrMVVMWithoutRAC
+{
+    /// 头像被点击
+    [self.userHeadImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        
+    }]];
+    
+    /// 位置被点击
+    [self.GPSBtn bk_addEventHandler:^(id sender) {
+        
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    /// 回复按钮被点击
+    [self.replyBtn bk_addEventHandler:^(id sender) {
+        
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    /// 收藏按钮被点击
+    [self.thumbBtn bk_addEventHandler:^(id sender) {
+        
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+}
+//// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
+
+
+
+
+
+//// 以下 MVVM With RAC 的事件回调的使用的场景，如果使用其他的模式的请自行ignore
+/// 事件处理 我这里使用 block 来回调事件 （PS：大家可以自行决定）
+- (void)_addActionDealForMVVMWithRAC
+{
+    ///
+    //    @weakify(self);
+    //    [[self.GPSBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+    //     subscribeNext:^(UIButton *sender) {
+    //         @strongify(self);
+    //         ///
+    //         NSLog(@"---位置被点击---");
+    //         [self.viewModel.locationDidClickedSuject sendNext:self.viewModel];
+    //     }];
+    //
+    //    self.userHeadImageView.userInteractionEnabled = YES;
+    //    UITapGestureRecognizer *avatarTapGr = [[UITapGestureRecognizer alloc] init];
+    //    [self.userHeadImageView addGestureRecognizer:avatarTapGr];
+    //    [avatarTapGr.rac_gestureSignal subscribeNext:^(id x) {
+    //        NSLog(@"---头像被点击---");
+    //        [self.viewModel.avatarDidClickedSuject sendNext:self.viewModel];
+    //    }];
+    //
+    //    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] init];
+    //    [self.optimalProductCollectionView addGestureRecognizer:singleTap];
+    //    [singleTap.rac_gestureSignal subscribeNext:^(id x) {
+    //        @strongify(self);
+    //        NSLog(@"---UICollectionView---");
+    //        [self.viewModel.pictureDidClickedSuject sendNext:self.viewModel];
+    //    }];
+
+}
+//// 以上 MVVM With RAC 的事件回调的使用的场景，如果使用其他的模式的请自行ignore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////// 以下为UI代码，不必过多关注 ///////////////////
 #pragma mark - collectionVeiwDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.imageURLs.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SUGoodsImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GoodsImage" forIndexPath:indexPath];
-//    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:self.imageURLs[indexPath.row]] placeholderImage:placeholderImage() options:SDWebImageRetryFailed|SDWebImageAllowInvalidSSLCertificates];
+    SUGoodsImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SUGoodsImageCell class]) forIndexPath:indexPath];
+    [MHWebImageTool setImageWithURL:self.imageURLs[indexPath.row] placeholderImage:placeholderImage() imageView:cell.imageView];
     return cell;
 }
-
 #pragma mark - Setter & Getter
-- (void)setImageURLs:(NSArray<NSString *> *)imageURLs {
+- (void)setImageURLs:(NSArray<NSString *> *)imageURLs
+{
     _imageURLs = imageURLs;
+    /// 归位
     self.optimalProductCollectionView.contentOffset = CGPointMake(-SUGlobalViewLeftOrRightMargin, 0);
     [self.optimalProductCollectionView reloadData];
 }

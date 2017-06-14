@@ -80,7 +80,7 @@
     // 添加自己的分割线
     CGFloat navSystemLineH = .5f;
     UIImageView *navSystemLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.navigationBar.mh_height - navSystemLineH, MHMainScreenWidth, navSystemLineH)];
-    navSystemLine.backgroundColor = [UIColor redColor];
+    navSystemLine.backgroundColor = SUGlobalBottomLineColor;
     [self.navigationBar addSubview:navSystemLine];
     
     self.navSystemLine = navSystemLine;

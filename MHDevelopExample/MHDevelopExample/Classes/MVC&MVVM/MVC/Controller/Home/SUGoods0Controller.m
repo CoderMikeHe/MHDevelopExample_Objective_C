@@ -10,8 +10,15 @@
 #import "SUSearchBarView.h"
 #import "SDCycleScrollView.h"
 #import "SUGoodsData.h"
+#import "SUGoodsFrame.h"
 #import "SUBanner.h"
+#import "SUGoodsCell.h"
+#import "SUGoodsHeaderView.h"
+#import "SUPublic0ViewController.h"
 
+//// 全局变量
+static UIStatusBarStyle style_ = UIStatusBarStyleDefault;
+static BOOL statusBarHidden_ = NO;
 
 @interface SUGoods0Controller ()
 /// 滚动到顶部的按钮
@@ -38,6 +45,17 @@
     
     // 如果你发现你的CycleScrollview会在viewWillAppear时图片卡在中间位置，你可以调用此方法调整图片位置
     [self.headerView adjustWhenControllerViewWillAppera];
+    
+    
+    NSLog(@"mmmm----before %@ ---" , NSStringFromUIEdgeInsets(self.tableView.contentInset));
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSLog(@"mmmm----after %@ ---" , NSStringFromUIEdgeInsets(self.tableView.contentInset));
 }
 
 - (void)viewDidLoad {
@@ -56,6 +74,14 @@
     self.shouldPullDownToRefresh = YES;
     self.shouldPullUpToLoadMore = YES;
     self.tableView.mj_footer.hidden = YES;
+    
+    /// tableView rigister  cell
+    [self.tableView mh_registerNibCell:[SUGoodsCell class]];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SUGoodsHeaderView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:NSStringFromClass([SUGoodsHeaderView class])];
+    
+    /// estimatedRowHeight
+    self.tableView.estimatedRowHeight = 280.0f;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 #pragma mark - 事件处理
 /// 事件处理
@@ -83,30 +109,35 @@
 /// 下拉刷新
 - (void)tableViewDidTriggerHeaderRefresh
 {
-    /// page reset to 1
-    self.page = 1;
+    /// page reset to 0
+    self.page = 0;
     
     /// config param
+    NSInteger page = self.page+1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    [param setValue:@(self.page) forKey:@"page"];
+    [param setValue:@(page) forKey:@"page"];
     
     /// 请求商品数据
     /// 请求商品数据 模拟网络请求
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.75f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        /// 结束刷新
-        [self tableViewDidFinishTriggerHeader:YES reload:YES];
-        
+        /// 移除掉数据
+        [self.dataSource removeAllObjects];
         /// 获取数据
-        NSData *data = [NSData dataNamed:@"SUBannerData.data"];
-        
-        
+        NSData *data = [NSData dataNamed:[NSString stringWithFormat:@"SUGoodsData_%zd.data",(page)]];
+        SUGoodsData *goodsData = [SUGoodsData modelWithJSON:data];
+        /// 转化数据
+        NSArray *dataSource = [self _dataSourceWithGoodsData:goodsData];
+        /// 添加数据
+        [self.dataSource addObjectsFromArray:dataSource];
+        /// 结束头部控件的刷新并刷新数据
+        [self tableViewDidFinishTriggerHeader:YES reload:YES];
     });
     
     /// 请求banner数据 模拟网络请求
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         /// 获取数据
         NSData *data = [NSData dataNamed:@"SUBannerData.data"];
-        
+        /// convert to model array
         self.banners = [SUBanner modelArrayWithJSON:data];
         
         /// 配置数据
@@ -119,17 +150,54 @@
 /// 上拉加载
 - (void)tableViewDidTriggerFooterRefresh
 {
-    MHLogFunc;
+    /// config param
+    NSInteger page = self.page+1;
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:@(page) forKey:@"page"];
+    
+    /// 请求商品数据
+    /// 请求商品数据 模拟网络请求
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.75f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        /// 获取数据
+        NSData *data = [NSData dataNamed:[NSString stringWithFormat:@"SUGoodsData_%zd.data",(page)]];
+        SUGoodsData *goodsData = [SUGoodsData modelWithJSON:data];
+        /// 转化数据
+        NSArray *dataSource = [self _dataSourceWithGoodsData:goodsData];
+        /// 添加数据
+        [self.dataSource addObjectsFromArray:dataSource];
+        /// 结束尾部控件的刷新并刷新数据
+        [self tableViewDidFinishTriggerHeader:NO reload:YES];
+    });
 }
+
+/// config  cell
+- (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath
+{
+    SUGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SUGoodsCell class])];
+    return cell;
+}
+
+/// config  data
+- (void)configureCell:(SUGoodsCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(SUGoodsFrame *)object
+{
+    /// config data
+    cell.goodsFrame = object;
+}
+
 /// 文本内容区域
 - (UIEdgeInsets)contentInset
 {
     return UIEdgeInsetsZero;
 }
 
-//// 全局变量
-UIStatusBarStyle style_ = UIStatusBarStyleDefault;
-BOOL statusBarHidden_ = NO;
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // 跳转到商品详请
+    [self _pushToPublicViewControllerWithTitle:@"商品详情"];
+}
+
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -174,9 +242,48 @@ BOOL statusBarHidden_ = NO;
     return bannerImageUrlString.copy;
 }
 
+/// 处理goodsData
+- (NSArray *)_dataSourceWithGoodsData:(SUGoodsData *)goodsData
+{
+    NSMutableArray *dataSource = [NSMutableArray arrayWithCapacity:goodsData.data.count];
+    
+    for (SUGoods *goods in goodsData.data) {
+        SUGoodsFrame *goodsFrame = [[SUGoodsFrame alloc] initWithGoods:goods];
+        [dataSource addObject:goodsFrame];
+    }
+    /// config data
+    self.page = goodsData.currentPage;
+    self.lastPage = goodsData.lastPage;
+    self.perPage = goodsData.perPage;
+    return dataSource.copy;
+}
+
+/// 跳转界面 这里只是一个跳转，实际情况，自行定夺
+- (void)_pushToPublicViewControllerWithTitle:(NSString *)title
+{
+    SUPublic0ViewController *publicVC = [[SUPublic0ViewController alloc] init];
+    publicVC.title = title;
+    [self.navigationController pushViewController:publicVC animated:YES];
+}
+
+
 
 
 ////////////////// 以下为UI代码，不必过多关注 ///////////////////
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return .0001f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 53;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    /// FIXED : when data is empty ，show nothing
+    if (self.dataSource.count==0) return nil;
+    SUGoodsHeaderView *sectionHeader = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([SUGoodsHeaderView class])];
+    return sectionHeader;
+}
 #pragma mark - Override
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return style_;
@@ -189,7 +296,7 @@ BOOL statusBarHidden_ = NO;
 - (void)_setupSubViews
 {
     /// Create NavBar;
-    UIView *navBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MHMainScreenWidth, self.navigationController.navigationBar.mh_height)];
+    UIView *navBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MHMainScreenWidth, self.navigationController.navigationBar.mh_height+20)];
     navBar.backgroundColor = MHAlphaColor(254.0f, 88.0f, 62.0f, .0f) ;
     self.navBar = navBar;
     [self.view addSubview:navBar];
@@ -227,5 +334,7 @@ BOOL statusBarHidden_ = NO;
     headerView.hidden = YES;
     headerView.backgroundColor = [UIColor whiteColor];
     self.tableView.tableHeaderView = headerView;
+    
+    self.tableView.contentInset = self.contentInset;
 }
 @end

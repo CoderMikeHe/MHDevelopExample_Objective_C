@@ -17,9 +17,30 @@
  */
 - (CGSize)mh_sizeWithFont:(UIFont *)font
 {
+    CGSize theSize;
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
-    return [self sizeWithAttributes:attributes];
+    theSize = [self sizeWithAttributes:attributes];
+    // 向上取整
+    theSize.width = ceil(theSize.width);
+    theSize.height = ceil(theSize.height);
+    return theSize;
+}
 
+
+- (CGSize)mh_sizeWithFont:(UIFont *)font limitSize:(CGSize)limitSize
+{
+    CGSize theSize;
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
+    CGRect rect = [self boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attributes context:nil];
+    theSize.width = ceil(rect.size.width);
+    theSize.height = ceil(rect.size.height);
+    return theSize;
+}
+
+
+- (CGSize)mh_sizeWithFont:(UIFont *)font limitWidth:(CGFloat)limitWidth
+{
+    return [self mh_sizeWithFont:font limitSize:CGSizeMake(limitWidth, MAXFLOAT)];
 }
 
 @end

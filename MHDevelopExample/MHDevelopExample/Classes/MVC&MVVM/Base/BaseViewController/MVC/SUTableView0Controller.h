@@ -24,17 +24,18 @@
 /// 内容缩进
 @property (nonatomic, readonly, assign) UIEdgeInsets contentInset;
 
-/** 下来刷新 */
+/** 下来刷新 defalut is NO*/
 @property (nonatomic, readwrite, assign) BOOL shouldPullDownToRefresh;
-/** 上拉加载 */
+/** 上拉加载 defalut is NO*/
 @property (nonatomic, readwrite, assign) BOOL shouldPullUpToLoadMore;
+/// 是否数据是多段 (It's effect tableView's dataSource 'numberOfSectionsInTableView:') defalut is NO
+@property (nonatomic, readwrite, assign) BOOL shouldShowSections;
 
-
-/// 当前页
+/// 当前页 defalut is 0
 @property (nonatomic, readwrite, assign) NSUInteger page;
-/// 每一页的数据
+/// 每一页的数据 defalut is 20
 @property (nonatomic, readwrite, assign) NSUInteger perPage;
-/// 最后一页
+/// 最后一页 defalut is 0
 @property (nonatomic, readwrite, assign) NSUInteger lastPage;
 
 

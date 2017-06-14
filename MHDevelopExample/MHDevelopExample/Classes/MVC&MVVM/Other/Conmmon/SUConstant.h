@@ -15,7 +15,7 @@
 
 
 /// 全局粉红色
-#define SUGlobalPinkColor [UIColor colorFromHexString:@"#56585f"]
+#define SUGlobalPinkColor [UIColor colorFromHexString:@"#FE8491"]
 /// 全局浅粉红色
 #define SUGlobalShadowPinkColor [UIColor colorFromHexString:@"#FFF1F2"]
 /// 全局亮红色 V1.4.0 @"#FE583E"

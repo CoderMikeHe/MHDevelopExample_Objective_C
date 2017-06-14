@@ -11,7 +11,7 @@
 @interface SUModel : NSObject<YYModel>
 
 /**
- * A json object of `NSDictionary`, `NSString` or `NSData`
+ * 将 JSON (NSData,NSString,NSDictionary) 转换为 Model
  */
 + (instancetype)modelWithJSON:(id)json;
 - (BOOL)modelSetWithJSON:(id)json;

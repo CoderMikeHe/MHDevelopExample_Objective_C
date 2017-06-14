@@ -180,4 +180,67 @@
     return [calendar components:unit fromDate:self toDate:[NSDate date] options:0];
 }
 
+
+
+
+//////////// MVC&MVVM的商品的发布时间的描述 ////////////
+- (NSString *)mh_string_yyyy_MM_dd {
+    return [self mh_string_yyyy_MM_dd:[NSDate date]];
+}
+
+- (NSString *)mh_string_yyyy_MM_dd:(NSDate *)toDate {
+    // 设置日期格式（声明字符串里面每个数字和单词的含义）
+    // E:星期几
+    // M:月份
+    // d:几号(这个月的第几天)
+    // H:24小时制的小时
+    // m:分钟
+    // s:秒
+    // y:年
+    // fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    // 真机调试，转换这种欧美时间，需要设置locale
+    fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    // fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+    // fmt.locale = [NSLocale currentLocale];
+    
+    // 由于小闲肉使用的是北京时间，需要减掉8小时时差(转为欧美时间体系)
+    NSDate *fromDate = [NSDate dateWithTimeIntervalSince1970:(self.timeIntervalSince1970 - 8*60*60)];
+    
+    // 日历对象（方便比较两个日期之间的差距）
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    // NSCalendarUnit枚举代表想获得哪些差值
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    // 计算两个日期之间的差值
+    NSDateComponents *cmps = [calendar components:unit fromDate:fromDate toDate:toDate options:0];
+    
+    if (cmps.year == 0) { // 今年
+        if (cmps.year == 0 && cmps.month == 0 && cmps.day == 1) { // 昨天
+            // fmt.dateFormat = @"昨天 HH:mm";
+            fmt.dateFormat = @"MM-dd HH:mm";
+            return [fmt stringFromDate:fromDate];
+        } else if (cmps.year == 0 && cmps.month == 0 && cmps.day == 0) { // 今天
+            if (cmps.hour >= 1) {
+                return [NSString stringWithFormat:@"%d小时前", (int)cmps.hour];
+            } else if (cmps.minute >= 1) {
+                return [NSString stringWithFormat:@"%d分钟前", (int)cmps.minute];
+            } else {
+                return @"刚刚";
+            }
+        } else { // 今年的其他日子
+            fmt.dateFormat = @"MM-dd HH:mm";
+            return [fmt stringFromDate:fromDate];
+        }
+    } else { // 非今年
+        fmt.dateFormat = @"yyyy-MM-dd HH:mm";
+        return [fmt stringFromDate:fromDate];
+    }
+}
+//////////// MVC&MVVM的商品的发布时间的描述 ////////////
+
+
+
+
+
 @end

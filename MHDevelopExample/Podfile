@@ -97,9 +97,11 @@ pod 'BlocksKit'                         , '~> 2.2.5'
 # 图片轮播器 由于头文件问题 手动导入
 # pod 'SDCycleScrollView', '~> 1.66'
 
+#########  Category  #########
 # 非常强大的Objective-C库的扩展
 pod 'libextobjc'                        , '~> 0.4.1'
-
 # YYKit 的一套分类
 pod 'YYCategories'                      , '~> 1.0.4'
+
+#########  图片浏览器  #########
 end

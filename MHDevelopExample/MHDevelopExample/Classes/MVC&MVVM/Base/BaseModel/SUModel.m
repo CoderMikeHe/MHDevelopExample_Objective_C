@@ -9,7 +9,7 @@
 #import "SUModel.h"
 
 @implementation SUModel
-/// A json object of `NSDictionary`, `NSString` or `NSData` to create a model
+/// 将 JSON (NSData,NSString,NSDictionary) 转换为 Model
 + (instancetype)modelWithJSON:(id)json { return [self yy_modelWithJSON:json]; }
 - (BOOL)modelSetWithJSON:(id)json { return [self yy_modelSetWithJSON:json]; }
 

@@ -4,7 +4,7 @@
 //
 //  Created by senba on 2017/6/9.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
-//  首页商品模型 data-model
+//  首页商品模型 data-model -- M
 
 #import <Foundation/Foundation.h>
 #import "SUGoodsImage.h"
@@ -63,7 +63,29 @@ typedef NS_ENUM(NSUInteger, SUGoodsExpressType) {
 /// 用户昵称
 @property (nonatomic, readwrite, copy) NSString * nickName;
 /// 是否芝麻认证
-@property (nonatomic, assign) BOOL iszm;
+@property (nonatomic, readwrite, assign) BOOL iszm;
 
 
+
+
+//// 以下 MVC使用的场景，如果使用MVVM的请自行ignore
+//// 辅助属性
+/// 商品图片UrlString
+@property (nonatomic, readonly, copy) NSArray <NSString *> *imagesUrlStrings;
+/// 运费情况
+@property (nonatomic, readonly, copy) NSString *freightExplain;
+
+/// 发布时间描述
+@property (nonatomic, readonly, copy) NSString *goodsPublishTime;
+
+/// 商品价格的富文本
+@property (nonatomic, readonly, copy) NSAttributedString *goodsPriceAttributedString;
+
+/// 商品原价的富文本
+@property (nonatomic, readonly, copy) NSAttributedString *goodsOPriceAttributedString;
+
+/// 全新+title
+@property (nonatomic, readwrite, copy) NSAttributedString *goodsTitleAttributedString;
+
+//// 以上 MVC使用的场景，如果使用MVVM的请自行ignore
 @end

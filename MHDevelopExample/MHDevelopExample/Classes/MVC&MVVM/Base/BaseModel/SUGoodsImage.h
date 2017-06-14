@@ -4,7 +4,7 @@
 //
 //  Created by senba on 2017/6/9.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
-//  商品预览图模型 data-model
+//  商品预览图模型 data-model  -- M
 
 #import "SUModel.h"
 
