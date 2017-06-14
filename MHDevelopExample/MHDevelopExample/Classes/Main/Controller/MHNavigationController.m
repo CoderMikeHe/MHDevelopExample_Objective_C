@@ -110,7 +110,7 @@
 
     // 设置文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:MHPxConvertPt(17.0f)];
+    textAttrs[NSFontAttributeName] = MHRegularFont_18;
     textAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
     // UIOffsetZero是结构体, 只要包装成NSValue对象, 才能放进字典\数组中
     NSShadow *shadow = [[NSShadow alloc] init];
@@ -127,13 +127,13 @@
 {
     // 通过appearance对象能修改整个项目中所有UIBarButtonItem的样式
     UIBarButtonItem *appearance = [UIBarButtonItem appearance];
-    CGFloat fontSize = MHPxConvertPt(14.0f);
+    CGFloat fontSize = 14.0f;
     
     /**设置文字属性**/
     // 设置普通状态的文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = MHGlobalBlackTextColor;
-    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:fontSize];
+    textAttrs[NSFontAttributeName] = MHRegularFont(fontSize);
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowOffset =  CGSizeZero;
     textAttrs[NSShadowAttributeName] = shadow;

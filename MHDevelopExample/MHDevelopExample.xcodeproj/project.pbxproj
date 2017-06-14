@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260C2DF71EF11A9200378885 /* SUWebView0Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 260C2DF61EF11A9200378885 /* SUWebView0Controller.m */; };
+		260C2DFA1EF1261000378885 /* SUPublic0WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260C2DF91EF1261000378885 /* SUPublic0WebViewController.m */; };
 		260D8D841EED37CB00B47B3D /* SUGoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8D701EED37CB00B47B3D /* SUGoods.m */; };
 		260D8D851EED37CB00B47B3D /* SUGoodsImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8D721EED37CB00B47B3D /* SUGoodsImage.m */; };
 		260D8D861EED37CB00B47B3D /* SUGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8D751EED37CB00B47B3D /* SUGoodsCell.m */; };
@@ -171,6 +173,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260C2DF51EF11A9200378885 /* SUWebView0Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUWebView0Controller.h; sourceTree = "<group>"; };
+		260C2DF61EF11A9200378885 /* SUWebView0Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUWebView0Controller.m; sourceTree = "<group>"; };
+		260C2DF81EF1261000378885 /* SUPublic0WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUPublic0WebViewController.h; sourceTree = "<group>"; };
+		260C2DF91EF1261000378885 /* SUPublic0WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUPublic0WebViewController.m; sourceTree = "<group>"; };
 		260D8D6F1EED37CB00B47B3D /* SUGoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUGoods.h; sourceTree = "<group>"; };
 		260D8D701EED37CB00B47B3D /* SUGoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUGoods.m; sourceTree = "<group>"; };
 		260D8D711EED37CB00B47B3D /* SUGoodsImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUGoodsImage.h; sourceTree = "<group>"; };
@@ -713,6 +719,8 @@
 				2615EC881EEE308200D6B473 /* SUView0Controller.m */,
 				2615EC8A1EEE30D500D6B473 /* SUTableView0Controller.h */,
 				2615EC8B1EEE30D500D6B473 /* SUTableView0Controller.m */,
+				260C2DF51EF11A9200378885 /* SUWebView0Controller.h */,
+				260C2DF61EF11A9200378885 /* SUWebView0Controller.m */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -815,6 +823,8 @@
 				260E2E6C1EEFEBDD00A0A50D /* SUPublic0ViewController.h */,
 				260E2E6D1EEFEBDD00A0A50D /* SUPublic0ViewController.m */,
 				260E2E6E1EEFEBDD00A0A50D /* SUPublic0ViewController.xib */,
+				260C2DF81EF1261000378885 /* SUPublic0WebViewController.h */,
+				260C2DF91EF1261000378885 /* SUPublic0WebViewController.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -2046,6 +2056,7 @@
 				2615EC891EEE308200D6B473 /* SUView0Controller.m in Sources */,
 				622BF5F01E56E88A004DFCA2 /* MHYouKuAnthologyItem.m in Sources */,
 				2615ECCE1EEE919900D6B473 /* TAAnimatedDotView.m in Sources */,
+				260C2DFA1EF1261000378885 /* SUPublic0WebViewController.m in Sources */,
 				260F3BDC1EEEF91100ACF0D5 /* SUBanner.m in Sources */,
 				625B73BD1E4C598C006A8E86 /* NSDate+Extension.m in Sources */,
 				2615EC831EEE2E3000D6B473 /* SUViewController.m in Sources */,
@@ -2061,6 +2072,7 @@
 				2615ECCD1EEE919900D6B473 /* TAAbstractDotView.m in Sources */,
 				2615ECBC1EEE7DB200D6B473 /* SUSearchBarView.m in Sources */,
 				2615EC821EEE2E3000D6B473 /* SUTableViewController.m in Sources */,
+				260C2DF71EF11A9200378885 /* SUWebView0Controller.m in Sources */,
 				260D8DD01EEDA4D100B47B3D /* SUTableViewModel.m in Sources */,
 				260D8D841EED37CB00B47B3D /* SUGoods.m in Sources */,
 				627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */,

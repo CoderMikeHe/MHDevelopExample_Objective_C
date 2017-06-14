@@ -231,27 +231,31 @@ UICollectionViewDataSource>
 - (void)_addActionDealForMVCOrMVVMWithoutRAC
 {
     /// 头像被点击
+    @weakify(self);
     [self.userHeadImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
-        
+        @strongify(self);
+        !self.avatarClickedHandler?:self.avatarClickedHandler(self , self.goodsFrame.goods.userId);
     }]];
     
     /// 位置被点击
     [self.GPSBtn bk_addEventHandler:^(id sender) {
-        
+        @strongify(self);
+        !self.locationClickedHandler?:self.locationClickedHandler(self , self.goodsFrame.goods.locationAreaName);
     } forControlEvents:UIControlEventTouchUpInside];
     
     
     /// 回复按钮被点击
     [self.replyBtn bk_addEventHandler:^(id sender) {
-        
+        @strongify(self);
+        !self.replyClickedHandler?:self.replyClickedHandler(self , self.goodsFrame.goods.goodsId);
     } forControlEvents:UIControlEventTouchUpInside];
     
     
     /// 收藏按钮被点击
     [self.thumbBtn bk_addEventHandler:^(id sender) {
-        
+        @strongify(self);
+        !self.thumbClickedHandler?:self.thumbClickedHandler(self , self.goodsFrame.goods.goodsId);
     } forControlEvents:UIControlEventTouchUpInside];
-    
 }
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 

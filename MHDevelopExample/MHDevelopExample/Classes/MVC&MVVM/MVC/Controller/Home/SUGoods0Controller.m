@@ -15,6 +15,7 @@
 #import "SUGoodsCell.h"
 #import "SUGoodsHeaderView.h"
 #import "SUPublic0ViewController.h"
+#import "SUPublic0WebViewController.h"
 
 //// 全局变量
 static UIStatusBarStyle style_ = UIStatusBarStyleDefault;
@@ -45,17 +46,7 @@ static BOOL statusBarHidden_ = NO;
     
     // 如果你发现你的CycleScrollview会在viewWillAppear时图片卡在中间位置，你可以调用此方法调整图片位置
     [self.headerView adjustWhenControllerViewWillAppera];
-    
-    
-    NSLog(@"mmmm----before %@ ---" , NSStringFromUIEdgeInsets(self.tableView.contentInset));
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    NSLog(@"mmmm----after %@ ---" , NSStringFromUIEdgeInsets(self.tableView.contentInset));
+  
 }
 
 - (void)viewDidLoad {
@@ -63,7 +54,8 @@ static BOOL statusBarHidden_ = NO;
     
     // hide sys navBar
     self.fd_prefersNavigationBarHidden = YES;
-    
+    // 去掉侧滑pop手势
+    self.fd_interactivePopDisabled = YES;
     // create subViews
     [self _setupSubViews];
 
@@ -91,13 +83,23 @@ static BOOL statusBarHidden_ = NO;
     @weakify(self);
     self.titleView.searchBarViewClicked = ^ {
         @strongify(self);
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        @weakify(self);
+        UIAlertAction *confirmlAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            @strongify(self);
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"确定要注销当前用户吗?" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:confirmlAction];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     };
     /// banner 视图被点击
     self.headerView.clickItemOperationBlock = ^(NSInteger currentIndex) {
-//        @strongify(self);
-        
-    
+        @strongify(self);
+        SUPublic0WebViewController *webViewVc = [[SUPublic0WebViewController alloc] init];
+        webViewVc.request = (NSString *)[self.banners[currentIndex] url];
+        [self.navigationController pushViewController:webViewVc animated:YES];
     };
 }
 /// 滚动到顶部
@@ -174,6 +176,49 @@ static BOOL statusBarHidden_ = NO;
 - (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath
 {
     SUGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SUGoodsCell class])];
+    /// 处理事件
+    @weakify(self);
+    /// 头像
+    cell.avatarClickedHandler = ^(SUGoodsCell *goodsCell, NSString *userId) {
+        @strongify(self);
+        SUGoodsFrame *goodsFrame = self.dataSource[indexPath.row];
+        [self _pushToPublicViewControllerWithTitle:goodsFrame.goods.nickName];
+    };
+    /// 位置
+    cell.locationClickedHandler = ^(SUGoodsCell *goodsCell, NSString *locationAreaName) {
+        @strongify(self);
+        [self _pushToPublicViewControllerWithTitle:locationAreaName];
+    };
+    
+    /// 回复
+    cell.replyClickedHandler = ^(SUGoodsCell *goodsCell, NSString *goodsId) {
+        @strongify(self);
+        [self _pushToPublicViewControllerWithTitle:[NSString stringWithFormat:@"商品%@的评论列表",goodsId]];
+    };
+    
+    /// 点赞
+    cell.thumbClickedHandler = ^(SUGoodsCell *goodsCell, NSString *goodsId) {
+        @strongify(self);
+        /// show loading
+        [MBProgressHUD mh_showProgressHUD:@"Loading..." addedToView:self.view];
+        /// 模拟网络
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            /// hid loading
+            [MBProgressHUD mh_hideHUDForView:self.view];
+            /// data
+            SUGoodsFrame *goodsFrame = self.dataSource[indexPath.row];
+            SUGoods *goods = goodsFrame.goods;
+            /// update data
+            goods.isLike = !goods.isLike;
+            NSInteger likes = (goods.isLike)?(goods.likes.integerValue+1):(goods.likes.integerValue-1);
+            NSString *tips = (goods.isLike)?@"收藏商品成功":@"取消收藏商品";
+            [MBProgressHUD mh_showTips:tips];
+            goods.likes = [NSString stringWithFormat:@"%zd",likes];
+            /// reload data
+            [self.tableView reloadData];
+            
+        });
+    };
     return cell;
 }
 
@@ -202,6 +247,7 @@ static BOOL statusBarHidden_ = NO;
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;
+    
     self.scrollToTopButton.hidden = (offsetY < scrollView.mh_height);
     
     CGFloat duration = 0.65;
@@ -314,8 +360,8 @@ static BOOL statusBarHidden_ = NO;
     /// 滚动到顶部的按钮
     CGFloat scrollToTopButtonW = 52;
     CGFloat scrollToTopButtonH = 90;
-    CGFloat scrollToTopButtonX = (self.tableView.mh_width - scrollToTopButtonW) - 12;
-    CGFloat scrollToTopButtonY = (self.tableView.mh_height - scrollToTopButtonH) - 15;
+    CGFloat scrollToTopButtonX = (MHMainScreenWidth - scrollToTopButtonW) - 12;
+    CGFloat scrollToTopButtonY = (MHMainScreenHeight - scrollToTopButtonH) - 60;
     UIButton *scrollToTopButton = [[UIButton alloc] initWithFrame:CGRectMake(scrollToTopButtonX, scrollToTopButtonY, scrollToTopButtonW, scrollToTopButtonH)];
     [scrollToTopButton setImage:[UIImage imageNamed:@"home_page_scroll_to_top"] forState:UIControlStateNormal];
     scrollToTopButton.hidden = YES;

@@ -24,22 +24,22 @@ typedef void(^SUGoodsCellPictureClickedHandler)(SUGoodsCell *goodsCell, NSIntege
 /**
  * 头像被点击
  */
-typedef void(^SUGoodsCellAvatarClickedHandler)(SUGoodsCell *goodsCell);
+typedef void(^SUGoodsCellAvatarClickedHandler)(SUGoodsCell *goodsCell , NSString *userId);
 
 /**
  * 位置被点击
  */
-typedef void(^SUGoodsCellLocationClickedHandler)(SUGoodsCell *goodsCell);
+typedef void(^SUGoodsCellLocationClickedHandler)(SUGoodsCell *goodsCell , NSString *locationAreaName);
 
 /**
  * 留言被点击
  */
-typedef void(^SUGoodsCellReplyClickedHandler)(SUGoodsCell *goodsCell);
+typedef void(^SUGoodsCellReplyClickedHandler)(SUGoodsCell *goodsCell , NSString *goodsId);
 
 /**
  * 点赞被点击
  */
-typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell);
+typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell , NSString *goodsId);
 
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 
@@ -66,7 +66,6 @@ typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell);
 @property (nonatomic, readwrite, copy) SUGoodsCellReplyClickedHandler replyClickedHandler;
 /// 点赞按钮被点击
 @property (nonatomic, readwrite, copy) SUGoodsCellThumbClickedHandler thumbClickedHandler;
-
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 
 @end

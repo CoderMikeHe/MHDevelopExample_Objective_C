@@ -143,6 +143,10 @@
 #pragma mark - 初始化subView
 - (void)_setupSubViews
 {
+    /// 设置圆角
+    [self.userAvatar zy_cornerRadiusRoundingRect];
+    [self.userAvatar zy_attachBorderWidth:.5f color:MHColorFromHexString(@"#EBEBEB")];
+    
     /// 输入框
     SULoginInputView *inputView = [SULoginInputView inputView];
     self.inputView = inputView;

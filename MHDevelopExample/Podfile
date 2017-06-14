@@ -1,79 +1,79 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
-
+## ignore warning
 inhibit_all_warnings!
 target 'MHDevelopExample' do
 
-#富文本
+# 富文本
 pod 'YYText', '~> 1.0.5'
 
-#AutoLayout
+# AutoLayout
 pod 'Masonry', '~> 1.0.1'
 
-#缓存tableViewCell的高度
+# 缓存tableViewCell的高度
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
 
-#字典转模型
+# 字典转模型
 pod 'MJExtension', '~> 3.0.13'
 pod 'YYModel'                           , '~> 1.0.4'
 
-#颜色分类
+# 颜色分类
 pod 'Colours', '~> 5.13.0'
 
-#根据颜色 生成一张图片
+# 根据颜色 生成一张图片
 pod 'UIImage+ImageWithColor', '~> 1.3'
 
-#HUD
+# HUD
 pod 'MBProgressHUD', '~> 1.0.0'
 
-#HUD
+# HUD
 pod 'SVProgressHUD', '~> 2.0.3'
 
-#侧滑手势
+# 侧滑手势
 pod 'FDFullscreenPopGesture', '~> 1.1'
 
-#数据库
+# 数据库
 pod 'FMDB', '~> 2.6.2'
 
-#环形进度条
+# 环形进度条
 pod 'DACircularProgress', '~> 2.3.1'
 
-#消息链
+# 消息链
 pod 'ReactiveCocoa','2.5'
 
-#网络请求
+# 网络请求
 pod 'AFNetworking', '~> 3.1.0'
 
-#图片缓存
+# 图片缓存
 pod 'SDWebImage', '~> 4.0.0'
 
-#UIView模糊
+# UIView模糊
 pod 'FXBlurView', '~> 1.6.4'
 
-#WebSocket
+# WebSocket
 pod 'SocketRocket', '~> 0.5.1'
 
-#badgeValue
+# badgeValue
 pod 'WZLBadge', '~> 1.2.5'
 pod 'JSBadgeView', '~> 1.4.1'
 
-#文件压缩与解压
+# 文件压缩与解压
 pod 'SSZipArchive', '~> 1.6.2'
 
-#苹果内购
+# 苹果内购
 pod 'RMStore', '~> 0.7.1'
 
-#YYImage
+# YYImage
 pod 'YYImage', '~> 1.0.4'
 
-#webP
+# webP
 pod 'YYImage/WebP'
 
-#菊花activity
+# 菊花activity
 pod 'MMMaterialDesignSpinner', '~> 0.2.3'
 
-#类似网易新闻的标签栏
+# 类似网易新闻的标签栏
 pod 'YZDisplayViewController', '~> 1.0.6'
 
 #刷新控件
@@ -95,7 +95,7 @@ pod 'HJCornerRadius', :git => 'https://github.com/panghaijiao/HJCornerRadius.git
 pod 'BlocksKit'                         , '~> 2.2.5'
 
 # 图片轮播器 由于头文件问题 手动导入
-# pod 'SDCycleScrollView', '~> 1.66'
+# pod 'SDCycleScrollView'               , '~> 1.66'
 
 #########  Category  #########
 # 非常强大的Objective-C库的扩展
@@ -104,4 +104,5 @@ pod 'libextobjc'                        , '~> 0.4.1'
 pod 'YYCategories'                      , '~> 1.0.4'
 
 #########  图片浏览器  #########
+pod 'PYPhotoBrowser'                    , '~> 1.5.0'
 end
