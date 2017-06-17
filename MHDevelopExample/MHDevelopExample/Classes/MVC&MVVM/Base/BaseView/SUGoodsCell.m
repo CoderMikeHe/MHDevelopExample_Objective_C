@@ -15,7 +15,7 @@
 #import "SUGoodsImageCell.h"
 
 
-//#import "SUGoodsHomeItemViewModel.h"
+#import "SUGoodsItemViewModel.h"
 
 
 @interface SUGoodsCell()<
@@ -60,9 +60,10 @@ UICollectionViewDataSource>
 /// 点赞按钮
 @property (weak, nonatomic) IBOutlet UIButton *thumbBtn;
 
-
+//// 以下 MVVM使用的场景，如果使用MVC的请自行ignore
 /// viewModle
-//@property (nonatomic, readwrite, strong) SUGoodsHomeItemViewModel *viewModel;
+@property (nonatomic, readwrite, strong) SUGoodsItemViewModel *viewModel;
+//// 以上 MVVM使用的场景，如果使用MVC的请自行ignore
 @end
 
 @implementation SUGoodsCell
@@ -109,7 +110,7 @@ UICollectionViewDataSource>
     self.flowLayout.itemSize = CGSizeMake(itemWH, itemWH);
     self.optimalProductCollectionView.backgroundColor   = [UIColor whiteColor];
 
-    // ---add Action
+    // --- add Action ---
     //// 使用MVC 和 MVVM without RAC 的事件回调
     [self _addActionDealForMVCOrMVVMWithoutRAC];
     
@@ -118,53 +119,57 @@ UICollectionViewDataSource>
     
 }
 
+// 以下 MVVM使用的场景，如果使用MVC的请自行ignore
+#pragma mark - bind data
+- (void)bindViewModel:(SUGoodsItemViewModel *)viewModel
+{
+    self.viewModel = viewModel;
+    
+    /// 头像
+    [MHWebImageTool setImageWithURL:viewModel.goods.avatar placeholderImage:placeholderUserIcon() imageView:self.userHeadImageView];
+    
+    /// 昵称
+    self.userNameLabel.text = viewModel.goods.nickName;
+    self.realNameIcon.hidden = !viewModel.goods.iszm;
+    /// 发布时间
+    self.publishTimeLabel.text = viewModel.goodsPublishTime;
+    
+    /// 照片
+    self.imageURLs = viewModel.imagesUrlStrings;
+    
+    /// 卖价
+    self.priceLabel.attributedText = viewModel.goodsPriceAttributedString;
+    self.priceLabel.frame = viewModel.priceLalelFrame;
+    
+    /// 原价
+    self.oldPriceLabel.attributedText = viewModel.goodsOPriceAttributedString;
+    self.oldPriceLabel.frame = viewModel.oPriceLalelFrame;
+    
+    /// 运费
+    self.extraFee.text = viewModel.freightExplain;
+    self.extraFee.frame = viewModel.freightageLalelFrame;
+    [self.extraFee hyb_addCornerRadius:2];
+    /// 数量
+    self.countLabel.text = viewModel.number;
+    
+    /// 主题
+    self.goodsTitleLabel.attributedText = viewModel.goodsTitleAttributedString;
+    
+    /// 描述
+    self.contentLabel.text = viewModel.goods.goodsDescription;
+    
+    /// 位置
+    [self.GPSBtn setTitle:viewModel.goods.locationAreaName forState:UIControlStateNormal];
+    
+    /// 回复数
+    [self.replyBtn setTitle:viewModel.goods.messages forState:UIControlStateNormal];
+    
+    /// 点赞数
+    [self.thumbBtn setTitle:viewModel.goods.likes forState:UIControlStateNormal];
+    self.thumbBtn.selected = viewModel.goods.isLike;
 
-//#pragma mark - bind data
-//- (void)bindViewModel:(SUGoodsHomeItemViewModel *)viewModel
-//{
-//    self.viewModel = viewModel;
-//    
-//    /// 头像
-//    [MHWebImageTool setImageWithURL:viewModel.avatar placeholderImage:placeholderUserIcon() imageView:self.userHeadImageView];
-//    
-//    /// 昵称
-//    self.userNameLabel.text = viewModel.nickname;
-//    self.realNameIcon.hidden = !viewModel.iszm;
-//    /// 发布时间
-//    self.publishTimeLabel.text = viewModel.publishTime;
-//    
-//    /// 照片
-//    self.imageURLs = viewModel.imageURLs;
-//    
-//    /// 卖价
-//    self.priceLabel.attributedText = viewModel.price;
-//    self.priceLabel.frame = viewModel.priceLalelFrame;
-//    
-//    /// 原价
-//    self.oldPriceLabel.attributedText = viewModel.oPrice;
-//    self.oldPriceLabel.frame = viewModel.oPriceLalelFrame;
-//    
-//    /// 运费
-//    self.extraFee.text = viewModel.freightExplain;
-//    self.extraFee.frame = viewModel.freightageLalelFrame;
-//    [self.extraFee hyb_addCornerRadius:2];
-//    /// 数量
-//    self.countLabel.text = viewModel.number;
-//    
-//    /// 主题
-//    self.goodsTitleLabel.attributedText = viewModel.titleAttr;
-//    
-//    /// 描述
-//    self.contentLabel.text = viewModel.goodsDescription;
-//    
-//    /// 位置
-//    [self.GPSBtn setTitle:viewModel.locationName forState:UIControlStateNormal];
-//    
-//    /// 留言数量
-//    [self.replyBtn setAttributedTitle:viewModel.messages forState:UIControlStateNormal];
-//
-//}
-
+}
+//// 以上 MVVM使用的场景，如果使用MVC的请自行ignore
 
 
 
@@ -234,27 +239,27 @@ UICollectionViewDataSource>
     @weakify(self);
     [self.userHeadImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
         @strongify(self);
-        !self.avatarClickedHandler?:self.avatarClickedHandler(self , self.goodsFrame.goods.userId);
+        !self.avatarClickedHandler?:self.avatarClickedHandler(self);
     }]];
     
     /// 位置被点击
     [self.GPSBtn bk_addEventHandler:^(id sender) {
         @strongify(self);
-        !self.locationClickedHandler?:self.locationClickedHandler(self , self.goodsFrame.goods.locationAreaName);
+        !self.locationClickedHandler?:self.locationClickedHandler(self);
     } forControlEvents:UIControlEventTouchUpInside];
     
     
     /// 回复按钮被点击
     [self.replyBtn bk_addEventHandler:^(id sender) {
         @strongify(self);
-        !self.replyClickedHandler?:self.replyClickedHandler(self , self.goodsFrame.goods.goodsId);
+        !self.replyClickedHandler?:self.replyClickedHandler(self);
     } forControlEvents:UIControlEventTouchUpInside];
     
     
     /// 收藏按钮被点击
     [self.thumbBtn bk_addEventHandler:^(id sender) {
         @strongify(self);
-        !self.thumbClickedHandler?:self.thumbClickedHandler(self , self.goodsFrame.goods.goodsId);
+        !self.thumbClickedHandler?:self.thumbClickedHandler(self);
     } forControlEvents:UIControlEventTouchUpInside];
 }
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore

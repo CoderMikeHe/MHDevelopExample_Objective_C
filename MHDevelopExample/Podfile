@@ -91,9 +91,6 @@ pod 'HYBImageCliped'                    , '~> 2.2.4'
 pod 'ZYCornerRadius'                    , '~> 1.0.2'
 pod 'HJCornerRadius', :git => 'https://github.com/panghaijiao/HJCornerRadius.git'
 
-# UI block
-pod 'BlocksKit'                         , '~> 2.2.5'
-
 # 图片轮播器 由于头文件问题 手动导入
 # pod 'SDCycleScrollView'               , '~> 1.66'
 
@@ -102,7 +99,12 @@ pod 'BlocksKit'                         , '~> 2.2.5'
 pod 'libextobjc'                        , '~> 0.4.1'
 # YYKit 的一套分类
 pod 'YYCategories'                      , '~> 1.0.4'
+# UI block
+pod 'BlocksKit'                         , '~> 2.2.5'
 
 #########  图片浏览器  #########
 pod 'PYPhotoBrowser'                    , '~> 1.5.0'
+
+#########  FaceBook‘s KVO（优雅的代替系统的KVO）  #########
+pod 'KVOController'                     , '~> 1.2.0'
 end

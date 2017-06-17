@@ -26,6 +26,9 @@
 
 + (void)setImageWithURL:(nullable NSString *)url placeholderImage:(nullable UIImage *)placeholder imageView:(nullable UIImageView *)imageView progress:(nullable MHWebImageDownloaderProgressBlock)progressBlock completed:(nullable MHWebImageCompletionWithFinishedBlock)completedBlock
 {
+    if (MHObjectIsNil(url)) {
+        url = nil;
+    }
     [imageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:placeholder options:SDWebImageLowPriority | SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         if (progressBlock) {
             progressBlock(receivedSize,expectedSize,targetURL);

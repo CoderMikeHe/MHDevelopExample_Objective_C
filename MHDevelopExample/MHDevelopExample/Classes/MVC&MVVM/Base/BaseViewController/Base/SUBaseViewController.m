@@ -20,7 +20,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.extendedLayoutIncludesOpaqueBars = YES;
     /// backgroundColor
-    self.view.backgroundColor = MHColorFromHexString(@"#EEEFF4");
+    self.view.backgroundColor = SUGlobalGrayBackgroundColor;
 }
 
 #pragma mark - Orientation

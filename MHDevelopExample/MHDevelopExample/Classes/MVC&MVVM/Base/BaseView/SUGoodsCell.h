@@ -20,26 +20,26 @@
 /**
  * 图片被点击
  */
-typedef void(^SUGoodsCellPictureClickedHandler)(SUGoodsCell *goodsCell, NSInteger index);
+typedef void(^SUGoodsCellPictureClickedHandler)(SUGoodsCell *goodsCell);
 /**
  * 头像被点击
  */
-typedef void(^SUGoodsCellAvatarClickedHandler)(SUGoodsCell *goodsCell , NSString *userId);
+typedef void(^SUGoodsCellAvatarClickedHandler)(SUGoodsCell *goodsCell);
 
 /**
  * 位置被点击
  */
-typedef void(^SUGoodsCellLocationClickedHandler)(SUGoodsCell *goodsCell , NSString *locationAreaName);
+typedef void(^SUGoodsCellLocationClickedHandler)(SUGoodsCell *goodsCell);
 
 /**
  * 留言被点击
  */
-typedef void(^SUGoodsCellReplyClickedHandler)(SUGoodsCell *goodsCell , NSString *goodsId);
+typedef void(^SUGoodsCellReplyClickedHandler)(SUGoodsCell *goodsCell);
 
 /**
  * 点赞被点击
  */
-typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell , NSString *goodsId);
+typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell);
 
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 

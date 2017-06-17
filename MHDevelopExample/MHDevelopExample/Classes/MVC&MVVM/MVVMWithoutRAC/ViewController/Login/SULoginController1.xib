@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SULogin1Controller">
+            <connections>
+                <outlet property="inputBaseView" destination="0nn-t9-PhL" id="bzU-Qp-p9k"/>
+                <outlet property="loginBtn" destination="YdH-sc-3BG" id="wa8-0o-rHJ"/>
+                <outlet property="userAvatar" destination="cep-FJ-X2A" id="vhc-kN-p9b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-t9-PhL" userLabel="InputView">
+                    <rect key="frame" x="0.0" y="194" width="375" height="128"/>
+                    <color key="backgroundColor" red="0.43245760309999998" green="1" blue="0.48755101950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="uVy-bc-fMp"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-sc-3BG" userLabel="LoginBtn">
+                    <rect key="frame" x="12" y="362" width="351" height="49"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.51764705879999995" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="yyU-gf-42C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="_loginBtnDidClicked:" destination="-1" eventType="touchUpInside" id="pOj-U5-t4h"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cep-FJ-X2A" userLabel="Avatar">
+                    <rect key="frame" x="147.5" y="74" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="HOR-wn-kzl"/>
+                        <constraint firstAttribute="height" constant="80" id="fXd-i9-8sz"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YdH-sc-3BG" secondAttribute="trailing" constant="12" id="3Bo-uZ-xqV"/>
+                <constraint firstAttribute="trailing" secondItem="0nn-t9-PhL" secondAttribute="trailing" id="4rV-8k-oHR"/>
+                <constraint firstItem="YdH-sc-3BG" firstAttribute="top" secondItem="0nn-t9-PhL" secondAttribute="bottom" constant="40" id="69i-pZ-mdA"/>
+                <constraint firstItem="cep-FJ-X2A" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6cC-KQ-DsL"/>
+                <constraint firstItem="0nn-t9-PhL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8dt-o8-F2E"/>
+                <constraint firstItem="cep-FJ-X2A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="MmL-P7-QW9"/>
+                <constraint firstItem="YdH-sc-3BG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="g95-Gg-dci"/>
+                <constraint firstItem="0nn-t9-PhL" firstAttribute="top" secondItem="cep-FJ-X2A" secondAttribute="bottom" constant="40" id="wyQ-1d-R7o"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="placeholder_icon" width="81" height="81"/>
+    </resources>
+</document>

@@ -21,8 +21,9 @@
 #import "MHDeleteController.h"
 #import "MHUITableViewStyleGroupedBugController.h"
 // MVC&MVVM
-#import "SULogin0Controller.h"
-
+#import "SULoginController0.h"
+#import "SULoginController1.h"
+#import "SULoginController2.h"
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
@@ -115,7 +116,7 @@
         MHExample *designPatternsExample = [[MHExample alloc] init];
         designPatternsExample.header = @"四、MVC&MVVM等设计模式的使用";
         designPatternsExample.titles = @[@"1.1 MVC的运用实践",@"1.2 MVVM Without ReactiveCococa的运用实践",@"1.3 MVVM With ReactiveCococa的运用实践"];
-        designPatternsExample.classes = @[@"SULogin0Controller",@"SULogin0Controller",@"SULogin0Controller"];
+        designPatternsExample.classes = @[@"SULoginController0",@"SULoginController1",@"SULoginController2"];
         [_examples addObject:designPatternsExample];
         
         
@@ -200,6 +201,21 @@
     MHExample *example = self.examples[indexPath.section];
     
     NSString* vcClassString = example.classes[indexPath.row];
+    /// 这里做个判断
+    if ([vcClassString isEqualToString:@"SULoginController1"]) {
+        SULoginViewModel1 *viewModel = [[SULoginViewModel1 alloc] initWithParams:@{SUViewModelTitleKey:@"登录"}];
+        SULoginController1 *vc = [[SULoginController1 alloc] initWithViewModel:viewModel];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    
+    if ([vcClassString isEqualToString:@"SULoginController2"]) {
+        SULoginViewModel2 *viewModel = [[SULoginViewModel2 alloc] initWithParams:@{SUViewModelTitleKey:@"登录"}];
+        SULoginController2 *vc = [[SULoginController2 alloc] initWithViewModel:viewModel];
+        [self.navigationController pushViewController:vc animated:YES];
+        return;
+    }
+    
     UIViewController *vc = [[NSClassFromString(vcClassString) alloc] init];
 
     [self.navigationController pushViewController:vc animated:YES];

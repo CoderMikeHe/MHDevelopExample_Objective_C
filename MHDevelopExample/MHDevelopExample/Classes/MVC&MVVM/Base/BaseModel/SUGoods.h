@@ -68,6 +68,10 @@ typedef NS_ENUM(NSUInteger, SUGoodsExpressType) {
 
 
 
+
+
+
+
 //// 以下 MVC使用的场景，如果使用MVVM的请自行ignore
 //// 辅助属性
 /// 商品图片UrlString
@@ -85,7 +89,7 @@ typedef NS_ENUM(NSUInteger, SUGoodsExpressType) {
 @property (nonatomic, readonly, copy) NSAttributedString *goodsOPriceAttributedString;
 
 /// 全新+title
-@property (nonatomic, readwrite, copy) NSAttributedString *goodsTitleAttributedString;
+@property (nonatomic, readonly, copy) NSAttributedString *goodsTitleAttributedString;
 
 //// 以上 MVC使用的场景，如果使用MVVM的请自行ignore
 @end

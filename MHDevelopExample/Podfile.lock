@@ -34,6 +34,7 @@ PODS:
   - Colours/ObjC (5.13.0)
   - DACircularProgress (2.3.1)
   - FDFullscreenPopGesture (1.1)
+  - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -42,6 +43,7 @@ PODS:
   - HYBImageCliped (2.2.4)
   - JPFPSStatus (0.1)
   - JSBadgeView (1.4.1)
+  - KVOController (1.2.0)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -83,6 +85,10 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - MMMaterialDesignSpinner (0.2.3)
+  - PYPhotoBrowser (1.5.0):
+    - DACircularProgress
+    - MBProgressHUD
+    - SDWebImage/GIF (~> 4.0.0)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -96,6 +102,9 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - SDWebImage/GIF (4.0.0):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - SocketRocket (0.5.1)
   - SSZipArchive (1.6.2)
   - SVProgressHUD (2.0.4)
@@ -127,6 +136,7 @@ DEPENDENCIES:
   - HYBImageCliped (~> 2.2.4)
   - JPFPSStatus (~> 0.1)
   - JSBadgeView (~> 1.4.1)
+  - KVOController (~> 1.2.0)
   - libextobjc (~> 0.4.1)
   - LxDBAnything (~> 1.1.0)
   - Masonry (~> 1.0.1)
@@ -134,6 +144,7 @@ DEPENDENCIES:
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
   - MMMaterialDesignSpinner (~> 0.2.3)
+  - PYPhotoBrowser (~> 1.5.0)
   - ReactiveCocoa (= 2.5)
   - RMStore (~> 0.7.1)
   - SDWebImage (~> 4.0.0)
@@ -166,12 +177,14 @@ SPEC CHECKSUMS:
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   HJCornerRadius: 0af191386b5f2e9c4465739b5db22c0acc52923b
   HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   LxDBAnything: 154a2ad1ae32e70355d886b5443260543bb60c71
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -179,6 +192,7 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MMMaterialDesignSpinner: 55c80b454f7928d0ed789cc3c456fa06bd6a2f16
+  PYPhotoBrowser: eb140689619b10843beaad9e532581825ad7f542
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RMStore: 64ba13a9c040e3b7572765d169f77175cd3243e5
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
@@ -195,6 +209,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: f24b8bd657928fb653e1ef6d8708cafeec5ce0a3
+PODFILE CHECKSUM: c6eee5ae08c0f5443ab0525a50e199c17649c0d8
 
 COCOAPODS: 1.2.1
