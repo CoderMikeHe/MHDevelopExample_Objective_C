@@ -48,12 +48,7 @@ static BOOL statusBarHidden_ = NO;
     [self.headerView adjustWhenControllerViewWillAppera];
   
 }
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    NSLog(@"----------%@",NSStringFromUIEdgeInsets(self.tableView.contentInset));
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -78,8 +73,9 @@ static BOOL statusBarHidden_ = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SUGoodsHeaderView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:NSStringFromClass([SUGoodsHeaderView class])];
     
     /// estimatedRowHeight
-    self.tableView.estimatedRowHeight = 280.0f;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    /// Fixed：如果添加下面👇代码 会导致当表格滚动到大于一页的时候 ，点击右下角的向上按钮 无法滚动到顶部的bug。原因还在排查中...
+//    self.tableView.estimatedRowHeight = 280.0f;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 #pragma mark - 事件处理
 /// 事件处理
@@ -243,6 +239,12 @@ static BOOL statusBarHidden_ = NO;
 }
 
 #pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    /// 由于使用系统的autoLayout来计算cell的高度，每次滚动时都要重新计算cell的布局以此来获得cell的高度 这样一来性能不好
+    /// 所以笔者采用实现计算好的cell的高度
+    return [self.dataSource[indexPath.row] cellHeight];
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

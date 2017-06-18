@@ -16,6 +16,9 @@
 /// 验证码
 @property (nonatomic, readwrite, copy) NSString *verifyCode;
 
+/// 登录按钮的点击状态
+@property (nonatomic, readonly, assign) BOOL validLogin;
+
 /// 用户头像
 @property (nonatomic, readonly, copy) NSString *avatarUrlString;
 

@@ -98,11 +98,11 @@
 /// textField的数据改变
 - (void)_textFieldValueDidChanged:(UITextField *)sender
 {
-    self.loginBtn.enabled = (self.inputView.phoneTextField.hasText && self.inputView.verifyTextField.hasText);
-    
     /// bind data
     self.viewModel.mobilePhone = self.inputView.phoneTextField.text;
     self.viewModel.verifyCode = self.inputView.verifyTextField.text;
+    self.loginBtn.enabled = self.viewModel.validLogin;
+    
 }
 
 /// 填充数据 Just To Debug

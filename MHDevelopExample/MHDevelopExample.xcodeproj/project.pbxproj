@@ -43,10 +43,10 @@
 		260D8DB71EED3BD100B47B3D /* SUGoodsData_9.data in Resources */ = {isa = PBXBuildFile; fileRef = 260D8DA31EED3BD100B47B3D /* SUGoodsData_9.data */; };
 		260D8DC11EED9AFD00B47B3D /* SULoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8DC01EED9AFD00B47B3D /* SULoginInputView.m */; };
 		260D8DC31EED9B0900B47B3D /* SULoginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 260D8DC21EED9B0900B47B3D /* SULoginInputView.xib */; };
-		260D8DCD1EEDA46700B47B3D /* SUViewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8DCC1EEDA46700B47B3D /* SUViewModel2.m */; };
-		260D8DD01EEDA4D100B47B3D /* SUTableViewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 260D8DCF1EEDA4D100B47B3D /* SUTableViewModel2.m */; };
 		260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E2E671EEFBC7800A0A50D /* SUGoodsData.m */; };
 		260E2E6B1EEFBEAE00A0A50D /* SUGoodsFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E2E6A1EEFBEAE00A0A50D /* SUGoodsFrame.m */; };
+		260E595F1EF6CCA200C323CB /* SUTableViewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E595C1EF6CCA200C323CB /* SUTableViewModel2.m */; };
+		260E59601EF6CCA200C323CB /* SUViewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 260E595E1EF6CCA200C323CB /* SUViewModel2.m */; };
 		260F3BD91EEEF8A300ACF0D5 /* SUBannerData.data in Resources */ = {isa = PBXBuildFile; fileRef = 260F3BD81EEEF8A300ACF0D5 /* SUBannerData.data */; };
 		260F3BDC1EEEF91100ACF0D5 /* SUBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F3BDB1EEEF91100ACF0D5 /* SUBanner.m */; };
 		260F3BDF1EEF011A00ACF0D5 /* SUModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 260F3BDE1EEF011A00ACF0D5 /* SUModel.m */; };
@@ -243,14 +243,14 @@
 		260D8DBF1EED9AFD00B47B3D /* SULoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SULoginInputView.h; sourceTree = "<group>"; };
 		260D8DC01EED9AFD00B47B3D /* SULoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SULoginInputView.m; sourceTree = "<group>"; };
 		260D8DC21EED9B0900B47B3D /* SULoginInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SULoginInputView.xib; sourceTree = "<group>"; };
-		260D8DCB1EEDA46700B47B3D /* SUViewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUViewModel2.h; sourceTree = "<group>"; };
-		260D8DCC1EEDA46700B47B3D /* SUViewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUViewModel2.m; sourceTree = "<group>"; };
-		260D8DCE1EEDA4D100B47B3D /* SUTableViewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTableViewModel2.h; sourceTree = "<group>"; };
-		260D8DCF1EEDA4D100B47B3D /* SUTableViewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableViewModel2.m; sourceTree = "<group>"; };
 		260E2E661EEFBC7800A0A50D /* SUGoodsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUGoodsData.h; sourceTree = "<group>"; };
 		260E2E671EEFBC7800A0A50D /* SUGoodsData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUGoodsData.m; sourceTree = "<group>"; };
 		260E2E691EEFBEAE00A0A50D /* SUGoodsFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUGoodsFrame.h; sourceTree = "<group>"; };
 		260E2E6A1EEFBEAE00A0A50D /* SUGoodsFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUGoodsFrame.m; sourceTree = "<group>"; };
+		260E595B1EF6CCA200C323CB /* SUTableViewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUTableViewModel2.h; sourceTree = "<group>"; };
+		260E595C1EF6CCA200C323CB /* SUTableViewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTableViewModel2.m; sourceTree = "<group>"; };
+		260E595D1EF6CCA200C323CB /* SUViewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUViewModel2.h; sourceTree = "<group>"; };
+		260E595E1EF6CCA200C323CB /* SUViewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUViewModel2.m; sourceTree = "<group>"; };
 		260F3BD81EEEF8A300ACF0D5 /* SUBannerData.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SUBannerData.data; sourceTree = "<group>"; };
 		260F3BDA1EEEF91100ACF0D5 /* SUBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBanner.h; sourceTree = "<group>"; };
 		260F3BDB1EEEF91100ACF0D5 /* SUBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBanner.m; sourceTree = "<group>"; };
@@ -573,6 +573,10 @@
 		260C2E061EF1387F00378885 /* WithRAC */ = {
 			isa = PBXGroup;
 			children = (
+				260E595B1EF6CCA200C323CB /* SUTableViewModel2.h */,
+				260E595C1EF6CCA200C323CB /* SUTableViewModel2.m */,
+				260E595D1EF6CCA200C323CB /* SUViewModel2.h */,
+				260E595E1EF6CCA200C323CB /* SUViewModel2.m */,
 			);
 			path = WithRAC;
 			sourceTree = "<group>";
@@ -657,10 +661,6 @@
 			children = (
 				260C2E051EF1387F00378885 /* WithoutRAC */,
 				260C2E061EF1387F00378885 /* WithRAC */,
-				260D8DCB1EEDA46700B47B3D /* SUViewModel2.h */,
-				260D8DCC1EEDA46700B47B3D /* SUViewModel2.m */,
-				260D8DCE1EEDA4D100B47B3D /* SUTableViewModel2.h */,
-				260D8DCF1EEDA4D100B47B3D /* SUTableViewModel2.m */,
 			);
 			path = BaseViewModel;
 			sourceTree = "<group>";
@@ -2315,6 +2315,7 @@
 				2615ECD71EEE980300D6B473 /* UIScrollView+MHRefresh.m in Sources */,
 				627A95791E49AD30004A1ED2 /* UIBarButtonItem+MHExtension.m in Sources */,
 				622637651E4B08E1007F9360 /* NSObject+MHRandom.m in Sources */,
+				260E59601EF6CCA200C323CB /* SUViewModel2.m in Sources */,
 				6226375D1E4AF925007F9360 /* NSString+MHSize.m in Sources */,
 				261133731EF43D27006AE109 /* SUPublicWebViewModel1.m in Sources */,
 				627A956F1E49A615004A1ED2 /* MHViewController.m in Sources */,
@@ -2369,13 +2370,12 @@
 				6226374E1E4AC61D007F9360 /* MHTopicHeaderView.m in Sources */,
 				627A95911E49C91B004A1ED2 /* MHTopicLabel.m in Sources */,
 				622E334B1E553800001FB056 /* UIImage+MHSnap.m in Sources */,
-				260D8DCD1EEDA46700B47B3D /* SUViewModel2.m in Sources */,
 				2615ECCD1EEE919900D6B473 /* TAAbstractDotView.m in Sources */,
 				261BC8151EF25DF2003E41F9 /* SUViewController1.m in Sources */,
 				261BC8181EF25E1A003E41F9 /* SUTableViewController1.m in Sources */,
 				2615ECBC1EEE7DB200D6B473 /* SUSearchBarView.m in Sources */,
 				260C2DF71EF11A9200378885 /* SUWebViewController0.m in Sources */,
-				260D8DD01EEDA4D100B47B3D /* SUTableViewModel2.m in Sources */,
+				260E595F1EF6CCA200C323CB /* SUTableViewModel2.m in Sources */,
 				260D8D841EED37CB00B47B3D /* SUGoods.m in Sources */,
 				627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */,
 				260C2DFE1EF1315900378885 /* SULoginController1.m in Sources */,

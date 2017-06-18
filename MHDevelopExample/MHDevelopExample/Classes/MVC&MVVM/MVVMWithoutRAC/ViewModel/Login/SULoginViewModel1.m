@@ -24,7 +24,6 @@
     if (self) {
         [self initialize];
     }
-    
     return self;
 }
 
@@ -60,5 +59,10 @@
         /// 失败的回调 我就不处理 现实中开发绝逼不是这样的
         !success?:success([AppDelegate sharedDelegate].account);
     });
+}
+
+- (BOOL)validLogin
+{
+     return (MHStringIsNotEmpty(self.mobilePhone) && MHStringIsNotEmpty(self.verifyCode));
 }
 @end
