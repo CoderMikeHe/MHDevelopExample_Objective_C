@@ -159,26 +159,7 @@ static BOOL statusBarHidden_ = NO;
 /// config  cell
 - (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath
 {
-    SUGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SUGoodsCell class])];
-
-
-
-    /// 点赞
-//    cell.thumbClickedHandler = ^(SUGoodsCell *goodsCell) {
-//        @strongify(self);
-//        /// show loading
-//        [MBProgressHUD mh_showProgressHUD:@"Loading..." addedToView:self.view];
-//        SUGoodsItemViewModel *viewModel = self.viewModel.dataSource[indexPath.row];
-//        /// 点赞
-//        [self.viewModel thumbGoodsWithGoodsItemViewModel:viewModel success:^(NSNumber * responseObject) {
-//            [MBProgressHUD mh_hideHUDForView:self.view];
-//            NSString *tips = (responseObject.boolValue)?@"收藏商品成功":@"取消收藏商品";
-//            [MBProgressHUD mh_showTips:tips];
-//            /// reload data
-//            [self.tableView reloadData];
-//        } failure:nil];
-//    };
-    return cell;
+    return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SUGoodsCell class])];
 }
 
 /// config  data
