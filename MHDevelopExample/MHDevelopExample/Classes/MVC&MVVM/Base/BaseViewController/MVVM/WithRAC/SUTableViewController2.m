@@ -7,23 +7,17 @@
 //  MVVM with RAC 开发模式的所有自定义的还有表格视图（UITableView）控制器的父类
 
 #import "SUTableViewController2.h"
-#import "SUTableViewModel2.h"
+
 
 
 @interface SUTableViewController2 ()
 
-/** tableView */
+/// tableView
 @property (nonatomic, readwrite, weak) UITableView *tableView;
-
-
-@property (nonatomic, readwrite, strong) UISearchBar *searchBar;
-
-/** contentInset defaul is (64 , 0 , 0 , 0) */
+/// contentInset defaul is (64 , 0 , 0 , 0)
 @property (nonatomic, readwrite, assign) UIEdgeInsets contentInset;
-
-
+/// 视图模型
 @property (nonatomic, readonly, strong) SUTableViewModel2 *viewModel;
-
 
 @end
 
@@ -78,9 +72,8 @@
          [self reloadData];
      }];
     
+    /// ...
 }
-
-
 
 
 /// setup add `_su_` avoid sub class override it
@@ -96,9 +89,6 @@
     tableView.contentInset  = self.contentInset;
     self.tableView = tableView;
     [self.view addSubview:tableView];
-    
-    
-    self.tableView.contentInset  = self.contentInset;
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
@@ -106,17 +96,98 @@
     // 注册cell
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
+    /// 添加加载和刷新控件
+    if (self.viewModel.shouldPullDownToRefresh) {
+        /// 下拉刷新
+        @weakify(self);
+        [self.tableView mh_addHeaderRefresh:^(MJRefreshNormalHeader *header) {
+            /// 加载下拉刷新的数据
+            @strongify(self);
+            [self tableViewDidTriggerHeaderRefresh];
+        }];
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    if (self.viewModel.shouldPullUpToLoadMore) {
+        /// 上拉加载
+        @weakify(self);
+        [self.tableView mh_addFooterRefresh:^(MJRefreshAutoNormalFooter *footer) {
+            /// 加载上拉刷新的数据
+            @strongify(self);
+            [self tableViewDidTriggerFooterRefresh];
+        }];
+        
+        /// 判断一下数据
+        [self tableViewDidFinishTriggerHeader:NO reload:NO];
+    }
 }
 
+#pragma mark - sub class can override it
+/// 下拉事件
+- (void)tableViewDidTriggerHeaderRefresh
+{
+    @weakify(self)
+    [[[self.viewModel.requestRemoteDataCommand
+       execute:@1]
+     	deliverOnMainThread]
+    	subscribeNext:^(id x) {
+            @strongify(self)
+            self.viewModel.page = 1;
+        } error:^(NSError *error) {
+            @strongify(self)
+            [self tableViewDidFinishTriggerHeader:YES reload:NO];
+        } completed:^{
+            @strongify(self)
+            /// 已经在bindViewModel中添加了对viewModel.dataSource的变化的监听来刷新数据
+            [self tableViewDidFinishTriggerHeader:YES reload:NO];
+        }];
+}
 
-#pragma mark - sub class override it
-/// sub class can override it
+/// 上拉事件
+- (void)tableViewDidTriggerFooterRefresh
+{
+    @weakify(self);
+    [[[self.viewModel.requestRemoteDataCommand
+       execute:@(self.viewModel.page + 1)]
+      deliverOnMainThread]
+     subscribeNext:^(id x) {
+         @strongify(self)
+         self.viewModel.page += 1;
+     } error:^(NSError *error) {
+         @strongify(self);
+         [self tableViewDidFinishTriggerHeader:NO reload:NO];
+     } completed:^{
+         @strongify(self)
+         [self tableViewDidFinishTriggerHeader:NO reload:NO];
+     }];
+}
+
+/// 刷新完成事件
+- (void)tableViewDidFinishTriggerHeader:(BOOL)isHeader reload:(BOOL)reload
+{
+    __weak SUTableViewController2 *weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (reload) {
+            [weakSelf.tableView reloadData];
+        }
+        if (isHeader) {
+            [weakSelf.tableView.mj_header endRefreshing];
+        }
+        else{
+            [weakSelf.tableView.mj_footer endRefreshing];
+        }
+        /// 最后一页隐藏加载控件
+        self.tableView.mj_footer.hidden = (self.viewModel.page>=self.viewModel.lastPage);
+    });
+
+}
+
 - (UIEdgeInsets)contentInset
 {
     return UIEdgeInsetsMake(64, 0, 0, 0);
 }
 
-/// reload tableView data 
+/// reload tableView data
 - (void)reloadData
 {
     [self.tableView reloadData];
@@ -131,18 +202,18 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {}
 
 
-
-
 #pragma mark - UITableViewDataSource
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.viewModel.dataSource ? self.viewModel.dataSource.count : 1;
+    if (self.viewModel.shouldMultiSections) return self.viewModel.dataSource ? self.viewModel.dataSource.count : 1;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.viewModel.dataSource[section] count];
+    if (self.viewModel.shouldMultiSections) return [self.viewModel.dataSource[section] count];
+    
+    return self.viewModel.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -150,14 +221,15 @@
     UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
     // fetch object
-    id object = self.viewModel.dataSource[indexPath.section][indexPath.row];
+    id object = nil;
+    if (self.viewModel.shouldMultiSections) object = self.viewModel.dataSource[indexPath.section][indexPath.row];
+    if (!self.viewModel.shouldMultiSections) object = self.viewModel.dataSource[indexPath.row];
     
     /// bind model
     [self configureCell:cell atIndexPath:indexPath withObject:(id)object];
-   
+    
     return cell;
 }
-
 
 
 #pragma mark - UITableViewDelegate

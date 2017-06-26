@@ -39,12 +39,22 @@
     [(MHNavigationController *)self.navigationController hideNavgationSystemLine];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    /// 弹出键盘
+    [self.inputView.phoneTextField becomeFirstResponder];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     
     [(MHNavigationController *)self.navigationController showNavgationSystemLine];
+    
 }
+
+
 /////// ========== 产品🐶的需求 程序🦍的命运 ==========
 
 
@@ -81,12 +91,10 @@
     //// 键盘掉下
     [self.view endEditing:YES];
     /// show loading
-    self.loginBtn.enabled = NO;
     [MBProgressHUD mh_showProgressHUD:@"Loading..."];
     @weakify(self);
     [self.viewModel loginSuccess:^(id json) {
         @strongify(self);
-        self.loginBtn.enabled = YES;
         [MBProgressHUD mh_hideHUD];
         /// 跳转
         SUGoodsViewModel1 *viewModel = [[SUGoodsViewModel1 alloc] initWithParams:@{}];

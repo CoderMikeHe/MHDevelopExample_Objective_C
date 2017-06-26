@@ -36,7 +36,6 @@
 #import "MHWebImageTool.h"
 #import "MHSingleton.h"
 #import "Masonry.h"
-#import "JPFPSStatus.h"
 #import "LxDBAnything.h"
 #import "ReactiveCocoa.h"
 #import "YYModel.h"

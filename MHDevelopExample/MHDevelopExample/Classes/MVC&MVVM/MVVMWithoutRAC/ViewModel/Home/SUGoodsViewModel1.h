@@ -23,5 +23,5 @@
                                  failure:(void (^)(NSError *))failure;
 
 /// 通过索引获取数据
-- (NSString *)banerUrlWithIndex:(NSInteger)index;
+- (NSString *)bannerUrlWithIndex:(NSInteger)index;
 @end

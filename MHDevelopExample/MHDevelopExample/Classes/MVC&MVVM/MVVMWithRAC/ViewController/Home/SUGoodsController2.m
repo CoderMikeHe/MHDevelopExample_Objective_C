@@ -1,25 +1,26 @@
 //
-//  SUGoodsController1.m
+//  SUGoodsController2.m
 //  MHDevelopExample
 //
-//  Created by senba on 2017/6/16.
+//  Created by senba on 2017/6/19.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
-//  MVVM Without RAC 开发模式的商品首页控制器 -- C
+//
 
-#import "SUGoodsController1.h"
+#import "SUGoodsController2.h"
 #import "SUSearchBarView.h"
 #import "SDCycleScrollView.h"
 #import "SUGoodsCell.h"
 #import "SUGoodsHeaderView.h"
-#import "SUPublicController1.h"
-#import "SUPublicWebController1.h"
+#import "SUPublicController2.h"
+#import "SUPublicWebController2.h"
+
 //// 全局变量
 static UIStatusBarStyle style_ = UIStatusBarStyleDefault;
 static BOOL statusBarHidden_ = NO;
+@interface SUGoodsController2 ()
 
-@interface SUGoodsController1 ()
 /// 模型视图
-@property (nonatomic, readonly, strong) SUGoodsViewModel1 *viewModel;
+@property (nonatomic, readonly, strong) SUGoodsViewModel2 *viewModel;
 /// 滚动到顶部的按钮
 @property (nonatomic, readwrite, weak) UIButton *scrollToTopButton;
 /// 自定义的导航条
@@ -30,11 +31,7 @@ static BOOL statusBarHidden_ = NO;
 @property (nonatomic, readwrite, weak) SDCycleScrollView *headerView;
 @end
 
-@implementation SUGoodsController1
-{
-    /// KVOController 监听数据
-    FBKVOController *_KVOController;
-}
+@implementation SUGoodsController2
 @dynamic viewModel;
 
 - (void)dealloc
@@ -66,18 +63,9 @@ static BOOL statusBarHidden_ = NO;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SUGoodsHeaderView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:NSStringFromClass([SUGoodsHeaderView class])];
     
     /// estimatedRowHeight
-    /// Fixed：如果添加下面👇代码 会导致当表格滚动到大于一页的时候 ，点击右下角的向上按钮 无法滚动到顶部的bug。原因还在排查中...
-//    self.tableView.estimatedRowHeight = 280.0f;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
-//
-    /// bind viewModel
-    [self _bindViewModel];
-}
-
-#pragma mark - BindModel
-- (void)_bindViewModel{
-    /// kvo
-    _KVOController = [FBKVOController controllerWithObserver:self];
+    /// Fixed：如果添加下面👇代码 会导致当表格滚动到大于一页的时候 ，点击右下角的返回到顶部的按钮 无法滚动到顶部的bug。原因还在排查中...
+    //    self.tableView.estimatedRowHeight = 280.0f;
+    //    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 #pragma mark - 事件处理
@@ -102,68 +90,94 @@ static BOOL statusBarHidden_ = NO;
     /// banner 视图被点击
     self.headerView.clickItemOperationBlock = ^(NSInteger currentIndex) {
         @strongify(self);
-        SUPublicWebViewModel1 *viewModel = [[SUPublicWebViewModel1 alloc] initWithParams:@{SUViewModelRequestKey:[self.viewModel bannerUrlWithIndex:currentIndex]}];
-        SUPublicWebController1 *webViewVc = [[SUPublicWebController1 alloc] initWithViewModel:viewModel];
+        SUPublicWebViewModel2 *viewModel = [[SUPublicWebViewModel2 alloc] initWithParams:@{SUViewModelRequestKey:[self.viewModel bannerUrlWithIndex:currentIndex]}];
+        SUPublicWebController2 *webViewVc = [[SUPublicWebController2 alloc] initWithViewModel:viewModel];
         [self.navigationController pushViewController:webViewVc animated:YES];
     };
+    
+    /// 滚动到顶部的按钮事件
+    [[self.scrollToTopButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(UIButton *sender) {
+         @strongify(self);
+         [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
+     }];
 }
-/// 滚动到顶部
-- (void)_scrollToTop {
-    [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
-}
+
+
 #pragma mark - Override
+- (void)bindViewModel
+{
+    [super bindViewModel];
+    
+    @weakify(self);
+    /// 1. 监听banners的数据变化
+    [RACObserve(self.viewModel, banners) subscribeNext:^(id x) {
+        /// 配置数据
+        @strongify(self);
+        self.headerView.imageURLStringsGroup = self.viewModel.banners;
+        self.headerView.hidden = !(self.viewModel.banners.count>0);
+    }];
+    
+    /// 2. 处理cell上的点击事件（PS：如果cell的数据不是异步请求的数据，那么就用 RACSubject 代替代理（block） ，否则也可以用 RACCommand代替代理（block），但是建议用 RACSubject，但是RACSubject过于灵活）
+    /// cell被点击
+    self.viewModel.didSelectCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
+        @strongify(self);
+        // 跳转到商品详请
+        [self _pushToPublicViewControllerWithTitle:@"商品详情"];
+        return [RACSignal empty];
+    }];
+    
+    /// cell 头像被点击
+    [self.viewModel.didClickedAvatarSubject subscribeNext:^(SUGoodsItemViewModel * viewModel) {
+        @strongify(self);
+        [self _pushToPublicViewControllerWithTitle:viewModel.goods.nickName];
+    }];
+    
+    /// cell 地址被点击
+    [self.viewModel.didClickedLocationSubject subscribeNext:^(SUGoodsItemViewModel * viewModel) {
+        @strongify(self);
+        [self _pushToPublicViewControllerWithTitle:viewModel.goods.locationAreaName];
+    }];
+    
+    /// cell 回复被点击
+    [self.viewModel.didClickedReplySubject subscribeNext:^(SUGoodsItemViewModel * viewModel) {
+        @strongify(self);
+        [self _pushToPublicViewControllerWithTitle:[NSString stringWithFormat:@"商品%@的评论列表",viewModel.goods.goodsId]];
+    }];
+    
+    /// 
+}
+
 //// 下拉刷新
 - (void)tableViewDidTriggerHeaderRefresh{
     /// 先调用父类的加载数据
     [super tableViewDidTriggerHeaderRefresh];
+    
     /// 加载banners data
-    [self.viewModel loadBannerData:^(id responseObject) {
-        /// 配置数据
-        self.headerView.imageURLStringsGroup = self.viewModel.banners;
-        self.headerView.hidden = !(self.viewModel.banners.count>0);
-    } failure:nil];
+    [self.viewModel.requestBannerDataCommand execute:nil];
 }
 /// config  cell
 - (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath
 {
     SUGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SUGoodsCell class])];
-    /// 处理事件
-    @weakify(self);
-    /// 头像
-    cell.avatarClickedHandler = ^(SUGoodsCell *goodsCell) {
-        @strongify(self);
-        SUGoodsItemViewModel *viewModel = self.viewModel.dataSource[indexPath.row];
-        [self _pushToPublicViewControllerWithTitle:viewModel.goods.nickName];
-    };
-    /// 位置
-    cell.locationClickedHandler = ^(SUGoodsCell *goodsCell) {
-        @strongify(self);
-        SUGoodsItemViewModel *viewModel = self.viewModel.dataSource[indexPath.row];
-        [self _pushToPublicViewControllerWithTitle:viewModel.goods.locationAreaName];
-    };
-    
-    /// 回复
-    cell.replyClickedHandler = ^(SUGoodsCell *goodsCell) {
-        @strongify(self);
-        SUGoodsItemViewModel *viewModel = self.viewModel.dataSource[indexPath.row];
-        [self _pushToPublicViewControllerWithTitle:[NSString stringWithFormat:@"商品%@的评论列表",viewModel.goods.goodsId]];
-    };
-    
+
+
+
     /// 点赞
-    cell.thumbClickedHandler = ^(SUGoodsCell *goodsCell) {
-        @strongify(self);
-        /// show loading
-        [MBProgressHUD mh_showProgressHUD:@"Loading..." addedToView:self.view];
-        SUGoodsItemViewModel *viewModel = self.viewModel.dataSource[indexPath.row];
-        /// 点赞
-        [self.viewModel thumbGoodsWithGoodsItemViewModel:viewModel success:^(NSNumber * responseObject) {
-            [MBProgressHUD mh_hideHUDForView:self.view];
-            NSString *tips = (responseObject.boolValue)?@"收藏商品成功":@"取消收藏商品";
-            [MBProgressHUD mh_showTips:tips];
-            /// reload data
-            [self.tableView reloadData];
-        } failure:nil];
-    };
+//    cell.thumbClickedHandler = ^(SUGoodsCell *goodsCell) {
+//        @strongify(self);
+//        /// show loading
+//        [MBProgressHUD mh_showProgressHUD:@"Loading..." addedToView:self.view];
+//        SUGoodsItemViewModel *viewModel = self.viewModel.dataSource[indexPath.row];
+//        /// 点赞
+//        [self.viewModel thumbGoodsWithGoodsItemViewModel:viewModel success:^(NSNumber * responseObject) {
+//            [MBProgressHUD mh_hideHUDForView:self.view];
+//            NSString *tips = (responseObject.boolValue)?@"收藏商品成功":@"取消收藏商品";
+//            [MBProgressHUD mh_showTips:tips];
+//            /// reload data
+//            [self.tableView reloadData];
+//        } failure:nil];
+//    };
     return cell;
 }
 
@@ -187,18 +201,13 @@ static BOOL statusBarHidden_ = NO;
     /// 所以笔者采用实现计算好的cell的高度
     return [self.viewModel.dataSource[indexPath.row] cellHeight];
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    // 跳转到商品详请
-    [self _pushToPublicViewControllerWithTitle:@"商品详情"];
-}
+
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;
     self.scrollToTopButton.hidden = (offsetY < scrollView.mh_height);
-
+    
     CGFloat duration = 0.65;
     CGFloat titleViewAlpha = (offsetY >= 0)?1.0:0.;
     CGFloat navBarAlhpa = (offsetY >= self.headerView.mh_height)?1.0:0.0;
@@ -225,10 +234,12 @@ static BOOL statusBarHidden_ = NO;
 /// 跳转界面 这里只是一个跳转，实际情况，自行定夺
 - (void)_pushToPublicViewControllerWithTitle:(NSString *)title
 {
-    SUPublicViewModel1 *viewModel = [[SUPublicViewModel1 alloc] initWithParams:@{SUViewModelTitleKey:title}];
-    SUPublicController1 *publicVC = [[SUPublicController1 alloc] initWithViewModel:viewModel];
+    SUPublicViewModel2 *viewModel = [[SUPublicViewModel2 alloc] initWithParams:@{SUViewModelTitleKey:title}];
+    SUPublicController2 *publicVC = [[SUPublicController2 alloc] initWithViewModel:viewModel];
     [self.navigationController pushViewController:publicVC animated:YES];
 }
+
+
 
 
 
@@ -288,9 +299,7 @@ static BOOL statusBarHidden_ = NO;
     scrollToTopButton.hidden = YES;
     self.scrollToTopButton = scrollToTopButton;
     [self.view addSubview:scrollToTopButton];
-    //// 添加事件处理
-    [scrollToTopButton addTarget:self action:@selector(_scrollToTop) forControlEvents:UIControlEventTouchUpInside];
-    
+
     /// 头视图 banner
     SDCycleScrollView *headerView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.mh_width, SUGoodsBannerViewHeight)];
     headerView.autoScrollTimeInterval = 5.0f;

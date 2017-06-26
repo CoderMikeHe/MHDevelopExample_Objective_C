@@ -31,7 +31,6 @@
     MHTopicCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
         cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        
     }
     return cell;
 }

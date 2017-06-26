@@ -87,7 +87,7 @@
 
 
 /// 通过索引获取数据
-- (NSString *)banerUrlWithIndex:(NSInteger)index
+- (NSString *)bannerUrlWithIndex:(NSInteger)index
 {
     return [self.bannerModels[index] url];
 }

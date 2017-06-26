@@ -33,6 +33,11 @@ PODS:
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
   - DACircularProgress (2.3.1)
+  - FBAllocationTracker (0.1.5)
+  - FBMemoryProfiler (0.1.3):
+    - FBAllocationTracker (~> 0.1)
+    - FBRetainCycleDetector (~> 0.1)
+  - FBRetainCycleDetector (0.1.3)
   - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
@@ -129,6 +134,7 @@ DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - Colours (~> 5.13.0)
   - DACircularProgress (~> 2.3.1)
+  - FBMemoryProfiler
   - FDFullscreenPopGesture (~> 1.1)
   - FMDB (~> 2.6.2)
   - FXBlurView (~> 1.6.4)
@@ -176,6 +182,9 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
+  FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
+  FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -209,6 +218,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: c6eee5ae08c0f5443ab0525a50e199c17649c0d8
+PODFILE CHECKSUM: d9d173478c2aef566864f56fcbf32fa7dd402728
 
 COCOAPODS: 1.2.1

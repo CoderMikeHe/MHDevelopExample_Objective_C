@@ -26,6 +26,20 @@ NSString *const SULoginPhoneKey1 = @"SULoginPhoneKey1";
 NSString *const SULoginVerifyCodeKey1 = @"SULoginVerifyCodeKey1";
 
 
+/// MVVM With RAC
+//// 登录的手机号
+NSString *const SULoginPhoneKey2 = @"SULoginPhoneKey2";
+//// 登录的验证码
+NSString *const SULoginVerifyCodeKey2 = @"SULoginVerifyCodeKey2";
+
+
+/// 项目中关于一些简单的业务逻辑验证放在ViewModel的命令中统一处理 NSError
+/// eg：假设验证出来不是正确的手机号：
+/// [RACSignal error:[NSError errorWithDomain:SUCommandErrorDomain code:SUCommandErrorCode userInfo:@{SUCommandErrorUserInfoKey:@"请输入正确的手机号码"}]];
+NSString * const SUCommandErrorDomain = @"SUCommandErrorDomain";
+NSString * const SUCommandErrorUserInfoKey = @"SUCommandErrorUserInfoKey";
+CGFloat    const SUCommandErrorCode = 7438;
+
 /// 搜索tips
 NSString *const SUSearchTipsText = @"输入你要找的宝贝";
 

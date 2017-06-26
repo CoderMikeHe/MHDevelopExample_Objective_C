@@ -54,16 +54,23 @@ UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *sepLineView;
 /// 发布时间
 @property (weak, nonatomic) IBOutlet UILabel *publishTimeLabel;
-
+/// 商品图片布局
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *flowLayout;
 
 /// 点赞按钮
 @property (weak, nonatomic) IBOutlet UIButton *thumbBtn;
 
-//// 以下 MVVM使用的场景，如果使用MVC的请自行ignore
+/// 以下 MVVM使用的场景，如果使用MVC的请自行ignore
 /// viewModle
 @property (nonatomic, readwrite, strong) SUGoodsItemViewModel *viewModel;
 //// 以上 MVVM使用的场景，如果使用MVC的请自行ignore
+
+/// 以下 MVVM With RAC使用的场景，如果使用其他的的请自行ignore
+
+/// 显示HUD
+@property (nonatomic, readwrite, assign) BOOL showHUD;
+
+/// 以上 MVVM With RAC使用的场景，如果使用其他的的请自行ignore
 @end
 
 @implementation SUGoodsCell
@@ -95,7 +102,7 @@ UICollectionViewDataSource>
     self.extraFee.backgroundColor = SUGlobalPinkColor;
     self.extraFee.textColor = [UIColor whiteColor];
     self.extraFee.layer.cornerRadius = 2;
-#warning FIXME：需要优化，避免离屏渲染
+#warning COderMikeHe FIXME：需要优化，避免离屏渲染
     self.extraFee.layer.masksToBounds = YES;
 
     /// UICollectionView注册cell
@@ -114,9 +121,32 @@ UICollectionViewDataSource>
     //// 使用MVC 和 MVVM without RAC 的事件回调
     [self _addActionDealForMVCOrMVVMWithoutRAC];
     
+    
+    
     //// MVVM with RAC 的事件回调
     [self _addActionDealForMVVMWithRAC];
     
+    
+    //// 以下 MVVM With RAC 模式的的数据绑定 如果使用其他的模式的请自行ignore
+    @weakify(self);
+    
+    /// 按钮选中状态
+    [RACObserve(self, viewModel.goods.isLike).deliverOnMainThread.distinctUntilChanged subscribeNext:^(NSNumber *isLike) {
+        @strongify(self);
+        if (!self.showHUD) return ;
+        self.thumbBtn.selected = isLike.boolValue;
+        NSString *tips = (isLike.boolValue)?@"收藏商品成功":@"取消收藏商品";
+        [MBProgressHUD mh_showTips:tips];
+        
+    }];
+    /// 监听点赞数据
+    [RACObserve(self, viewModel.goods.likes).deliverOnMainThread.distinctUntilChanged
+     subscribeNext:^(NSString * likes) {
+         @strongify(self);
+         [self.thumbBtn setTitle:likes forState:UIControlStateNormal];
+         
+     }];
+    //// 以下 MVVM With RAC 的事件回调的使用的场景，如果使用其他的模式的请自行ignore
 }
 
 // 以下 MVVM使用的场景，如果使用MVC的请自行ignore
@@ -124,6 +154,9 @@ UICollectionViewDataSource>
 - (void)bindViewModel:(SUGoodsItemViewModel *)viewModel
 {
     self.viewModel = viewModel;
+    
+    self.showHUD = NO;
+    
     
     /// 头像
     [MHWebImageTool setImageWithURL:viewModel.goods.avatar placeholderImage:placeholderUserIcon() imageView:self.userHeadImageView];
@@ -224,7 +257,7 @@ UICollectionViewDataSource>
     /// 点赞数
     [self.thumbBtn setTitle:goods.likes forState:UIControlStateNormal];
     self.thumbBtn.selected = goods.isLike;
-    
+
 }
 //// 以上 MVC使用的场景，如果使用MVVM的请自行ignore
 
@@ -261,6 +294,12 @@ UICollectionViewDataSource>
         @strongify(self);
         !self.thumbClickedHandler?:self.thumbClickedHandler(self);
     } forControlEvents:UIControlEventTouchUpInside];
+    
+    /// 图片被点击
+    [self.optimalProductCollectionView addGestureRecognizer:[[UITapGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        @strongify(self);
+        !self.pictureViewClickedHandler?:self.pictureViewClickedHandler(self);
+    }]];
 }
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 
@@ -272,31 +311,67 @@ UICollectionViewDataSource>
 /// 事件处理 我这里使用 block 来回调事件 （PS：大家可以自行决定）
 - (void)_addActionDealForMVVMWithRAC
 {
-    ///
-    //    @weakify(self);
-    //    [[self.GPSBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-    //     subscribeNext:^(UIButton *sender) {
-    //         @strongify(self);
-    //         ///
-    //         NSLog(@"---位置被点击---");
-    //         [self.viewModel.locationDidClickedSuject sendNext:self.viewModel];
-    //     }];
-    //
-    //    self.userHeadImageView.userInteractionEnabled = YES;
-    //    UITapGestureRecognizer *avatarTapGr = [[UITapGestureRecognizer alloc] init];
-    //    [self.userHeadImageView addGestureRecognizer:avatarTapGr];
-    //    [avatarTapGr.rac_gestureSignal subscribeNext:^(id x) {
-    //        NSLog(@"---头像被点击---");
-    //        [self.viewModel.avatarDidClickedSuject sendNext:self.viewModel];
-    //    }];
-    //
-    //    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] init];
-    //    [self.optimalProductCollectionView addGestureRecognizer:singleTap];
-    //    [singleTap.rac_gestureSignal subscribeNext:^(id x) {
-    //        @strongify(self);
-    //        NSLog(@"---UICollectionView---");
-    //        [self.viewModel.pictureDidClickedSuject sendNext:self.viewModel];
-    //    }];
+    @weakify(self);
+    /// 头像
+    /// Fixed : 这个方法会导致上面的使用 MVC 或者 MVVM without RAC 情况的头像点击失效 但是理论上是绝对不会出现这两种模式共存的情况的 这里笔者只是为了做区分而已
+    UITapGestureRecognizer *avatarTapGr = [[UITapGestureRecognizer alloc] init];
+    [self.userHeadImageView addGestureRecognizer:avatarTapGr];
+    [[avatarTapGr.rac_gestureSignal
+     takeUntil:self.rac_prepareForReuseSignal]
+    subscribeNext:^(id x) {
+        @strongify(self);
+        [self.viewModel.didClickedAvatarSubject sendNext:self.viewModel];
+        ///  MVC 或者 MVVM without RAC 有效
+        !self.avatarClickedHandler?:self.avatarClickedHandler(self);
+    }];
+    
+    /// 地址
+    [[[self.GPSBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+     takeUntil:self.rac_prepareForReuseSignal]
+     subscribeNext:^(UIButton *sender) {
+         @strongify(self);
+         [self.viewModel.didClickedLocationSubject sendNext:self.viewModel];
+     }];
+
+    /// 回复
+    [[[self.replyBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+     takeUntil:self.rac_prepareForReuseSignal]
+     subscribeNext:^(UIButton *sender) {
+         @strongify(self);
+         [self.viewModel.didClickedReplySubject sendNext:self.viewModel];
+     }];
+
+    CALayer
+    /// 收藏按钮
+    [[[self.thumbBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
+     takeUntil:self.rac_prepareForReuseSignal]
+     subscribeNext:^(UIButton *sender) {
+         @strongify(self);
+         /// 执行
+         self.thumbBtn.enabled = NO;
+         self.showHUD = YES;
+         [MBProgressHUD mh_showProgressHUD:@"Loading..."];
+         @weakify(self)
+         [[[self.viewModel.operationCommand
+            execute:self.viewModel]
+           deliverOnMainThread]
+          subscribeCompleted:^{
+              @strongify(self)
+              self.thumbBtn.enabled = YES;
+              self.showHUD = NO;
+          }];
+         
+     }];
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] init];
+    [self.optimalProductCollectionView addGestureRecognizer:singleTap];
+    [[singleTap.rac_gestureSignal
+     takeUntil:self.rac_prepareForReuseSignal]
+     subscribeNext:^(id x) {
+        @strongify(self);
+        /// MVC 或者 MVVM without RAC 有效
+        !self.pictureViewClickedHandler?:self.pictureViewClickedHandler(self);
+    }];
 
 }
 //// 以上 MVVM With RAC 的事件回调的使用的场景，如果使用其他的模式的请自行ignore

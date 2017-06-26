@@ -11,6 +11,14 @@
 #import "MHExampleController.h"
 
 
+#if defined(DEBUG)||defined(_DEBUG)
+#import "JPFPSStatus.h"
+#import <FBMemoryProfiler/FBMemoryProfiler.h>
+#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
+#import "CacheCleanerPlugin.h"
+#import "RetainCycleLoggerPlugin.h"
+#endif
+
 
 @interface AppDelegate ()
 /**
@@ -23,7 +31,11 @@
 @end
 
 @implementation AppDelegate
-
+{
+#if defined(DEBUG)||defined(_DEBUG)
+    FBMemoryProfiler *memoryProfiler;
+#endif
+}
 
 #pragma mark- 获取appdelegate
 + (AppDelegate *)sharedDelegate
@@ -51,38 +63,29 @@
     [self.window makeKeyAndVisible];
     
 #if defined(DEBUG)||defined(_DEBUG)
-    [[JPFPSStatus sharedInstance] open];
+    [self _configDebugModelTools];
 #endif
-    
     
     return YES;
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
-
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+#pragma mark - 调试(DEBUG)模式
+- (void)_configDebugModelTools
+{
+    /// 显示FPS
+    [[JPFPSStatus sharedInstance] open];
+    
+    /// 内存分析+通过Runtime监测循环引用+跟踪oc对象的分配情况
+    NSArray *filters = @[FBFilterBlockWithObjectIvarRelation([UIView class], @"_subviewCache"),
+                         FBFilterBlockWithObjectIvarRelation([UIPanGestureRecognizer class], @"_internalActiveTouches")];
+    FBObjectGraphConfiguration *configuration =
+    [[FBObjectGraphConfiguration alloc] initWithFilterBlocks:filters
+                                         shouldInspectTimers:NO];
+    memoryProfiler = [[FBMemoryProfiler alloc] initWithPlugins:@[[CacheCleanerPlugin new],
+                                                                 [RetainCycleLoggerPlugin new]]
+                              retainCycleDetectorConfiguration:configuration];
+    [memoryProfiler enable];
 }
 
 

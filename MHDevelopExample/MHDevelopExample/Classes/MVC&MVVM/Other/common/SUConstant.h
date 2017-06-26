@@ -58,6 +58,21 @@ FOUNDATION_EXTERN NSString *const SULoginPhoneKey1;
 /// 登录的验证码
 FOUNDATION_EXTERN NSString *const SULoginVerifyCodeKey1;
 
+/// MVVM With RAC
+/// 登录的手机号
+FOUNDATION_EXTERN NSString *const SULoginPhoneKey2;
+/// 登录的验证码
+FOUNDATION_EXTERN NSString *const SULoginVerifyCodeKey2;
+
+
+/// 项目中关于一些简单的业务逻辑验证放在ViewModel的命令中统一处理 NSError
+/// eg：假设验证出来不是正确的手机号：
+/// [RACSignal error:[NSError errorWithDomain:SUCommandErrorDomain code:SUCommandErrorCode userInfo:@{SUCommandErrorUserInfoKey:@"请输入正确的手机号码"}]];
+FOUNDATION_EXTERN NSString * const SUCommandErrorDomain ;
+FOUNDATION_EXTERN NSString * const SUCommandErrorUserInfoKey ;
+FOUNDATION_EXTERN CGFloat    const SUCommandErrorCode ;
+
+
 
 /// 搜索tips
 FOUNDATION_EXTERN NSString *const SUSearchTipsText;

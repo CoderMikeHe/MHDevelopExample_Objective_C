@@ -42,6 +42,13 @@
     
     [(MHNavigationController *)self.navigationController showNavgationSystemLine];
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    /// 弹出键盘
+    [self.inputView.phoneTextField becomeFirstResponder];
+}
 /////// ========== 产品🐶的需求 程序🦍的命运 ==========
 
 - (void)dealloc{
@@ -81,13 +88,11 @@
     [self.view endEditing:YES];
     
     /// show loading
-    self.loginBtn.enabled = NO;
     [MBProgressHUD mh_showProgressHUD:@"Loading..."];
     
     /// 发起请求 模拟网络请求
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         /// hid hud
-        self.loginBtn.enabled = YES;
         [MBProgressHUD mh_hideHUD];
         
         /// 登录成功 保存数据 简单起见 随便存了哈

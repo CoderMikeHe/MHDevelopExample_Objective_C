@@ -4,7 +4,7 @@
 //
 //  Created by senba on 2017/4/12.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
-//
+//  MVVM With RAC 开发模式的控制器有TableView的所有自定义ViewModel的父类
 
 #import "SUTableViewModel2.h"
 
@@ -19,7 +19,8 @@
 - (void)initialize {
     [super initialize];
     
-    self.currentPage = 1;
+    self.page = 1;
+    self.lastPage = 1;
     self.perPage = 100;
     
     @weakify(self)
@@ -33,6 +34,7 @@
      subscribe:self.errors];
 }
 
+/// sub class can ovrride it
 - (BOOL (^)(NSError *error))requestRemoteDataErrorsFilter {
     return ^(NSError *error) {
         return YES;

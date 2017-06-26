@@ -102,9 +102,12 @@ pod 'YYCategories'                      , '~> 1.0.4'
 # UI block
 pod 'BlocksKit'                         , '~> 2.2.5'
 
-#########  图片浏览器  #########
+# 图片浏览器
 pod 'PYPhotoBrowser'                    , '~> 1.5.0'
 
-#########  FaceBook‘s KVO（优雅的代替系统的KVO）  #########
+# FaceBook‘s KVO（优雅的代替系统原生的KVO）
 pod 'KVOController'                     , '~> 1.2.0'
+
+# FaceBook‘s 内存分析工具 其中包括了：FBAllocationTracker 和 FBRetainCycleDetector两个工具
+pod 'FBMemoryProfiler'
 end

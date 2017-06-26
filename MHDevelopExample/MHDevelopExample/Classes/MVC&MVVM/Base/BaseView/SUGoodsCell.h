@@ -41,6 +41,10 @@ typedef void(^SUGoodsCellReplyClickedHandler)(SUGoodsCell *goodsCell);
  */
 typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell);
 
+/**
+ * 商品图片view被点击
+ */
+typedef void(^SUGoodsCellPictureViewClickedHandler)(SUGoodsCell *goodsCell);
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 
 
@@ -66,6 +70,8 @@ typedef void(^SUGoodsCellThumbClickedHandler)(SUGoodsCell *goodsCell);
 @property (nonatomic, readwrite, copy) SUGoodsCellReplyClickedHandler replyClickedHandler;
 /// 点赞按钮被点击
 @property (nonatomic, readwrite, copy) SUGoodsCellThumbClickedHandler thumbClickedHandler;
+/// 商品照片view被点击
+@property (nonatomic, readwrite, copy) SUGoodsCellPictureViewClickedHandler pictureViewClickedHandler;
 //// 以上 MVC 和 MVVM without RAC 的事件回调的使用的场景，如果使用MVVM With RAC的请自行ignore
 
 @end
