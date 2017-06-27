@@ -81,6 +81,7 @@
     
     if (self)
     {
+        
         // 初始化
         [self _setup];
         
@@ -114,7 +115,7 @@
     // 设置颜色
     self.contentView.backgroundColor = [UIColor whiteColor];
     
-    // 去掉选中
+    // 去掉选中的背景色
     UIView *selectedBackgroundView =  [[UIView alloc] init];
     selectedBackgroundView.backgroundColor = [UIColor clearColor];
     self.selectedBackgroundView = selectedBackgroundView;

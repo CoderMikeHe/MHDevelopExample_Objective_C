@@ -341,7 +341,7 @@ UICollectionViewDataSource>
          [self.viewModel.didClickedReplySubject sendNext:self.viewModel];
      }];
 
-    CALayer
+   
     /// 收藏按钮
     [[[self.thumbBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      takeUntil:self.rac_prepareForReuseSignal]
