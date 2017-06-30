@@ -316,8 +316,7 @@ UICollectionViewDataSource>
     /// Fixed : 这个方法会导致上面的使用 MVC 或者 MVVM without RAC 情况的头像点击失效 但是理论上是绝对不会出现这两种模式共存的情况的 这里笔者只是为了做区分而已
     UITapGestureRecognizer *avatarTapGr = [[UITapGestureRecognizer alloc] init];
     [self.userHeadImageView addGestureRecognizer:avatarTapGr];
-    [[avatarTapGr.rac_gestureSignal
-     takeUntil:self.rac_prepareForReuseSignal]
+    [avatarTapGr.rac_gestureSignal
     subscribeNext:^(id x) {
         @strongify(self);
         [self.viewModel.didClickedAvatarSubject sendNext:self.viewModel];
@@ -326,16 +325,14 @@ UICollectionViewDataSource>
     }];
     
     /// 地址
-    [[[self.GPSBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-     takeUntil:self.rac_prepareForReuseSignal]
+    [[self.GPSBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(UIButton *sender) {
          @strongify(self);
          [self.viewModel.didClickedLocationSubject sendNext:self.viewModel];
      }];
 
     /// 回复
-    [[[self.replyBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-     takeUntil:self.rac_prepareForReuseSignal]
+    [[self.replyBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(UIButton *sender) {
          @strongify(self);
          [self.viewModel.didClickedReplySubject sendNext:self.viewModel];
@@ -343,8 +340,7 @@ UICollectionViewDataSource>
 
    
     /// 收藏按钮
-    [[[self.thumbBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
-     takeUntil:self.rac_prepareForReuseSignal]
+    [[self.thumbBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(UIButton *sender) {
          @strongify(self);
          /// 执行
@@ -365,8 +361,7 @@ UICollectionViewDataSource>
     
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] init];
     [self.optimalProductCollectionView addGestureRecognizer:singleTap];
-    [[singleTap.rac_gestureSignal
-     takeUntil:self.rac_prepareForReuseSignal]
+    [singleTap.rac_gestureSignal
      subscribeNext:^(id x) {
         @strongify(self);
         /// MVC 或者 MVVM without RAC 有效
