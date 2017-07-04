@@ -102,7 +102,7 @@ UICollectionViewDataSource>
     self.extraFee.backgroundColor = SUGlobalPinkColor;
     self.extraFee.textColor = [UIColor whiteColor];
     self.extraFee.layer.cornerRadius = 2;
-#warning COderMikeHe FIXME：需要优化，避免离屏渲染
+#warning COderMikeHe FIXME：此处需要优化，避免离屏渲染
     self.extraFee.layer.masksToBounds = YES;
 
     /// UICollectionView注册cell
