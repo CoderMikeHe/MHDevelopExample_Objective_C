@@ -156,27 +156,23 @@ static BOOL statusBarHidden_ = NO;
     [self.viewModel.requestBannerDataCommand execute:nil];
 }
 /// config  cell
-- (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath{
     return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SUGoodsCell class])];
 }
 
 /// config  data
-- (void)configureCell:(SUGoodsCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(SUGoodsItemViewModel *)object
-{
+- (void)configureCell:(SUGoodsCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(SUGoodsItemViewModel *)object{
     /// config data (PS：由于MVVM主要是View与数据之间的绑定，但是跟 setViewModel: 差不多啦)
     [cell bindViewModel:object];
 }
 
 /// 文本内容区域
-- (UIEdgeInsets)contentInset
-{
+- (UIEdgeInsets)contentInset{
     return UIEdgeInsetsZero;
 }
 
 #pragma mark - UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     /// 由于使用系统的autoLayout来计算cell的高度，每次滚动时都要重新计算cell的布局以此来获得cell的高度 这样一来性能不好
     /// 所以笔者采用实现计算好的cell的高度
     return [self.viewModel.dataSource[indexPath.row] cellHeight];
@@ -201,19 +197,19 @@ static BOOL statusBarHidden_ = NO;
     
     UIStatusBarStyle tempStyle = (offsetY >= self.headerView.mh_height)?UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
     BOOL tempStatusBarHidden = (offsetY >= 0)?NO:YES;
+    
     if ((tempStyle == style_) && (tempStatusBarHidden == statusBarHidden_)) {
     } else {
         style_ = tempStyle;
         statusBarHidden_ = tempStatusBarHidden;
         /// 更新状态栏
-//        [self setNeedsStatusBarAppearanceUpdate];
+        [self setNeedsStatusBarAppearanceUpdate];
     }
 }
 
 #pragma mark - 辅助方法
 /// 跳转界面 这里只是一个跳转，实际情况，自行定夺
-- (void)_pushToPublicViewControllerWithTitle:(NSString *)title
-{
+- (void)_pushToPublicViewControllerWithTitle:(NSString *)title{
     SUPublicViewModel2 *viewModel = [[SUPublicViewModel2 alloc] initWithParams:@{SUViewModelTitleKey:title}];
     SUPublicController2 *publicVC = [[SUPublicController2 alloc] initWithViewModel:viewModel];
     [self.navigationController pushViewController:publicVC animated:YES];

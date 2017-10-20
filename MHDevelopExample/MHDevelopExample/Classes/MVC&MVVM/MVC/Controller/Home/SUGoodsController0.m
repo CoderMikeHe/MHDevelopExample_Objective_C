@@ -111,8 +111,7 @@ static BOOL statusBarHidden_ = NO;
 
 #pragma mark - Override
 /// 下拉刷新
-- (void)tableViewDidTriggerHeaderRefresh
-{
+- (void)tableViewDidTriggerHeaderRefresh{
     /// config param
     NSInteger page = 1;
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
@@ -268,7 +267,6 @@ static BOOL statusBarHidden_ = NO;
         self.navBar.backgroundColor = MHAlphaColor(254.0f, 132.0f, 154.0f, navBarAlhpa);
         self.titleView.alpha = titleViewAlpha;
     }];
-    
     UIStatusBarStyle tempStyle = (offsetY >= self.headerView.mh_height)?UIStatusBarStyleLightContent:UIStatusBarStyleDefault;
     BOOL tempStatusBarHidden = (offsetY >= 0)?NO:YES;
     if ((tempStyle == style_) && (tempStatusBarHidden == statusBarHidden_)) {
@@ -276,7 +274,7 @@ static BOOL statusBarHidden_ = NO;
         style_ = tempStyle;
         statusBarHidden_ = tempStatusBarHidden;
         /// 更新状态栏
-//        [self setNeedsStatusBarAppearanceUpdate];
+        [self setNeedsStatusBarAppearanceUpdate];
     }
 }
 

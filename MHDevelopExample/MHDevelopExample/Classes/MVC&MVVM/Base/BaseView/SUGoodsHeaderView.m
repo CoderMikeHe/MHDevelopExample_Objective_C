@@ -15,7 +15,6 @@
     [super awakeFromNib];
     
     /// Setting the background color on UITableViewHeaderFooterView has been deprecated. Please use contentView.backgroundColor instead.
-    self.backgroundColor = SUGlobalGrayBackgroundColor;
     self.contentView.backgroundColor = SUGlobalGrayBackgroundColor;
 }
 
