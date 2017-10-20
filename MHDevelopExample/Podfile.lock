@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
   - AFNetworking (3.1.0):
     - AFNetworking/NSURLSession (= 3.1.0)
     - AFNetworking/Reachability (= 3.1.0)
@@ -32,26 +33,35 @@ PODS:
   - CHTCollectionViewWaterfallLayout (0.9.6):
     - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.6)
   - CHTCollectionViewWaterfallLayout/ObjC (0.9.6)
+  - CocoaSecurity (1.2.4)
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
   - DACircularProgress (2.3.1)
+  - DZNEmptyDataSet (1.8.1)
   - FBAllocationTracker (0.1.5)
   - FBMemoryProfiler (0.1.3):
     - FBAllocationTracker (~> 0.1)
     - FBRetainCycleDetector (~> 0.1)
   - FBRetainCycleDetector (0.1.3)
   - FDFullscreenPopGesture (1.1)
-  - FLAnimatedImage (1.0.12)
+  - FLEX (2.4.0)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - FXBlurView (1.6.4)
   - HJCornerRadius (0.0.1)
   - HYBImageCliped (2.2.4)
+  - IQKeyboardManager (5.0.2)
+  - JDStatusBarNotification (1.5.5)
   - JPFPSStatus (0.1)
   - JSBadgeView (1.4.1)
   - KVOController (1.2.0)
+  - LBXScan/LBXNative (2.0)
+  - LBXScan/LBXZBar (2.0):
+    - ZBarSDK (~> 1.3.1)
+  - LBXScan/LBXZXing (2.0)
+  - LBXScan/UI (2.0)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -93,32 +103,27 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - MMMaterialDesignSpinner (0.2.3)
-  - PYPhotoBrowser (1.5.0):
-    - DACircularProgress
-    - MBProgressHUD
-    - SDWebImage/GIF (~> 4.0.0)
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
+  - pop (1.0.10)
+  - ReactiveCocoa (2.5.2):
+    - ReactiveCocoa/UI (= 2.5.2)
+  - ReactiveCocoa/Core (2.5.2):
     - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
+  - ReactiveCocoa/no-arc (2.5.2)
+  - ReactiveCocoa/UI (2.5.2):
     - ReactiveCocoa/Core
-  - RMStore (0.7.1):
-    - RMStore/Core (= 0.7.1)
-  - RMStore/Core (0.7.1)
+  - SAMKeychain (1.5.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - SDWebImage/GIF (4.0.0):
-    - FLAnimatedImage (~> 1.0)
-    - SDWebImage/Core
   - SocketRocket (0.5.1)
-  - SSZipArchive (1.6.2)
-  - SVProgressHUD (2.0.4)
+  - SSZipArchive (1.8.1)
+  - SVProgressHUD (2.1.2)
+  - TTTAttributedLabel (2.0.0)
+  - TXScrollLabelView (1.3.1)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
   - UIImage+ImageWithColor (1.4.0)
-  - UITableView+FDTemplateLayoutCell (1.5.beta)
-  - WZLBadge (1.2.5)
+  - UITableView+FDTemplateLayoutCell (1.6)
+  - WZLBadge (1.2.6)
   - YYAsyncLayer (1.0)
   - YYCache (1.0.4)
   - YYCategories (1.0.4):
@@ -136,81 +141,105 @@ PODS:
   - YYWebImage (1.0.5):
     - YYCache
     - YYImage
-  - YZDisplayViewController (1.0.6)
+  - ZBarSDK (1.3.1)
   - ZYCornerRadius (1.0.2)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.1.0)
-  - BlocksKit (~> 2.2.5)
-  - CHTCollectionViewWaterfallLayout (~> 0.9.6)
-  - Colours (~> 5.13.0)
-  - DACircularProgress (~> 2.3.1)
-  - FBMemoryProfiler
-  - FDFullscreenPopGesture (~> 1.1)
-  - FMDB (~> 2.6.2)
-  - FXBlurView (~> 1.6.4)
+  - ActionSheetPicker-3.0 (= 2.2.0)
+  - AFNetworking (= 3.1.0)
+  - BlocksKit (= 2.2.5)
+  - CHTCollectionViewWaterfallLayout (= 0.9.6)
+  - CocoaSecurity (= 1.2.4)
+  - Colours (= 5.13.0)
+  - DACircularProgress (= 2.3.1)
+  - DZNEmptyDataSet (= 1.8.1)
+  - FBMemoryProfiler (= 0.1.3)
+  - FDFullscreenPopGesture (= 1.1)
+  - FLEX (= 2.4.0)
+  - FMDB (= 2.6.2)
+  - FXBlurView (= 1.6.4)
   - HJCornerRadius (from `https://github.com/panghaijiao/HJCornerRadius.git`)
-  - HYBImageCliped (~> 2.2.4)
-  - JPFPSStatus (~> 0.1)
-  - JSBadgeView (~> 1.4.1)
-  - KVOController (~> 1.2.0)
-  - libextobjc (~> 0.4.1)
-  - LxDBAnything (~> 1.1.0)
-  - Masonry (~> 1.0.1)
-  - MBProgressHUD (~> 1.0.0)
-  - MJExtension (~> 3.0.13)
-  - MJRefresh (~> 3.1.12)
-  - MMMaterialDesignSpinner (~> 0.2.3)
-  - PYPhotoBrowser (~> 1.5.0)
-  - ReactiveCocoa (= 2.5)
-  - RMStore (~> 0.7.1)
-  - SDWebImage (~> 4.0.0)
-  - SocketRocket (~> 0.5.1)
-  - SSZipArchive (~> 1.6.2)
-  - SVProgressHUD (~> 2.0.3)
-  - UIImage+ImageWithColor (~> 1.3)
-  - UITableView+FDTemplateLayoutCell (~> 1.5.beta)
-  - WZLBadge (~> 1.2.5)
-  - YYAsyncLayer (~> 1.0)
-  - YYCache (~> 1.0.4)
-  - YYCategories (~> 1.0.4)
-  - YYDispatchQueuePool (~> 1.0)
-  - YYImage (~> 1.0.4)
+  - HYBImageCliped (= 2.2.4)
+  - IQKeyboardManager (= 5.0.2)
+  - JDStatusBarNotification (= 1.5.5)
+  - JPFPSStatus (= 0.1)
+  - JSBadgeView (= 1.4.1)
+  - KVOController (= 1.2.0)
+  - LBXScan/LBXNative (= 2.0)
+  - LBXScan/LBXZBar (= 2.0)
+  - LBXScan/LBXZXing (= 2.0)
+  - LBXScan/UI (= 2.0)
+  - libextobjc (= 0.4.1)
+  - LxDBAnything (= 1.1.0)
+  - Masonry (= 1.0.2)
+  - MBProgressHUD (= 1.0.0)
+  - MJExtension (= 3.0.13)
+  - MJRefresh (= 3.1.12)
+  - MMMaterialDesignSpinner (= 0.2.3)
+  - pop (= 1.0.10)
+  - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
+  - SAMKeychain (= 1.5.2)
+  - SDWebImage (= 4.0.0)
+  - SocketRocket (= 0.5.1)
+  - SSZipArchive (= 1.8.1)
+  - SVProgressHUD (= 2.1.2)
+  - TTTAttributedLabel (= 2.0.0)
+  - TXScrollLabelView (= 1.3.1)
+  - UICollectionViewLeftAlignedLayout (= 1.0.2)
+  - UIImage+ImageWithColor (= 1.4.0)
+  - UITableView+FDTemplateLayoutCell (= 1.6)
+  - WZLBadge (= 1.2.6)
+  - YYAsyncLayer (= 1.0)
+  - YYCache (= 1.0.4)
+  - YYCategories (= 1.0.4)
+  - YYDispatchQueuePool (= 1.0)
+  - YYImage (= 1.0.4)
   - YYImage/WebP
-  - YYKeyboardManager (~> 1.0.1)
-  - YYModel (~> 1.0.4)
-  - YYText (~> 1.0.5)
-  - YYWebImage (~> 1.0.5)
-  - YZDisplayViewController (~> 1.0.6)
-  - ZYCornerRadius (~> 1.0.2)
+  - YYKeyboardManager (= 1.0.1)
+  - YYModel (= 1.0.4)
+  - YYText (= 1.0.7)
+  - YYWebImage (= 1.0.5)
+  - ZYCornerRadius (= 1.0.2)
 
 EXTERNAL SOURCES:
   HJCornerRadius:
     :git: https://github.com/panghaijiao/HJCornerRadius.git
+  ReactiveCocoa:
+    :git: https://github.com/zhao0/ReactiveCocoa.git
+    :tag: 2.5.2
 
 CHECKOUT OPTIONS:
   HJCornerRadius:
     :commit: 50e1c7463849862ef60ee3d711f433f9b25a45fb
     :git: https://github.com/panghaijiao/HJCornerRadius.git
+  ReactiveCocoa:
+    :git: https://github.com/zhao0/ReactiveCocoa.git
+    :tag: 2.5.2
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CHTCollectionViewWaterfallLayout: f4dab06db57b36dcf29e802594175acc76c56615
+  CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
   FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
   FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   HJCornerRadius: 0af191386b5f2e9c4465739b5db22c0acc52923b
   HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
+  IQKeyboardManager: 5ab84749f20f682f784160c2c63bef4f19d10d26
+  JDStatusBarNotification: 2b4f29bd68a60d7aa2f190b5265f1ce59c18aaf8
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JSBadgeView: 3861ddee41094284d9468e6d0af5107f703aaac5
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  LBXScan: 458f4b7a6688504a1415dc4a0f9822100e099f66
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   LxDBAnything: 154a2ad1ae32e70355d886b5443260543bb60c71
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -218,16 +247,19 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MMMaterialDesignSpinner: 55c80b454f7928d0ed789cc3c456fa06bd6a2f16
-  PYPhotoBrowser: eb140689619b10843beaad9e532581825ad7f542
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  RMStore: 64ba13a9c040e3b7572765d169f77175cd3243e5
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  SSZipArchive: 428eb1ac8d37dd133404d30f422b23958c1f9acc
-  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  TXScrollLabelView: 0c46b8ad58f85df9d0c923ac58cd43c6c715c580
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   UIImage+ImageWithColor: 891401f732f2f332fefe68c2332c6c955c2a879c
-  UITableView+FDTemplateLayoutCell: 02b508ab1cb4cea16a8c17ac83d2cd1fd72124f9
-  WZLBadge: 16c08aa0a645e2591690f21cbcb410a3d878c7ac
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
@@ -237,9 +269,9 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
-  YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
+  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 85b258bad9cab3baac063e62691219979ef655aa
+PODFILE CHECKSUM: decddef4b388bd57820accbf3981d7cc5ca292a6
 
 COCOAPODS: 1.2.1
