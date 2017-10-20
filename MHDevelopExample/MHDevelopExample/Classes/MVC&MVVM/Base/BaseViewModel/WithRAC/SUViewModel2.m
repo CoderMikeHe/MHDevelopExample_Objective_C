@@ -50,7 +50,6 @@
             @strongify(viewModel)
             [viewModel initialize];
         }];
-    
     return viewModel;
 }
 

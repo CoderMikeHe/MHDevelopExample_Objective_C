@@ -21,7 +21,6 @@
 ///------
 /// Block
 ///------
-
 typedef void (^VoidBlock)();
 typedef BOOL (^BoolBlock)();
 typedef int  (^IntBlock) ();

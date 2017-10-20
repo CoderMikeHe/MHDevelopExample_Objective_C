@@ -4,9 +4,30 @@ use_frameworks!
 ## ignore warning
 inhibit_all_warnings!
 target 'MHDevelopExample' do
+    
+#########  YYKit ###############
+#pod 'YYKit'                             , '~> 1.0.9'
 
+# YYKit 的一套分类
+pod 'YYCategories'                      , '~> 1.0.4'
 # 富文本
-pod 'YYText', '~> 1.0.5'
+pod 'YYText'                            , '~> 1.0.5'
+# 字典转模型
+pod 'YYModel'                           , '~> 1.0.4'
+# YYImage
+pod 'YYImage'                           , '~> 1.0.4'
+# webP
+pod 'YYImage/WebP'
+# 高性能的 iOS 缓存框架
+pod 'YYCache'                           , '~> 1.0.4'
+# 高性能的 iOS 异步图像加载框架。
+pod 'YYWebImage'                        , '~> 1.0.5'
+# iOS 键盘监听管理工具
+pod 'YYKeyboardManager'                 , '~> 1.0.1'
+# iOS 全局并发队列管理工具
+pod 'YYDispatchQueuePool'               , '~> 1.0'
+# iOS 异步绘制与显示的工具
+pod 'YYAsyncLayer'                      , '~> 1.0'
 
 # AutoLayout
 pod 'Masonry', '~> 1.0.1'
@@ -16,7 +37,7 @@ pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
 
 # 字典转模型
 pod 'MJExtension', '~> 3.0.13'
-pod 'YYModel'                           , '~> 1.0.4'
+
 
 # 颜色分类
 pod 'Colours', '~> 5.13.0'
@@ -64,11 +85,7 @@ pod 'SSZipArchive', '~> 1.6.2'
 # 苹果内购
 pod 'RMStore', '~> 0.7.1'
 
-# YYImage
-pod 'YYImage', '~> 1.0.4'
 
-# webP
-pod 'YYImage/WebP'
 
 # 菊花activity
 pod 'MMMaterialDesignSpinner', '~> 0.2.3'
@@ -97,8 +114,7 @@ pod 'HJCornerRadius', :git => 'https://github.com/panghaijiao/HJCornerRadius.git
 #########  Category  #########
 # 非常强大的Objective-C库的扩展
 pod 'libextobjc'                        , '~> 0.4.1'
-# YYKit 的一套分类
-pod 'YYCategories'                      , '~> 1.0.4'
+
 # UI block
 pod 'BlocksKit'                         , '~> 2.2.5'
 
@@ -110,4 +126,7 @@ pod 'KVOController'                     , '~> 1.2.0'
 
 # FaceBook‘s 内存分析工具 其中包括了：FBAllocationTracker 和 FBRetainCycleDetector两个工具
 pod 'FBMemoryProfiler'
+
+# 瀑布流
+pod 'CHTCollectionViewWaterfallLayout', '~> 0.9.6'
 end

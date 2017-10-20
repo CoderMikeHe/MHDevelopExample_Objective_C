@@ -24,8 +24,7 @@
 /**
  *  用户数据 只读
  */
-@property (nonatomic , strong) MHAccount *account;
-
+@property (nonatomic, readwrite, strong) MHAccount *account;
 
 
 @end
@@ -51,6 +50,8 @@
     }
     return _account;
 }
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     

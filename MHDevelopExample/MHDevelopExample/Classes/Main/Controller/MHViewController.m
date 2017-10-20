@@ -16,13 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // 初始化
     [self _baseSetup];
-    
-    
-
-    
 }
 
 

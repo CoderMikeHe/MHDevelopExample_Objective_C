@@ -34,8 +34,7 @@ static BOOL statusBarHidden_ = NO;
 @implementation SUGoodsController2
 @dynamic viewModel;
 
-- (void)dealloc
-{
+- (void)dealloc{
     MHDealloc;
 }
 
@@ -207,7 +206,7 @@ static BOOL statusBarHidden_ = NO;
         style_ = tempStyle;
         statusBarHidden_ = tempStatusBarHidden;
         /// 更新状态栏
-        [self setNeedsStatusBarAppearanceUpdate];
+//        [self setNeedsStatusBarAppearanceUpdate];
     }
 }
 

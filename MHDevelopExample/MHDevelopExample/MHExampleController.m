@@ -5,21 +5,24 @@
 //  Created by CoderMikeHe on 17/2/7.
 //  Copyright © 2017年 CoderMikeHe. All rights reserved.
 //
-
 #import "MHExampleController.h"
 #import "MHExample.h"
 // 父子控制器
 #import "MHBuDeJieController.h"
 #import "MHNetEaseNewsController.h"
 #import "MHDisplayController.h"
+
 // 微信朋友圈评论回复
 #import "MHTopicOneController.h"
 #import "MHTopicTwoController.h"
 #import "MHYouKuController.h"
+
+
 // UITableView常见的使用场景
 #import "MHSelectsController.h"
 #import "MHDeleteController.h"
 #import "MHUITableViewStyleGroupedBugController.h"
+
 // MVC&MVVM
 #import "SULoginController0.h"
 #import "SULoginController1.h"
@@ -86,6 +89,7 @@
          1.1 cell里面不嵌套UITableView
          1.2 cell里面嵌套UITableView
          1.3 仿优酷视频的评论回复
+         1.4 仿微信朋友圈
          */
         MHExample *commentExample = [[MHExample alloc] init];
         commentExample.header = @"二、微信朋友圈评论回复功能";
@@ -215,9 +219,8 @@
         [self.navigationController pushViewController:vc animated:YES];
         return;
     }
-    
-    UIViewController *vc = [[NSClassFromString(vcClassString) alloc] init];
 
+    UIViewController *vc = [[NSClassFromString(vcClassString) alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
 }

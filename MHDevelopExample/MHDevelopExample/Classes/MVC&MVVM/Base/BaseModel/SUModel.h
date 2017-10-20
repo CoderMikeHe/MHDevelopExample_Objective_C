@@ -7,7 +7,7 @@
 //  所有自定义类的父类 -- M
 
 #import <Foundation/Foundation.h>
-#import "YYModel.h"
+
 @interface SUModel : NSObject<YYModel>
 
 /**

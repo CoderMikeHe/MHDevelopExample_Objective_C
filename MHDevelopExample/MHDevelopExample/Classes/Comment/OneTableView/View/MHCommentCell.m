@@ -34,6 +34,7 @@
     static NSString *ID = @"CommentCell";
     MHCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
+        MHLog(@"....cell不嵌套tableView.....创建评论cell...");
         cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         
     }

@@ -9,9 +9,11 @@
 #import "SULoginController0.h"
 #import "SULoginInputView.h"
 #import "SUGoodsController0.h"
-
+#import "JPLabel.h"
+#import "XMGLabel.h"
 @interface SULoginController0 ()
-
+///
+@property (nonatomic, readwrite, weak) XMGLabel *label ;
 /// 输入款的父类
 @property (weak, nonatomic) IBOutlet UIView *inputBaseView;
 
@@ -22,6 +24,7 @@
 @property (nonatomic, readwrite, weak) SULoginInputView *inputView;
 /// 用户头像
 @property (weak, nonatomic) IBOutlet UIImageView *userAvatar;
+
 
 
 @end
@@ -47,7 +50,7 @@
 {
     [super viewDidAppear:animated];
     /// 弹出键盘
-    [self.inputView.phoneTextField becomeFirstResponder];
+//    [self.inputView.phoneTextField becomeFirstResponder];
 }
 /////// ========== 产品🐶的需求 程序🦍的命运 ==========
 
@@ -59,12 +62,23 @@
     [super viewDidLoad];
     
     self.title = @"登录";
-    
+
     /// 初始化导航栏
     [self _setupNavigationItem];
+
+    
+    
     
     /// 初始化subView
     [self _setupSubViews];
+    
+    XMGLabel *label = [[XMGLabel alloc] initWithFrame:CGRectMake(0, 450, MHMainScreenWidth, 44)];
+    label.backgroundColor = [UIColor greenColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
+    label.font = MHMediumFont(17.0f);
+    [self.view addSubview:label];
+    self.label = label;
 }
 
 ////////////////// 以下为逻辑代码，还请过多关注 ///////////////////

@@ -18,7 +18,6 @@
 @property (nonatomic, readonly, strong) RACCommand *requestBannerDataCommand;
 
 
-
 /// 通过索引获取数据
 - (NSString *)bannerUrlWithIndex:(NSInteger)index;
 

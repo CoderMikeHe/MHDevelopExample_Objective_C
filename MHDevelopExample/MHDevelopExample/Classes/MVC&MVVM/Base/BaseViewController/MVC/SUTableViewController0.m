@@ -67,10 +67,11 @@
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
-    
     // 注册cell
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
+    /// CoderMikeHe Fixed: 这里需要强制布局一下界面，解决由于设置了tableView的contentInset，然而contentOffset始终是（0，0）的bug
+    [self.view layoutIfNeeded];
     
     /// 添加加载和刷新控件
     if (self.shouldPullDownToRefresh) {

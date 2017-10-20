@@ -60,6 +60,7 @@
     static NSString *ID = @"TopicCell";
     MHTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (!cell) {
+        MHLog(@"....cell嵌套tableView.....创建话题cell...");
         cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         

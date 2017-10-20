@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MHAccount.h"
 #import "MHNavigationController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -16,7 +17,8 @@
 /**
  *  用户数据 只读
  */
-@property (nonatomic , strong ,readonly) MHAccount *account;
+@property (nonatomic, readonly , strong) MHAccount *account;
+
 /**
  *  获取delegate
  *

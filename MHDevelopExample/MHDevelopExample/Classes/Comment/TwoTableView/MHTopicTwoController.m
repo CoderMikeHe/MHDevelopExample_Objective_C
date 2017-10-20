@@ -176,7 +176,7 @@
         topic.text = [self.textString substringFromIndex:[NSObject mh_randomNumber:0 to:self.textString.length-1]];
         topic.user = self.users[[NSObject mh_randomNumber:0 to:9]];
         
-        NSInteger commentsCount = [NSObject mh_randomNumber:0 to:15];
+        NSInteger commentsCount = [NSObject mh_randomNumber:0 to:100];
         topic.commentsCount = commentsCount;
         for (NSInteger j = 0; j<commentsCount; j++) {
             MHComment *comment = [[MHComment alloc] init];
@@ -257,7 +257,6 @@
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-
     return 1;
 }
 
