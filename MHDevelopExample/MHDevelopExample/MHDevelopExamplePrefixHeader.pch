@@ -21,10 +21,10 @@
 ///------
 /// Block
 ///------
-typedef void (^VoidBlock)();
-typedef BOOL (^BoolBlock)();
-typedef int  (^IntBlock) ();
-typedef id   (^IDBlock)  ();
+typedef void (^VoidBlock)(void);
+typedef BOOL (^BoolBlock)(void);
+typedef int  (^IntBlock) (void);
+typedef id   (^IDBlock)  (void);
 
 typedef void (^VoidBlock_int)(int);
 typedef BOOL (^BoolBlock_int)(int);
@@ -54,6 +54,20 @@ typedef id   (^IDBlock_id)  (id);
 #define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
 #define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define MH_IS_IPHONE_X          (MH_IS_IPHONE && MH_SCREEN_MAX_LENGTH == 812.0)
+
+
+/// 导航条高度
+#define MH_APPLICATION_TOP_BAR_HEIGHT (MH_IS_IPHONE_X?88.0f:64.0f)
+/// tabBar高度
+#define MH_APPLICATION_TAB_BAR_HEIGHT (MH_IS_IPHONE_X?83.0f:49.0f)
+/// 工具条高度 (常见的高度)
+#define MH_APPLICATION_TOOL_BAR_HEIGHT_44  44.0f
+#define MH_APPLICATION_TOOL_BAR_HEIGHT_49  49.0f
+/// 状态栏高度
+#define MH_APPLICATION_STATUS_BAR_HEIGHT (MH_IS_IPHONE_X?44:20.0f)
+
+
 
 // 适配AF
 #ifndef TARGET_OS_IOS
@@ -164,6 +178,31 @@ self.automaticallyAdjustsScrollViewInsets = NO;\
 
 // 设置图片
 #define MHImageNamed(__imageName) [UIImage imageNamed:__imageName]
+
+
+
+
+
+
+
+
+/// 适配iPhone X + iOS 11
+#define  MHAdjustsScrollViewInsets_Never(__scrollView)\
+do {\
+_Pragma("clang diagnostic push")\
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"")\
+if ([__scrollView respondsToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {\
+NSMethodSignature *signature = [UIScrollView instanceMethodSignatureForSelector:@selector(setContentInsetAdjustmentBehavior:)];\
+NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];\
+NSInteger argument = 2;\
+invocation.target = __scrollView;\
+invocation.selector = @selector(setContentInsetAdjustmentBehavior:);\
+[invocation setArgument:&argument atIndex:2];\
+[invocation retainArguments];\
+[invocation invoke];\
+}\
+_Pragma("clang diagnostic pop")\
+} while (0)
 
 // 常用的
 #import "MHConstant.h"

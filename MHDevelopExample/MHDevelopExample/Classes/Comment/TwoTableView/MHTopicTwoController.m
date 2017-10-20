@@ -158,7 +158,7 @@
 {
     NSDate *date = [NSDate date];
     // 初始化100条数据
-    for (NSInteger i = 100; i>0; i--) {
+    for (NSInteger i = 20; i>0; i--) {
         
         // 话题
         MHTopic *topic = [[MHTopic alloc] init];
@@ -176,7 +176,7 @@
         topic.text = [self.textString substringFromIndex:[NSObject mh_randomNumber:0 to:self.textString.length-1]];
         topic.user = self.users[[NSObject mh_randomNumber:0 to:9]];
         
-        NSInteger commentsCount = [NSObject mh_randomNumber:0 to:100];
+        NSInteger commentsCount = [NSObject mh_randomNumber:0 to:20];
         topic.commentsCount = commentsCount;
         for (NSInteger j = 0; j<commentsCount; j++) {
             MHComment *comment = [[MHComment alloc] init];

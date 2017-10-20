@@ -41,7 +41,7 @@
 - (void)_su_setupSubViews
 {
     // set up tableView
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:self.viewModel.style];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:MHMainScreenBounds style:self.viewModel.style];
     tableView.backgroundColor = self.view.backgroundColor;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // set delegate and dataSource
@@ -50,11 +50,9 @@
     tableView.contentInset  = self.contentInset;
     self.tableView = tableView;
     [self.view addSubview:tableView];
-    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
-    }];
+
     /// CoderMikeHe Fixed: 这里需要强制布局一下界面，解决由于设置了tableView的contentInset，然而contentOffset始终是（0，0）的bug
-    [self.view layoutIfNeeded];
+//    [self.view layoutIfNeeded];
     // 注册cell
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
@@ -82,6 +80,13 @@
         /// 判断一下数据
         [self tableViewDidFinishTriggerHeader:NO reload:NO];
     }
+    
+#ifdef __IPHONE_11_0
+    MHAdjustsScrollViewInsets_Never(tableView);
+    tableView.estimatedRowHeight = 0;
+    tableView.estimatedSectionHeaderHeight = 0;
+    tableView.estimatedSectionFooterHeight = 0;
+#endif
 }
 
 

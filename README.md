@@ -10,6 +10,12 @@
 - 本`Demo`利用`Cocoapods`管理第三方框架，若第一次使用本项目，请使用终端`cd`到如下图所示的文件夹，执行`pod install`命令即可。
 
 	![Usage.png](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/Usage.png)
+	
+	```
+	1. pod repo update : 更新本地仓库
+	2. pod install : 下载新的库
+	
+	```
 
 
 ### 期待

@@ -276,7 +276,7 @@ static BOOL statusBarHidden_ = NO;
         style_ = tempStyle;
         statusBarHidden_ = tempStatusBarHidden;
         /// 更新状态栏
-        [self setNeedsStatusBarAppearanceUpdate];
+//        [self setNeedsStatusBarAppearanceUpdate];
     }
 }
 

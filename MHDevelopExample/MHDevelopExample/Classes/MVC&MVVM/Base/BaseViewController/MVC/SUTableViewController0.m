@@ -55,7 +55,7 @@
 - (void)_su_setupSubViews
 {
     // set up tableView
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:self.style];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:MHMainScreenBounds style:self.style];
     tableView.backgroundColor = self.view.backgroundColor;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     // set delegate and dataSource
@@ -64,9 +64,7 @@
     tableView.contentInset  = self.contentInset;
     self.tableView = tableView;
     [self.view addSubview:tableView];
-    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
-    }];
+
     // 注册cell
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
@@ -94,6 +92,15 @@
             [self tableViewDidTriggerFooterRefresh];
         }];
     }
+    
+#ifdef __IPHONE_11_0
+    MHAdjustsScrollViewInsets_Never(tableView);
+    tableView.estimatedRowHeight = 0;
+    tableView.estimatedSectionHeaderHeight = 0;
+    tableView.estimatedSectionFooterHeight = 0;
+#endif
+    
+    
 }
 
 

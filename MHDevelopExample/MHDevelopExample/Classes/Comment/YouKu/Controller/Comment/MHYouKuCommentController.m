@@ -180,6 +180,10 @@
     
     // 设置缓存值
     textView.text = self.cacheText;
+    
+    
+    /// 适配 iOS11
+    MHAdjustsScrollViewInsets_Never(self.textView);
 }
 
 

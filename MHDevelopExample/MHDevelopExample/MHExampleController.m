@@ -41,8 +41,7 @@
 
 @implementation MHExampleController
 
-- (void)dealloc
-{
+- (void)dealloc{
     MHDealloc;
 }
 
@@ -67,8 +66,7 @@
 #pragma mark - 私有方法
 
 #pragma mark - Getter
-- (NSMutableArray *)examples
-{
+- (NSMutableArray *)examples{
     if (_examples == nil) {
         
         _examples = [[NSMutableArray alloc] init];

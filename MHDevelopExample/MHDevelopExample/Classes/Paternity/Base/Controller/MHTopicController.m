@@ -19,8 +19,7 @@
 
 @implementation MHTopicController
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
 }
@@ -38,9 +37,8 @@
 }
 
 #pragma mark - 初始化
-- (void)_setup
-{
-    
+- (void)_setup{
+    MHAdjustsScrollViewInsets_Never(self.tableView);
 }
 
 
@@ -56,8 +54,7 @@
 }
 
 // 初始化TableView
-- (void)_setupTableView
-{
+- (void)_setupTableView{
     // 设置内边距
     CGFloat bottom = 0;
     CGFloat top = MHTitilesViewY + MHTitilesViewH +10;
@@ -77,8 +74,6 @@
     [self.tableView.mj_header beginRefreshing];
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(_loadMoreTopics)];
-    
-    
 }
 
 
@@ -103,57 +98,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return 100;
 }
 
-
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellID = @"topicCellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@ **  %zd" , self.title , indexPath.row];
-    
     return cell;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-
-
-
-
-- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    if (scrollView != self.tableView) {
-        return;
-    }
-
-//    MHLogFunc;
-    
-}
-
-
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    if (scrollView != self.tableView) {
-        return;
-    }
-    
-//    MHLogFunc;
-   
 }
 
 @end

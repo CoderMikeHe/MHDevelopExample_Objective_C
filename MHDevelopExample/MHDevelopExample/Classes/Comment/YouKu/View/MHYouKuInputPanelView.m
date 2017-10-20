@@ -352,7 +352,7 @@
     
     __weak typeof(self) weakSelf = self;
     
-    void(^animations)() = ^{
+    void(^animations)(void) = ^{
         // 回调
         [weakSelf _willShowKeyboardWithFromFrame:beginFrame toFrame:endFrame];
     };

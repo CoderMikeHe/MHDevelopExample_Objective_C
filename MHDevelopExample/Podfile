@@ -66,7 +66,7 @@ pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag 
 pod 'AFNetworking'                      , '3.1.0'
 
 # 图片缓存
-pod 'SDWebImage'                        , '4.0.0'
+pod 'SDWebImage'                        , '~> 4.1.2'
 
 # UIView模糊
 pod 'FXBlurView'                        , '1.6.4'
@@ -144,9 +144,9 @@ pod 'ActionSheetPicker-3.0'             , '2.2.0'
 # 空占位
 pod 'DZNEmptyDataSet'                   , '1.8.1'
 # 图片浏览器
-#pod 'PYPhotoBrowser'                    , '1.5.0'
+pod 'PYPhotoBrowser'                    , '~> 1.5.5'
 # 类似网易新闻的标签栏
-#pod 'YZDisplayViewController', '1.0.6'
+pod 'YZDisplayViewController'           , '~> 1.0.6'
 # 苹果内购
 #pod 'RMStore', '0.7.1'
 

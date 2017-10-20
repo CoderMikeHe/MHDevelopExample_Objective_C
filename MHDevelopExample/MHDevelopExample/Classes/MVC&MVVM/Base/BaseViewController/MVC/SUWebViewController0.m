@@ -68,7 +68,7 @@ static NSString * const SUWebViewKVOEstimatedProgress = @"estimatedProgress";
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     configuration.userContentController = userContentController;
     
-    WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, MHMainScreenWidth , MHMainScreenHeight-64) configuration:configuration];
+    WKWebView *webView = [[WKWebView alloc] initWithFrame:MHMainScreenBounds configuration:configuration];
     webView.navigationDelegate = self;
     webView.UIDelegate = self;
     

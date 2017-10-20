@@ -123,6 +123,13 @@
         /// 判断一下数据
         [self tableViewDidFinishTriggerHeader:NO reload:NO];
     }
+    
+#ifdef __IPHONE_11_0
+    MHAdjustsScrollViewInsets_Never(tableView);
+    tableView.estimatedRowHeight = 0;
+    tableView.estimatedSectionHeaderHeight = 0;
+    tableView.estimatedSectionFooterHeight = 0;
+#endif
 }
 
 #pragma mark - sub class can override it
@@ -185,14 +192,12 @@
 
 }
 
-- (UIEdgeInsets)contentInset
-{
+- (UIEdgeInsets)contentInset{
     return UIEdgeInsetsMake(64, 0, 0, 0);
 }
 
 /// reload tableView data
-- (void)reloadData
-{
+- (void)reloadData{
     [self.tableView reloadData];
 }
 

@@ -16,8 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+#ifdef __IPHONE_11_0
+    /// ignore adjust scroll 64
+    self.automaticallyAdjustsScrollViewInsets = YES;
+#else
     /// ignore adjust scroll 64
     self.automaticallyAdjustsScrollViewInsets = NO;
+#endif
+    
+
+    
     self.extendedLayoutIncludesOpaqueBars = YES;
     /// backgroundColor
     self.view.backgroundColor = SUGlobalGrayBackgroundColor;

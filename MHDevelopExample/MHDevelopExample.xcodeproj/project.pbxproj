@@ -2861,7 +2861,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/** $(inherited)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				WARNING_CFLAGS = (
 					"-Wno-ambiguous-macro",
 					"-Wno-documentation",
@@ -2884,7 +2884,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/** $(inherited)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				WARNING_CFLAGS = (
 					"-Wno-ambiguous-macro",
 					"-Wno-documentation",
