@@ -9,11 +9,8 @@
 #import "SULoginController0.h"
 #import "SULoginInputView.h"
 #import "SUGoodsController0.h"
-#import "JPLabel.h"
-#import "XMGLabel.h"
+
 @interface SULoginController0 ()
-///
-@property (nonatomic, readwrite, weak) XMGLabel *label ;
 /// 输入款的父类
 @property (weak, nonatomic) IBOutlet UIView *inputBaseView;
 
@@ -72,13 +69,6 @@
     /// 初始化subView
     [self _setupSubViews];
     
-    XMGLabel *label = [[XMGLabel alloc] initWithFrame:CGRectMake(0, 450, MHMainScreenWidth, 44)];
-    label.backgroundColor = [UIColor greenColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = @"哈哈哈哈哈哈哈哈哈哈哈哈哈哈";
-    label.font = MHMediumFont(17.0f);
-    [self.view addSubview:label];
-    self.label = label;
 }
 
 ////////////////// 以下为逻辑代码，还请过多关注 ///////////////////

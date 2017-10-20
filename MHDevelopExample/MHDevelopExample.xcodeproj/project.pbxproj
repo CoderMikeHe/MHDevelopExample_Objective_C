@@ -116,8 +116,6 @@
 		261BC82D1EF2993F003E41F9 /* SULoginController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 261BC82B1EF2993F003E41F9 /* SULoginController2.m */; };
 		261BC82E1EF2993F003E41F9 /* SULoginController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261BC82C1EF2993F003E41F9 /* SULoginController2.xib */; };
 		261BC8311EF29965003E41F9 /* SULoginViewModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 261BC8301EF29965003E41F9 /* SULoginViewModel2.m */; };
-		26F1785B1F1DB819002C718C /* JPLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F1785A1F1DB819002C718C /* JPLabel.m */; };
-		26F178611F1DC489002C718C /* XMGLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F178601F1DC489002C718C /* XMGLabel.m */; };
 		3D3D48382E147C90FD55FE03 /* Pods_MHDevelopExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A0424108EDF4DD00FF9B94 /* Pods_MHDevelopExample.framework */; };
 		6208770C1E5483DD00183F81 /* MHYouKuBottomToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208770B1E5483DD00183F81 /* MHYouKuBottomToolBar.m */; };
 		6208770F1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6208770E1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m */; };
@@ -402,10 +400,6 @@
 		261BC82C1EF2993F003E41F9 /* SULoginController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SULoginController2.xib; sourceTree = "<group>"; };
 		261BC82F1EF29965003E41F9 /* SULoginViewModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SULoginViewModel2.h; sourceTree = "<group>"; };
 		261BC8301EF29965003E41F9 /* SULoginViewModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SULoginViewModel2.m; sourceTree = "<group>"; };
-		26F178591F1DB819002C718C /* JPLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPLabel.h; sourceTree = "<group>"; };
-		26F1785A1F1DB819002C718C /* JPLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPLabel.m; sourceTree = "<group>"; };
-		26F1785F1F1DC489002C718C /* XMGLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGLabel.h; sourceTree = "<group>"; };
-		26F178601F1DC489002C718C /* XMGLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGLabel.m; sourceTree = "<group>"; };
 		6208770A1E5483DD00183F81 /* MHYouKuBottomToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuBottomToolBar.h; sourceTree = "<group>"; };
 		6208770B1E5483DD00183F81 /* MHYouKuBottomToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHYouKuBottomToolBar.m; sourceTree = "<group>"; };
 		6208770D1E549FE900183F81 /* MHYouKuVerticalSeparateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHYouKuVerticalSeparateButton.h; sourceTree = "<group>"; };
@@ -1117,10 +1111,6 @@
 				2615EC961EEE36C900D6B473 /* SULoginController0.h */,
 				2615EC971EEE36C900D6B473 /* SULoginController0.m */,
 				2615EC981EEE36C900D6B473 /* SULoginController0.xib */,
-				26F1785F1F1DC489002C718C /* XMGLabel.h */,
-				26F178601F1DC489002C718C /* XMGLabel.m */,
-				26F178591F1DB819002C718C /* JPLabel.h */,
-				26F1785A1F1DB819002C718C /* JPLabel.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2467,7 +2457,6 @@
 				627A95831E49AE5B004A1ED2 /* UIView+MHExtension.m in Sources */,
 				2615ECAB1EEE6E6800D6B473 /* MBProgressHUD+MHExtension.m in Sources */,
 				261148E01F15413000758DAF /* YYThreadSafeDictionary.m in Sources */,
-				26F1785B1F1DB819002C718C /* JPLabel.m in Sources */,
 				260C2E091EF13AAC00378885 /* SUViewModel1.m in Sources */,
 				260D8D851EED37CB00B47B3D /* SUGoodsImage.m in Sources */,
 				627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */,
@@ -2524,7 +2513,6 @@
 				261309511E97801F0095BE0E /* RACBasicUseController.m in Sources */,
 				260FE12B1EF3EBDC00830B07 /* SUPublicController0.m in Sources */,
 				625B739D1E4C4AB7006A8E86 /* MHUserInfoController.m in Sources */,
-				26F178611F1DC489002C718C /* XMGLabel.m in Sources */,
 				6226374C1E4AC61D007F9360 /* MHCommentCell.m in Sources */,
 				2615ECA11EEE4C5A00D6B473 /* NSAttributedString+MHSize.m in Sources */,
 				622637331E4AAC10007F9360 /* MHComment.m in Sources */,
