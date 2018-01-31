@@ -14,9 +14,13 @@
 	```
 	1. pod repo update : 更新本地仓库
 	2. pod install : 下载新的库
-	
 	```
+- 如果你升级了Mac的系统时，并且当你的Mac系统升级为` high sierra `的时候，别忘记更新`cocoapods`。执行命令为：
 
+	```
+	$ sudo gem update --system
+	$ sudo gem install cocoapods -n/usr/local/bin
+	```
 
 ### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。

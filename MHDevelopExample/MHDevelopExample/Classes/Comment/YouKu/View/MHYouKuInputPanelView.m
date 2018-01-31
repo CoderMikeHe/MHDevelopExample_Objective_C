@@ -148,8 +148,7 @@
 
 #pragma mark - 私有方法
 #pragma mark - 初始化
-- (void)_setup
-{
+- (void)_setup{
     self.backgroundColor = [UIColor clearColor];
     
 }
@@ -480,29 +479,23 @@
 }
 
 /** 获取编辑框的高度 */
-- (CGFloat)_getTextViewHeight:(YYTextView *)textView
-{
+- (CGFloat)_getTextViewHeight:(YYTextView *)textView{
     return textView.textLayout.textBoundingSize.height;
 }
 
 #pragma mark - 编辑框将要到那个高度
-- (void)_bottomToolBarWillChangeHeight:(CGFloat)toHeight
-{
+- (void)_bottomToolBarWillChangeHeight:(CGFloat)toHeight{
     // 需要加上 MHTopicCommentToolBarWithNoTextViewHeight才是bottomToolBarHeight
     toHeight = toHeight + MHTopicCommentToolBarWithNoTextViewHeight;
     
-    if (toHeight < MHTopicCommentToolBarMinHeight || self.textView.attributedText.length == 0)
-    {
+    if (toHeight < MHTopicCommentToolBarMinHeight || self.textView.attributedText.length == 0){
         toHeight = MHTopicCommentToolBarMinHeight;
     }
     
     // 不允许遮盖住 视频播放
     CGFloat maxHeight = MHMainScreenHeight - MHTopicCommentToolBarMinTopInset - self.keyboardHeight;
     
-    if (toHeight > maxHeight)
-    {
-        toHeight = maxHeight ;
-    }
+    if (toHeight > maxHeight) { toHeight = maxHeight ;}
     
     // 高度是之前的高度  跳过
     if (toHeight == self.previousTextViewContentHeight) return;

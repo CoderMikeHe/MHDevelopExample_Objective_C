@@ -31,8 +31,7 @@ MHSingletonM(Manager)
     // 回复模型
     MHCommentReply *commmentReply = [[MHCommentReply alloc] init];
     
-    if ([model isKindOfClass:[MHTopic class]])
-    {
+    if ([model isKindOfClass:[MHTopic class]]){
         // 话题
         MHTopic *topic = (MHTopic *)model;
         commmentReply.mediabase_id = topic.mediabase_id;
