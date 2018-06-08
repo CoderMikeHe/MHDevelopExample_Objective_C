@@ -18,35 +18,55 @@
  )
  */
 
+// IOS版本
+#define MH_IOSVersion ([[[UIDevice currentDevice] systemVersion] floatValue])
 
-/**设置系统的字体大小（YES：粗体 NO：常规）*/
+
+/// 设置系统的字体大小（YES：粗体 NO：常规）
 #define MHFont(__size__,__bold__) ((__bold__)?([UIFont boldSystemFontOfSize:__size__]):([UIFont systemFontOfSize:__size__]))
 
+/// 极细体
+#define MHUltralightFont(__size__) ((MH_IOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_UltralightFontOfSize:__size__])
 
-/** 极细体 */
-#define MHUltralightFont(__size__) [UIFont mh_fontForPingFangSC_UltralightFontOfSize:__size__]
+/// 纤细体
+#define MHThinFont(__size__)       ((MH_IOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_ThinFontOfSize:__size__])
 
+/// 细体
+#define MHLightFont(__size__)      ((MH_IOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_LightFontOfSize:__size__])
 
-/** 纤细体 */
-#define MHThinFont(__size__)       [UIFont mh_fontForPingFangSC_ThinFontOfSize:__size__]
-
-/** 细体 */
-#define MHLightFont(__size__)      [UIFont mh_fontForPingFangSC_LightFontOfSize:__size__]
-
-
-
-// 该项目 主要使用以下三种字体
-// 该项目 主要使用以下三种字体
 // 中等
-#define MHMediumFont(__size__)     ((MHIOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_MediumFontOfSize:__size__])
+#define MHMediumFont(__size__)     ((MH_IOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_MediumFontOfSize:__size__])
 
 // 常规
-#define MHRegularFont(__size__)    ((MHIOSVersion<9.0)?MHFont(__size__ , NO):[UIFont mh_fontForPingFangSC_RegularFontOfSize:__size__])
+#define MHRegularFont(__size__)    ((MH_IOSVersion<9.0)?MHFont(__size__ , NO):[UIFont mh_fontForPingFangSC_RegularFontOfSize:__size__])
 
 /** 中粗体 */
-#define MHSemiboldFont(__size__)   ((MHIOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_SemiboldFontOfSize:__size__])
+#define MHSemiboldFont(__size__)   ((MH_IOSVersion<9.0)?MHFont(__size__ , YES):[UIFont mh_fontForPingFangSC_SemiboldFontOfSize:__size__])
 
 
+
+/// 苹方常规字体 10
+#define MHRegularFont_10 MHRegularFont(10.0f)
+/// 苹方常规字体 11
+#define MHRegularFont_11 MHRegularFont(11.0f)
+/// 苹方常规字体 12
+#define MHRegularFont_12 MHRegularFont(12.0f)
+/// 苹方常规字体 13
+#define MHRegularFont_13 MHRegularFont(13.0f)
+/** 苹方常规字体 14 */
+#define MHRegularFont_14 MHRegularFont(14.0f)
+/// 苹方常规字体 15
+#define MHRegularFont_15 MHRegularFont(15.0f)
+/// 苹方常规字体 16
+#define MHRegularFont_16 MHRegularFont(16.0f)
+/// 苹方常规字体 17
+#define MHRegularFont_17 MHRegularFont(17.0f)
+/// 苹方常规字体 18
+#define MHRegularFont_18 MHRegularFont(18.0f)
+/// 苹方常规字体 19
+#define MHRegularFont_19 MHRegularFont(19.0f)
+/// 苹方常规字体 20
+#define MHRegularFont_20 MHRegularFont(20.0f)
 
 
 #import <UIKit/UIKit.h>

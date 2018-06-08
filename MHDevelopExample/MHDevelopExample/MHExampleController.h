@@ -10,6 +10,5 @@
 
 @interface MHExampleController : UIViewController
 
-
 @end
 

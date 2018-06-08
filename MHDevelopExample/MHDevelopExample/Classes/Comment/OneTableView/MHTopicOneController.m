@@ -15,7 +15,6 @@
 #import "MHTopicFooterView.h"
 #import "MHCommentCell.h"
 #import "MHUserInfoController.h"
-#import "MJExtension.h"
 @interface MHTopicOneController () <UITableViewDelegate,UITableViewDataSource , MHCommentCellDelegate ,MHTopicHeaderViewDelegate>
 
 /** MHTopicFrame 模型 */

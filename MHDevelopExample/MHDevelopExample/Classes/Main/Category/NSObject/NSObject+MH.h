@@ -10,5 +10,5 @@
 #define NSObject_MH_h
 
 #import "NSObject+MHRandom.h"
-
+#import "NSObject+MHAlert.h"
 #endif /* NSObject_MH_h */

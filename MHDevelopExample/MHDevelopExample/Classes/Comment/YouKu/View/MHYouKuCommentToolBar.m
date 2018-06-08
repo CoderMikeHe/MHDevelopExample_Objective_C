@@ -78,8 +78,8 @@
     UIButton *sendBtn = [[UIButton alloc] init];
     [sendBtn setTitle:@"发送" forState:UIControlStateNormal];
     [sendBtn setTitleColor:MHGlobalWhiteTextColor forState:UIControlStateNormal];
-    [sendBtn setBackgroundImage:[UIImage mh_resizedImage:@"comment_send_nor"] forState:UIControlStateNormal];
-    [sendBtn setBackgroundImage:[UIImage mh_resizedImage:@"comment_send_disable"] forState:UIControlStateDisabled];
+    [sendBtn setBackgroundImage:[UIImage mh_resizableImage:@"comment_send_nor"] forState:UIControlStateNormal];
+    [sendBtn setBackgroundImage:[UIImage mh_resizableImage:@"comment_send_disable"] forState:UIControlStateDisabled];
     [sendBtn addTarget:self action:@selector(_sendBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     sendBtn.titleLabel.font = MHFont(MHPxConvertPt(14.0f), NO);
     sendBtn.enabled = NO;

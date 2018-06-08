@@ -142,7 +142,7 @@ static NSString * const SUWebViewKVOEstimatedProgress = @"estimatedProgress";
 #pragma mark - Getter & Setter
 - (UIProgressView *)progressView {
     if (!_progressView) {
-        CGFloat progressViewW = SCREEN_WIDTH;
+        CGFloat progressViewW = MH_SCREEN_WIDTH;
         CGFloat progressViewH = 3;
         CGFloat progressViewX = 0;
         CGFloat progressViewY = CGRectGetHeight(self.navigationController.navigationBar.frame) - progressViewH + 1;

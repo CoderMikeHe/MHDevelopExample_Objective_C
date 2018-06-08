@@ -17,15 +17,15 @@ static NSTimeInterval const MHThumbnailImageTime = 10.0f;
 /**
  *  根据图片名返回一张能够自由拉伸的图片 (从中间拉伸)
  */
-+ (UIImage *)mh_resizedImage:(NSString *)imgName
++ (UIImage *)mh_resizableImage:(NSString *)imgName
 {
-    return [self mh_resizedImage:imgName xPos:0.5 yPos:0.5];;
+    return [self mh_resizableImage:imgName xPos:0.5 yPos:0.5];;
 }
 
 /**
  *  根据图片名返回一张能够自由拉伸的图片
  */
-+ (UIImage *)mh_resizedImage:(NSString *)imgName xPos:(CGFloat)xPos yPos:(CGFloat)yPos
++ (UIImage *)mh_resizableImage:(NSString *)imgName xPos:(CGFloat)xPos yPos:(CGFloat)yPos
 {
     UIImage *image = [UIImage imageNamed:imgName];
     

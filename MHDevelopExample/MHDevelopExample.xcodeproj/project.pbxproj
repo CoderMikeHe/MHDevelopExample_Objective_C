@@ -106,8 +106,6 @@
 		2615ECD21EEE919900D6B473 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2615ECCA1EEE919900D6B473 /* SDCycleScrollView.m */; };
 		2615ECD31EEE919900D6B473 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2615ECCC1EEE919900D6B473 /* UIView+SDExtension.m */; };
 		2615ECD71EEE980300D6B473 /* UIScrollView+MHRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2615ECD61EEE980300D6B473 /* UIScrollView+MHRefresh.m */; };
-		261841CB1EF8D4BF009EAFB4 /* CacheCleanerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 261841C81EF8D4BF009EAFB4 /* CacheCleanerPlugin.m */; };
-		261841CC1EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 261841CA1EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.m */; };
 		261BC8101EF22FEB003E41F9 /* SUConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 261BC80F1EF22FEB003E41F9 /* SUConstant.m */; };
 		261BC8151EF25DF2003E41F9 /* SUViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 261BC8141EF25DF2003E41F9 /* SUViewController1.m */; };
 		261BC8181EF25E1A003E41F9 /* SUTableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 261BC8171EF25E1A003E41F9 /* SUTableViewController1.m */; };
@@ -196,6 +194,43 @@
 		627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A958D1E49B0B0004A1ED2 /* MHTopicController.m */; };
 		627A95911E49C91B004A1ED2 /* MHTopicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A95901E49C91B004A1ED2 /* MHTopicLabel.m */; };
 		A9A81CCC402890821EA27D99 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53FC4F542F2116C4E9F74A8 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework */; };
+		E92AB23120C512480067D0B6 /* CMHExample01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23020C512480067D0B6 /* CMHExample01ViewController.m */; };
+		E92AB23620C5160D0067D0B6 /* CMHExample02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23520C5160D0067D0B6 /* CMHExample02ViewController.m */; };
+		E92AB23A20C518B50067D0B6 /* CMHExample03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23920C518B50067D0B6 /* CMHExample03ViewController.m */; };
+		E92AB23E20C541C40067D0B6 /* CMHExample04ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23D20C541C40067D0B6 /* CMHExample04ViewController.m */; };
+		E92AB24B20C54E560067D0B6 /* CMHProfileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB24A20C54E560067D0B6 /* CMHProfileButton.m */; };
+		E92AB24F20C551A40067D0B6 /* CMHPingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB24E20C551A40067D0B6 /* CMHPingTransition.m */; };
+		E92AB25220C551D70067D0B6 /* CMHPingInvertTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB25120C551D70067D0B6 /* CMHPingInvertTransition.m */; };
+		E92AB25620C644A40067D0B6 /* cmh_page_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E92AB25520C644A40067D0B6 /* cmh_page_0.jpg */; };
+		E92DFDB320C8EAF500823A4F /* CMHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */; };
+		E92DFDB620C906A500823A4F /* NSObject+MHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB420C906A400823A4F /* NSObject+MHAlert.m */; };
+		E92DFDBA20C907BD00823A4F /* CMHControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB920C907BD00823A4F /* CMHControllerHelper.m */; };
+		E92DFDBE20C9089F00823A4F /* UIAlertController+MHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDBC20C9089F00823A4F /* UIAlertController+MHColor.m */; };
+		E92DFDC520C90FF400823A4F /* CMHConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDC420C90FF400823A4F /* CMHConstant.m */; };
+		E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FC320C794FD002070C3 /* CMHExample05ViewController.m */; };
+		E92F2FC820C7CDE2002070C3 /* CMHPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FC720C7CDE2002070C3 /* CMHPresentTransition.m */; };
+		E92F2FCB20C7D0C3002070C3 /* CMHDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FCA20C7D0C3002070C3 /* CMHDismissTransition.m */; };
+		E92F2FCE20C7D11E002070C3 /* CMHInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FCD20C7D11E002070C3 /* CMHInteractiveTransition.m */; };
+		E932AAB420B6481500C99B3C /* CMHRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAB320B6481500C99B3C /* CMHRefreshHeader.m */; };
+		E932AAB720B64B1D00C99B3C /* CMHRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAB620B64B1D00C99B3C /* CMHRefreshFooter.m */; };
+		E932AABA20B65BF700C99B3C /* CAAnimation+CMHRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAB920B65BF700C99B3C /* CAAnimation+CMHRefresh.m */; };
+		E932AAC120B65F1000C99B3C /* UIScrollView+CMHRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAC020B65F1000C99B3C /* UIScrollView+CMHRefresh.m */; };
+		E932AAC920B673FD00C99B3C /* CMHTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAC820B673FD00C99B3C /* CMHTabBar.m */; };
+		E932AACE20B677BB00C99B3C /* CMHHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AACD20B677BB00C99B3C /* CMHHomePageViewController.m */; };
+		E932AAD920B68DCC00C99B3C /* CMHProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAD820B68DCC00C99B3C /* CMHProfileViewController.m */; };
+		E932AADC20B68DF600C99B3C /* CMHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AADB20B68DF500C99B3C /* CMHDiscoverViewController.m */; };
+		E932AADF20B68E0600C99B3C /* CMHContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AADE20B68E0600C99B3C /* CMHContactsViewController.m */; };
+		E932AAE220B68E1800C99B3C /* CMHMainFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAE120B68E1800C99B3C /* CMHMainFrameViewController.m */; };
+		E943E45B20C4F29700AFC4A9 /* CMHExample00ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E943E45A20C4F29700AFC4A9 /* CMHExample00ViewController.m */; };
+		E951601020C2807C007224DA /* CMHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600720C2807C007224DA /* CMHTableViewController.m */; };
+		E951601120C2807C007224DA /* CMHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600A20C2807C007224DA /* CMHTabBarController.m */; };
+		E951601220C2807C007224DA /* CMHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600C20C2807C007224DA /* CMHNavigationController.m */; };
+		E951601320C2807C007224DA /* CMHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600D20C2807C007224DA /* CMHViewController.m */; };
+		E951601720C280A6007224DA /* CMHView.m in Sources */ = {isa = PBXBuildFile; fileRef = E951601620C280A6007224DA /* CMHView.m */; };
+		E951601A20C280BA007224DA /* CMHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E951601920C280BA007224DA /* CMHTableViewCell.m */; };
+		E951601D20C28263007224DA /* CMHExampleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E951601C20C28263007224DA /* CMHExampleCell.m */; };
+		E951602020C284DB007224DA /* CMHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E951601F20C284DB007224DA /* CMHObject.m */; };
+		E951602420C2855D007224DA /* CMHExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E951602320C2855D007224DA /* CMHExample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,10 +419,6 @@
 		2615ECCC1EEE919900D6B473 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		2615ECD51EEE980300D6B473 /* UIScrollView+MHRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MHRefresh.h"; sourceTree = "<group>"; };
 		2615ECD61EEE980300D6B473 /* UIScrollView+MHRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MHRefresh.m"; sourceTree = "<group>"; };
-		261841C71EF8D4BF009EAFB4 /* CacheCleanerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCleanerPlugin.h; sourceTree = "<group>"; };
-		261841C81EF8D4BF009EAFB4 /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
-		261841C91EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
-		261841CA1EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleLoggerPlugin.m; sourceTree = "<group>"; };
 		261BC80E1EF22FEB003E41F9 /* SUConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUConstant.h; sourceTree = "<group>"; };
 		261BC80F1EF22FEB003E41F9 /* SUConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUConstant.m; sourceTree = "<group>"; };
 		261BC8131EF25DF2003E41F9 /* SUViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUViewController1.h; sourceTree = "<group>"; };
@@ -573,6 +604,84 @@
 		D709199DA67C0E6BC2500608 /* Pods-MHDevelopExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.release.xcconfig"; sourceTree = "<group>"; };
 		DF4CA6BC05B6740B754109C1 /* Pods-MHDevelopExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E53FC4F542F2116C4E9F74A8 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHDevelopExample_MHDevelopExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92AB22F20C512480067D0B6 /* CMHExample01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample01ViewController.h; sourceTree = "<group>"; };
+		E92AB23020C512480067D0B6 /* CMHExample01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample01ViewController.m; sourceTree = "<group>"; };
+		E92AB23420C5160D0067D0B6 /* CMHExample02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample02ViewController.h; sourceTree = "<group>"; };
+		E92AB23520C5160D0067D0B6 /* CMHExample02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample02ViewController.m; sourceTree = "<group>"; };
+		E92AB23820C518B50067D0B6 /* CMHExample03ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample03ViewController.h; sourceTree = "<group>"; };
+		E92AB23920C518B50067D0B6 /* CMHExample03ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample03ViewController.m; sourceTree = "<group>"; };
+		E92AB23C20C541C40067D0B6 /* CMHExample04ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample04ViewController.h; sourceTree = "<group>"; };
+		E92AB23D20C541C40067D0B6 /* CMHExample04ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample04ViewController.m; sourceTree = "<group>"; };
+		E92AB24920C54E560067D0B6 /* CMHProfileButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHProfileButton.h; sourceTree = "<group>"; };
+		E92AB24A20C54E560067D0B6 /* CMHProfileButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHProfileButton.m; sourceTree = "<group>"; };
+		E92AB24D20C551A40067D0B6 /* CMHPingTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHPingTransition.h; sourceTree = "<group>"; };
+		E92AB24E20C551A40067D0B6 /* CMHPingTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHPingTransition.m; sourceTree = "<group>"; };
+		E92AB25020C551D70067D0B6 /* CMHPingInvertTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHPingInvertTransition.h; sourceTree = "<group>"; };
+		E92AB25120C551D70067D0B6 /* CMHPingInvertTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHPingInvertTransition.m; sourceTree = "<group>"; };
+		E92AB25520C644A40067D0B6 /* cmh_page_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cmh_page_0.jpg; sourceTree = "<group>"; };
+		E92AB25720C66C790067D0B6 /* CMHConstInline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstInline.h; sourceTree = "<group>"; };
+		E92DFDB120C8EAF500823A4F /* CMHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWebViewController.h; sourceTree = "<group>"; };
+		E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHWebViewController.m; sourceTree = "<group>"; };
+		E92DFDB420C906A400823A4F /* NSObject+MHAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MHAlert.m"; sourceTree = "<group>"; };
+		E92DFDB520C906A500823A4F /* NSObject+MHAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MHAlert.h"; sourceTree = "<group>"; };
+		E92DFDB820C907BD00823A4F /* CMHControllerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHControllerHelper.h; sourceTree = "<group>"; };
+		E92DFDB920C907BD00823A4F /* CMHControllerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHControllerHelper.m; sourceTree = "<group>"; };
+		E92DFDBC20C9089F00823A4F /* UIAlertController+MHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+MHColor.m"; sourceTree = "<group>"; };
+		E92DFDBD20C9089F00823A4F /* UIAlertController+MHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+MHColor.h"; sourceTree = "<group>"; };
+		E92DFDC320C90FF400823A4F /* CMHConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstant.h; sourceTree = "<group>"; };
+		E92DFDC420C90FF400823A4F /* CMHConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHConstant.m; sourceTree = "<group>"; };
+		E92F2FC220C794FD002070C3 /* CMHExample05ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample05ViewController.h; sourceTree = "<group>"; };
+		E92F2FC320C794FD002070C3 /* CMHExample05ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample05ViewController.m; sourceTree = "<group>"; };
+		E92F2FC620C7CDE2002070C3 /* CMHPresentTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHPresentTransition.h; sourceTree = "<group>"; };
+		E92F2FC720C7CDE2002070C3 /* CMHPresentTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHPresentTransition.m; sourceTree = "<group>"; };
+		E92F2FC920C7D0C3002070C3 /* CMHDismissTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHDismissTransition.h; sourceTree = "<group>"; };
+		E92F2FCA20C7D0C3002070C3 /* CMHDismissTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHDismissTransition.m; sourceTree = "<group>"; };
+		E92F2FCC20C7D11E002070C3 /* CMHInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHInteractiveTransition.h; sourceTree = "<group>"; };
+		E92F2FCD20C7D11E002070C3 /* CMHInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHInteractiveTransition.m; sourceTree = "<group>"; };
+		E932AAB220B6481500C99B3C /* CMHRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHRefreshHeader.h; sourceTree = "<group>"; };
+		E932AAB320B6481500C99B3C /* CMHRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHRefreshHeader.m; sourceTree = "<group>"; };
+		E932AAB520B64B1D00C99B3C /* CMHRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHRefreshFooter.h; sourceTree = "<group>"; };
+		E932AAB620B64B1D00C99B3C /* CMHRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHRefreshFooter.m; sourceTree = "<group>"; };
+		E932AAB820B65BF700C99B3C /* CAAnimation+CMHRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+CMHRefresh.h"; sourceTree = "<group>"; };
+		E932AAB920B65BF700C99B3C /* CAAnimation+CMHRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+CMHRefresh.m"; sourceTree = "<group>"; };
+		E932AABF20B65F1000C99B3C /* UIScrollView+CMHRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CMHRefresh.h"; sourceTree = "<group>"; };
+		E932AAC020B65F1000C99B3C /* UIScrollView+CMHRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CMHRefresh.m"; sourceTree = "<group>"; };
+		E932AAC320B660A200C99B3C /* CMHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHMacros.h; sourceTree = "<group>"; };
+		E932AAC720B673FD00C99B3C /* CMHTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHTabBar.h; sourceTree = "<group>"; };
+		E932AAC820B673FD00C99B3C /* CMHTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHTabBar.m; sourceTree = "<group>"; };
+		E932AACC20B677BB00C99B3C /* CMHHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHHomePageViewController.h; sourceTree = "<group>"; };
+		E932AACD20B677BB00C99B3C /* CMHHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHHomePageViewController.m; sourceTree = "<group>"; };
+		E932AAD720B68DCC00C99B3C /* CMHProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHProfileViewController.h; sourceTree = "<group>"; };
+		E932AAD820B68DCC00C99B3C /* CMHProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHProfileViewController.m; sourceTree = "<group>"; };
+		E932AADA20B68DF500C99B3C /* CMHDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHDiscoverViewController.h; sourceTree = "<group>"; };
+		E932AADB20B68DF500C99B3C /* CMHDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHDiscoverViewController.m; sourceTree = "<group>"; };
+		E932AADD20B68E0600C99B3C /* CMHContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHContactsViewController.h; sourceTree = "<group>"; };
+		E932AADE20B68E0600C99B3C /* CMHContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHContactsViewController.m; sourceTree = "<group>"; };
+		E932AAE020B68E1800C99B3C /* CMHMainFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHMainFrameViewController.h; sourceTree = "<group>"; };
+		E932AAE120B68E1800C99B3C /* CMHMainFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHMainFrameViewController.m; sourceTree = "<group>"; };
+		E932AAE320B68EC600C99B3C /* CMHConstEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstEnum.h; sourceTree = "<group>"; };
+		E943E45620C4D90B00AFC4A9 /* CMHConfigureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConfigureView.h; sourceTree = "<group>"; };
+		E943E45720C4D92800AFC4A9 /* CMHConfigureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConfigureCell.h; sourceTree = "<group>"; };
+		E943E45920C4F29700AFC4A9 /* CMHExample00ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample00ViewController.h; sourceTree = "<group>"; };
+		E943E45A20C4F29700AFC4A9 /* CMHExample00ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample00ViewController.m; sourceTree = "<group>"; };
+		E951600720C2807C007224DA /* CMHTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHTableViewController.m; sourceTree = "<group>"; };
+		E951600820C2807C007224DA /* CMHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHViewController.h; sourceTree = "<group>"; };
+		E951600920C2807C007224DA /* CMHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHNavigationController.h; sourceTree = "<group>"; };
+		E951600A20C2807C007224DA /* CMHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHTabBarController.m; sourceTree = "<group>"; };
+		E951600B20C2807C007224DA /* CMHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHTableViewController.h; sourceTree = "<group>"; };
+		E951600C20C2807C007224DA /* CMHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHNavigationController.m; sourceTree = "<group>"; };
+		E951600D20C2807C007224DA /* CMHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHViewController.m; sourceTree = "<group>"; };
+		E951600E20C2807C007224DA /* CMHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHTabBarController.h; sourceTree = "<group>"; };
+		E951601520C280A6007224DA /* CMHView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHView.h; sourceTree = "<group>"; };
+		E951601620C280A6007224DA /* CMHView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHView.m; sourceTree = "<group>"; };
+		E951601820C280BA007224DA /* CMHTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHTableViewCell.h; sourceTree = "<group>"; };
+		E951601920C280BA007224DA /* CMHTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHTableViewCell.m; sourceTree = "<group>"; };
+		E951601B20C28263007224DA /* CMHExampleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExampleCell.h; sourceTree = "<group>"; };
+		E951601C20C28263007224DA /* CMHExampleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExampleCell.m; sourceTree = "<group>"; };
+		E951601E20C284DB007224DA /* CMHObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHObject.h; sourceTree = "<group>"; };
+		E951601F20C284DB007224DA /* CMHObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHObject.m; sourceTree = "<group>"; };
+		E951602220C2855D007224DA /* CMHExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample.h; sourceTree = "<group>"; };
+		E951602320C2855D007224DA /* CMHExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1218,17 +1327,6 @@
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
-		261841C61EF8D4AE009EAFB4 /* FBMemoryProfiler */ = {
-			isa = PBXGroup;
-			children = (
-				261841C71EF8D4BF009EAFB4 /* CacheCleanerPlugin.h */,
-				261841C81EF8D4BF009EAFB4 /* CacheCleanerPlugin.m */,
-				261841C91EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.h */,
-				261841CA1EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.m */,
-			);
-			path = FBMemoryProfiler;
-			sourceTree = "<group>";
-		};
 		261BC80D1EF22FEB003E41F9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -1505,6 +1603,8 @@
 		622637621E4B08B8007F9360 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
+				E92DFDB520C906A500823A4F /* NSObject+MHAlert.h */,
+				E92DFDB420C906A400823A4F /* NSObject+MHAlert.m */,
 				622637631E4B08E1007F9360 /* NSObject+MHRandom.h */,
 				622637641E4B08E1007F9360 /* NSObject+MHRandom.m */,
 				622637661E4B0994007F9360 /* NSObject+MH.h */,
@@ -1926,8 +2026,9 @@
 				627A951A1E4968E0004A1ED2 /* AppDelegate.m */,
 				627A951C1E4968E0004A1ED2 /* MHExampleController.h */,
 				627A951D1E4968E0004A1ED2 /* MHExampleController.m */,
-				627A95621E497824004A1ED2 /* Assets.xcassets */,
 				627A95491E496C3F004A1ED2 /* Classes */,
+				E92CC2DB20B3EE96003938F7 /* Architecture */,
+				627A95621E497824004A1ED2 /* Assets.xcassets */,
 				627A95271E4968E0004A1ED2 /* Info.plist */,
 				627A95161E4968E0004A1ED2 /* Supporting Files */,
 			);
@@ -1991,6 +2092,7 @@
 		627A954B1E496C3F004A1ED2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E92DFDBB20C9089F00823A4F /* UIAlertController */,
 				260D68CA1F1C89DF0045B232 /* Common */,
 				260FE1061EF37B7100830B07 /* FBKVOController */,
 				2615ECD41EEE97C000D6B473 /* UIScrollView */,
@@ -2023,7 +2125,6 @@
 			isa = PBXGroup;
 			children = (
 				261148B21F153E4000758DAF /* YYKit */,
-				261841C61EF8D4AE009EAFB4 /* FBMemoryProfiler */,
 				2615ECBD1EEE919900D6B473 /* SDCycleScrollView */,
 				2615ECA71EEE6E6800D6B473 /* MBProgressHUD */,
 				2615EC9B1EEE4C1700D6B473 /* RegexKitLite */,
@@ -2236,6 +2337,368 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E92857CA20B4FA7600A5DF9A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E951602120C28504007224DA /* Model */,
+				E92857CB20B4FA7600A5DF9A /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E92857CB20B4FA7600A5DF9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAB220B6481500C99B3C /* CMHRefreshHeader.h */,
+				E932AAB320B6481500C99B3C /* CMHRefreshHeader.m */,
+				E932AAB520B64B1D00C99B3C /* CMHRefreshFooter.h */,
+				E932AAB620B64B1D00C99B3C /* CMHRefreshFooter.m */,
+				E932AAB820B65BF700C99B3C /* CAAnimation+CMHRefresh.h */,
+				E932AAB920B65BF700C99B3C /* CAAnimation+CMHRefresh.m */,
+				E932AAC720B673FD00C99B3C /* CMHTabBar.h */,
+				E932AAC820B673FD00C99B3C /* CMHTabBar.m */,
+				E951601B20C28263007224DA /* CMHExampleCell.h */,
+				E951601C20C28263007224DA /* CMHExampleCell.m */,
+				E92AB24920C54E560067D0B6 /* CMHProfileButton.h */,
+				E92AB24A20C54E560067D0B6 /* CMHProfileButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E92AB22E20C511E20067D0B6 /* Example01 */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB22F20C512480067D0B6 /* CMHExample01ViewController.h */,
+				E92AB23020C512480067D0B6 /* CMHExample01ViewController.m */,
+			);
+			path = Example01;
+			sourceTree = "<group>";
+		};
+		E92AB23320C515F20067D0B6 /* Example02 */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB23420C5160D0067D0B6 /* CMHExample02ViewController.h */,
+				E92AB23520C5160D0067D0B6 /* CMHExample02ViewController.m */,
+			);
+			path = Example02;
+			sourceTree = "<group>";
+		};
+		E92AB23720C5188F0067D0B6 /* Example03 */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB23820C518B50067D0B6 /* CMHExample03ViewController.h */,
+				E92AB23920C518B50067D0B6 /* CMHExample03ViewController.m */,
+			);
+			path = Example03;
+			sourceTree = "<group>";
+		};
+		E92AB23B20C541B20067D0B6 /* Example04 */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB24C20C5508B0067D0B6 /* Transition */,
+				E92AB23C20C541C40067D0B6 /* CMHExample04ViewController.h */,
+				E92AB23D20C541C40067D0B6 /* CMHExample04ViewController.m */,
+			);
+			path = Example04;
+			sourceTree = "<group>";
+		};
+		E92AB24C20C5508B0067D0B6 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB24D20C551A40067D0B6 /* CMHPingTransition.h */,
+				E92AB24E20C551A40067D0B6 /* CMHPingTransition.m */,
+				E92AB25020C551D70067D0B6 /* CMHPingInvertTransition.h */,
+				E92AB25120C551D70067D0B6 /* CMHPingInvertTransition.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		E92AB25320C6447A0067D0B6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB25420C6447A0067D0B6 /* Picture */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		E92AB25420C6447A0067D0B6 /* Picture */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB25520C644A40067D0B6 /* cmh_page_0.jpg */,
+			);
+			path = Picture;
+			sourceTree = "<group>";
+		};
+		E92CC2DB20B3EE96003938F7 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				E92AB25320C6447A0067D0B6 /* Resource */,
+				E932AAD520B68DAE00C99B3C /* Profile */,
+				E932AAD320B68D7D00C99B3C /* Discover */,
+				E932AAD120B68D5B00C99B3C /* Contacts */,
+				E932AACF20B68D3C00C99B3C /* MainFrame */,
+				E932AACA20B6779400C99B3C /* HomePage */,
+				E932AAC220B6605D00C99B3C /* Macros */,
+				E932AABB20B65EB300C99B3C /* Utils */,
+				E92857CA20B4FA7600A5DF9A /* Other */,
+				E92CC2DC20B3F258003938F7 /* BaseClass */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		E92CC2DC20B3F258003938F7 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				E951601420C28092007224DA /* View */,
+				E951600F20C2807C007224DA /* Model */,
+				E951600620C2807C007224DA /* ViewController */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		E92DFDB720C907A000823A4F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E92DFDB820C907BD00823A4F /* CMHControllerHelper.h */,
+				E92DFDB920C907BD00823A4F /* CMHControllerHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E92DFDBB20C9089F00823A4F /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				E92DFDBD20C9089F00823A4F /* UIAlertController+MHColor.h */,
+				E92DFDBC20C9089F00823A4F /* UIAlertController+MHColor.m */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
+		E92F2FC120C794B5002070C3 /* Example05 */ = {
+			isa = PBXGroup;
+			children = (
+				E92F2FC520C7C673002070C3 /* Transition */,
+				E92F2FC220C794FD002070C3 /* CMHExample05ViewController.h */,
+				E92F2FC320C794FD002070C3 /* CMHExample05ViewController.m */,
+			);
+			path = Example05;
+			sourceTree = "<group>";
+		};
+		E92F2FC520C7C673002070C3 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				E92F2FC620C7CDE2002070C3 /* CMHPresentTransition.h */,
+				E92F2FC720C7CDE2002070C3 /* CMHPresentTransition.m */,
+				E92F2FC920C7D0C3002070C3 /* CMHDismissTransition.h */,
+				E92F2FCA20C7D0C3002070C3 /* CMHDismissTransition.m */,
+				E92F2FCC20C7D11E002070C3 /* CMHInteractiveTransition.h */,
+				E92F2FCD20C7D11E002070C3 /* CMHInteractiveTransition.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		E932AABB20B65EB300C99B3C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E943E45520C4D87C00AFC4A9 /* Protocol */,
+				E932AABC20B65ED000C99B3C /* Category */,
+				E932AABD20B65ED000C99B3C /* Util */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E932AABC20B65ED000C99B3C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E932AABE20B65EE300C99B3C /* UIScrollView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E932AABD20B65ED000C99B3C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E92DFDB720C907A000823A4F /* Helper */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		E932AABE20B65EE300C99B3C /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				E932AABF20B65F1000C99B3C /* UIScrollView+CMHRefresh.h */,
+				E932AAC020B65F1000C99B3C /* UIScrollView+CMHRefresh.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		E932AAC220B6605D00C99B3C /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAC320B660A200C99B3C /* CMHMacros.h */,
+				E932AAE320B68EC600C99B3C /* CMHConstEnum.h */,
+				E92AB25720C66C790067D0B6 /* CMHConstInline.h */,
+				E92DFDC320C90FF400823A4F /* CMHConstant.h */,
+				E92DFDC420C90FF400823A4F /* CMHConstant.m */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		E932AACA20B6779400C99B3C /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				E932AACB20B6779400C99B3C /* HomePage */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		E932AACB20B6779400C99B3C /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				E932AACC20B677BB00C99B3C /* CMHHomePageViewController.h */,
+				E932AACD20B677BB00C99B3C /* CMHHomePageViewController.m */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		E932AACF20B68D3C00C99B3C /* MainFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E92F2FC120C794B5002070C3 /* Example05 */,
+				E92AB23B20C541B20067D0B6 /* Example04 */,
+				E92AB23720C5188F0067D0B6 /* Example03 */,
+				E92AB23320C515F20067D0B6 /* Example02 */,
+				E92AB22E20C511E20067D0B6 /* Example01 */,
+				E943E45820C4F23000AFC4A9 /* Example00 */,
+				E932AAD020B68D3C00C99B3C /* MainFrame */,
+			);
+			path = MainFrame;
+			sourceTree = "<group>";
+		};
+		E932AAD020B68D3C00C99B3C /* MainFrame */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAE020B68E1800C99B3C /* CMHMainFrameViewController.h */,
+				E932AAE120B68E1800C99B3C /* CMHMainFrameViewController.m */,
+			);
+			path = MainFrame;
+			sourceTree = "<group>";
+		};
+		E932AAD120B68D5B00C99B3C /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAD220B68D5B00C99B3C /* Contacts */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		E932AAD220B68D5B00C99B3C /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E932AADD20B68E0600C99B3C /* CMHContactsViewController.h */,
+				E932AADE20B68E0600C99B3C /* CMHContactsViewController.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		E932AAD320B68D7D00C99B3C /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAD420B68D7D00C99B3C /* Discover */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		E932AAD420B68D7D00C99B3C /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				E932AADA20B68DF500C99B3C /* CMHDiscoverViewController.h */,
+				E932AADB20B68DF500C99B3C /* CMHDiscoverViewController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		E932AAD520B68DAE00C99B3C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAD620B68DAE00C99B3C /* Profile */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E932AAD620B68DAE00C99B3C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E932AAD720B68DCC00C99B3C /* CMHProfileViewController.h */,
+				E932AAD820B68DCC00C99B3C /* CMHProfileViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E943E45520C4D87C00AFC4A9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E943E45620C4D90B00AFC4A9 /* CMHConfigureView.h */,
+				E943E45720C4D92800AFC4A9 /* CMHConfigureCell.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E943E45820C4F23000AFC4A9 /* Example00 */ = {
+			isa = PBXGroup;
+			children = (
+				E943E45920C4F29700AFC4A9 /* CMHExample00ViewController.h */,
+				E943E45A20C4F29700AFC4A9 /* CMHExample00ViewController.m */,
+			);
+			path = Example00;
+			sourceTree = "<group>";
+		};
+		E951600620C2807C007224DA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E951600920C2807C007224DA /* CMHNavigationController.h */,
+				E951600C20C2807C007224DA /* CMHNavigationController.m */,
+				E951600E20C2807C007224DA /* CMHTabBarController.h */,
+				E951600A20C2807C007224DA /* CMHTabBarController.m */,
+				E951600B20C2807C007224DA /* CMHTableViewController.h */,
+				E951600720C2807C007224DA /* CMHTableViewController.m */,
+				E92DFDB120C8EAF500823A4F /* CMHWebViewController.h */,
+				E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */,
+				E951600820C2807C007224DA /* CMHViewController.h */,
+				E951600D20C2807C007224DA /* CMHViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E951600F20C2807C007224DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E951601E20C284DB007224DA /* CMHObject.h */,
+				E951601F20C284DB007224DA /* CMHObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E951601420C28092007224DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E951601520C280A6007224DA /* CMHView.h */,
+				E951601620C280A6007224DA /* CMHView.m */,
+				E951601820C280BA007224DA /* CMHTableViewCell.h */,
+				E951601920C280BA007224DA /* CMHTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E951602120C28504007224DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E951602220C2855D007224DA /* CMHExample.h */,
+				E951602320C2855D007224DA /* CMHExample.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F2D576D8EF168759D8A5190E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2259,7 +2722,6 @@
 				627A95101E4968E0004A1ED2 /* Frameworks */,
 				627A95111E4968E0004A1ED2 /* Resources */,
 				6097DCE86803312718147934 /* [CP] Embed Pods Frameworks */,
-				44911888C87BD4AC95195632 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2279,7 +2741,6 @@
 				627A95291E4968E0004A1ED2 /* Frameworks */,
 				627A952A1E4968E0004A1ED2 /* Resources */,
 				D5B7B11C260AD2094268A930 /* [CP] Embed Pods Frameworks */,
-				5A29AA6065374C517309FA73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2300,7 +2761,6 @@
 				627A95341E4968E0004A1ED2 /* Frameworks */,
 				627A95351E4968E0004A1ED2 /* Resources */,
 				F697359590059C49FB1E90AB /* [CP] Embed Pods Frameworks */,
-				58F0718935E30AE8F5955411 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2318,13 +2778,13 @@
 		627A950B1E4968E0004A1ED2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = WX;
+				CLASSPREFIX = CMH;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CoderMikeHe;
 				TargetAttributes = {
 					627A95121E4968E0004A1ED2 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = S9TYFJ7FBY;
+						DevelopmentTeam = 9M4756J7A7;
 						ProvisioningStyle = Automatic;
 					};
 					627A952B1E4968E0004A1ED2 = {
@@ -2372,6 +2832,7 @@
 				260D8DA91EED3BD100B47B3D /* SUGoodsData_14.data in Resources */,
 				260FE13B1EF3EEA100830B07 /* SUPublicController1.xib in Resources */,
 				260D8DAE1EED3BD100B47B3D /* SUGoodsData_19.data in Resources */,
+				E92AB25620C644A40067D0B6 /* cmh_page_0.jpg in Resources */,
 				260D8DB41EED3BD100B47B3D /* SUGoodsData_6.data in Resources */,
 				260D8DA41EED3BD100B47B3D /* SUGoodsData_1.data in Resources */,
 				260D8DB01EED3BD100B47B3D /* SUGoodsData_20.data in Resources */,
@@ -2425,58 +2886,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MHDevelopExample-MHDevelopExampleUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		44911888C87BD4AC95195632 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		58F0718935E30AE8F5955411 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleUITests/Pods-MHDevelopExample-MHDevelopExampleUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A29AA6065374C517309FA73 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleTests/Pods-MHDevelopExample-MHDevelopExampleTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6097DCE86803312718147934 /* [CP] Embed Pods Frameworks */ = {
@@ -2485,9 +2904,68 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/HJCornerRadius/HJCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/HYBImageCliped/HYBImageCliped.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JPFPSStatus/JPFPSStatus.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
+				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YZDisplayViewController/YZDisplayViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/ZYCornerRadius/ZYCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HJCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HYBImageCliped.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JPFPSStatus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YZDisplayViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZYCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2500,13 +2978,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MHDevelopExample-MHDevelopExampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D5B7B11C260AD2094268A930 /* [CP] Embed Pods Frameworks */ = {
@@ -2515,9 +2996,68 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleTests/Pods-MHDevelopExample-MHDevelopExampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/HJCornerRadius/HJCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/HYBImageCliped/HYBImageCliped.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JPFPSStatus/JPFPSStatus.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
+				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YZDisplayViewController/YZDisplayViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/ZYCornerRadius/ZYCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HJCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HYBImageCliped.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JPFPSStatus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YZDisplayViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZYCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2530,13 +3070,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MHDevelopExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F697359590059C49FB1E90AB /* [CP] Embed Pods Frameworks */ = {
@@ -2545,9 +3088,68 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleUITests/Pods-MHDevelopExample-MHDevelopExampleUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/HJCornerRadius/HJCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/HYBImageCliped/HYBImageCliped.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JPFPSStatus/JPFPSStatus.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
+				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YZDisplayViewController/YZDisplayViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/ZYCornerRadius/ZYCornerRadius.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HJCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HYBImageCliped.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JPFPSStatus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YZDisplayViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZYCornerRadius.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2571,10 +3173,12 @@
 				261148E01F15413000758DAF /* YYThreadSafeDictionary.m in Sources */,
 				260C2E091EF13AAC00378885 /* SUViewModel1.m in Sources */,
 				260D8D851EED37CB00B47B3D /* SUGoodsImage.m in Sources */,
+				E92AB25220C551D70067D0B6 /* CMHPingInvertTransition.m in Sources */,
 				627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */,
 				261133671EF43923006AE109 /* SUWebViewController1.m in Sources */,
 				620877121E54B0B900183F81 /* MHYouKuCommentButton.m in Sources */,
 				6229907F1E4D504800E0890E /* MHTitleLeftButton.m in Sources */,
+				E951602420C2855D007224DA /* CMHExample.m in Sources */,
 				625B73BE1E4C598C006A8E86 /* NSDateFormatter+Extension.m in Sources */,
 				2615ECD01EEE919900D6B473 /* TAPageControl.m in Sources */,
 				260FC4D71EF7849000390A8E /* SUGoodsViewModel2.m in Sources */,
@@ -2587,13 +3191,20 @@
 				627A95791E49AD30004A1ED2 /* UIBarButtonItem+MHExtension.m in Sources */,
 				622637651E4B08E1007F9360 /* NSObject+MHRandom.m in Sources */,
 				260E59601EF6CCA200C323CB /* SUViewModel2.m in Sources */,
+				E951601720C280A6007224DA /* CMHView.m in Sources */,
 				6226375D1E4AF925007F9360 /* NSString+MHSize.m in Sources */,
 				261133731EF43D27006AE109 /* SUPublicWebViewModel1.m in Sources */,
 				627A956F1E49A615004A1ED2 /* MHViewController.m in Sources */,
 				622E33731E5591F6001FB056 /* MHYouKuTopicController.m in Sources */,
+				E951601120C2807C007224DA /* CMHTabBarController.m in Sources */,
+				E932AAE220B68E1800C99B3C /* CMHMainFrameViewController.m in Sources */,
 				622E33761E5595B5001FB056 /* MHYouKuInputPanelView.m in Sources */,
 				260FC4CF1EF783A300390A8E /* SUPublicViewModel2.m in Sources */,
+				E92AB23620C5160D0067D0B6 /* CMHExample02ViewController.m in Sources */,
+				E92AB23A20C518B50067D0B6 /* CMHExample03ViewController.m in Sources */,
 				622990851E4E2D4500E0890E /* MHOperationController.m in Sources */,
+				E92AB24B20C54E560067D0B6 /* CMHProfileButton.m in Sources */,
+				E951601A20C280BA007224DA /* CMHTableViewCell.m in Sources */,
 				2615ECB31EEE6ECE00D6B473 /* NSError+MHExtension.m in Sources */,
 				260E2E6B1EEFBEAE00A0A50D /* SUGoodsFrame.m in Sources */,
 				260D8D861EED37CB00B47B3D /* SUGoodsCell.m in Sources */,
@@ -2604,34 +3215,46 @@
 				2611336A1EF43A26006AE109 /* SUWebViewModel1.m in Sources */,
 				627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */,
 				622637581E4AF259007F9360 /* UIFont+MHExtension.m in Sources */,
+				E92DFDBA20C907BD00823A4F /* CMHControllerHelper.m in Sources */,
 				260FE13A1EF3EEA100830B07 /* SUPublicController1.m in Sources */,
+				E932AADC20B68DF600C99B3C /* CMHDiscoverViewController.m in Sources */,
 				260FC4C51EF7829500390A8E /* SUPublicController2.m in Sources */,
 				260F3BDF1EEF011A00ACF0D5 /* SUModel.m in Sources */,
+				E951601020C2807C007224DA /* CMHTableViewController.m in Sources */,
 				627A95611E4973D2004A1ED2 /* MHConstant.m in Sources */,
 				625B73B51E4C4BA6006A8E86 /* MHTopicTwoController.m in Sources */,
 				261BC8101EF22FEB003E41F9 /* SUConstant.m in Sources */,
+				E92F2FCE20C7D11E002070C3 /* CMHInteractiveTransition.m in Sources */,
 				2615EC9E1EEE4C1700D6B473 /* RegexKitLite.m in Sources */,
 				6223CEE01E54096700993A91 /* MHTopicManager.m in Sources */,
+				E932AACE20B677BB00C99B3C /* CMHHomePageViewController.m in Sources */,
 				625B73B71E4C4BA6006A8E86 /* MHTopicCommentCell.m in Sources */,
 				261148EC1F1541FE00758DAF /* YYWeakProxy.m in Sources */,
 				622E335B1E554AC8001FB056 /* UIViewController+MHHUD.m in Sources */,
 				260FC4D21EF783C500390A8E /* SUPublicWebViewModel2.m in Sources */,
+				E943E45B20C4F29700AFC4A9 /* CMHExample00ViewController.m in Sources */,
 				622E334A1E553800001FB056 /* UIImage+MHOrientation.m in Sources */,
 				260FC4C91EF7831200390A8E /* SUWebViewController2.m in Sources */,
 				2615ECA41EEE4C8700D6B473 /* NSString+MHValid.m in Sources */,
 				622637301E4AABF8007F9360 /* MHUser.m in Sources */,
+				E951601D20C28263007224DA /* CMHExampleCell.m in Sources */,
 				261148E51F15416700758DAF /* YYKeychain.m in Sources */,
+				E932AAD920B68DCC00C99B3C /* CMHProfileViewController.m in Sources */,
 				6226374D1E4AC61D007F9360 /* MHTopicFooterView.m in Sources */,
 				261309511E97801F0095BE0E /* RACBasicUseController.m in Sources */,
+				E92DFDB320C8EAF500823A4F /* CMHWebViewController.m in Sources */,
 				260FE12B1EF3EBDC00830B07 /* SUPublicController0.m in Sources */,
 				625B739D1E4C4AB7006A8E86 /* MHUserInfoController.m in Sources */,
 				6226374C1E4AC61D007F9360 /* MHCommentCell.m in Sources */,
+				E92F2FCB20C7D0C3002070C3 /* CMHDismissTransition.m in Sources */,
 				2615ECA11EEE4C5A00D6B473 /* NSAttributedString+MHSize.m in Sources */,
+				E92DFDB620C906A500823A4F /* NSObject+MHAlert.m in Sources */,
 				622637331E4AAC10007F9360 /* MHComment.m in Sources */,
 				622E33721E5591F6001FB056 /* MHYouKuTopicDetailController.m in Sources */,
 				260FE1211EF3CEB400830B07 /* SUGoodsItemViewModel.m in Sources */,
 				622637611E4B0325007F9360 /* MHWebImageTool.m in Sources */,
 				260FE1111EF3890A00830B07 /* SUGoodsController1.m in Sources */,
+				E932AABA20B65BF700C99B3C /* CAAnimation+CMHRefresh.m in Sources */,
 				2615EC891EEE308200D6B473 /* SUViewController0.m in Sources */,
 				260FC4DA1EF784B900390A8E /* SUGoodsController2.m in Sources */,
 				261148EB1F1541FE00758DAF /* YYTimer.m in Sources */,
@@ -2647,29 +3270,36 @@
 				622E335A1E554AC8001FB056 /* UIViewController+MHDismissKeyboard.m in Sources */,
 				627A955D1E496E1B004A1ED2 /* MHExample.m in Sources */,
 				6226374E1E4AC61D007F9360 /* MHTopicHeaderView.m in Sources */,
+				E932AAC120B65F1000C99B3C /* UIScrollView+CMHRefresh.m in Sources */,
 				627A95911E49C91B004A1ED2 /* MHTopicLabel.m in Sources */,
+				E92F2FC820C7CDE2002070C3 /* CMHPresentTransition.m in Sources */,
+				E92DFDC520C90FF400823A4F /* CMHConstant.m in Sources */,
+				E951601220C2807C007224DA /* CMHNavigationController.m in Sources */,
+				E932AADF20B68E0600C99B3C /* CMHContactsViewController.m in Sources */,
 				622E334B1E553800001FB056 /* UIImage+MHSnap.m in Sources */,
 				2615ECCD1EEE919900D6B473 /* TAAbstractDotView.m in Sources */,
 				261BC8151EF25DF2003E41F9 /* SUViewController1.m in Sources */,
 				261BC8181EF25E1A003E41F9 /* SUTableViewController1.m in Sources */,
 				2615ECBC1EEE7DB200D6B473 /* SUSearchBarView.m in Sources */,
 				260C2DF71EF11A9200378885 /* SUWebViewController0.m in Sources */,
+				E92DFDBE20C9089F00823A4F /* UIAlertController+MHColor.m in Sources */,
 				260E595F1EF6CCA200C323CB /* SUTableViewModel2.m in Sources */,
 				260FC4CC1EF7835600390A8E /* SUPublicWebController2.m in Sources */,
 				260D8D841EED37CB00B47B3D /* SUGoods.m in Sources */,
 				627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */,
 				260C2DFE1EF1315900378885 /* SULoginController1.m in Sources */,
+				E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */,
 				622637541E4AED10007F9360 /* MHDivider.m in Sources */,
 				622E33711E5591F6001FB056 /* MHYouKuCommentController.m in Sources */,
 				260D8D8A1EED37CB00B47B3D /* SUGoodsImageCell.m in Sources */,
 				622BF5E41E56D579004DFCA2 /* MHYouKuItem.m in Sources */,
 				622637361E4AAD85007F9360 /* MHTopicFrame.m in Sources */,
-				261841CB1EF8D4BF009EAFB4 /* CacheCleanerPlugin.m in Sources */,
 				261BC8221EF29685003E41F9 /* SUTableViewController2.m in Sources */,
 				260D8DC11EED9AFD00B47B3D /* SULoginInputView.m in Sources */,
 				622BF5E71E56D59F004DFCA2 /* MHYouKuCommentItem.m in Sources */,
 				622E33471E553800001FB056 /* UIImage+MHCrop.m in Sources */,
 				260C2E0C1EF13F3600378885 /* SUTableViewModel1.m in Sources */,
+				E92AB24F20C551A40067D0B6 /* CMHPingTransition.m in Sources */,
 				261BC8231EF29685003E41F9 /* SUViewController2.m in Sources */,
 				622E60471E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m in Sources */,
 				622E33481E553800001FB056 /* UIImage+MHExtension.m in Sources */,
@@ -2680,7 +3310,9 @@
 				622BF5DE1E569E47004DFCA2 /* MHYouKuMediaSummary.m in Sources */,
 				261148DA1F1540CF00758DAF /* YYGestureRecognizer.m in Sources */,
 				2615EC991EEE36C900D6B473 /* SULoginController0.m in Sources */,
+				E932AAB420B6481500C99B3C /* CMHRefreshHeader.m in Sources */,
 				6208770C1E5483DD00183F81 /* MHYouKuBottomToolBar.m in Sources */,
+				E92AB23120C512480067D0B6 /* CMHExample01ViewController.m in Sources */,
 				625B73B61E4C4BA6006A8E86 /* MHTopicCell.m in Sources */,
 				622E33541E554603001FB056 /* MHYouKuCommentToolBar.m in Sources */,
 				622BF5EA1E56E6A4004DFCA2 /* MHYouKuAnthologyHeaderView.m in Sources */,
@@ -2690,12 +3322,14 @@
 				622990761E4D4D5100E0890E /* MHSelectsController.m in Sources */,
 				6208770F1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m in Sources */,
 				260FE12D1EF3EBDC00830B07 /* SUPublicWebController0.m in Sources */,
+				E92AB23E20C541C40067D0B6 /* CMHExample04ViewController.m in Sources */,
 				622BF5E11E569EC3004DFCA2 /* MHYouKuMediaDetail.m in Sources */,
 				627A957C1E49AE00004A1ED2 /* MHBackButton.m in Sources */,
 				260FE1401EF3EEEE00830B07 /* SUPublicViewModel1.m in Sources */,
 				260FC4C11EF7812900390A8E /* SUWebViewModel2.m in Sources */,
 				2615ECD21EEE919900D6B473 /* SDCycleScrollView.m in Sources */,
 				261133701EF43C60006AE109 /* SUPublicWebController1.m in Sources */,
+				E951602020C284DB007224DA /* CMHObject.m in Sources */,
 				6229906F1E4D4CC500E0890E /* MHDeleteController.m in Sources */,
 				261148E61F15416700758DAF /* YYReachability.m in Sources */,
 				622990821E4DAEBF00E0890E /* MHButton.m in Sources */,
@@ -2707,10 +3341,12 @@
 				260C2E041EF1363B00378885 /* SULoginViewModel1.m in Sources */,
 				260FE1141EF389B300830B07 /* SUGoodsViewModel1.m in Sources */,
 				622BF5DB1E569130004DFCA2 /* MHYouKuMedia.m in Sources */,
-				261841CC1EF8D4BF009EAFB4 /* RetainCycleLoggerPlugin.m in Sources */,
 				260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */,
+				E932AAB720B64B1D00C99B3C /* CMHRefreshFooter.m in Sources */,
 				620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */,
+				E951601320C2807C007224DA /* CMHViewController.m in Sources */,
 				6223CEE81E5423B300993A91 /* MHCommentReply.m in Sources */,
+				E932AAC920B673FD00C99B3C /* CMHTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2854,7 +3490,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				DEVELOPMENT_TEAM = S9TYFJ7FBY;
+				DEVELOPMENT_TEAM = 9M4756J7A7;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2877,7 +3513,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				DEVELOPMENT_TEAM = S9TYFJ7FBY;
+				DEVELOPMENT_TEAM = 9M4756J7A7;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

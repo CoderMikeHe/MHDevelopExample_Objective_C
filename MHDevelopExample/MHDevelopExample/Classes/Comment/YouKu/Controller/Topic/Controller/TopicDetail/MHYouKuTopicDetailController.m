@@ -306,7 +306,7 @@
     [commentBtn addTarget:self action:@selector(_commentBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     [commentBtn setTitle:@"回复" forState:UIControlStateNormal];
     [commentBtn setTitleColor:MHColorFromHexString(@"#BEBEBE") forState:UIControlStateNormal];
-    [commentBtn setBackgroundImage:[UIImage mh_resizedImage:@"comment_comment"] forState:UIControlStateNormal];
+    [commentBtn setBackgroundImage:[UIImage mh_resizableImage:@"comment_comment"] forState:UIControlStateNormal];
     [commentView addSubview:commentBtn];
     
     

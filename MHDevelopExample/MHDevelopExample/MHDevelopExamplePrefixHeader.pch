@@ -14,8 +14,73 @@
 
 #ifdef __OBJC__
 
+
+/// 系统or第三方框架
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <MJRefresh/MJRefresh.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <HYBImageCliped/HYBImageCliped.h>
+
+/// User Custom File
+/// 协议
+#import "CMHConfigureView.h"
+
+
+
+/// YYKit
+#import "YYText.h"
+#import "YYCategories.h"
+#import "YYModel.h"
+#import "YYWebImage.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
+// category
+#import "UIBarButtonItem+MHExtension.h"
+#import "UIAlertController+MHColor.h"
+#import "UIView+MH.h"
+#import "UIFont+MHExtension.h"
+#import "NSString+MH.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "NSObject+MH.h"
+#import "Colours.h"
+#import "UIImage+MH.h"
+#import "UIViewController+MHDismissKeyboard.h"
+#import "UIViewController+MHHUD.h"
+#import "NSDate+Extension.h"
+#import "MBProgressHUD+MHExtension.h"
+#import "HJCornerRadius.h"
+#import "UIImageView+CornerRadius.h"
+#import "NSError+MHExtension.h"
+#import "UITableView+MHExtension.h"
+#import "BlocksKit.h"
+#import "BlocksKit+UIKit.h"
+
+
+// tool
+#import "MHWebImageTool.h"
+#import "MHSingleton.h"
+#import "Masonry.h"
+
+#import "KVOController.h"
+#import "FBKVOController+MHExtension.h"
+#import "UIScrollView+MHRefresh.h"
+#import "UIScrollView+CMHRefresh.h"
+// UIKit
+#import "MHButton.h"
+
+#import "MHImageView.h"
+#import "MHDivider.h"
+#import "MHBackButton.h"
+
+// 模型
+#import "AppDelegate.h"
+
+
+/// 常量
+#import "SUConstant.h"
+#import "MHInline.h"
+
+
 
 
 ///------
@@ -41,19 +106,23 @@ typedef BOOL (^BoolBlock_id)(id);
 typedef int  (^IntBlock_id) (id);
 typedef id   (^IDBlock_id)  (id);
 
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+/// 类型相关
+#define MH_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define MH_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define MH_IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
 
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
-#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
-#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+/// 屏幕尺寸相关
+#define MH_SCREEN_WIDTH  ([[UIScreen mainScreen] bounds].size.width)
+#define MH_SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define MH_SCREEN_BOUNDS ([[UIScreen mainScreen] bounds])
+#define MH_SCREEN_MAX_LENGTH (MAX(MH_SCREEN_WIDTH, MH_SCREEN_HEIGHT))
+#define MH_SCREEN_MIN_LENGTH (MIN(MH_SCREEN_WIDTH, MH_SCREEN_HEIGHT))
 
-#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
-#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
-#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
-#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+/// 手机类型相关
+#define MH_IS_IPHONE_4_OR_LESS  (MH_IS_IPHONE && MH_SCREEN_MAX_LENGTH  < 568.0)
+#define MH_IS_IPHONE_5          (MH_IS_IPHONE && MH_SCREEN_MAX_LENGTH == 568.0)
+#define MH_IS_IPHONE_6          (MH_IS_IPHONE && MH_SCREEN_MAX_LENGTH == 667.0)
+#define MH_IS_IPHONE_6P         (MH_IS_IPHONE && MH_SCREEN_MAX_LENGTH == 736.0)
 #define MH_IS_IPHONE_X          (MH_IS_IPHONE && MH_SCREEN_MAX_LENGTH == 812.0)
 
 
@@ -85,7 +154,7 @@ typedef id   (^IDBlock_id)  (id);
 
 // 输出日志 (格式: [时间] [哪个方法] [哪行] [输出内容])
 #ifdef DEBUG
-#define NSLog(format, ...) printf("\n[%s] %s [第%zd行] 💕 %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String]);
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] 💕 %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String]);
 #else
 #define NSLog(format, ...)
 #endif
@@ -206,6 +275,6 @@ _Pragma("clang diagnostic pop")\
 
 // 常用的
 #import "MHConstant.h"
-
+#import "CMHMacros.h"
 
 #endif

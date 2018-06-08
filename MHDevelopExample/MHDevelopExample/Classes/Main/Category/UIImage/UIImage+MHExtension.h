@@ -17,12 +17,12 @@
 /**
  *  根据图片名返回一张能够自由拉伸的图片 (从中间拉伸)
  */
-+ (UIImage *)mh_resizedImage:(NSString *)imgName;
++ (UIImage *)mh_resizableImage:(NSString *)imgName;
 
 /**
  *  根据图片名返回一张能够自由拉伸的图片
  */
-+ (UIImage *)mh_resizedImage:(NSString *)imgName xPos:(CGFloat)xPos yPos:(CGFloat)yPos;
++ (UIImage *)mh_resizableImage:(NSString *)imgName xPos:(CGFloat)xPos yPos:(CGFloat)yPos;
 
 /**
  *  获取视频第一帧图片
