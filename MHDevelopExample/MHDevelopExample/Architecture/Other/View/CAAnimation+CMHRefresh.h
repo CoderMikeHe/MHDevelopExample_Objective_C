@@ -11,4 +11,6 @@
 @interface CAAnimation (CMHRefresh)
 /// 旋转动画
 + (CABasicAnimation *)cmh_rotationAnimation;
+/// 旋转一个 开始角度 旋转到 结束角度
++ (CABasicAnimation *) cmh_rotaAnimStartAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle;
 @end

@@ -32,7 +32,8 @@
 #import "CMHDismissTransition.h"
 /// 侧滑Dismiss
 #import "CMHInteractiveTransition.h"
-
+/// 基类提供的方法
+#import "CMHExample06ViewController.h"
 
 @interface CMHMainFrameViewController ()<UINavigationControllerDelegate,UIViewControllerTransitioningDelegate>
 /// 个人中心按钮
@@ -105,6 +106,12 @@
         [self presentViewController:example05Nav animated:YES completion:NULL];
     };
     [self.dataSource addObject:example05];
+    
+    
+    CMHExample *example06 = [[CMHExample alloc] initWithTitle:@"06：测试基类提供的API" subtitle:@"[requestRemoteData]、[configure]、[fetchLocalData]"];
+    example06.destClass = [CMHExample06ViewController class];
+    [self.dataSource addObject:example06];
+    
     
     /// 刷洗数据
 //    [self.tableView reloadData]; /// 等效下面的方法

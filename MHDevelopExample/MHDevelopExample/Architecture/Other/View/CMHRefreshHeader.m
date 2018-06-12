@@ -12,6 +12,9 @@
 /// logo
 @property (nonatomic , readwrite , weak) UIImageView *loadingView;
 
+/// preAngle
+@property (nonatomic , readwrite , assign) CGFloat preAngle;
+
 @end
 
 
@@ -91,6 +94,9 @@
 - (void)setPullingPercent:(CGFloat)pullingPercent{
     [super setPullingPercent:pullingPercent];
 
+    [self.loadingView.layer addAnimation:[CAAnimation cmh_rotaAnimStartAngle:self.preAngle endAngle:pullingPercent] forKey:@"rotaAnims"];
+    self.preAngle = pullingPercent;
+    
 }
 
 @end

@@ -145,7 +145,7 @@
 
 
 #pragma mark - 事件处理
-- (void)_back{ /// 回去
+- (void)_backItemDidClicked{ /// 回去
     [self popViewControllerAnimated:YES];
 }
 
@@ -162,8 +162,6 @@
         } else {
             topViewController.snapshot = [self.view snapshotViewAfterScreenUpdates:NO];
         }
-        
-        
         /// 统一隐藏底部tabbar
         viewController.hidesBottomBarWhenPushed = YES;
         
@@ -172,7 +170,7 @@
         [viewController.navigationItem setHidesBackButton:YES];
         
         // 4.这里可以设置导航栏的左右按钮 统一管理方法
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem mh_backItemWithTitle:nil imageName:@"return_black" target:self action:@selector(_back)];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem mh_backItemWithTitle:@"返回" imageName:@"barbuttonicon_back_15x30" target:self action:@selector(_backItemDidClicked)];
     }
     
     // push

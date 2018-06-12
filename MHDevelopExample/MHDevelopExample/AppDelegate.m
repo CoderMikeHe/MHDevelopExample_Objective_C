@@ -61,6 +61,8 @@
     
     [self.window makeKeyAndVisible];
     
+    
+
 #if defined(DEBUG)||defined(_DEBUG)
 //    [self _configDebugModelTools];
 #endif
@@ -76,6 +78,9 @@
     
     /// 配置键盘
     [self _configureKeyboardManager];
+    
+    // 配置YYWebImage
+    [self _configureYYWebImage];
 }
 
 /// 配置键盘管理器
@@ -85,6 +90,13 @@
     IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = YES;
 }
 
+/// 配置YYWebImage
+- (void)_configureYYWebImage {
+    /// CoderMikeHe Fixed Bug : 解决 SDWebImage & YYWebImage 加载不出http://img3.imgtn.bdimg.com/it/u=965183317,1784857244&fm=27&gp=0.jpg的BUG
+    NSMutableDictionary *header = [YYWebImageManager sharedManager].headers.mutableCopy;
+    header[@"User-Agent"] = @"iPhone"; 
+    [YYWebImageManager sharedManager].headers = header;
+}
 
 #pragma mark - 调试(DEBUG)模式
 - (void)_configDebugModelTools{

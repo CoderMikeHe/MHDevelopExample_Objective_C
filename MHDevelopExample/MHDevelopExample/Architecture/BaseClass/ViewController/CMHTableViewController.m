@@ -29,7 +29,8 @@
     if (self = [super init]) {
         _style = UITableViewStylePlain;
         _shouldBeginRefreshing = YES;
-        _perPage = 10;
+        _page = 1;
+        _perPage = 20;
         _shouldEndRefreshingWithNoMoreData = YES;
     }
     return self;
@@ -141,7 +142,13 @@
         
         if (isHeader) {
             /// 重置没有更多的状态
-            if (self.shouldEndRefreshingWithNoMoreData) [self.tableView.mj_footer resetNoMoreData];
+            if (self.shouldEndRefreshingWithNoMoreData){
+                [self.tableView.mj_footer setHidden:NO];
+                [self.tableView.mj_footer resetNoMoreData];
+            }else{
+                [self.tableView.mj_footer setHidden:NO];
+            }
+            
             [strongSelf.tableView.mj_header endRefreshing];
         }
         else{
@@ -159,7 +166,15 @@
     NSUInteger count = self.dataSource.count;
     /// CoderMikeHe Fixed: 这里必须要等到，底部控件结束刷新后，再来设置无更多数据，否则被叠加无效
     if (self.shouldMultiSections) return;  // 多组的不处理
-    if (self.shouldEndRefreshingWithNoMoreData && (count == 0 || count % self.perPage)) [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    
+    if (count == 0 || count % self.perPage) {
+        
+        if (self.shouldEndRefreshingWithNoMoreData) {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }else{
+            self.tableView.mj_footer.hidden = YES;
+        }
+    }
 }
 
 
@@ -182,7 +197,6 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(id)object {}
 
 
-#pragma mark - 辅助方法
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

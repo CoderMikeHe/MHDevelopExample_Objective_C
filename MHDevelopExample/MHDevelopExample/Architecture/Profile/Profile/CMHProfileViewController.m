@@ -88,7 +88,7 @@
     [self.dataSource addObject:example32];
     
     
-    CMHExample *example33 = [[CMHExample alloc] initWithTitle:@"33：支持下拉刷新且进去就开始刷新" subtitle:@"shouldPullDownToRefresh = YES"];
+    CMHExample *example33 = [[CMHExample alloc] initWithTitle:@"33：支持下拉刷新且一进去就开始刷新" subtitle:@"shouldPullDownToRefresh = YES"];
     example33.operation = ^{
         @strongify(self);
         CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];
@@ -99,7 +99,7 @@
     [self.dataSource addObject:example33];
     
     
-    CMHExample *example34 = [[CMHExample alloc] initWithTitle:@"34：支持下拉刷新且进去不自动刷新" subtitle:@"shouldPullDownToRefresh = YES && shouldBeginRefreshing = NO"];
+    CMHExample *example34 = [[CMHExample alloc] initWithTitle:@"34：支持下拉刷新且一进去不自动刷新" subtitle:@"shouldPullDownToRefresh = YES && shouldBeginRefreshing = NO"];
     example34.operation = ^{
         @strongify(self);
         CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];

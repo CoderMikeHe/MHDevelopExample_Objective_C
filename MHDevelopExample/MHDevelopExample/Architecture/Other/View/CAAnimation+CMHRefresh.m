@@ -40,5 +40,35 @@
     return anim;
 }
 
++ (CABasicAnimation *) cmh_rotaAnimStartAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle{
+    
+    
+    CABasicAnimation *anim =  [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    
+    //设置起点
+    anim.fromValue = @(startAngle * M_PI * 2);
+    
+    //设置终点(M_PI/180.0 * (x)
+    anim.toValue=@(M_PI * endAngle * 2);
+    
+    //设置动画执行一次的时长
+    anim.duration = 0.1f;
+    
+    //设置速度函数
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    
+    //完成动画不删除：
+    anim.removedOnCompletion = YES;
+    
+    //向前填充
+    anim.fillMode = kCAFillModeForwards;
+    
+    //设置重复次数
+    anim.repeatCount = 1;
+    
+    
+    return anim;
+}
+
 
 @end

@@ -29,6 +29,9 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - CHTCollectionViewWaterfallLayout (0.9.6):
+    - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.6)
+  - CHTCollectionViewWaterfallLayout/ObjC (0.9.6)
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
@@ -53,6 +56,7 @@ PODS:
   - SDWebImage (4.4.0):
     - SDWebImage/Core (= 4.4.0)
   - SDWebImage/Core (4.4.0)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
   - "UIImage+ImageWithColor (1.4.0)"
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYCache (1.0.4)
@@ -75,6 +79,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
   - BlocksKit (= 2.2.5)
+  - CHTCollectionViewWaterfallLayout (= 0.9.6)
   - Colours (= 5.13.0)
   - DZNEmptyDataSet (= 1.8.1)
   - FDFullscreenPopGesture (= 1.1)
@@ -91,6 +96,7 @@ DEPENDENCIES:
   - pop (= 1.0.10)
   - ReactiveObjC (= 3.1.0)
   - SDWebImage (= 4.4.0)
+  - UICollectionViewLeftAlignedLayout (= 1.0.2)
   - "UIImage+ImageWithColor (= 1.4.0)"
   - "UITableView+FDTemplateLayoutCell (= 1.6)"
   - YYCache (= 1.0.4)
@@ -107,6 +113,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - BlocksKit
+    - CHTCollectionViewWaterfallLayout
     - Colours
     - DZNEmptyDataSet
     - FBRetainCycleDetector
@@ -123,6 +130,7 @@ SPEC REPOS:
     - pop
     - ReactiveObjC
     - SDWebImage
+    - UICollectionViewLeftAlignedLayout
     - "UIImage+ImageWithColor"
     - "UITableView+FDTemplateLayoutCell"
     - YYCache
@@ -146,6 +154,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  CHTCollectionViewWaterfallLayout: f4dab06db57b36dcf29e802594175acc76c56615
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
@@ -163,6 +172,7 @@ SPEC CHECKSUMS:
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   "UIImage+ImageWithColor": 891401f732f2f332fefe68c2332c6c955c2a879c
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
@@ -174,6 +184,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: 922cd9a4bb252adacee5687c6ce48a5c0d676f11
+PODFILE CHECKSUM: db7ab94e22e2a269c6f8f3edaa48d0e777374f73
 
 COCOAPODS: 1.5.0

@@ -38,9 +38,6 @@
 
 
 
-
-
-
 - (void)setMh_centerX:(CGFloat)mh_centerX
 {
     CGPoint center = self.center;
@@ -108,6 +105,68 @@
 {
     return self.frame.size;
 }
+
+
+
+
+
+- (void)setMh_origin:(CGPoint)mh_origin
+{
+    CGRect frame = self.frame;
+    frame.origin = mh_origin;
+    self.frame = frame;
+}
+- (CGPoint)mh_origin
+{
+    return self.frame.origin;
+}
+
+
+- (void)setMh_top:(CGFloat)mh_top
+{
+    CGRect frame = self.frame;
+    frame.origin.y = mh_top;
+    self.frame = frame;
+}
+- (CGFloat)mh_top
+{
+    return self.frame.origin.y;
+}
+
+
+- (void)setMh_left:(CGFloat)mh_left
+{
+    CGRect frame = self.frame;
+    frame.origin.x = mh_left;
+    self.frame = frame;
+}
+- (CGFloat)mh_left
+{
+    return self.frame.origin.x;
+}
+
+
+- (void)setMh_bottom:(CGFloat)mh_bottom
+{
+    CGRect frame = self.frame;
+    frame.origin.y = mh_bottom - frame.size.height;
+    self.frame = frame;
+}
+- (CGFloat)mh_bottom{
+    return self.frame.origin.y + self.frame.size.height;
+}
+
+
+- (void)setMh_right:(CGFloat)mh_right
+{
+    CGRect frame = self.frame;
+    frame.origin.x = mh_right - frame.size.width;
+    self.frame = frame;
+}
+- (CGFloat)mh_right{
+    return self.frame.origin.x + self.frame.size.width;
+}
+
 
 
 

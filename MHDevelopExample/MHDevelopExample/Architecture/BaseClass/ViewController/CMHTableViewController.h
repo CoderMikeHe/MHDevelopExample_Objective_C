@@ -10,11 +10,11 @@
 
 @interface CMHTableViewController : CMHViewController<UITableViewDelegate , UITableViewDataSource>
 
-/// The table view for tableView controller.
+/// The table view for tableView controller. <自带全屏tableView,子类可以重新布局其frame>
 /// tableView
 @property (nonatomic, readonly, weak) UITableView *tableView;
 
-/// The data source of table view
+/// The data source of table view <数据源懒加载>
 @property (nonatomic, readonly, strong) NSMutableArray *dataSource;
 
 /// `tableView` 的内容缩进，default is UIEdgeInsetsMake(64,0,0,0)，you can override it
@@ -29,9 +29,9 @@
 @property (nonatomic, readwrite, assign) BOOL shouldBeginRefreshing;
 /// 需要支持上拉加载 defalut is NO
 @property (nonatomic, readwrite, assign) BOOL shouldPullUpToLoadMore;
-/// 是否数据是多段 (It's effect tableView's dataSource 'numberOfSectionsInTableView:') defalut is NO
+/// 是否数据是多段 (It's effect tableView's dataSource 'numberOfSectionsInTableView:') defalut is NO，但是不能跟组头组尾相关联
 @property (nonatomic, readwrite, assign) BOOL shouldMultiSections;
-/// 是否在上拉加载后的数据,dataSource.count < pageSize 提示没有更多的数据.default is YES 否则隐藏mi_footer
+/// 是否在上拉加载后的数据,dataSource.count < pageSize 提示没有更多的数据.default is YES 否则 隐藏mi_footer 。 前提是` shouldMultiSections = NO `才有效。
 @property (nonatomic, readwrite, assign) BOOL shouldEndRefreshingWithNoMoreData;
 
 /// 当前页 defalut is 1

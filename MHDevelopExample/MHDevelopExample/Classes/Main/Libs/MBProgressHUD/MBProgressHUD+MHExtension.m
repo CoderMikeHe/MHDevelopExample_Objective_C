@@ -84,7 +84,7 @@
     MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
     HUD.mode = isAutomaticHide?MBProgressHUDModeText:MBProgressHUDModeIndeterminate;
     HUD.animationType = MBProgressHUDAnimationZoom;
-    HUD.label.font = MHMediumFont(17.0f);
+    HUD.label.font = isAutomaticHide?MHMediumFont(17.0f):MHMediumFont(14.0f);
     HUD.label.textColor = [UIColor whiteColor];
     HUD.contentColor = [UIColor whiteColor];
     HUD.label.text = tipStr;
@@ -92,7 +92,7 @@
     HUD.bezelView.layer.masksToBounds = YES;
     HUD.bezelView.color = MHAlphaColor(0, 0, 0, .6f);
     HUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    HUD.minSize =isAutomaticHide?CGSizeMake([UIScreen mainScreen].bounds.size.width-96.0f, 60):CGSizeZero;
+    HUD.minSize =isAutomaticHide?CGSizeMake([UIScreen mainScreen].bounds.size.width-96.0f, 60):CGSizeMake(120, 120);
     HUD.margin = 18.2f;
     HUD.removeFromSuperViewOnHide = YES;
     if (isAutomaticHide) [HUD hideAnimated:YES afterDelay:1.0f];

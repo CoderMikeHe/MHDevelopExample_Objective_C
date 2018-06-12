@@ -13,40 +13,35 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (MHFrame)
-/**
- *  控件x值
- */
-@property (nonatomic, assign) CGFloat mh_x;
 
-/**
- *  控件y值
- */
-@property (nonatomic, assign) CGFloat mh_y;
 
-/**
- *  控件centerX值
- */
-@property (nonatomic, assign) CGFloat mh_centerX;
+/// < Shortcut for frame.origin.x.
+@property (nonatomic, readwrite, assign) CGFloat mh_left;
+/// < Shortcut for frame.origin.y
+@property (nonatomic, readwrite, assign) CGFloat mh_top;
+/// < Shortcut for frame.origin.x + frame.size.width
+@property (nonatomic, readwrite, assign) CGFloat mh_right;
+/// < Shortcut for frame.origin.y + frame.size.height
+@property (nonatomic, readwrite, assign) CGFloat mh_bottom;
 
-/**
- *  控件centerY值
- */
-@property (nonatomic, assign) CGFloat mh_centerY;
+/// < Shortcut for frame.origin.x.
+@property (nonatomic, readwrite, assign) CGFloat mh_x;
+/// < Shortcut for frame.origin.y
+@property (nonatomic, readwrite, assign) CGFloat mh_y;
+/// < Shortcut for frame.size.width
+@property (nonatomic, readwrite, assign) CGFloat mh_width;
+/// < Shortcut for frame.size.height
+@property (nonatomic, readwrite, assign) CGFloat mh_height;
 
-/**
- *  控件width值
- */
-@property (nonatomic, assign) CGFloat mh_width;
+/// < Shortcut for center.x
+@property (nonatomic, readwrite, assign) CGFloat mh_centerX;
+///< Shortcut for center.y
+@property (nonatomic, readwrite, assign) CGFloat mh_centerY;
 
-/**
- *  控件height值
- */
-@property (nonatomic, assign) CGFloat mh_height;
-
-/**
- *  控件size值
- */
-@property (nonatomic, assign) CGSize mh_size;
+/// < Shortcut for frame.size.
+@property (nonatomic, readwrite, assign) CGSize mh_size;
+/// < Shortcut for frame.origin.
+@property (nonatomic, readwrite, assign) CGPoint mh_origin;
 
 
 

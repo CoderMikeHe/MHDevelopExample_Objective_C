@@ -194,6 +194,40 @@
 		627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A958D1E49B0B0004A1ED2 /* MHTopicController.m */; };
 		627A95911E49C91B004A1ED2 /* MHTopicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 627A95901E49C91B004A1ED2 /* MHTopicLabel.m */; };
 		A9A81CCC402890821EA27D99 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53FC4F542F2116C4E9F74A8 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework */; };
+		E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E7820CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m */; };
+		E9263E7D20CEC0CE003C8C69 /* CMHExample23ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E7C20CEC0CE003C8C69 /* CMHExample23ViewController.m */; };
+		E9263E8820CEC245003C8C69 /* XLCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E8020CEC245003C8C69 /* XLCardItem.m */; };
+		E9263E8920CEC245003C8C69 /* XLCardSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E8120CEC245003C8C69 /* XLCardSwitch.m */; };
+		E9263E8A20CEC245003C8C69 /* XLCardSwitchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E8620CEC245003C8C69 /* XLCardSwitchFlowLayout.m */; };
+		E9263E8B20CEC245003C8C69 /* XLCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E8720CEC245003C8C69 /* XLCard.m */; };
+		E927C15120CB58600093E144 /* CMHOperationToolBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E927C14F20CB58600093E144 /* CMHOperationToolBarItem.m */; };
+		E927C15220CB58600093E144 /* CMHOperationToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E927C15020CB58600093E144 /* CMHOperationToolBar.m */; };
+		E927C15620CBEE970093E144 /* CMHExample15ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E927C15520CBEE970093E144 /* CMHExample15ViewController.m */; };
+		E929642420CF57380048CDFF /* CMHCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E929642320CF57380048CDFF /* CMHCard.m */; };
+		E929642720CF58040048CDFF /* CMHCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E929642620CF58040048CDFF /* CMHCardCell.m */; };
+		E929D83E20CA53EA001F833E /* CMHExample10ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D83D20CA53EA001F833E /* CMHExample10ViewController.m */; };
+		E929D84320CA54B3001F833E /* CMHExampleTableTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D84220CA54B3001F833E /* CMHExampleTableTestCell.m */; };
+		E929D84720CA550B001F833E /* CMHExampleTableTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D84620CA550B001F833E /* CMHExampleTableTest.m */; };
+		E929D84B20CA59DC001F833E /* CMHExample06ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D84A20CA59DC001F833E /* CMHExample06ViewController.m */; };
+		E929D85020CA6BBB001F833E /* YYCache+CMHHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D84F20CA6BBB001F833E /* YYCache+CMHHelper.m */; };
+		E929D85420CA8753001F833E /* CMHExample11ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D85320CA8753001F833E /* CMHExample11ViewController.m */; };
+		E929D85820CA8897001F833E /* CMHExample12ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D85720CA8897001F833E /* CMHExample12ViewController.m */; };
+		E929D85C20CA8F64001F833E /* CMHExample13ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D85B20CA8F64001F833E /* CMHExample13ViewController.m */; };
+		E929D86020CAA1EC001F833E /* CMHExample14ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E929D85F20CAA1EC001F833E /* CMHExample14ViewController.m */; };
+		E92A8F1420CE081800EE850F /* CMHExample16ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F1320CE081800EE850F /* CMHExample16ViewController.m */; };
+		E92A8F1720CE1EF500EE850F /* CMHCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F1620CE1EF500EE850F /* CMHCollectionViewController.m */; };
+		E92A8F1B20CE308A00EE850F /* CMHExample20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F1A20CE308A00EE850F /* CMHExample20ViewController.m */; };
+		E92A8F2420CE4E1F00EE850F /* CMHExampleCollectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F2320CE4E1F00EE850F /* CMHExampleCollectTest.m */; };
+		E92A8F2820CE4F7400EE850F /* CMHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F2720CE4F7400EE850F /* CMHCollectionViewCell.m */; };
+		E92A8F2B20CE4F9400EE850F /* CMHExampleCollectTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F2A20CE4F9400EE850F /* CMHExampleCollectTestCell.m */; };
+		E92A8F2F20CE6AA300EE850F /* CMHExample21ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F2E20CE6AA300EE850F /* CMHExample21ViewController.m */; };
+		E92A8F3320CE6D5E00EE850F /* CMHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F3220CE6D5E00EE850F /* CMHTextField.m */; };
+		E92A8F3620CE6EB900EE850F /* CMHSearchTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F3520CE6EB900EE850F /* CMHSearchTitleView.m */; };
+		E92A8F3B20CE72E200EE850F /* CMHSearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F3720CE72E100EE850F /* CMHSearchHistoryCell.m */; };
+		E92A8F3C20CE72E200EE850F /* CMHSearchHistoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F3820CE72E200EE850F /* CMHSearchHistoryHeaderView.m */; };
+		E92A8F4020CE888600EE850F /* CMHExample22ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F3F20CE888600EE850F /* CMHExample22ViewController.m */; };
+		E92A8F4520CE8A0C00EE850F /* CMHWaterfall.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F4420CE8A0C00EE850F /* CMHWaterfall.m */; };
+		E92A8F4820CE8A3300EE850F /* CMHWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92A8F4720CE8A3300EE850F /* CMHWaterfallCell.m */; };
 		E92AB23120C512480067D0B6 /* CMHExample01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23020C512480067D0B6 /* CMHExample01ViewController.m */; };
 		E92AB23620C5160D0067D0B6 /* CMHExample02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23520C5160D0067D0B6 /* CMHExample02ViewController.m */; };
 		E92AB23A20C518B50067D0B6 /* CMHExample03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB23920C518B50067D0B6 /* CMHExample03ViewController.m */; };
@@ -604,6 +638,74 @@
 		D709199DA67C0E6BC2500608 /* Pods-MHDevelopExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.release.xcconfig"; sourceTree = "<group>"; };
 		DF4CA6BC05B6740B754109C1 /* Pods-MHDevelopExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E53FC4F542F2116C4E9F74A8 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHDevelopExample_MHDevelopExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9263E7720CEBD4F003C8C69 /* CMHWaterfallDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWaterfallDetailViewController.h; sourceTree = "<group>"; };
+		E9263E7820CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHWaterfallDetailViewController.m; sourceTree = "<group>"; };
+		E9263E7B20CEC0CE003C8C69 /* CMHExample23ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample23ViewController.h; sourceTree = "<group>"; };
+		E9263E7C20CEC0CE003C8C69 /* CMHExample23ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample23ViewController.m; sourceTree = "<group>"; };
+		E9263E8020CEC245003C8C69 /* XLCardItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCardItem.m; sourceTree = "<group>"; };
+		E9263E8120CEC245003C8C69 /* XLCardSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCardSwitch.m; sourceTree = "<group>"; };
+		E9263E8220CEC245003C8C69 /* XLCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCard.h; sourceTree = "<group>"; };
+		E9263E8320CEC245003C8C69 /* XLCardSwitchFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCardSwitchFlowLayout.h; sourceTree = "<group>"; };
+		E9263E8420CEC245003C8C69 /* XLCardItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCardItem.h; sourceTree = "<group>"; };
+		E9263E8520CEC245003C8C69 /* XLCardSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLCardSwitch.h; sourceTree = "<group>"; };
+		E9263E8620CEC245003C8C69 /* XLCardSwitchFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCardSwitchFlowLayout.m; sourceTree = "<group>"; };
+		E9263E8720CEC245003C8C69 /* XLCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLCard.m; sourceTree = "<group>"; };
+		E927C14D20CB585F0093E144 /* CMHOperationToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHOperationToolBar.h; sourceTree = "<group>"; };
+		E927C14E20CB585F0093E144 /* CMHOperationToolBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHOperationToolBarItem.h; sourceTree = "<group>"; };
+		E927C14F20CB58600093E144 /* CMHOperationToolBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHOperationToolBarItem.m; sourceTree = "<group>"; };
+		E927C15020CB58600093E144 /* CMHOperationToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHOperationToolBar.m; sourceTree = "<group>"; };
+		E927C15420CBEE970093E144 /* CMHExample15ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample15ViewController.h; sourceTree = "<group>"; };
+		E927C15520CBEE970093E144 /* CMHExample15ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample15ViewController.m; sourceTree = "<group>"; };
+		E929642220CF57380048CDFF /* CMHCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHCard.h; sourceTree = "<group>"; };
+		E929642320CF57380048CDFF /* CMHCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHCard.m; sourceTree = "<group>"; };
+		E929642520CF58040048CDFF /* CMHCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHCardCell.h; sourceTree = "<group>"; };
+		E929642620CF58040048CDFF /* CMHCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHCardCell.m; sourceTree = "<group>"; };
+		E929D83C20CA53EA001F833E /* CMHExample10ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample10ViewController.h; sourceTree = "<group>"; };
+		E929D83D20CA53EA001F833E /* CMHExample10ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample10ViewController.m; sourceTree = "<group>"; };
+		E929D84120CA54B3001F833E /* CMHExampleTableTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExampleTableTestCell.h; sourceTree = "<group>"; };
+		E929D84220CA54B3001F833E /* CMHExampleTableTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExampleTableTestCell.m; sourceTree = "<group>"; };
+		E929D84520CA550B001F833E /* CMHExampleTableTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExampleTableTest.h; sourceTree = "<group>"; };
+		E929D84620CA550B001F833E /* CMHExampleTableTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExampleTableTest.m; sourceTree = "<group>"; };
+		E929D84920CA59DC001F833E /* CMHExample06ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample06ViewController.h; sourceTree = "<group>"; };
+		E929D84A20CA59DC001F833E /* CMHExample06ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample06ViewController.m; sourceTree = "<group>"; };
+		E929D84E20CA6BBB001F833E /* YYCache+CMHHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYCache+CMHHelper.h"; sourceTree = "<group>"; };
+		E929D84F20CA6BBB001F833E /* YYCache+CMHHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YYCache+CMHHelper.m"; sourceTree = "<group>"; };
+		E929D85220CA8753001F833E /* CMHExample11ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample11ViewController.h; sourceTree = "<group>"; };
+		E929D85320CA8753001F833E /* CMHExample11ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample11ViewController.m; sourceTree = "<group>"; };
+		E929D85620CA8897001F833E /* CMHExample12ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample12ViewController.h; sourceTree = "<group>"; };
+		E929D85720CA8897001F833E /* CMHExample12ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample12ViewController.m; sourceTree = "<group>"; };
+		E929D85A20CA8F64001F833E /* CMHExample13ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample13ViewController.h; sourceTree = "<group>"; };
+		E929D85B20CA8F64001F833E /* CMHExample13ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample13ViewController.m; sourceTree = "<group>"; };
+		E929D85E20CAA1EC001F833E /* CMHExample14ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample14ViewController.h; sourceTree = "<group>"; };
+		E929D85F20CAA1EC001F833E /* CMHExample14ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample14ViewController.m; sourceTree = "<group>"; };
+		E92A8F1220CE081800EE850F /* CMHExample16ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample16ViewController.h; sourceTree = "<group>"; };
+		E92A8F1320CE081800EE850F /* CMHExample16ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample16ViewController.m; sourceTree = "<group>"; };
+		E92A8F1520CE1EF500EE850F /* CMHCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHCollectionViewController.h; sourceTree = "<group>"; };
+		E92A8F1620CE1EF500EE850F /* CMHCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHCollectionViewController.m; sourceTree = "<group>"; };
+		E92A8F1920CE308A00EE850F /* CMHExample20ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample20ViewController.h; sourceTree = "<group>"; };
+		E92A8F1A20CE308A00EE850F /* CMHExample20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample20ViewController.m; sourceTree = "<group>"; };
+		E92A8F2220CE4E1F00EE850F /* CMHExampleCollectTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExampleCollectTest.h; sourceTree = "<group>"; };
+		E92A8F2320CE4E1F00EE850F /* CMHExampleCollectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExampleCollectTest.m; sourceTree = "<group>"; };
+		E92A8F2620CE4F7400EE850F /* CMHCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHCollectionViewCell.h; sourceTree = "<group>"; };
+		E92A8F2720CE4F7400EE850F /* CMHCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHCollectionViewCell.m; sourceTree = "<group>"; };
+		E92A8F2920CE4F9400EE850F /* CMHExampleCollectTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExampleCollectTestCell.h; sourceTree = "<group>"; };
+		E92A8F2A20CE4F9400EE850F /* CMHExampleCollectTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExampleCollectTestCell.m; sourceTree = "<group>"; };
+		E92A8F2D20CE6AA300EE850F /* CMHExample21ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample21ViewController.h; sourceTree = "<group>"; };
+		E92A8F2E20CE6AA300EE850F /* CMHExample21ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample21ViewController.m; sourceTree = "<group>"; };
+		E92A8F3120CE6D5E00EE850F /* CMHTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHTextField.h; sourceTree = "<group>"; };
+		E92A8F3220CE6D5E00EE850F /* CMHTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHTextField.m; sourceTree = "<group>"; };
+		E92A8F3420CE6EB900EE850F /* CMHSearchTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHSearchTitleView.h; sourceTree = "<group>"; };
+		E92A8F3520CE6EB900EE850F /* CMHSearchTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHSearchTitleView.m; sourceTree = "<group>"; };
+		E92A8F3720CE72E100EE850F /* CMHSearchHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHSearchHistoryCell.m; sourceTree = "<group>"; };
+		E92A8F3820CE72E200EE850F /* CMHSearchHistoryHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHSearchHistoryHeaderView.m; sourceTree = "<group>"; };
+		E92A8F3920CE72E200EE850F /* CMHSearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHSearchHistoryCell.h; sourceTree = "<group>"; };
+		E92A8F3A20CE72E200EE850F /* CMHSearchHistoryHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHSearchHistoryHeaderView.h; sourceTree = "<group>"; };
+		E92A8F3E20CE888600EE850F /* CMHExample22ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample22ViewController.h; sourceTree = "<group>"; };
+		E92A8F3F20CE888600EE850F /* CMHExample22ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample22ViewController.m; sourceTree = "<group>"; };
+		E92A8F4320CE8A0C00EE850F /* CMHWaterfall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWaterfall.h; sourceTree = "<group>"; };
+		E92A8F4420CE8A0C00EE850F /* CMHWaterfall.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHWaterfall.m; sourceTree = "<group>"; };
+		E92A8F4620CE8A3300EE850F /* CMHWaterfallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWaterfallCell.h; sourceTree = "<group>"; };
+		E92A8F4720CE8A3300EE850F /* CMHWaterfallCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHWaterfallCell.m; sourceTree = "<group>"; };
 		E92AB22F20C512480067D0B6 /* CMHExample01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample01ViewController.h; sourceTree = "<group>"; };
 		E92AB23020C512480067D0B6 /* CMHExample01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample01ViewController.m; sourceTree = "<group>"; };
 		E92AB23420C5160D0067D0B6 /* CMHExample02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample02ViewController.h; sourceTree = "<group>"; };
@@ -2337,6 +2439,70 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E9263E7620CEBD1C003C8C69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9263E7720CEBD4F003C8C69 /* CMHWaterfallDetailViewController.h */,
+				E9263E7820CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9263E7A20CEC0B0003C8C69 /* Example23 */ = {
+			isa = PBXGroup;
+			children = (
+				E929642120CF56F40048CDFF /* Controller */,
+				E929641F20CF56F40048CDFF /* Model */,
+				E929642020CF56F40048CDFF /* View */,
+				E9263E7B20CEC0CE003C8C69 /* CMHExample23ViewController.h */,
+				E9263E7C20CEC0CE003C8C69 /* CMHExample23ViewController.m */,
+			);
+			path = Example23;
+			sourceTree = "<group>";
+		};
+		E9263E7E20CEC22B003C8C69 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				E9263E7F20CEC245003C8C69 /* XLCardSwitch */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		E9263E7F20CEC245003C8C69 /* XLCardSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				E9263E8220CEC245003C8C69 /* XLCard.h */,
+				E9263E8720CEC245003C8C69 /* XLCard.m */,
+				E9263E8420CEC245003C8C69 /* XLCardItem.h */,
+				E9263E8020CEC245003C8C69 /* XLCardItem.m */,
+				E9263E8520CEC245003C8C69 /* XLCardSwitch.h */,
+				E9263E8120CEC245003C8C69 /* XLCardSwitch.m */,
+				E9263E8320CEC245003C8C69 /* XLCardSwitchFlowLayout.h */,
+				E9263E8620CEC245003C8C69 /* XLCardSwitchFlowLayout.m */,
+			);
+			path = XLCardSwitch;
+			sourceTree = "<group>";
+		};
+		E927C14C20CB58530093E144 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E927C14D20CB585F0093E144 /* CMHOperationToolBar.h */,
+				E927C15020CB58600093E144 /* CMHOperationToolBar.m */,
+				E927C14E20CB585F0093E144 /* CMHOperationToolBarItem.h */,
+				E927C14F20CB58600093E144 /* CMHOperationToolBarItem.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E927C15320CBEE820093E144 /* Example15 */ = {
+			isa = PBXGroup;
+			children = (
+				E927C15420CBEE970093E144 /* CMHExample15ViewController.h */,
+				E927C15520CBEE970093E144 /* CMHExample15ViewController.m */,
+			);
+			path = Example15;
+			sourceTree = "<group>";
+		};
 		E92857CA20B4FA7600A5DF9A /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -2361,6 +2527,222 @@
 				E951601C20C28263007224DA /* CMHExampleCell.m */,
 				E92AB24920C54E560067D0B6 /* CMHProfileButton.h */,
 				E92AB24A20C54E560067D0B6 /* CMHProfileButton.m */,
+				E92A8F3120CE6D5E00EE850F /* CMHTextField.h */,
+				E92A8F3220CE6D5E00EE850F /* CMHTextField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E929641F20CF56F40048CDFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E929642220CF57380048CDFF /* CMHCard.h */,
+				E929642320CF57380048CDFF /* CMHCard.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E929642020CF56F40048CDFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E929642520CF58040048CDFF /* CMHCardCell.h */,
+				E929642620CF58040048CDFF /* CMHCardCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E929642120CF56F40048CDFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E929D83B20CA53D2001F833E /* Example10 */ = {
+			isa = PBXGroup;
+			children = (
+				E929D83C20CA53EA001F833E /* CMHExample10ViewController.h */,
+				E929D83D20CA53EA001F833E /* CMHExample10ViewController.m */,
+			);
+			path = Example10;
+			sourceTree = "<group>";
+		};
+		E929D83F20CA5485001F833E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E929D84420CA54FB001F833E /* Model */,
+				E929D84020CA5485001F833E /* View */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E929D84020CA5485001F833E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E929D84120CA54B3001F833E /* CMHExampleTableTestCell.h */,
+				E929D84220CA54B3001F833E /* CMHExampleTableTestCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E929D84420CA54FB001F833E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E929D84520CA550B001F833E /* CMHExampleTableTest.h */,
+				E929D84620CA550B001F833E /* CMHExampleTableTest.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E929D84820CA597E001F833E /* Example06 */ = {
+			isa = PBXGroup;
+			children = (
+				E929D84920CA59DC001F833E /* CMHExample06ViewController.h */,
+				E929D84A20CA59DC001F833E /* CMHExample06ViewController.m */,
+			);
+			path = Example06;
+			sourceTree = "<group>";
+		};
+		E929D84C20CA6B1B001F833E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E929D84E20CA6BBB001F833E /* YYCache+CMHHelper.h */,
+				E929D84F20CA6BBB001F833E /* YYCache+CMHHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E929D85120CA8731001F833E /* Example11 */ = {
+			isa = PBXGroup;
+			children = (
+				E929D85220CA8753001F833E /* CMHExample11ViewController.h */,
+				E929D85320CA8753001F833E /* CMHExample11ViewController.m */,
+			);
+			path = Example11;
+			sourceTree = "<group>";
+		};
+		E929D85520CA887C001F833E /* Example12 */ = {
+			isa = PBXGroup;
+			children = (
+				E929D85620CA8897001F833E /* CMHExample12ViewController.h */,
+				E929D85720CA8897001F833E /* CMHExample12ViewController.m */,
+			);
+			path = Example12;
+			sourceTree = "<group>";
+		};
+		E929D85920CA8F28001F833E /* Example13 */ = {
+			isa = PBXGroup;
+			children = (
+				E927C14C20CB58530093E144 /* View */,
+				E929D85A20CA8F64001F833E /* CMHExample13ViewController.h */,
+				E929D85B20CA8F64001F833E /* CMHExample13ViewController.m */,
+			);
+			path = Example13;
+			sourceTree = "<group>";
+		};
+		E929D85D20CAA1A5001F833E /* Example14 */ = {
+			isa = PBXGroup;
+			children = (
+				E929D85E20CAA1EC001F833E /* CMHExample14ViewController.h */,
+				E929D85F20CAA1EC001F833E /* CMHExample14ViewController.m */,
+			);
+			path = Example14;
+			sourceTree = "<group>";
+		};
+		E92A8F1120CE07EE00EE850F /* Example16 */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F1220CE081800EE850F /* CMHExample16ViewController.h */,
+				E92A8F1320CE081800EE850F /* CMHExample16ViewController.m */,
+			);
+			path = Example16;
+			sourceTree = "<group>";
+		};
+		E92A8F1820CE2F6300EE850F /* Example20 */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F1920CE308A00EE850F /* CMHExample20ViewController.h */,
+				E92A8F1A20CE308A00EE850F /* CMHExample20ViewController.m */,
+			);
+			path = Example20;
+			sourceTree = "<group>";
+		};
+		E92A8F1F20CE4CD500EE850F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F2520CE4F5700EE850F /* View */,
+				E92A8F2020CE4DB900EE850F /* Model */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E92A8F2020CE4DB900EE850F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F2220CE4E1F00EE850F /* CMHExampleCollectTest.h */,
+				E92A8F2320CE4E1F00EE850F /* CMHExampleCollectTest.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E92A8F2520CE4F5700EE850F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F2920CE4F9400EE850F /* CMHExampleCollectTestCell.h */,
+				E92A8F2A20CE4F9400EE850F /* CMHExampleCollectTestCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E92A8F2C20CE6A8D00EE850F /* Example21 */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F3020CE6C9600EE850F /* View */,
+				E92A8F2D20CE6AA300EE850F /* CMHExample21ViewController.h */,
+				E92A8F2E20CE6AA300EE850F /* CMHExample21ViewController.m */,
+			);
+			path = Example21;
+			sourceTree = "<group>";
+		};
+		E92A8F3020CE6C9600EE850F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F3920CE72E200EE850F /* CMHSearchHistoryCell.h */,
+				E92A8F3720CE72E100EE850F /* CMHSearchHistoryCell.m */,
+				E92A8F3A20CE72E200EE850F /* CMHSearchHistoryHeaderView.h */,
+				E92A8F3820CE72E200EE850F /* CMHSearchHistoryHeaderView.m */,
+				E92A8F3420CE6EB900EE850F /* CMHSearchTitleView.h */,
+				E92A8F3520CE6EB900EE850F /* CMHSearchTitleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E92A8F3D20CE848F00EE850F /* Example22 */ = {
+			isa = PBXGroup;
+			children = (
+				E9263E7620CEBD1C003C8C69 /* Controller */,
+				E92A8F4120CE898100EE850F /* Model */,
+				E92A8F4220CE898100EE850F /* View */,
+				E92A8F3E20CE888600EE850F /* CMHExample22ViewController.h */,
+				E92A8F3F20CE888600EE850F /* CMHExample22ViewController.m */,
+			);
+			path = Example22;
+			sourceTree = "<group>";
+		};
+		E92A8F4120CE898100EE850F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F4320CE8A0C00EE850F /* CMHWaterfall.h */,
+				E92A8F4420CE8A0C00EE850F /* CMHWaterfall.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E92A8F4220CE898100EE850F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E92A8F4620CE8A3300EE850F /* CMHWaterfallCell.h */,
+				E92A8F4720CE8A3300EE850F /* CMHWaterfallCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2432,6 +2814,7 @@
 		E92CC2DB20B3EE96003938F7 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				E9263E7E20CEC22B003C8C69 /* Vendor */,
 				E92AB25320C6447A0067D0B6 /* Resource */,
 				E932AAD520B68DAE00C99B3C /* Profile */,
 				E932AAD320B68D7D00C99B3C /* Discover */,
@@ -2500,6 +2883,7 @@
 		E932AABB20B65EB300C99B3C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E929D84C20CA6B1B001F833E /* Helper */,
 				E943E45520C4D87C00AFC4A9 /* Protocol */,
 				E932AABC20B65ED000C99B3C /* Category */,
 				E932AABD20B65ED000C99B3C /* Util */,
@@ -2564,6 +2948,7 @@
 		E932AACF20B68D3C00C99B3C /* MainFrame */ = {
 			isa = PBXGroup;
 			children = (
+				E929D84820CA597E001F833E /* Example06 */,
 				E92F2FC120C794B5002070C3 /* Example05 */,
 				E92AB23B20C541B20067D0B6 /* Example04 */,
 				E92AB23720C5188F0067D0B6 /* Example03 */,
@@ -2587,7 +2972,15 @@
 		E932AAD120B68D5B00C99B3C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				E92A8F1120CE07EE00EE850F /* Example16 */,
+				E927C15320CBEE820093E144 /* Example15 */,
+				E929D85D20CAA1A5001F833E /* Example14 */,
+				E929D85920CA8F28001F833E /* Example13 */,
+				E929D85520CA887C001F833E /* Example12 */,
+				E929D85120CA8731001F833E /* Example11 */,
+				E929D83B20CA53D2001F833E /* Example10 */,
 				E932AAD220B68D5B00C99B3C /* Contacts */,
+				E929D83F20CA5485001F833E /* Other */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -2604,7 +2997,12 @@
 		E932AAD320B68D7D00C99B3C /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				E9263E7A20CEC0B0003C8C69 /* Example23 */,
+				E92A8F3D20CE848F00EE850F /* Example22 */,
+				E92A8F2C20CE6A8D00EE850F /* Example21 */,
+				E92A8F1820CE2F6300EE850F /* Example20 */,
 				E932AAD420B68D7D00C99B3C /* Discover */,
+				E92A8F1F20CE4CD500EE850F /* Other */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -2662,6 +3060,8 @@
 				E951600A20C2807C007224DA /* CMHTabBarController.m */,
 				E951600B20C2807C007224DA /* CMHTableViewController.h */,
 				E951600720C2807C007224DA /* CMHTableViewController.m */,
+				E92A8F1520CE1EF500EE850F /* CMHCollectionViewController.h */,
+				E92A8F1620CE1EF500EE850F /* CMHCollectionViewController.m */,
 				E92DFDB120C8EAF500823A4F /* CMHWebViewController.h */,
 				E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */,
 				E951600820C2807C007224DA /* CMHViewController.h */,
@@ -2686,6 +3086,8 @@
 				E951601620C280A6007224DA /* CMHView.m */,
 				E951601820C280BA007224DA /* CMHTableViewCell.h */,
 				E951601920C280BA007224DA /* CMHTableViewCell.m */,
+				E92A8F2620CE4F7400EE850F /* CMHCollectionViewCell.h */,
+				E92A8F2720CE4F7400EE850F /* CMHCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2907,6 +3309,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
@@ -2923,6 +3326,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
@@ -2939,6 +3343,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
@@ -2955,6 +3360,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
@@ -2999,6 +3405,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleTests/Pods-MHDevelopExample-MHDevelopExampleTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
@@ -3015,6 +3422,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
@@ -3031,6 +3439,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
@@ -3047,6 +3456,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
@@ -3091,6 +3501,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleUITests/Pods-MHDevelopExample-MHDevelopExampleUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
+				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
@@ -3107,6 +3518,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
@@ -3123,6 +3535,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
@@ -3139,6 +3552,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
@@ -3174,12 +3588,15 @@
 				260C2E091EF13AAC00378885 /* SUViewModel1.m in Sources */,
 				260D8D851EED37CB00B47B3D /* SUGoodsImage.m in Sources */,
 				E92AB25220C551D70067D0B6 /* CMHPingInvertTransition.m in Sources */,
+				E92A8F4820CE8A3300EE850F /* CMHWaterfallCell.m in Sources */,
 				627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */,
 				261133671EF43923006AE109 /* SUWebViewController1.m in Sources */,
 				620877121E54B0B900183F81 /* MHYouKuCommentButton.m in Sources */,
 				6229907F1E4D504800E0890E /* MHTitleLeftButton.m in Sources */,
 				E951602420C2855D007224DA /* CMHExample.m in Sources */,
 				625B73BE1E4C598C006A8E86 /* NSDateFormatter+Extension.m in Sources */,
+				E92A8F1B20CE308A00EE850F /* CMHExample20ViewController.m in Sources */,
+				E92A8F2820CE4F7400EE850F /* CMHCollectionViewCell.m in Sources */,
 				2615ECD01EEE919900D6B473 /* TAPageControl.m in Sources */,
 				260FC4D71EF7849000390A8E /* SUGoodsViewModel2.m in Sources */,
 				627A955A1E496CF1004A1ED2 /* MHNavigationController.m in Sources */,
@@ -3189,6 +3606,7 @@
 				622E33461E553800001FB056 /* UIImage+MHBlur.m in Sources */,
 				2615ECD71EEE980300D6B473 /* UIScrollView+MHRefresh.m in Sources */,
 				627A95791E49AD30004A1ED2 /* UIBarButtonItem+MHExtension.m in Sources */,
+				E927C15220CB58600093E144 /* CMHOperationToolBar.m in Sources */,
 				622637651E4B08E1007F9360 /* NSObject+MHRandom.m in Sources */,
 				260E59601EF6CCA200C323CB /* SUViewModel2.m in Sources */,
 				E951601720C280A6007224DA /* CMHView.m in Sources */,
@@ -3198,14 +3616,17 @@
 				622E33731E5591F6001FB056 /* MHYouKuTopicController.m in Sources */,
 				E951601120C2807C007224DA /* CMHTabBarController.m in Sources */,
 				E932AAE220B68E1800C99B3C /* CMHMainFrameViewController.m in Sources */,
+				E927C15620CBEE970093E144 /* CMHExample15ViewController.m in Sources */,
 				622E33761E5595B5001FB056 /* MHYouKuInputPanelView.m in Sources */,
 				260FC4CF1EF783A300390A8E /* SUPublicViewModel2.m in Sources */,
 				E92AB23620C5160D0067D0B6 /* CMHExample02ViewController.m in Sources */,
 				E92AB23A20C518B50067D0B6 /* CMHExample03ViewController.m in Sources */,
+				E92A8F1720CE1EF500EE850F /* CMHCollectionViewController.m in Sources */,
 				622990851E4E2D4500E0890E /* MHOperationController.m in Sources */,
 				E92AB24B20C54E560067D0B6 /* CMHProfileButton.m in Sources */,
 				E951601A20C280BA007224DA /* CMHTableViewCell.m in Sources */,
 				2615ECB31EEE6ECE00D6B473 /* NSError+MHExtension.m in Sources */,
+				E929D84320CA54B3001F833E /* CMHExampleTableTestCell.m in Sources */,
 				260E2E6B1EEFBEAE00A0A50D /* SUGoodsFrame.m in Sources */,
 				260D8D861EED37CB00B47B3D /* SUGoodsCell.m in Sources */,
 				6229907C1E4D503800E0890E /* MHTitleRightButton.m in Sources */,
@@ -3213,19 +3634,28 @@
 				2615ECD31EEE919900D6B473 /* UIView+SDExtension.m in Sources */,
 				2615EC811EEE2E3000D6B473 /* SUBaseViewController.m in Sources */,
 				2611336A1EF43A26006AE109 /* SUWebViewModel1.m in Sources */,
+				E929D85820CA8897001F833E /* CMHExample12ViewController.m in Sources */,
 				627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */,
 				622637581E4AF259007F9360 /* UIFont+MHExtension.m in Sources */,
 				E92DFDBA20C907BD00823A4F /* CMHControllerHelper.m in Sources */,
 				260FE13A1EF3EEA100830B07 /* SUPublicController1.m in Sources */,
+				E92A8F2420CE4E1F00EE850F /* CMHExampleCollectTest.m in Sources */,
 				E932AADC20B68DF600C99B3C /* CMHDiscoverViewController.m in Sources */,
 				260FC4C51EF7829500390A8E /* SUPublicController2.m in Sources */,
 				260F3BDF1EEF011A00ACF0D5 /* SUModel.m in Sources */,
+				E9263E8A20CEC245003C8C69 /* XLCardSwitchFlowLayout.m in Sources */,
+				E929642420CF57380048CDFF /* CMHCard.m in Sources */,
 				E951601020C2807C007224DA /* CMHTableViewController.m in Sources */,
 				627A95611E4973D2004A1ED2 /* MHConstant.m in Sources */,
 				625B73B51E4C4BA6006A8E86 /* MHTopicTwoController.m in Sources */,
+				E929D86020CAA1EC001F833E /* CMHExample14ViewController.m in Sources */,
+				E929D85C20CA8F64001F833E /* CMHExample13ViewController.m in Sources */,
 				261BC8101EF22FEB003E41F9 /* SUConstant.m in Sources */,
+				E927C15120CB58600093E144 /* CMHOperationToolBarItem.m in Sources */,
+				E92A8F2B20CE4F9400EE850F /* CMHExampleCollectTestCell.m in Sources */,
 				E92F2FCE20C7D11E002070C3 /* CMHInteractiveTransition.m in Sources */,
 				2615EC9E1EEE4C1700D6B473 /* RegexKitLite.m in Sources */,
+				E929642720CF58040048CDFF /* CMHCardCell.m in Sources */,
 				6223CEE01E54096700993A91 /* MHTopicManager.m in Sources */,
 				E932AACE20B677BB00C99B3C /* CMHHomePageViewController.m in Sources */,
 				625B73B71E4C4BA6006A8E86 /* MHTopicCommentCell.m in Sources */,
@@ -3237,6 +3667,7 @@
 				260FC4C91EF7831200390A8E /* SUWebViewController2.m in Sources */,
 				2615ECA41EEE4C8700D6B473 /* NSString+MHValid.m in Sources */,
 				622637301E4AABF8007F9360 /* MHUser.m in Sources */,
+				E92A8F3320CE6D5E00EE850F /* CMHTextField.m in Sources */,
 				E951601D20C28263007224DA /* CMHExampleCell.m in Sources */,
 				261148E51F15416700758DAF /* YYKeychain.m in Sources */,
 				E932AAD920B68DCC00C99B3C /* CMHProfileViewController.m in Sources */,
@@ -3266,9 +3697,11 @@
 				2615ECD11EEE919900D6B473 /* SDCollectionViewCell.m in Sources */,
 				2615ECB81EEE75C000D6B473 /* SUGoodsController0.m in Sources */,
 				261BC8311EF29965003E41F9 /* SULoginViewModel2.m in Sources */,
+				E929D84B20CA59DC001F833E /* CMHExample06ViewController.m in Sources */,
 				261BC82D1EF2993F003E41F9 /* SULoginController2.m in Sources */,
 				622E335A1E554AC8001FB056 /* UIViewController+MHDismissKeyboard.m in Sources */,
 				627A955D1E496E1B004A1ED2 /* MHExample.m in Sources */,
+				E9263E8820CEC245003C8C69 /* XLCardItem.m in Sources */,
 				6226374E1E4AC61D007F9360 /* MHTopicHeaderView.m in Sources */,
 				E932AAC120B65F1000C99B3C /* UIScrollView+CMHRefresh.m in Sources */,
 				627A95911E49C91B004A1ED2 /* MHTopicLabel.m in Sources */,
@@ -3284,11 +3717,15 @@
 				260C2DF71EF11A9200378885 /* SUWebViewController0.m in Sources */,
 				E92DFDBE20C9089F00823A4F /* UIAlertController+MHColor.m in Sources */,
 				260E595F1EF6CCA200C323CB /* SUTableViewModel2.m in Sources */,
+				E92A8F3B20CE72E200EE850F /* CMHSearchHistoryCell.m in Sources */,
 				260FC4CC1EF7835600390A8E /* SUPublicWebController2.m in Sources */,
 				260D8D841EED37CB00B47B3D /* SUGoods.m in Sources */,
 				627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */,
 				260C2DFE1EF1315900378885 /* SULoginController1.m in Sources */,
 				E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */,
+				E929D85420CA8753001F833E /* CMHExample11ViewController.m in Sources */,
+				E9263E8B20CEC245003C8C69 /* XLCard.m in Sources */,
+				E929D84720CA550B001F833E /* CMHExampleTableTest.m in Sources */,
 				622637541E4AED10007F9360 /* MHDivider.m in Sources */,
 				622E33711E5591F6001FB056 /* MHYouKuCommentController.m in Sources */,
 				260D8D8A1EED37CB00B47B3D /* SUGoodsImageCell.m in Sources */,
@@ -3301,12 +3738,15 @@
 				260C2E0C1EF13F3600378885 /* SUTableViewModel1.m in Sources */,
 				E92AB24F20C551A40067D0B6 /* CMHPingTransition.m in Sources */,
 				261BC8231EF29685003E41F9 /* SUViewController2.m in Sources */,
+				E92A8F3C20CE72E200EE850F /* CMHSearchHistoryHeaderView.m in Sources */,
 				622E60471E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m in Sources */,
 				622E33481E553800001FB056 /* UIImage+MHExtension.m in Sources */,
 				627A95181E4968E0004A1ED2 /* main.m in Sources */,
 				623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */,
 				627A95841E49AE5B004A1ED2 /* UIView+MHFrame.m in Sources */,
 				6226372D1E4AAB50007F9360 /* MHTopic.m in Sources */,
+				E92A8F1420CE081800EE850F /* CMHExample16ViewController.m in Sources */,
+				E9263E8920CEC245003C8C69 /* XLCardSwitch.m in Sources */,
 				622BF5DE1E569E47004DFCA2 /* MHYouKuMediaSummary.m in Sources */,
 				261148DA1F1540CF00758DAF /* YYGestureRecognizer.m in Sources */,
 				2615EC991EEE36C900D6B473 /* SULoginController0.m in Sources */,
@@ -3318,17 +3758,23 @@
 				622BF5EA1E56E6A4004DFCA2 /* MHYouKuAnthologyHeaderView.m in Sources */,
 				6226373C1E4AB8D4007F9360 /* MHTopicOneController.m in Sources */,
 				622637391E4AAD96007F9360 /* MHCommentFrame.m in Sources */,
+				E9263E7D20CEC0CE003C8C69 /* CMHExample23ViewController.m in Sources */,
+				E92A8F4020CE888600EE850F /* CMHExample22ViewController.m in Sources */,
 				620B4C031E4A2A5A00266A72 /* ViewPagerController.m in Sources */,
 				622990761E4D4D5100E0890E /* MHSelectsController.m in Sources */,
 				6208770F1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m in Sources */,
 				260FE12D1EF3EBDC00830B07 /* SUPublicWebController0.m in Sources */,
 				E92AB23E20C541C40067D0B6 /* CMHExample04ViewController.m in Sources */,
 				622BF5E11E569EC3004DFCA2 /* MHYouKuMediaDetail.m in Sources */,
+				E92A8F2F20CE6AA300EE850F /* CMHExample21ViewController.m in Sources */,
 				627A957C1E49AE00004A1ED2 /* MHBackButton.m in Sources */,
 				260FE1401EF3EEEE00830B07 /* SUPublicViewModel1.m in Sources */,
 				260FC4C11EF7812900390A8E /* SUWebViewModel2.m in Sources */,
 				2615ECD21EEE919900D6B473 /* SDCycleScrollView.m in Sources */,
+				E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */,
+				E92A8F4520CE8A0C00EE850F /* CMHWaterfall.m in Sources */,
 				261133701EF43C60006AE109 /* SUPublicWebController1.m in Sources */,
+				E929D85020CA6BBB001F833E /* YYCache+CMHHelper.m in Sources */,
 				E951602020C284DB007224DA /* CMHObject.m in Sources */,
 				6229906F1E4D4CC500E0890E /* MHDeleteController.m in Sources */,
 				261148E61F15416700758DAF /* YYReachability.m in Sources */,
@@ -3336,10 +3782,12 @@
 				622BF5F31E56F45D004DFCA2 /* MHYouKuCommentHeaderView.m in Sources */,
 				260D68CC1F1C89DF0045B232 /* Foundation+Log.m in Sources */,
 				2615EC8C1EEE30D500D6B473 /* SUTableViewController0.m in Sources */,
+				E929D83E20CA53EA001F833E /* CMHExample10ViewController.m in Sources */,
 				261148DF1F15413000758DAF /* YYThreadSafeArray.m in Sources */,
 				620877151E54B33C00183F81 /* MHAccount.m in Sources */,
 				260C2E041EF1363B00378885 /* SULoginViewModel1.m in Sources */,
 				260FE1141EF389B300830B07 /* SUGoodsViewModel1.m in Sources */,
+				E92A8F3620CE6EB900EE850F /* CMHSearchTitleView.m in Sources */,
 				622BF5DB1E569130004DFCA2 /* MHYouKuMedia.m in Sources */,
 				260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */,
 				E932AAB720B64B1D00C99B3C /* CMHRefreshFooter.m in Sources */,
@@ -3412,6 +3860,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3465,6 +3914,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -3491,6 +3941,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEVELOPMENT_TEAM = 9M4756J7A7;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3514,6 +3965,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEVELOPMENT_TEAM = 9M4756J7A7;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
