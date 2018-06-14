@@ -10,8 +10,9 @@
 #define CMHMacros_h
 
 
-/// 1 -- 进入MVC设计模式        0 -- 进入开发Demo
-#define CMHDEBUG 0
+/// 1 -- 进入基于MVC设计模式的基类设计
+/// 0 -- 进入常用的开发Demo
+#define CMHDEBUG 1
 
 
 

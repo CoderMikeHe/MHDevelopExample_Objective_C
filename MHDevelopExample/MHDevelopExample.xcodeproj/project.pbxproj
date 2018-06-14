@@ -255,6 +255,10 @@
 		E932AADC20B68DF600C99B3C /* CMHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AADB20B68DF500C99B3C /* CMHDiscoverViewController.m */; };
 		E932AADF20B68E0600C99B3C /* CMHContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AADE20B68E0600C99B3C /* CMHContactsViewController.m */; };
 		E932AAE220B68E1800C99B3C /* CMHMainFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E932AAE120B68E1800C99B3C /* CMHMainFrameViewController.m */; };
+		E933662720D0F75F00B6F51F /* MHEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662520D0F75E00B6F51F /* MHEXTRuntimeExtensions.m */; };
+		E933662820D0F75F00B6F51F /* MHReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662620D0F75F00B6F51F /* MHReflection.m */; };
+		E933662B20D0F86700B6F51F /* NSError+MHModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662A20D0F86700B6F51F /* NSError+MHModelException.m */; };
+		E933662F20D12DD200B6F51F /* CMHExample07ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662E20D12DD200B6F51F /* CMHExample07ViewController.m */; };
 		E943E45B20C4F29700AFC4A9 /* CMHExample00ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E943E45A20C4F29700AFC4A9 /* CMHExample00ViewController.m */; };
 		E951601020C2807C007224DA /* CMHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600720C2807C007224DA /* CMHTableViewController.m */; };
 		E951601120C2807C007224DA /* CMHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600A20C2807C007224DA /* CMHTabBarController.m */; };
@@ -762,6 +766,14 @@
 		E932AAE020B68E1800C99B3C /* CMHMainFrameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHMainFrameViewController.h; sourceTree = "<group>"; };
 		E932AAE120B68E1800C99B3C /* CMHMainFrameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHMainFrameViewController.m; sourceTree = "<group>"; };
 		E932AAE320B68EC600C99B3C /* CMHConstEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstEnum.h; sourceTree = "<group>"; };
+		E933662320D0F75E00B6F51F /* MHReflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHReflection.h; sourceTree = "<group>"; };
+		E933662420D0F75E00B6F51F /* MHEXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHEXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		E933662520D0F75E00B6F51F /* MHEXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHEXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		E933662620D0F75F00B6F51F /* MHReflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHReflection.m; sourceTree = "<group>"; };
+		E933662920D0F86600B6F51F /* NSError+MHModelException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MHModelException.h"; sourceTree = "<group>"; };
+		E933662A20D0F86700B6F51F /* NSError+MHModelException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MHModelException.m"; sourceTree = "<group>"; };
+		E933662D20D12DD200B6F51F /* CMHExample07ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample07ViewController.h; sourceTree = "<group>"; };
+		E933662E20D12DD200B6F51F /* CMHExample07ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample07ViewController.m; sourceTree = "<group>"; };
 		E943E45620C4D90B00AFC4A9 /* CMHConfigureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConfigureView.h; sourceTree = "<group>"; };
 		E943E45720C4D92800AFC4A9 /* CMHConfigureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConfigureCell.h; sourceTree = "<group>"; };
 		E943E45920C4F29700AFC4A9 /* CMHExample00ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample00ViewController.h; sourceTree = "<group>"; };
@@ -2814,13 +2826,13 @@
 		E92CC2DB20B3EE96003938F7 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				E932AACA20B6779400C99B3C /* HomePage */,
+				E932AACF20B68D3C00C99B3C /* MainFrame */,
+				E932AAD120B68D5B00C99B3C /* Contacts */,
+				E932AAD320B68D7D00C99B3C /* Discover */,
+				E932AAD520B68DAE00C99B3C /* Profile */,
 				E9263E7E20CEC22B003C8C69 /* Vendor */,
 				E92AB25320C6447A0067D0B6 /* Resource */,
-				E932AAD520B68DAE00C99B3C /* Profile */,
-				E932AAD320B68D7D00C99B3C /* Discover */,
-				E932AAD120B68D5B00C99B3C /* Contacts */,
-				E932AACF20B68D3C00C99B3C /* MainFrame */,
-				E932AACA20B6779400C99B3C /* HomePage */,
 				E932AAC220B6605D00C99B3C /* Macros */,
 				E932AABB20B65EB300C99B3C /* Utils */,
 				E92857CA20B4FA7600A5DF9A /* Other */,
@@ -2948,6 +2960,7 @@
 		E932AACF20B68D3C00C99B3C /* MainFrame */ = {
 			isa = PBXGroup;
 			children = (
+				E933662C20D12DBD00B6F51F /* Example07 */,
 				E929D84820CA597E001F833E /* Example06 */,
 				E92F2FC120C794B5002070C3 /* Example05 */,
 				E92AB23B20C541B20067D0B6 /* Example04 */,
@@ -3033,6 +3046,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		E933662C20D12DBD00B6F51F /* Example07 */ = {
+			isa = PBXGroup;
+			children = (
+				E933662D20D12DD200B6F51F /* CMHExample07ViewController.h */,
+				E933662E20D12DD200B6F51F /* CMHExample07ViewController.m */,
+			);
+			path = Example07;
+			sourceTree = "<group>";
+		};
 		E943E45520C4D87C00AFC4A9 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -3054,18 +3076,18 @@
 		E951600620C2807C007224DA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E951600920C2807C007224DA /* CMHNavigationController.h */,
-				E951600C20C2807C007224DA /* CMHNavigationController.m */,
-				E951600E20C2807C007224DA /* CMHTabBarController.h */,
-				E951600A20C2807C007224DA /* CMHTabBarController.m */,
+				E951600820C2807C007224DA /* CMHViewController.h */,
+				E951600D20C2807C007224DA /* CMHViewController.m */,
 				E951600B20C2807C007224DA /* CMHTableViewController.h */,
 				E951600720C2807C007224DA /* CMHTableViewController.m */,
 				E92A8F1520CE1EF500EE850F /* CMHCollectionViewController.h */,
 				E92A8F1620CE1EF500EE850F /* CMHCollectionViewController.m */,
 				E92DFDB120C8EAF500823A4F /* CMHWebViewController.h */,
 				E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */,
-				E951600820C2807C007224DA /* CMHViewController.h */,
-				E951600D20C2807C007224DA /* CMHViewController.m */,
+				E951600920C2807C007224DA /* CMHNavigationController.h */,
+				E951600C20C2807C007224DA /* CMHNavigationController.m */,
+				E951600E20C2807C007224DA /* CMHTabBarController.h */,
+				E951600A20C2807C007224DA /* CMHTabBarController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3075,6 +3097,12 @@
 			children = (
 				E951601E20C284DB007224DA /* CMHObject.h */,
 				E951601F20C284DB007224DA /* CMHObject.m */,
+				E933662420D0F75E00B6F51F /* MHEXTRuntimeExtensions.h */,
+				E933662520D0F75E00B6F51F /* MHEXTRuntimeExtensions.m */,
+				E933662320D0F75E00B6F51F /* MHReflection.h */,
+				E933662620D0F75F00B6F51F /* MHReflection.m */,
+				E933662920D0F86600B6F51F /* NSError+MHModelException.h */,
+				E933662A20D0F86700B6F51F /* NSError+MHModelException.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3671,6 +3699,7 @@
 				E951601D20C28263007224DA /* CMHExampleCell.m in Sources */,
 				261148E51F15416700758DAF /* YYKeychain.m in Sources */,
 				E932AAD920B68DCC00C99B3C /* CMHProfileViewController.m in Sources */,
+				E933662720D0F75F00B6F51F /* MHEXTRuntimeExtensions.m in Sources */,
 				6226374D1E4AC61D007F9360 /* MHTopicFooterView.m in Sources */,
 				261309511E97801F0095BE0E /* RACBasicUseController.m in Sources */,
 				E92DFDB320C8EAF500823A4F /* CMHWebViewController.m in Sources */,
@@ -3745,6 +3774,7 @@
 				623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */,
 				627A95841E49AE5B004A1ED2 /* UIView+MHFrame.m in Sources */,
 				6226372D1E4AAB50007F9360 /* MHTopic.m in Sources */,
+				E933662820D0F75F00B6F51F /* MHReflection.m in Sources */,
 				E92A8F1420CE081800EE850F /* CMHExample16ViewController.m in Sources */,
 				E9263E8920CEC245003C8C69 /* XLCardSwitch.m in Sources */,
 				622BF5DE1E569E47004DFCA2 /* MHYouKuMediaSummary.m in Sources */,
@@ -3772,6 +3802,7 @@
 				260FC4C11EF7812900390A8E /* SUWebViewModel2.m in Sources */,
 				2615ECD21EEE919900D6B473 /* SDCycleScrollView.m in Sources */,
 				E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */,
+				E933662B20D0F86700B6F51F /* NSError+MHModelException.m in Sources */,
 				E92A8F4520CE8A0C00EE850F /* CMHWaterfall.m in Sources */,
 				261133701EF43C60006AE109 /* SUPublicWebController1.m in Sources */,
 				E929D85020CA6BBB001F833E /* YYCache+CMHHelper.m in Sources */,
@@ -3791,6 +3822,7 @@
 				622BF5DB1E569130004DFCA2 /* MHYouKuMedia.m in Sources */,
 				260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */,
 				E932AAB720B64B1D00C99B3C /* CMHRefreshFooter.m in Sources */,
+				E933662F20D12DD200B6F51F /* CMHExample07ViewController.m in Sources */,
 				620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */,
 				E951601320C2807C007224DA /* CMHViewController.m in Sources */,
 				6223CEE81E5423B300993A91 /* MHCommentReply.m in Sources */,

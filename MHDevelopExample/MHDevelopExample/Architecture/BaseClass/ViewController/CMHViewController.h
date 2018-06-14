@@ -39,7 +39,6 @@ FOUNDATION_EXTERN NSString *const CMHViewControllerRequestKey;
 /// Returns a local data.
 - (id)fetchLocalData;
 
-
 /// ------------ Property ------------
 /// The `params` parameter in `-initWithParams:` method.
 /// The `params` Key's `CMHViewControllerIDKey`
@@ -49,9 +48,8 @@ FOUNDATION_EXTERN NSString *const CMHViewControllerRequestKey;
 @property (nonatomic, readwrite, copy) void (^callback)(id);
 
 /** should request data when viewController videwDidLoad . default is YES*/
-/** 是否需要在控制器viewDidLoad */
+/** 是否需要在控制器viewDidLoad后调用`requestRemoteData` default is YES*/
 @property (nonatomic, readwrite, assign) BOOL shouldRequestRemoteDataOnViewDidLoad;
-
 
 /// FDFullscreenPopGesture
 /// Whether the interactive pop gesture is disabled when contained in a navigation

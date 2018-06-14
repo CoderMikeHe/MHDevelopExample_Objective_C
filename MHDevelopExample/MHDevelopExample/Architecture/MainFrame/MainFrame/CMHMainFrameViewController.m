@@ -34,13 +34,20 @@
 #import "CMHInteractiveTransition.h"
 /// 基类提供的方法
 #import "CMHExample06ViewController.h"
-
+/// 测试回调
+#import "CMHExample07ViewController.h"
 @interface CMHMainFrameViewController ()<UINavigationControllerDelegate,UIViewControllerTransitioningDelegate>
 /// 个人中心按钮
 @property (nonatomic , readwrite , strong) CMHProfileButton *profileBtn;
 
 /// 侧滑Dismiss
 @property (nonatomic , readwrite , strong) CMHInteractiveTransition *interactiveDissmiss;
+
+
+/// 你的名字
+@property (nonatomic , readwrite , copy) NSString *name;
+
+
 @end
 
 @implementation CMHMainFrameViewController
@@ -112,6 +119,24 @@
     example06.destClass = [CMHExample06ViewController class];
     [self.dataSource addObject:example06];
     
+    
+    CMHExample *example07 = [[CMHExample alloc] initWithTitle:@"07：反向回调数据" subtitle:@"void (^callback)(id);"];
+    example07.operation = ^{
+        @strongify(self);
+        NSDictionary *param = MHStringIsNotEmpty(self.name)?@{CMHViewControllerUtilKey:self.name}:nil;
+        CMHExample07ViewController *vc = [[CMHExample07ViewController alloc] initWithParams:param];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        /// 设置回调
+        @weakify(self);
+        vc.callback = ^(NSString *name) {
+            @strongify(self);
+            self.name = name;
+            [MBProgressHUD mh_showTips:[NSString stringWithFormat:@"你的名字叫 -- %@",name] addedToView:self.view];
+        };
+        
+    };
+    [self.dataSource addObject:example07];
     
     /// 刷洗数据
 //    [self.tableView reloadData]; /// 等效下面的方法

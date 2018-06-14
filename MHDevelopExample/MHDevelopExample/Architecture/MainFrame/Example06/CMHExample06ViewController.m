@@ -62,7 +62,7 @@
     [self fetchLocalData];
     
     
-    /// 如果self.shouldRequestRemoteDataOnViewDidLoad = NO;我们需要手动调用requestRemoteData
+    /// 如果self.shouldRequestRemoteDataOnViewDidLoad = NO;我们可以手动调用requestRemoteData，具体看场景咯
     /// [self requestRemoteData];
     
 }

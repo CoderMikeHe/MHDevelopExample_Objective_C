@@ -6,6 +6,13 @@
 - 抛砖引玉，取长补短，希望能够提供一点思路，避免少走一些弯路。
 
 ### 使用
+- **特别说明：**使用前可以全局搜索 `CMHDEBUG` 字段，找到该字段的宏定义。可以修改其值，来获取自己想看的业务场景。具体场景说明如下：
+
+	```
+	/// 1 -- 进入基于MVC设计模式的基类设计
+	/// 0 -- 进入常用的开发Demo
+	#define CMHDEBUG 1
+	```
 - [Cocoapods安装教程](https://www.cnblogs.com/chuancheng/p/8443677.html) 
 - 本`Demo`利用`Cocoapods`管理第三方框架，若第一次使用本项目，请使用终端`cd`到如下图所示的文件夹，执行`pod install`命令即可。
 
@@ -21,7 +28,7 @@
 	$ sudo gem update --system
 	$ sudo gem install cocoapods -n/usr/local/bin
 	```
-- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/14T1x-1890qUM9rRawxw1QA  密码:zcoj <PS：不定期更新！！！>
+- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1grKJVITsm1D65MgjRk7d1g  密码:7xg2 <PS：不定期更新！！！>
 
 ### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。
