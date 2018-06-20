@@ -32,7 +32,6 @@
 /// 是否在上拉加载后的数据,dataSource.count < pageSize 提示没有更多的数据.default is YES 否则 隐藏mi_footer 。 前提是` shouldMultiSections = NO `才有效。
 @property (nonatomic, readwrite, assign) BOOL shouldEndRefreshingWithNoMoreData;
 
-
 /// 是否数据是多段 (It's effect tableView's dataSource 'numberOfSectionsInTableView:') defalut is NO，但是不能跟组头组尾相关联
 @property (nonatomic, readwrite, assign) BOOL shouldMultiSections;
 
@@ -61,5 +60,9 @@
 ///param isHeader   是否结束下拉加载(或者上拉加载)
 ///param reload     是否需要重载TabeleView
 - (void)tableViewDidFinishTriggerHeader:(BOOL)isHeader reload:(BOOL)reload;
+
+
+/// --------------- 2018-06-19 新增API --------------
+
 
 @end

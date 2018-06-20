@@ -133,6 +133,7 @@
 
 /// 结束刷新
 - (void)tableViewDidFinishTriggerHeader:(BOOL)isHeader reload:(BOOL)reload{
+    
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -143,12 +144,14 @@
         if (isHeader) {
             /// 重置没有更多的状态
             if (self.shouldEndRefreshingWithNoMoreData){
+                
                 [self.tableView.mj_footer setHidden:NO];
                 [self.tableView.mj_footer resetNoMoreData];
+                
             }else{
+                
                 [self.tableView.mj_footer setHidden:NO];
             }
-            
             [strongSelf.tableView.mj_header endRefreshing];
         }
         else{
@@ -163,9 +166,12 @@
 
 #pragma mark - 辅助方法
 - (void)_requestDataCompleted{
-    NSUInteger count = self.dataSource.count;
+    
     /// CoderMikeHe Fixed: 这里必须要等到，底部控件结束刷新后，再来设置无更多数据，否则被叠加无效
-    if (self.shouldMultiSections) return;  // 多组的不处理
+    /// 多组的不处理
+    if (self.shouldMultiSections) return;
+    
+    NSUInteger count = self.dataSource.count;
     
     if (count == 0 || count % self.perPage) {
         
@@ -174,9 +180,9 @@
         }else{
             self.tableView.mj_footer.hidden = YES;
         }
+        
     }
 }
-
 
 #pragma mark - Override
 - (UIEdgeInsets)contentInset{

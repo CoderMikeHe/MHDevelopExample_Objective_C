@@ -16,6 +16,7 @@
 #import "CMHExample14ViewController.h"
 #import "CMHExample15ViewController.h"
 #import "CMHExample16ViewController.h"
+#import "CMHExample17ViewController.h"
 @interface CMHContactsViewController ()
 
 @end
@@ -74,6 +75,9 @@
     example16.destClass = [CMHExample16ViewController class];
     [self.dataSource addObject:example16];
     
+    CMHExample *example17 = [[CMHExample alloc] initWithTitle:@"17：测试数据源为空显示占位视图" subtitle:@"详情请看`EmptyView`文件夹的内容"];
+    example17.destClass = [CMHExample17ViewController class];
+    [self.dataSource addObject:example17];
     
     /// 刷洗数据
     //    [self.tableView reloadData]; /// 等效下面的方法
