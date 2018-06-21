@@ -76,7 +76,7 @@
         
         NSString *urlStr = [NSObject mh_randomNumber:0 to:1] > 0 ? @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4212173360,2979120788&fm=27&gp=0.jpg" :@"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=146409975,692268348&fm=27&gp=0.jpg";
         
-        [self.remoteView yy_setImageWithURL:[NSURL URLWithString:urlStr] placeholder:MHImageNamed(@"placeholder_image") options:MHWebImageOptionAutomatic completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        [self.remoteView yy_setImageWithURL:[NSURL URLWithString:urlStr] placeholder:MHImageNamed(@"placeholder_image") options:CMHWebImageOptionAutomatic completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
             /// 将图片存在本地
             [[YYCache sharedCache] setObject:image forKey:CMHExample06RemoteImageCacheKey withBlock:^{
                 NSLog(@"+++++ 图片保存到本地 +++++");

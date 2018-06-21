@@ -57,7 +57,7 @@
     [self.view addSubview:imageView];
     self.imageView = imageView;
     
-    [self.imageView yy_setImageWithURL:[NSURL URLWithString:self.waterfall.imageUrl] placeholder:MHImageNamed(@"placeholder_image") options:MHWebImageOptionAutomatic completion:NULL];
+    [self.imageView yy_setImageWithURL:[NSURL URLWithString:self.waterfall.imageUrl] placeholder:MHImageNamed(@"placeholder_image") options:CMHWebImageOptionAutomatic completion:NULL];
 }
 
 #pragma mark - 布局子控件

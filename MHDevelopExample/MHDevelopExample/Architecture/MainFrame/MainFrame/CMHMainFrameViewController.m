@@ -247,7 +247,7 @@
         /// 这里不能用系统的UIButton，否则我们即使设置了按钮的固定大小，到时候展示网络图片的时候，按钮大小会跟随图片大小，解决方案：详见`CMHProfileButton`
         _profileBtn = [[CMHProfileButton alloc] init];
         [_profileBtn setImage:MHImageNamed(@"avata_default_my") forState:UIControlStateNormal];
-        [_profileBtn yy_setImageWithURL:[NSURL URLWithString:@"http://tva3.sinaimg.cn/crop.0.6.264.264.180/93276e1fjw8f5c6ob1pmpj207g07jaa5.jpg"] forState:UIControlStateNormal placeholder:MHImageNamed(@"fts_default_headimage_36x36") options:MHWebImageOptionAutomatic completion:NULL];
+        [_profileBtn yy_setImageWithURL:[NSURL URLWithString:@"http://tva3.sinaimg.cn/crop.0.6.264.264.180/93276e1fjw8f5c6ob1pmpj207g07jaa5.jpg"] forState:UIControlStateNormal placeholder:MHImageNamed(@"fts_default_headimage_36x36") options:CMHWebImageOptionAutomatic completion:NULL];
         _profileBtn.imageView.contentMode = UIViewContentModeScaleAspectFill;
         [_profileBtn addTarget:self action:@selector(_profileBtnDidClciked:) forControlEvents:UIControlEventTouchUpInside];
         [_profileBtn sizeToFit];

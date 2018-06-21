@@ -53,6 +53,7 @@ PODS:
     - FBRetainCycleDetector
   - pop (1.0.10)
   - ReactiveObjC (3.1.0)
+  - SAMKeychain (1.5.2)
   - SDWebImage (4.4.0):
     - SDWebImage/Core (= 4.4.0)
   - SDWebImage/Core (4.4.0)
@@ -95,6 +96,7 @@ DEPENDENCIES:
   - MLeaksFinder (~> 1.0.0)
   - pop (= 1.0.10)
   - ReactiveObjC (= 3.1.0)
+  - SAMKeychain (= 1.5.2)
   - SDWebImage (= 4.4.0)
   - UICollectionViewLeftAlignedLayout (= 1.0.2)
   - "UIImage+ImageWithColor (= 1.4.0)"
@@ -129,6 +131,7 @@ SPEC REPOS:
     - MLeaksFinder
     - pop
     - ReactiveObjC
+    - SAMKeychain
     - SDWebImage
     - UICollectionViewLeftAlignedLayout
     - "UIImage+ImageWithColor"
@@ -171,6 +174,7 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   "UIImage+ImageWithColor": 891401f732f2f332fefe68c2332c6c955c2a879c
@@ -184,6 +188,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: db7ab94e22e2a269c6f8f3edaa48d0e777374f73
+PODFILE CHECKSUM: f54930e2b06d9417b71a3e51582accba8d8c2633
 
 COCOAPODS: 1.5.0

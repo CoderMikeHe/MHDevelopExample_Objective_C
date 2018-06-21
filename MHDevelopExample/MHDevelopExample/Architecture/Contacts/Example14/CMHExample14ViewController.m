@@ -67,7 +67,7 @@
     /// 模拟网络
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [self.headerView yy_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528468978072&di=e503aaa44a96181286743186d6040522&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-01-05%2F5a4f5b0464423.jpg"] placeholder:MHImageNamed(@"placeholder_image") options:MHWebImageOptionAutomatic completion:NULL];
+        [self.headerView yy_setImageWithURL:[NSURL URLWithString:@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528468978072&di=e503aaa44a96181286743186d6040522&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-01-05%2F5a4f5b0464423.jpg"] placeholder:MHImageNamed(@"placeholder_image") options:CMHWebImageOptionAutomatic completion:NULL];
         
         /// 假设你获取到了ID 你再去获取列表数据
         [self tableViewDidTriggerHeaderRefresh];

@@ -20,7 +20,18 @@
  */
 + (instancetype)mh_viewFromXib;
 
+/**
+ * xib创建的view
+ */
++ (instancetype)mh_viewFromXibWithFrame:(CGRect)frame;
 
+/**
+ * xib中显示的属性
+ */
+@property (nonatomic) IBInspectable UIColor *borderColor;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
+@property (nonatomic) IBInspectable CGFloat cornerRadius;
+@property (nonatomic) IBInspectable BOOL masksToBounds;
 
 
 @end

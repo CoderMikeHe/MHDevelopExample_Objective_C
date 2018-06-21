@@ -81,6 +81,9 @@
     
     // 配置YYWebImage
     [self _configureYYWebImage];
+    
+    /// 配置网络请求
+    [CMHHTTPService sharedInstance];
 }
 
 /// 配置键盘管理器

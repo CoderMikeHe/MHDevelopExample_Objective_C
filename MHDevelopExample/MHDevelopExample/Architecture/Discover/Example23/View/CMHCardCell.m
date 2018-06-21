@@ -25,7 +25,7 @@
     self.card = card;
     
     self.titleLabel.text = card.title;
-    [self.imageView yy_setImageWithURL:[NSURL URLWithString:card.imageUrl] placeholder:MHImageNamed(@"placeholder_image") options:MHWebImageOptionAutomatic completion:NULL];
+    [self.imageView yy_setImageWithURL:[NSURL URLWithString:card.imageUrl] placeholder:MHImageNamed(@"placeholder_image") options:CMHWebImageOptionAutomatic completion:NULL];
 }
 
 

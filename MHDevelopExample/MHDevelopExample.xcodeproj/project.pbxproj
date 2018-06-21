@@ -256,9 +256,15 @@
 		E92C136920D9FECF0022891F /* cmh_default_my_address@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92C135620D9FECF0022891F /* cmh_default_my_address@3x.png */; };
 		E92C136B20DA07520022891F /* cmh_default_buy_goods@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92C136A20DA07510022891F /* cmh_default_buy_goods@3x.png */; };
 		E92C136D20DA07A80022891F /* cmh_default_buy_goods@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E92C136C20DA07A80022891F /* cmh_default_buy_goods@2x.png */; };
+		E92C137720DA4ED30022891F /* CMHHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C137620DA4ED30022891F /* CMHHTTPService.m */; };
+		E92C137E20DA54850022891F /* CMHHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C137D20DA54850022891F /* CMHHTTPResponse.m */; };
+		E92C138520DA54B70022891F /* CMHURLParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C138120DA54B60022891F /* CMHURLParameters.m */; };
+		E92C138620DA54B70022891F /* CMHHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C138220DA54B70022891F /* CMHHTTPRequest.m */; };
+		E92C138720DA54B70022891F /* CMHKeyedSubscript.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C138420DA54B70022891F /* CMHKeyedSubscript.m */; };
+		E92C138A20DA567C0022891F /* CMHControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C138920DA567C0022891F /* CMHControllerHelper.m */; };
+		E92C138D20DA59570022891F /* SAMKeychain+CMHUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C138C20DA59570022891F /* SAMKeychain+CMHUtil.m */; };
 		E92DFDB320C8EAF500823A4F /* CMHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */; };
 		E92DFDB620C906A500823A4F /* NSObject+MHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB420C906A400823A4F /* NSObject+MHAlert.m */; };
-		E92DFDBA20C907BD00823A4F /* CMHControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB920C907BD00823A4F /* CMHControllerHelper.m */; };
 		E92DFDBE20C9089F00823A4F /* UIAlertController+MHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDBC20C9089F00823A4F /* UIAlertController+MHColor.m */; };
 		E92DFDC520C90FF400823A4F /* CMHConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDC420C90FF400823A4F /* CMHConstant.m */; };
 		E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FC320C794FD002070C3 /* CMHExample05ViewController.m */; };
@@ -302,6 +308,11 @@
 		E95CA16320D8B1A3005D9DB5 /* cmh_default_empty_data_0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CA15920D8B1A3005D9DB5 /* cmh_default_empty_data_0@3x.png */; };
 		E95CA16420D8B1A3005D9DB5 /* cmh_default_service_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E95CA15A20D8B1A3005D9DB5 /* cmh_default_service_error@2x.png */; };
 		E95CA16820D9079F005D9DB5 /* CMHExample17ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E95CA16720D9079F005D9DB5 /* CMHExample17ViewController.m */; };
+		E9650BED20DB9A410069F8BB /* CMHExample18ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9650BEC20DB9A410069F8BB /* CMHExample18ViewController.m */; };
+		E9650BF020DB9A910069F8BB /* CMHLiveInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E9650BEF20DB9A910069F8BB /* CMHLiveInfo.m */; };
+		E9650BF320DB9AA80069F8BB /* CMHLiveRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E9650BF220DB9AA80069F8BB /* CMHLiveRoom.m */; };
+		E9650BF720DB9B240069F8BB /* CMHLiveRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9650BF520DB9B240069F8BB /* CMHLiveRoomCell.m */; };
+		E9650BF820DB9B240069F8BB /* CMHLiveRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9650BF620DB9B240069F8BB /* CMHLiveRoomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -779,12 +790,25 @@
 		E92C135620D9FECF0022891F /* cmh_default_my_address@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cmh_default_my_address@3x.png"; sourceTree = "<group>"; };
 		E92C136A20DA07510022891F /* cmh_default_buy_goods@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cmh_default_buy_goods@3x.png"; path = "../../../../../../../../../../XNB/Resource/Architecture/Default/cmh_default_buy_goods@3x.png"; sourceTree = "<group>"; };
 		E92C136C20DA07A80022891F /* cmh_default_buy_goods@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cmh_default_buy_goods@2x.png"; sourceTree = "<group>"; };
+		E92C137520DA4ED30022891F /* CMHHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHHTTPService.h; sourceTree = "<group>"; };
+		E92C137620DA4ED30022891F /* CMHHTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHHTTPService.m; sourceTree = "<group>"; };
+		E92C137B20DA54060022891F /* CMHHTTPServiceConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHHTTPServiceConstant.h; sourceTree = "<group>"; };
+		E92C137C20DA54850022891F /* CMHHTTPResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHHTTPResponse.h; sourceTree = "<group>"; };
+		E92C137D20DA54850022891F /* CMHHTTPResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHHTTPResponse.m; sourceTree = "<group>"; };
+		E92C137F20DA54B60022891F /* CMHHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHHTTPRequest.h; sourceTree = "<group>"; };
+		E92C138020DA54B60022891F /* CMHURLParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHURLParameters.h; sourceTree = "<group>"; };
+		E92C138120DA54B60022891F /* CMHURLParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHURLParameters.m; sourceTree = "<group>"; };
+		E92C138220DA54B70022891F /* CMHHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHHTTPRequest.m; sourceTree = "<group>"; };
+		E92C138320DA54B70022891F /* CMHKeyedSubscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHKeyedSubscript.h; sourceTree = "<group>"; };
+		E92C138420DA54B70022891F /* CMHKeyedSubscript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHKeyedSubscript.m; sourceTree = "<group>"; };
+		E92C138820DA567C0022891F /* CMHControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHControllerHelper.h; sourceTree = "<group>"; };
+		E92C138920DA567C0022891F /* CMHControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHControllerHelper.m; sourceTree = "<group>"; };
+		E92C138B20DA59570022891F /* SAMKeychain+CMHUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAMKeychain+CMHUtil.h"; sourceTree = "<group>"; };
+		E92C138C20DA59570022891F /* SAMKeychain+CMHUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAMKeychain+CMHUtil.m"; sourceTree = "<group>"; };
 		E92DFDB120C8EAF500823A4F /* CMHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWebViewController.h; sourceTree = "<group>"; };
 		E92DFDB220C8EAF500823A4F /* CMHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHWebViewController.m; sourceTree = "<group>"; };
 		E92DFDB420C906A400823A4F /* NSObject+MHAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MHAlert.m"; sourceTree = "<group>"; };
 		E92DFDB520C906A500823A4F /* NSObject+MHAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MHAlert.h"; sourceTree = "<group>"; };
-		E92DFDB820C907BD00823A4F /* CMHControllerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHControllerHelper.h; sourceTree = "<group>"; };
-		E92DFDB920C907BD00823A4F /* CMHControllerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHControllerHelper.m; sourceTree = "<group>"; };
 		E92DFDBC20C9089F00823A4F /* UIAlertController+MHColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+MHColor.m"; sourceTree = "<group>"; };
 		E92DFDBD20C9089F00823A4F /* UIAlertController+MHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+MHColor.h"; sourceTree = "<group>"; };
 		E92DFDC320C90FF400823A4F /* CMHConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstant.h; sourceTree = "<group>"; };
@@ -865,6 +889,16 @@
 		E95CA15A20D8B1A3005D9DB5 /* cmh_default_service_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cmh_default_service_error@2x.png"; sourceTree = "<group>"; };
 		E95CA16620D9079F005D9DB5 /* CMHExample17ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample17ViewController.h; sourceTree = "<group>"; };
 		E95CA16720D9079F005D9DB5 /* CMHExample17ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample17ViewController.m; sourceTree = "<group>"; };
+		E9650BE720DB994F0069F8BB /* CMHURLConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHURLConfigure.h; sourceTree = "<group>"; };
+		E9650BEB20DB9A410069F8BB /* CMHExample18ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample18ViewController.h; sourceTree = "<group>"; };
+		E9650BEC20DB9A410069F8BB /* CMHExample18ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample18ViewController.m; sourceTree = "<group>"; };
+		E9650BEE20DB9A910069F8BB /* CMHLiveInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHLiveInfo.h; sourceTree = "<group>"; };
+		E9650BEF20DB9A910069F8BB /* CMHLiveInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHLiveInfo.m; sourceTree = "<group>"; };
+		E9650BF120DB9AA80069F8BB /* CMHLiveRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHLiveRoom.h; sourceTree = "<group>"; };
+		E9650BF220DB9AA80069F8BB /* CMHLiveRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHLiveRoom.m; sourceTree = "<group>"; };
+		E9650BF420DB9B240069F8BB /* CMHLiveRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHLiveRoomCell.h; sourceTree = "<group>"; };
+		E9650BF520DB9B240069F8BB /* CMHLiveRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHLiveRoomCell.m; sourceTree = "<group>"; };
+		E9650BF620DB9B240069F8BB /* CMHLiveRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMHLiveRoomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2688,6 +2722,8 @@
 		E929D84C20CA6B1B001F833E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E92C138820DA567C0022891F /* CMHControllerHelper.h */,
+				E92C138920DA567C0022891F /* CMHControllerHelper.m */,
 				E929D84E20CA6BBB001F833E /* YYCache+CMHHelper.h */,
 				E929D84F20CA6BBB001F833E /* YYCache+CMHHelper.m */,
 			);
@@ -2893,6 +2929,56 @@
 			path = Picture;
 			sourceTree = "<group>";
 		};
+		E92C136E20DA3E320022891F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E92C136F20DA3E320022891F /* HTTP */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E92C136F20DA3E320022891F /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				E92C137A20DA53D40022891F /* Constant */,
+				E92C137820DA53D40022891F /* Request */,
+				E92C137920DA53D40022891F /* Response */,
+				E92C137520DA4ED30022891F /* CMHHTTPService.h */,
+				E92C137620DA4ED30022891F /* CMHHTTPService.m */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		E92C137820DA53D40022891F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E92C137F20DA54B60022891F /* CMHHTTPRequest.h */,
+				E92C138220DA54B70022891F /* CMHHTTPRequest.m */,
+				E92C138320DA54B70022891F /* CMHKeyedSubscript.h */,
+				E92C138420DA54B70022891F /* CMHKeyedSubscript.m */,
+				E92C138020DA54B60022891F /* CMHURLParameters.h */,
+				E92C138120DA54B60022891F /* CMHURLParameters.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E92C137920DA53D40022891F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E92C137C20DA54850022891F /* CMHHTTPResponse.h */,
+				E92C137D20DA54850022891F /* CMHHTTPResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E92C137A20DA53D40022891F /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				E92C137B20DA54060022891F /* CMHHTTPServiceConstant.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		E92CC2DB20B3EE96003938F7 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -2919,15 +3005,6 @@
 				E951600620C2807C007224DA /* ViewController */,
 			);
 			path = BaseClass;
-			sourceTree = "<group>";
-		};
-		E92DFDB720C907A000823A4F /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				E92DFDB820C907BD00823A4F /* CMHControllerHelper.h */,
-				E92DFDB920C907BD00823A4F /* CMHControllerHelper.m */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		E92DFDBB20C9089F00823A4F /* UIAlertController */ = {
@@ -2965,6 +3042,7 @@
 		E932AABB20B65EB300C99B3C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E92C136E20DA3E320022891F /* Service */,
 				E929D84C20CA6B1B001F833E /* Helper */,
 				E943E45520C4D87C00AFC4A9 /* Protocol */,
 				E932AABC20B65ED000C99B3C /* Category */,
@@ -2984,7 +3062,8 @@
 		E932AABD20B65ED000C99B3C /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				E92DFDB720C907A000823A4F /* Helper */,
+				E92C138B20DA59570022891F /* SAMKeychain+CMHUtil.h */,
+				E92C138C20DA59570022891F /* SAMKeychain+CMHUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -3006,6 +3085,7 @@
 				E92AB25720C66C790067D0B6 /* CMHConstInline.h */,
 				E92DFDC320C90FF400823A4F /* CMHConstant.h */,
 				E92DFDC420C90FF400823A4F /* CMHConstant.m */,
+				E9650BE720DB994F0069F8BB /* CMHURLConfigure.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -3055,6 +3135,7 @@
 		E932AAD120B68D5B00C99B3C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				E9650BE820DB9A1E0069F8BB /* Example18 */,
 				E95CA16520D90776005D9DB5 /* Example17 */,
 				E92A8F1120CE07EE00EE850F /* Example16 */,
 				E927C15320CBEE820093E144 /* Example15 */,
@@ -3258,6 +3339,38 @@
 			path = Example17;
 			sourceTree = "<group>";
 		};
+		E9650BE820DB9A1E0069F8BB /* Example18 */ = {
+			isa = PBXGroup;
+			children = (
+				E9650BE920DB9A1E0069F8BB /* Model */,
+				E9650BEA20DB9A1E0069F8BB /* View */,
+				E9650BEB20DB9A410069F8BB /* CMHExample18ViewController.h */,
+				E9650BEC20DB9A410069F8BB /* CMHExample18ViewController.m */,
+			);
+			path = Example18;
+			sourceTree = "<group>";
+		};
+		E9650BE920DB9A1E0069F8BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E9650BEE20DB9A910069F8BB /* CMHLiveInfo.h */,
+				E9650BEF20DB9A910069F8BB /* CMHLiveInfo.m */,
+				E9650BF120DB9AA80069F8BB /* CMHLiveRoom.h */,
+				E9650BF220DB9AA80069F8BB /* CMHLiveRoom.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9650BEA20DB9A1E0069F8BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9650BF420DB9B240069F8BB /* CMHLiveRoomCell.h */,
+				E9650BF520DB9B240069F8BB /* CMHLiveRoomCell.m */,
+				E9650BF620DB9B240069F8BB /* CMHLiveRoomCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F2D576D8EF168759D8A5190E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3419,6 +3532,7 @@
 				E92C136D20DA07A80022891F /* cmh_default_buy_goods@2x.png in Resources */,
 				260F3BD91EEEF8A300ACF0D5 /* SUBannerData.data in Resources */,
 				E92C136B20DA07520022891F /* cmh_default_buy_goods@3x.png in Resources */,
+				E9650BF820DB9B240069F8BB /* CMHLiveRoomCell.xib in Resources */,
 				E92C135C20D9FECF0022891F /* cmh_default_no_custom_service@3x.png in Resources */,
 				260D8DB11EED3BD100B47B3D /* SUGoodsData_3.data in Resources */,
 				E92C135B20D9FECF0022891F /* cmh_default_red_pocket@3x.png in Resources */,
@@ -3512,6 +3626,7 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
@@ -3546,6 +3661,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
@@ -3608,6 +3724,7 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
@@ -3642,6 +3759,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
@@ -3704,6 +3822,7 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
@@ -3738,6 +3857,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
@@ -3770,6 +3890,7 @@
 				260FE11D1EF3C13900830B07 /* SUGoods+SUAttributedString.m in Sources */,
 				622990791E4D4DAF00E0890E /* MHOperationCell.m in Sources */,
 				627A95831E49AE5B004A1ED2 /* UIView+MHExtension.m in Sources */,
+				E92C138A20DA567C0022891F /* CMHControllerHelper.m in Sources */,
 				2615ECAB1EEE6E6800D6B473 /* MBProgressHUD+MHExtension.m in Sources */,
 				261148E01F15413000758DAF /* YYThreadSafeDictionary.m in Sources */,
 				260C2E091EF13AAC00378885 /* SUViewModel1.m in Sources */,
@@ -3822,11 +3943,12 @@
 				260D8D881EED37CB00B47B3D /* SUGoodsHeaderView.m in Sources */,
 				2615ECD31EEE919900D6B473 /* UIView+SDExtension.m in Sources */,
 				2615EC811EEE2E3000D6B473 /* SUBaseViewController.m in Sources */,
+				E9650BF020DB9A910069F8BB /* CMHLiveInfo.m in Sources */,
 				2611336A1EF43A26006AE109 /* SUWebViewModel1.m in Sources */,
+				E9650BF320DB9AA80069F8BB /* CMHLiveRoom.m in Sources */,
 				E929D85820CA8897001F833E /* CMHExample12ViewController.m in Sources */,
 				627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */,
 				622637581E4AF259007F9360 /* UIFont+MHExtension.m in Sources */,
-				E92DFDBA20C907BD00823A4F /* CMHControllerHelper.m in Sources */,
 				260FE13A1EF3EEA100830B07 /* SUPublicController1.m in Sources */,
 				E92A8F2420CE4E1F00EE850F /* CMHExampleCollectTest.m in Sources */,
 				E932AADC20B68DF600C99B3C /* CMHDiscoverViewController.m in Sources */,
@@ -3852,6 +3974,7 @@
 				622E335B1E554AC8001FB056 /* UIViewController+MHHUD.m in Sources */,
 				260FC4D21EF783C500390A8E /* SUPublicWebViewModel2.m in Sources */,
 				E943E45B20C4F29700AFC4A9 /* CMHExample00ViewController.m in Sources */,
+				E92C138520DA54B70022891F /* CMHURLParameters.m in Sources */,
 				622E334A1E553800001FB056 /* UIImage+MHOrientation.m in Sources */,
 				260FC4C91EF7831200390A8E /* SUWebViewController2.m in Sources */,
 				2615ECA41EEE4C8700D6B473 /* NSString+MHValid.m in Sources */,
@@ -3862,6 +3985,7 @@
 				E932AAD920B68DCC00C99B3C /* CMHProfileViewController.m in Sources */,
 				E933662720D0F75F00B6F51F /* MHEXTRuntimeExtensions.m in Sources */,
 				6226374D1E4AC61D007F9360 /* MHTopicFooterView.m in Sources */,
+				E9650BF720DB9B240069F8BB /* CMHLiveRoomCell.m in Sources */,
 				261309511E97801F0095BE0E /* RACBasicUseController.m in Sources */,
 				E92DFDB320C8EAF500823A4F /* CMHWebViewController.m in Sources */,
 				260FE12B1EF3EBDC00830B07 /* SUPublicController0.m in Sources */,
@@ -3872,6 +3996,7 @@
 				E92DFDB620C906A500823A4F /* NSObject+MHAlert.m in Sources */,
 				622637331E4AAC10007F9360 /* MHComment.m in Sources */,
 				622E33721E5591F6001FB056 /* MHYouKuTopicDetailController.m in Sources */,
+				E92C138720DA54B70022891F /* CMHKeyedSubscript.m in Sources */,
 				260FE1211EF3CEB400830B07 /* SUGoodsItemViewModel.m in Sources */,
 				622637611E4B0325007F9360 /* MHWebImageTool.m in Sources */,
 				260FE1111EF3890A00830B07 /* SUGoodsController1.m in Sources */,
@@ -3894,6 +4019,7 @@
 				E9263E8820CEC245003C8C69 /* XLCardItem.m in Sources */,
 				6226374E1E4AC61D007F9360 /* MHTopicHeaderView.m in Sources */,
 				E932AAC120B65F1000C99B3C /* UIScrollView+CMHRefresh.m in Sources */,
+				E92C137720DA4ED30022891F /* CMHHTTPService.m in Sources */,
 				627A95911E49C91B004A1ED2 /* MHTopicLabel.m in Sources */,
 				E92F2FC820C7CDE2002070C3 /* CMHPresentTransition.m in Sources */,
 				E92DFDC520C90FF400823A4F /* CMHConstant.m in Sources */,
@@ -3946,7 +4072,9 @@
 				6208770C1E5483DD00183F81 /* MHYouKuBottomToolBar.m in Sources */,
 				E92AB23120C512480067D0B6 /* CMHExample01ViewController.m in Sources */,
 				625B73B61E4C4BA6006A8E86 /* MHTopicCell.m in Sources */,
+				E92C137E20DA54850022891F /* CMHHTTPResponse.m in Sources */,
 				622E33541E554603001FB056 /* MHYouKuCommentToolBar.m in Sources */,
+				E9650BED20DB9A410069F8BB /* CMHExample18ViewController.m in Sources */,
 				622BF5EA1E56E6A4004DFCA2 /* MHYouKuAnthologyHeaderView.m in Sources */,
 				6226373C1E4AB8D4007F9360 /* MHTopicOneController.m in Sources */,
 				622637391E4AAD96007F9360 /* MHCommentFrame.m in Sources */,
@@ -3966,8 +4094,10 @@
 				E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */,
 				E933662B20D0F86700B6F51F /* NSError+MHModelException.m in Sources */,
 				E92A8F4520CE8A0C00EE850F /* CMHWaterfall.m in Sources */,
+				E92C138D20DA59570022891F /* SAMKeychain+CMHUtil.m in Sources */,
 				261133701EF43C60006AE109 /* SUPublicWebController1.m in Sources */,
 				E929D85020CA6BBB001F833E /* YYCache+CMHHelper.m in Sources */,
+				E92C138620DA54B70022891F /* CMHHTTPRequest.m in Sources */,
 				E951602020C284DB007224DA /* CMHObject.m in Sources */,
 				6229906F1E4D4CC500E0890E /* MHDeleteController.m in Sources */,
 				261148E61F15416700758DAF /* YYReachability.m in Sources */,
@@ -4071,7 +4201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -4119,7 +4249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -4138,7 +4268,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4162,7 +4292,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

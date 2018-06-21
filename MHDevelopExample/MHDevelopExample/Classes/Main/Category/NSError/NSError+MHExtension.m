@@ -9,20 +9,17 @@
 #import "NSError+MHExtension.h"
 
 @implementation NSError (MHExtension)
-+ (NSString *)mh_tipsFromError:(NSError *)error
-{
-    if (error)
-    {
-        NSString *tipStr = nil;
-        if (error.userInfo[@"msg"]) {
-            tipStr = [error.userInfo objectForKey:@"msg"];
-        } else if (error.domain) {
-            tipStr = error.domain;
-        } else {
-            tipStr = error.localizedDescription;
-        }
-        return tipStr;
++ (NSString *)mh_tipsFromError:(NSError *)error{
+    if (!error) return nil;
+    NSString *tipStr = nil;
+    /// 这里需要处理HTTP请求的错误
+    if (error.userInfo[CMHHTTPServiceErrorDescriptionKey]) {
+        tipStr = [error.userInfo objectForKey:CMHHTTPServiceErrorDescriptionKey];
+    }else if (error.domain) {
+        tipStr = error.localizedFailureReason;
+    } else {
+        tipStr = error.localizedDescription;
     }
-    return nil;
+    return tipStr;
 }
 @end

@@ -17,6 +17,7 @@
 #import "CMHExample15ViewController.h"
 #import "CMHExample16ViewController.h"
 #import "CMHExample17ViewController.h"
+#import "CMHExample18ViewController.h"
 @interface CMHContactsViewController ()
 
 @end
@@ -39,7 +40,7 @@
 }
 #pragma mark - Override
 - (UIEdgeInsets)contentInset{
-    return UIEdgeInsetsMake(MH_APPLICATION_TOP_BAR_HEIGHT+16, 0, 0, 0);
+    return UIEdgeInsetsMake(MH_APPLICATION_TOP_BAR_HEIGHT+16, 0, MH_APPLICATION_TAB_BAR_HEIGHT, 0);
 }
 - (void)configure{
     [super configure];
@@ -78,6 +79,10 @@
     CMHExample *example17 = [[CMHExample alloc] initWithTitle:@"17：测试数据源为空显示占位视图" subtitle:@"详情请看`EmptyView`文件夹的内容"];
     example17.destClass = [CMHExample17ViewController class];
     [self.dataSource addObject:example17];
+    
+    CMHExample *example18 = [[CMHExample alloc] initWithTitle:@"18：请求工具类`CMHHTTPService`的使用" subtitle:@"详情请看`CMHHTTPService.h/m`的封装"];
+    example18.destClass = [CMHExample18ViewController class];
+    [self.dataSource addObject:example18];
     
     /// 刷洗数据
     //    [self.tableView reloadData]; /// 等效下面的方法

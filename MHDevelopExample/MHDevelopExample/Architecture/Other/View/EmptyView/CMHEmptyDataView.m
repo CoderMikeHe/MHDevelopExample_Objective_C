@@ -44,8 +44,7 @@
     NSInteger random = [NSObject mh_randomNumber:0 to:1];
     UIImage *image = nil;
     if (hasError) { /// 请求出错 1. 网络问题  2. 服务器问题
-#warning CMH TODO 后期增加网络请求再来处理，获取当前网络状态
-        if (0) {  /// 无网络
+        if (![CMHHTTPService sharedInstance].reachabilityManager.isReachable) {  /// 无网络
             errorInfo = MHStringIsNotEmpty(errorInfo)?errorInfo:@"呀！网络正在开小差~";
             image = [UIImage imageNamed:[NSString stringWithFormat:@"cmh_default_no_wifi_%ld",(long)random]];
         }else{    /// 服务器出错

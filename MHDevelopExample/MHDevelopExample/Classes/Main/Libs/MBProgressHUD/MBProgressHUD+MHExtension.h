@@ -28,7 +28,6 @@
 /// in special view
 /// 提示信息
 + (MBProgressHUD *)mh_showTips:(NSString *)tipStr addedToView:(UIView *)view;
-
 /// 提示错误
 + (MBProgressHUD *)mh_showErrorTips:(NSError *)error addedToView:(UIView *)view;
 /// 进度view

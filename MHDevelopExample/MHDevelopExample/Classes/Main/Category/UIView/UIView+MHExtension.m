@@ -9,6 +9,9 @@
 #import "UIView+MHExtension.h"
 
 @implementation UIView (MHExtension)
+
+@dynamic borderColor,borderWidth,masksToBounds,cornerRadius;
+
 /**
  * 判断一个控件是否真正显示在主窗口
  */
@@ -33,5 +36,31 @@
 + (instancetype)mh_viewFromXib
 {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
+
+
++ (instancetype)mh_viewFromXibWithFrame:(CGRect)frame {
+    UIView *view = [self mh_viewFromXib];
+    view.frame = frame;
+    return view;
+}
+
+/**
+ * xib中显示的属性
+ */
+-(void)setBorderColor:(UIColor *)borderColor {
+    [self.layer setBorderColor:borderColor.CGColor];
+}
+
+-(void)setBorderWidth:(CGFloat)borderWidth {
+    [self.layer setBorderWidth:borderWidth];
+}
+
+-(void)setCornerRadius:(CGFloat)cornerRadius {
+    [self.layer setCornerRadius:cornerRadius];
+}
+
+- (void)setMasksToBounds:(BOOL)masksToBounds {
+    [self.layer setMasksToBounds:masksToBounds];
 }
 @end

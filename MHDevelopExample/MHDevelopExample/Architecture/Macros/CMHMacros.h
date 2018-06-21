@@ -24,13 +24,14 @@
 
 /// ---- YYWebImage Option
 /// 手动设置image
-#define MHWebImageOptionManually (YYWebImageOptionAllowInvalidSSLCertificates|YYWebImageOptionAllowBackgroundTask|YYWebImageOptionSetImageWithFadeAnimation|YYWebImageOptionAvoidSetImage)
+#define CMHWebImageOptionManually (YYWebImageOptionAllowInvalidSSLCertificates|YYWebImageOptionAllowBackgroundTask|YYWebImageOptionSetImageWithFadeAnimation|YYWebImageOptionAvoidSetImage)
 /// 自动设置Image
-#define MHWebImageOptionAutomatic (YYWebImageOptionAllowInvalidSSLCertificates|YYWebImageOptionAllowBackgroundTask|YYWebImageOptionSetImageWithFadeAnimation)
+#define CMHWebImageOptionAutomatic (YYWebImageOptionAllowInvalidSSLCertificates|YYWebImageOptionAllowBackgroundTask|YYWebImageOptionSetImageWithFadeAnimation)
 
 
 
 #import "CMHConstEnum.h"
 #import "CMHConstInline.h"
 #import "CMHConstant.h"
+#import "CMHURLConfigure.h"
 #endif /* CMHMacros_h */

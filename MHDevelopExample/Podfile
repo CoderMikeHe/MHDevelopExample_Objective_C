@@ -86,7 +86,7 @@ pod 'SDWebImage'                        , '4.4.0'
 #pod 'SSZipArchive'                      , '1.8.1'
 
 # 钥匙串存储
-#pod 'SAMKeychain'                       , '1.5.2'
+pod 'SAMKeychain'                       , '1.5.2'
 
 # 菊花activity
 #pod 'MMMaterialDesignSpinner', '0.2.3'
@@ -157,6 +157,7 @@ pod 'YZDisplayViewController'           , '~> 1.0.6'
 #pod 'RMStore', '0.7.1'
 # 检测内存泄漏
 pod 'MLeaksFinder'                      , '~> 1.0.0'
+
     target 'MHDevelopExampleTests' do
     end
 

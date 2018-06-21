@@ -24,7 +24,7 @@
     self.waterfall = waterfall;
     
     self.titleLabel.text = waterfall.title;
-    [self.imageView yy_setImageWithURL:[NSURL URLWithString:waterfall.imageUrl] placeholder:MHImageNamed(@"placeholder_image") options:MHWebImageOptionAutomatic completion:NULL];
+    [self.imageView yy_setImageWithURL:[NSURL URLWithString:waterfall.imageUrl] placeholder:MHImageNamed(@"placeholder_image") options:CMHWebImageOptionAutomatic completion:NULL];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
