@@ -192,6 +192,10 @@ static id service_ = nil;
     /// 失败解析
     void (^failureParse)(NSURLSessionDataTask *_Nullable, NSError *) = ^(NSURLSessionDataTask * _Nullable task,  NSError *error){
         @strongify(self);
+        [self _parsedErrorWithTask:task
+                             error:error
+                        parameters:parameters
+                           failure:failure];
         
     };
     
@@ -439,8 +443,6 @@ static id service_ = nil;
     /// 回调错误信息
     !failure ? : failure(task , parsedError);
 }
-
-
 
 /// 解析错误信息
 - (NSError *)_parsingErrorWithFailureReason:(NSString *)localizedFailureReason {

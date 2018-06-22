@@ -28,7 +28,7 @@
 	$ sudo gem update --system
 	$ sudo gem install cocoapods -n/usr/local/bin
 	```
-- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1grKJVITsm1D65MgjRk7d1g  密码:7xg2 <PS：不定期更新！！！>
+- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1fvc5-LG9PJESyfbWYeBjrA  密码:44ue <PS：不定期更新！！！>
 
 ### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。
