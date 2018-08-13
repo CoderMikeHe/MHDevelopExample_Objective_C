@@ -113,7 +113,7 @@
     /// `contentInset` : 与前面`CMHTableViewController`中的`contentInset`类似，这里就不做复述
     
     
-    CMHExample *example35 = [[CMHExample alloc] initWithTitle:@"34：WKWebView系统自带的JS交互" subtitle:@"shouldPullDownToRefresh = YES && shouldBeginRefreshing = NO"];
+    CMHExample *example35 = [[CMHExample alloc] initWithTitle:@"34：WKWebView系统自带的JS交互" subtitle:@"只需要配置messageHandlers装着JS调用OC的方法名即可"];
     example35.operation = ^{
         @strongify(self);
         CMHExample35ViewController *webView = [[CMHExample35ViewController alloc] initWithParams:nil];
