@@ -53,7 +53,7 @@
         //标题颜色
         if ([ivarName isEqualToString:@"_attributedTitle"] && self.title && titleColor) {
             
-            NSMutableAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:self.title attributes:@{NSForegroundColorAttributeName:titleColor,NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
+            NSMutableAttributedString *attr = [[NSMutableAttributedString alloc]initWithString:self.title attributes:@{NSForegroundColorAttributeName:titleColor,NSFontAttributeName:[UIFont systemFontOfSize:18.0]}];
             [self setValue:attr forKey:@"attributedTitle"];
         }
     }
@@ -80,7 +80,7 @@
         //描述颜色
         if ([ivarName isEqualToString:@"_attributedMessage"] && self.message && messageColor) {
             
-            NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:self.message attributes:@{NSForegroundColorAttributeName:messageColor,NSFontAttributeName:[UIFont systemFontOfSize:12.0]}];
+            NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:self.message attributes:@{NSForegroundColorAttributeName:messageColor,NSFontAttributeName:[UIFont systemFontOfSize:16.0]}];
             [self setValue:attr forKey:@"attributedMessage"];
         }
     }

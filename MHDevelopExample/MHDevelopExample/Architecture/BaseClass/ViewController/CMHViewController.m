@@ -15,7 +15,7 @@ NSString *const CMHViewControllerIDKey = @"CMHViewControllerIDKey";
 /// 传递数据模型的key：例如 商品模型的传递 用户模型的传递...
 NSString *const CMHViewControllerUtilKey = @"CMHViewControllerUtilKey";
 /// 传递webView Request的key：例如 webView request...
-NSString *const CMHViewControllerRequestKey = @"CMHViewControllerRequestKey";
+NSString *const CMHViewControllerRequestUrlKey = @"CMHViewControllerRequestUrlKey";
 
 #import "CMHNavigationController.h"
 #import "CMHViewController.h"
@@ -202,7 +202,7 @@ NSString *const CMHViewControllerRequestKey = @"CMHViewControllerRequestKey";
 
 #pragma mark - Status bar
 - (BOOL)prefersStatusBarHidden { return NO; }
-- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleDefault; }
+- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; }
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation { return UIStatusBarAnimationFade; }
 
 

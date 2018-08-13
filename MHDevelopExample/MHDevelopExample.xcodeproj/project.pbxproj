@@ -266,6 +266,8 @@
 		E92AB24F20C551A40067D0B6 /* CMHPingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB24E20C551A40067D0B6 /* CMHPingTransition.m */; };
 		E92AB25220C551D70067D0B6 /* CMHPingInvertTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AB25120C551D70067D0B6 /* CMHPingInvertTransition.m */; };
 		E92AB25620C644A40067D0B6 /* cmh_page_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E92AB25520C644A40067D0B6 /* cmh_page_0.jpg */; };
+		E92BC9A2211150D3003AF3F3 /* CMHFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BC9A1211150D3003AF3F3 /* CMHFileManager.m */; };
+		E92BC9B421132EB9003AF3F3 /* CMHUploadFileConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BC9B321132EB9003AF3F3 /* CMHUploadFileConstant.m */; };
 		E92C137720DA4ED30022891F /* CMHHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C137620DA4ED30022891F /* CMHHTTPService.m */; };
 		E92C137E20DA54850022891F /* CMHHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C137D20DA54850022891F /* CMHHTTPResponse.m */; };
 		E92C138520DA54B70022891F /* CMHURLParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C138120DA54B60022891F /* CMHURLParameters.m */; };
@@ -277,6 +279,19 @@
 		E92DFDB620C906A500823A4F /* NSObject+MHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDB420C906A400823A4F /* NSObject+MHAlert.m */; };
 		E92DFDBE20C9089F00823A4F /* UIAlertController+MHColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDBC20C9089F00823A4F /* UIAlertController+MHColor.m */; };
 		E92DFDC520C90FF400823A4F /* CMHConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = E92DFDC420C90FF400823A4F /* CMHConstant.m */; };
+		E92E833A2100A0B4007C2C8D /* CMHCreateSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E83272100A0B3007C2C8D /* CMHCreateSourceController.m */; };
+		E92E833B2100A0B4007C2C8D /* CMHFileUploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E832A2100A0B3007C2C8D /* CMHFileUploadController.m */; };
+		E92E833C2100A0B4007C2C8D /* CMHFileUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E832C2100A0B3007C2C8D /* CMHFileUploadManager.m */; };
+		E92E833D2100A0B4007C2C8D /* CMHFileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E83302100A0B3007C2C8D /* CMHFileSource.m */; };
+		E92E833E2100A0B4007C2C8D /* CMHFileBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E83322100A0B3007C2C8D /* CMHFileBlock.m */; };
+		E92E833F2100A0B4007C2C8D /* CMHFileFragment.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E83342100A0B3007C2C8D /* CMHFileFragment.m */; };
+		E92E83402100A0B4007C2C8D /* CMHFileUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E83372100A0B3007C2C8D /* CMHFileUploadCell.m */; };
+		E92E83412100A0B4007C2C8D /* CMHFileUploadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92E83382100A0B3007C2C8D /* CMHFileUploadCell.xib */; };
+		E92E834D2101776E007C2C8D /* CMHCoverSourceView.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E834C2101776E007C2C8D /* CMHCoverSourceView.m */; };
+		E92E835021017F34007C2C8D /* CMHSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E834F21017F34007C2C8D /* CMHSource.m */; };
+		E92E835421018901007C2C8D /* CMHEditTitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E835221018901007C2C8D /* CMHEditTitleController.m */; };
+		E92E835521018901007C2C8D /* CMHEditTitleController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92E835321018901007C2C8D /* CMHEditTitleController.xib */; };
+		E92E835821019809007C2C8D /* CMHFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E92E835721019809007C2C8D /* CMHFile.m */; };
 		E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FC320C794FD002070C3 /* CMHExample05ViewController.m */; };
 		E92F2FC820C7CDE2002070C3 /* CMHPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FC720C7CDE2002070C3 /* CMHPresentTransition.m */; };
 		E92F2FCB20C7D0C3002070C3 /* CMHDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F2FCA20C7D0C3002070C3 /* CMHDismissTransition.m */; };
@@ -295,6 +310,8 @@
 		E933662820D0F75F00B6F51F /* MHReflection.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662620D0F75F00B6F51F /* MHReflection.m */; };
 		E933662B20D0F86700B6F51F /* NSError+MHModelException.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662A20D0F86700B6F51F /* NSError+MHModelException.m */; };
 		E933662F20D12DD200B6F51F /* CMHExample07ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E933662E20D12DD200B6F51F /* CMHExample07ViewController.m */; };
+		E9372AEC21056F24003CBBFC /* CMHFileSourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9372AEB21056F24003CBBFC /* CMHFileSourceCell.m */; };
+		E9372AEF210571BF003CBBFC /* CMHFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9372AEE210571BF003CBBFC /* CMHFileView.m */; };
 		E943E45B20C4F29700AFC4A9 /* CMHExample00ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E943E45A20C4F29700AFC4A9 /* CMHExample00ViewController.m */; };
 		E951601020C2807C007224DA /* CMHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600720C2807C007224DA /* CMHTableViewController.m */; };
 		E951601120C2807C007224DA /* CMHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E951600A20C2807C007224DA /* CMHTabBarController.m */; };
@@ -313,6 +330,10 @@
 		E9650BF320DB9AA80069F8BB /* CMHLiveRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = E9650BF220DB9AA80069F8BB /* CMHLiveRoom.m */; };
 		E9650BF720DB9B240069F8BB /* CMHLiveRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9650BF520DB9B240069F8BB /* CMHLiveRoomCell.m */; };
 		E9650BF820DB9B240069F8BB /* CMHLiveRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9650BF620DB9B240069F8BB /* CMHLiveRoomCell.xib */; };
+		E9752ADF2117EA4600647656 /* CMHFileUploadQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E9752ADE2117EA4600647656 /* CMHFileUploadQueue.m */; };
+		E9752AE221193E5A00647656 /* CMHFileSynthetise.m in Sources */ = {isa = PBXBuildFile; fileRef = E9752AE121193E5A00647656 /* CMHFileSynthetise.m */; };
+		E9752B1F211D9A7A00647656 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E9752B1E211D9A7A00647656 /* index.html */; };
+		E9752B23211D9B9600647656 /* CMHExample35ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9752B22211D9B9600647656 /* CMHExample35ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -800,6 +821,10 @@
 		E92AB25120C551D70067D0B6 /* CMHPingInvertTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHPingInvertTransition.m; sourceTree = "<group>"; };
 		E92AB25520C644A40067D0B6 /* cmh_page_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cmh_page_0.jpg; sourceTree = "<group>"; };
 		E92AB25720C66C790067D0B6 /* CMHConstInline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstInline.h; sourceTree = "<group>"; };
+		E92BC9A0211150D3003AF3F3 /* CMHFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHFileManager.h; sourceTree = "<group>"; };
+		E92BC9A1211150D3003AF3F3 /* CMHFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHFileManager.m; sourceTree = "<group>"; };
+		E92BC9B221132EB9003AF3F3 /* CMHUploadFileConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHUploadFileConstant.h; sourceTree = "<group>"; };
+		E92BC9B321132EB9003AF3F3 /* CMHUploadFileConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHUploadFileConstant.m; sourceTree = "<group>"; };
 		E92C137520DA4ED30022891F /* CMHHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHHTTPService.h; sourceTree = "<group>"; };
 		E92C137620DA4ED30022891F /* CMHHTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHHTTPService.m; sourceTree = "<group>"; };
 		E92C137B20DA54060022891F /* CMHHTTPServiceConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHHTTPServiceConstant.h; sourceTree = "<group>"; };
@@ -823,6 +848,30 @@
 		E92DFDBD20C9089F00823A4F /* UIAlertController+MHColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+MHColor.h"; sourceTree = "<group>"; };
 		E92DFDC320C90FF400823A4F /* CMHConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConstant.h; sourceTree = "<group>"; };
 		E92DFDC420C90FF400823A4F /* CMHConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHConstant.m; sourceTree = "<group>"; };
+		E92E83272100A0B3007C2C8D /* CMHCreateSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHCreateSourceController.m; sourceTree = "<group>"; };
+		E92E83282100A0B3007C2C8D /* CMHFileUploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHFileUploadController.h; sourceTree = "<group>"; };
+		E92E83292100A0B3007C2C8D /* CMHCreateSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHCreateSourceController.h; sourceTree = "<group>"; };
+		E92E832A2100A0B3007C2C8D /* CMHFileUploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHFileUploadController.m; sourceTree = "<group>"; };
+		E92E832C2100A0B3007C2C8D /* CMHFileUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHFileUploadManager.m; sourceTree = "<group>"; };
+		E92E832D2100A0B3007C2C8D /* CMHFileUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHFileUploadManager.h; sourceTree = "<group>"; };
+		E92E832F2100A0B3007C2C8D /* CMHFileBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHFileBlock.h; sourceTree = "<group>"; };
+		E92E83302100A0B3007C2C8D /* CMHFileSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHFileSource.m; sourceTree = "<group>"; };
+		E92E83312100A0B3007C2C8D /* CMHFileFragment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHFileFragment.h; sourceTree = "<group>"; };
+		E92E83322100A0B3007C2C8D /* CMHFileBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHFileBlock.m; sourceTree = "<group>"; };
+		E92E83332100A0B3007C2C8D /* CMHFileSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHFileSource.h; sourceTree = "<group>"; };
+		E92E83342100A0B3007C2C8D /* CMHFileFragment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHFileFragment.m; sourceTree = "<group>"; };
+		E92E83372100A0B3007C2C8D /* CMHFileUploadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHFileUploadCell.m; sourceTree = "<group>"; };
+		E92E83382100A0B3007C2C8D /* CMHFileUploadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMHFileUploadCell.xib; sourceTree = "<group>"; };
+		E92E83392100A0B3007C2C8D /* CMHFileUploadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHFileUploadCell.h; sourceTree = "<group>"; };
+		E92E834B2101776E007C2C8D /* CMHCoverSourceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHCoverSourceView.h; sourceTree = "<group>"; };
+		E92E834C2101776E007C2C8D /* CMHCoverSourceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHCoverSourceView.m; sourceTree = "<group>"; };
+		E92E834E21017F34007C2C8D /* CMHSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHSource.h; sourceTree = "<group>"; };
+		E92E834F21017F34007C2C8D /* CMHSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHSource.m; sourceTree = "<group>"; };
+		E92E835121018901007C2C8D /* CMHEditTitleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHEditTitleController.h; sourceTree = "<group>"; };
+		E92E835221018901007C2C8D /* CMHEditTitleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHEditTitleController.m; sourceTree = "<group>"; };
+		E92E835321018901007C2C8D /* CMHEditTitleController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CMHEditTitleController.xib; sourceTree = "<group>"; };
+		E92E835621019809007C2C8D /* CMHFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHFile.h; sourceTree = "<group>"; };
+		E92E835721019809007C2C8D /* CMHFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHFile.m; sourceTree = "<group>"; };
 		E92F2FC220C794FD002070C3 /* CMHExample05ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample05ViewController.h; sourceTree = "<group>"; };
 		E92F2FC320C794FD002070C3 /* CMHExample05ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample05ViewController.m; sourceTree = "<group>"; };
 		E92F2FC620C7CDE2002070C3 /* CMHPresentTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHPresentTransition.h; sourceTree = "<group>"; };
@@ -861,6 +910,10 @@
 		E933662A20D0F86700B6F51F /* NSError+MHModelException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MHModelException.m"; sourceTree = "<group>"; };
 		E933662D20D12DD200B6F51F /* CMHExample07ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample07ViewController.h; sourceTree = "<group>"; };
 		E933662E20D12DD200B6F51F /* CMHExample07ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample07ViewController.m; sourceTree = "<group>"; };
+		E9372AEA21056F24003CBBFC /* CMHFileSourceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHFileSourceCell.h; sourceTree = "<group>"; };
+		E9372AEB21056F24003CBBFC /* CMHFileSourceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHFileSourceCell.m; sourceTree = "<group>"; };
+		E9372AED210571BF003CBBFC /* CMHFileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHFileView.h; sourceTree = "<group>"; };
+		E9372AEE210571BF003CBBFC /* CMHFileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHFileView.m; sourceTree = "<group>"; };
 		E943E45620C4D90B00AFC4A9 /* CMHConfigureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConfigureView.h; sourceTree = "<group>"; };
 		E943E45720C4D92800AFC4A9 /* CMHConfigureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHConfigureCell.h; sourceTree = "<group>"; };
 		E943E45920C4F29700AFC4A9 /* CMHExample00ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample00ViewController.h; sourceTree = "<group>"; };
@@ -899,6 +952,13 @@
 		E9650BF420DB9B240069F8BB /* CMHLiveRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMHLiveRoomCell.h; sourceTree = "<group>"; };
 		E9650BF520DB9B240069F8BB /* CMHLiveRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMHLiveRoomCell.m; sourceTree = "<group>"; };
 		E9650BF620DB9B240069F8BB /* CMHLiveRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMHLiveRoomCell.xib; sourceTree = "<group>"; };
+		E9752ADD2117EA4600647656 /* CMHFileUploadQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHFileUploadQueue.h; sourceTree = "<group>"; };
+		E9752ADE2117EA4600647656 /* CMHFileUploadQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHFileUploadQueue.m; sourceTree = "<group>"; };
+		E9752AE021193E5A00647656 /* CMHFileSynthetise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHFileSynthetise.h; sourceTree = "<group>"; };
+		E9752AE121193E5A00647656 /* CMHFileSynthetise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHFileSynthetise.m; sourceTree = "<group>"; };
+		E9752B1E211D9A7A00647656 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		E9752B21211D9B9600647656 /* CMHExample35ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHExample35ViewController.h; sourceTree = "<group>"; };
+		E9752B22211D9B9600647656 /* CMHExample35ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMHExample35ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2247,6 +2307,7 @@
 				E92CC2DB20B3EE96003938F7 /* Architecture */,
 				627A95621E497824004A1ED2 /* Assets.xcassets */,
 				627A95271E4968E0004A1ED2 /* Info.plist */,
+				E9752B1E211D9A7A00647656 /* index.html */,
 				627A95161E4968E0004A1ED2 /* Supporting Files */,
 			);
 			path = MHDevelopExample;
@@ -2929,6 +2990,23 @@
 			path = Picture;
 			sourceTree = "<group>";
 		};
+		E92BC99E211150C3003AF3F3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E92BC99F211150C3003AF3F3 /* File */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E92BC99F211150C3003AF3F3 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				E92BC9A0211150D3003AF3F3 /* CMHFileManager.h */,
+				E92BC9A1211150D3003AF3F3 /* CMHFileManager.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
 		E92C136E20DA3E320022891F /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -3016,6 +3094,95 @@
 			path = UIAlertController;
 			sourceTree = "<group>";
 		};
+		E92E83242100A0B3007C2C8D /* FileUpload */ = {
+			isa = PBXGroup;
+			children = (
+				E92E83262100A0B3007C2C8D /* Controller */,
+				E92E832B2100A0B3007C2C8D /* Manager */,
+				E92E83352100A0B3007C2C8D /* Model */,
+				E92E83252100A0B3007C2C8D /* Other */,
+				E92E83362100A0B3007C2C8D /* View */,
+			);
+			path = FileUpload;
+			sourceTree = "<group>";
+		};
+		E92E83252100A0B3007C2C8D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E92BC9B221132EB9003AF3F3 /* CMHUploadFileConstant.h */,
+				E92BC9B321132EB9003AF3F3 /* CMHUploadFileConstant.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E92E83262100A0B3007C2C8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E92E83282100A0B3007C2C8D /* CMHFileUploadController.h */,
+				E92E832A2100A0B3007C2C8D /* CMHFileUploadController.m */,
+				E92E83292100A0B3007C2C8D /* CMHCreateSourceController.h */,
+				E92E83272100A0B3007C2C8D /* CMHCreateSourceController.m */,
+				E92E835121018901007C2C8D /* CMHEditTitleController.h */,
+				E92E835221018901007C2C8D /* CMHEditTitleController.m */,
+				E92E835321018901007C2C8D /* CMHEditTitleController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E92E832B2100A0B3007C2C8D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E92E832D2100A0B3007C2C8D /* CMHFileUploadManager.h */,
+				E92E832C2100A0B3007C2C8D /* CMHFileUploadManager.m */,
+				E92E832E2100A0B3007C2C8D /* Model */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E92E832E2100A0B3007C2C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E92E832F2100A0B3007C2C8D /* CMHFileBlock.h */,
+				E92E83322100A0B3007C2C8D /* CMHFileBlock.m */,
+				E92E83312100A0B3007C2C8D /* CMHFileFragment.h */,
+				E92E83342100A0B3007C2C8D /* CMHFileFragment.m */,
+				E92E83332100A0B3007C2C8D /* CMHFileSource.h */,
+				E92E83302100A0B3007C2C8D /* CMHFileSource.m */,
+				E9752ADD2117EA4600647656 /* CMHFileUploadQueue.h */,
+				E9752ADE2117EA4600647656 /* CMHFileUploadQueue.m */,
+				E9752AE021193E5A00647656 /* CMHFileSynthetise.h */,
+				E9752AE121193E5A00647656 /* CMHFileSynthetise.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E92E83352100A0B3007C2C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E92E834E21017F34007C2C8D /* CMHSource.h */,
+				E92E834F21017F34007C2C8D /* CMHSource.m */,
+				E92E835621019809007C2C8D /* CMHFile.h */,
+				E92E835721019809007C2C8D /* CMHFile.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E92E83362100A0B3007C2C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E92E83392100A0B3007C2C8D /* CMHFileUploadCell.h */,
+				E92E83372100A0B3007C2C8D /* CMHFileUploadCell.m */,
+				E92E83382100A0B3007C2C8D /* CMHFileUploadCell.xib */,
+				E92E834B2101776E007C2C8D /* CMHCoverSourceView.h */,
+				E92E834C2101776E007C2C8D /* CMHCoverSourceView.m */,
+				E9372AEA21056F24003CBBFC /* CMHFileSourceCell.h */,
+				E9372AEB21056F24003CBBFC /* CMHFileSourceCell.m */,
+				E9372AED210571BF003CBBFC /* CMHFileView.h */,
+				E9372AEE210571BF003CBBFC /* CMHFileView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E92F2FC120C794B5002070C3 /* Example05 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3042,6 +3209,7 @@
 		E932AABB20B65EB300C99B3C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E92BC99E211150C3003AF3F3 /* Manager */,
 				E92C136E20DA3E320022891F /* Service */,
 				E929D84C20CA6B1B001F833E /* Helper */,
 				E943E45520C4D87C00AFC4A9 /* Protocol */,
@@ -3135,6 +3303,7 @@
 		E932AAD120B68D5B00C99B3C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				E92E83242100A0B3007C2C8D /* FileUpload */,
 				E9650BE820DB9A1E0069F8BB /* Example18 */,
 				E95CA16520D90776005D9DB5 /* Example17 */,
 				E92A8F1120CE07EE00EE850F /* Example16 */,
@@ -3184,6 +3353,7 @@
 		E932AAD520B68DAE00C99B3C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E9752B20211D9B3700647656 /* Example35 */,
 				E932AAD620B68DAE00C99B3C /* Profile */,
 			);
 			path = Profile;
@@ -3371,6 +3541,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		E9752B20211D9B3700647656 /* Example35 */ = {
+			isa = PBXGroup;
+			children = (
+				E9752B21211D9B9600647656 /* CMHExample35ViewController.h */,
+				E9752B22211D9B9600647656 /* CMHExample35ViewController.m */,
+			);
+			path = Example35;
+			sourceTree = "<group>";
+		};
 		F2D576D8EF168759D8A5190E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3526,16 +3705,19 @@
 				260D8DB71EED3BD100B47B3D /* SUGoodsData_9.data in Resources */,
 				E928113C20E23A3B00D16953 /* cmh_default_order_detail@3x.png in Resources */,
 				E928113320E23A3B00D16953 /* cmh_default_collect_goods@3x.png in Resources */,
+				E92E835521018901007C2C8D /* CMHEditTitleController.xib in Resources */,
 				E928112620E23A3B00D16953 /* cmh_default_publish_goods@2x.png in Resources */,
 				260F3BD91EEEF8A300ACF0D5 /* SUBannerData.data in Resources */,
 				E9650BF820DB9B240069F8BB /* CMHLiveRoomCell.xib in Resources */,
 				E928113D20E23A3B00D16953 /* cmh_default_no_wifi_1@2x.png in Resources */,
+				E9752B1F211D9A7A00647656 /* index.html in Resources */,
 				E928113620E23A3B00D16953 /* cmh_default_no_wifi_1@3x.png in Resources */,
 				E928113020E23A3B00D16953 /* cmh_default_no_custom_service@3x.png in Resources */,
 				E928113820E23A3B00D16953 /* cmh_default_red_pocket@2x.png in Resources */,
 				E928112820E23A3B00D16953 /* cmh_default_collect_goods@2x.png in Resources */,
 				260D8DB11EED3BD100B47B3D /* SUGoodsData_3.data in Resources */,
 				E928114320E23A3B00D16953 /* cmh_default_publish_goods@3x.png in Resources */,
+				E92E83412100A0B4007C2C8D /* CMHFileUploadCell.xib in Resources */,
 				E928113120E23A3B00D16953 /* cmh_default_service_error@3x.png in Resources */,
 				260D8D8B1EED37CB00B47B3D /* SUGoodsImageCell.xib in Resources */,
 				260D8DB31EED3BD100B47B3D /* SUGoodsData_5.data in Resources */,
@@ -3609,13 +3791,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BGFMDB/BGFMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/HJCornerRadius/HJCornerRadius.framework",
 				"${BUILT_PRODUCTS_DIR}/HYBImageCliped/HYBImageCliped.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -3623,11 +3805,12 @@
 				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/UAProgressView/UAProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
@@ -3644,13 +3827,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BGFMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HJCornerRadius.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HYBImageCliped.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -3658,11 +3841,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UAProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
@@ -3707,13 +3891,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleTests/Pods-MHDevelopExample-MHDevelopExampleTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BGFMDB/BGFMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/HJCornerRadius/HJCornerRadius.framework",
 				"${BUILT_PRODUCTS_DIR}/HYBImageCliped/HYBImageCliped.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -3721,11 +3905,12 @@
 				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/UAProgressView/UAProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
@@ -3742,13 +3927,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BGFMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HJCornerRadius.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HYBImageCliped.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -3756,11 +3941,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UAProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
@@ -3805,13 +3991,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleUITests/Pods-MHDevelopExample-MHDevelopExampleUITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BGFMDB/BGFMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/BlocksKit/BlocksKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/HJCornerRadius/HJCornerRadius.framework",
 				"${BUILT_PRODUCTS_DIR}/HYBImageCliped/HYBImageCliped.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -3819,11 +4005,12 @@
 				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/UAProgressView/UAProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImage+ImageWithColor/UIImageWithColor.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
@@ -3840,13 +4027,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BGFMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BlocksKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHTCollectionViewWaterfallLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HJCornerRadius.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HYBImageCliped.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -3854,11 +4041,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UAProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionViewLeftAlignedLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageWithColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
@@ -3909,6 +4097,7 @@
 				260FC4D71EF7849000390A8E /* SUGoodsViewModel2.m in Sources */,
 				E95CA13B20D8A9FF005D9DB5 /* UIView+CMHEmptyView.m in Sources */,
 				627A955A1E496CF1004A1ED2 /* MHNavigationController.m in Sources */,
+				E92E835421018901007C2C8D /* CMHEditTitleController.m in Sources */,
 				627A95721E49A694004A1ED2 /* MHBuDeJieController.m in Sources */,
 				260FE1091EF37B8B00830B07 /* FBKVOController+MHExtension.m in Sources */,
 				622637511E4AEAD1007F9360 /* MHImageView.m in Sources */,
@@ -3923,6 +4112,7 @@
 				E95CA13520D8A04F005D9DB5 /* CMHEmptyDataView.m in Sources */,
 				261133731EF43D27006AE109 /* SUPublicWebViewModel1.m in Sources */,
 				627A956F1E49A615004A1ED2 /* MHViewController.m in Sources */,
+				E92E833F2100A0B4007C2C8D /* CMHFileFragment.m in Sources */,
 				622E33731E5591F6001FB056 /* MHYouKuTopicController.m in Sources */,
 				E951601120C2807C007224DA /* CMHTabBarController.m in Sources */,
 				E932AAE220B68E1800C99B3C /* CMHMainFrameViewController.m in Sources */,
@@ -3950,6 +4140,7 @@
 				627A951E1E4968E0004A1ED2 /* MHExampleController.m in Sources */,
 				622637581E4AF259007F9360 /* UIFont+MHExtension.m in Sources */,
 				260FE13A1EF3EEA100830B07 /* SUPublicController1.m in Sources */,
+				E92E835821019809007C2C8D /* CMHFile.m in Sources */,
 				E92A8F2420CE4E1F00EE850F /* CMHExampleCollectTest.m in Sources */,
 				E932AADC20B68DF600C99B3C /* CMHDiscoverViewController.m in Sources */,
 				260FC4C51EF7829500390A8E /* SUPublicController2.m in Sources */,
@@ -3976,6 +4167,7 @@
 				E943E45B20C4F29700AFC4A9 /* CMHExample00ViewController.m in Sources */,
 				E92C138520DA54B70022891F /* CMHURLParameters.m in Sources */,
 				622E334A1E553800001FB056 /* UIImage+MHOrientation.m in Sources */,
+				E92E833E2100A0B4007C2C8D /* CMHFileBlock.m in Sources */,
 				260FC4C91EF7831200390A8E /* SUWebViewController2.m in Sources */,
 				2615ECA41EEE4C8700D6B473 /* NSString+MHValid.m in Sources */,
 				622637301E4AABF8007F9360 /* MHUser.m in Sources */,
@@ -3983,6 +4175,7 @@
 				E951601D20C28263007224DA /* CMHExampleCell.m in Sources */,
 				261148E51F15416700758DAF /* YYKeychain.m in Sources */,
 				E932AAD920B68DCC00C99B3C /* CMHProfileViewController.m in Sources */,
+				E9752ADF2117EA4600647656 /* CMHFileUploadQueue.m in Sources */,
 				E933662720D0F75F00B6F51F /* MHEXTRuntimeExtensions.m in Sources */,
 				6226374D1E4AC61D007F9360 /* MHTopicFooterView.m in Sources */,
 				E9650BF720DB9B240069F8BB /* CMHLiveRoomCell.m in Sources */,
@@ -4006,6 +4199,7 @@
 				261148EB1F1541FE00758DAF /* YYTimer.m in Sources */,
 				622BF5F01E56E88A004DFCA2 /* MHYouKuAnthologyItem.m in Sources */,
 				2615ECCE1EEE919900D6B473 /* TAAnimatedDotView.m in Sources */,
+				E92E833A2100A0B4007C2C8D /* CMHCreateSourceController.m in Sources */,
 				260F3BDC1EEEF91100ACF0D5 /* SUBanner.m in Sources */,
 				625B73BD1E4C598C006A8E86 /* NSDate+Extension.m in Sources */,
 				2615ECB41EEE6ECE00D6B473 /* UITableView+MHExtension.m in Sources */,
@@ -4050,6 +4244,7 @@
 				261BC8221EF29685003E41F9 /* SUTableViewController2.m in Sources */,
 				260D8DC11EED9AFD00B47B3D /* SULoginInputView.m in Sources */,
 				622BF5E71E56D59F004DFCA2 /* MHYouKuCommentItem.m in Sources */,
+				E92E83402100A0B4007C2C8D /* CMHFileUploadCell.m in Sources */,
 				622E33471E553800001FB056 /* UIImage+MHCrop.m in Sources */,
 				260C2E0C1EF13F3600378885 /* SUTableViewModel1.m in Sources */,
 				E92AB24F20C551A40067D0B6 /* CMHPingTransition.m in Sources */,
@@ -4058,6 +4253,7 @@
 				622E60471E6E4D69003D9FD1 /* MHUITableViewStyleGroupedBugController.m in Sources */,
 				622E33481E553800001FB056 /* UIImage+MHExtension.m in Sources */,
 				627A95181E4968E0004A1ED2 /* main.m in Sources */,
+				E92E834D2101776E007C2C8D /* CMHCoverSourceView.m in Sources */,
 				623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */,
 				627A95841E49AE5B004A1ED2 /* UIView+MHFrame.m in Sources */,
 				6226372D1E4AAB50007F9360 /* MHTopic.m in Sources */,
@@ -4066,7 +4262,9 @@
 				E95CA16820D9079F005D9DB5 /* CMHExample17ViewController.m in Sources */,
 				E9263E8920CEC245003C8C69 /* XLCardSwitch.m in Sources */,
 				622BF5DE1E569E47004DFCA2 /* MHYouKuMediaSummary.m in Sources */,
+				E92BC9B421132EB9003AF3F3 /* CMHUploadFileConstant.m in Sources */,
 				261148DA1F1540CF00758DAF /* YYGestureRecognizer.m in Sources */,
+				E9372AEC21056F24003CBBFC /* CMHFileSourceCell.m in Sources */,
 				2615EC991EEE36C900D6B473 /* SULoginController0.m in Sources */,
 				E932AAB420B6481500C99B3C /* CMHRefreshHeader.m in Sources */,
 				6208770C1E5483DD00183F81 /* MHYouKuBottomToolBar.m in Sources */,
@@ -4076,6 +4274,8 @@
 				622E33541E554603001FB056 /* MHYouKuCommentToolBar.m in Sources */,
 				E9650BED20DB9A410069F8BB /* CMHExample18ViewController.m in Sources */,
 				622BF5EA1E56E6A4004DFCA2 /* MHYouKuAnthologyHeaderView.m in Sources */,
+				E92E833B2100A0B4007C2C8D /* CMHFileUploadController.m in Sources */,
+				E92BC9A2211150D3003AF3F3 /* CMHFileManager.m in Sources */,
 				6226373C1E4AB8D4007F9360 /* MHTopicOneController.m in Sources */,
 				622637391E4AAD96007F9360 /* MHCommentFrame.m in Sources */,
 				E9263E7D20CEC0CE003C8C69 /* CMHExample23ViewController.m in Sources */,
@@ -4083,6 +4283,7 @@
 				620B4C031E4A2A5A00266A72 /* ViewPagerController.m in Sources */,
 				622990761E4D4D5100E0890E /* MHSelectsController.m in Sources */,
 				6208770F1E549FE900183F81 /* MHYouKuVerticalSeparateButton.m in Sources */,
+				E92E833C2100A0B4007C2C8D /* CMHFileUploadManager.m in Sources */,
 				260FE12D1EF3EBDC00830B07 /* SUPublicWebController0.m in Sources */,
 				E92AB23E20C541C40067D0B6 /* CMHExample04ViewController.m in Sources */,
 				622BF5E11E569EC3004DFCA2 /* MHYouKuMediaDetail.m in Sources */,
@@ -4095,19 +4296,23 @@
 				E933662B20D0F86700B6F51F /* NSError+MHModelException.m in Sources */,
 				E92A8F4520CE8A0C00EE850F /* CMHWaterfall.m in Sources */,
 				E92C138D20DA59570022891F /* SAMKeychain+CMHUtil.m in Sources */,
+				E9752B23211D9B9600647656 /* CMHExample35ViewController.m in Sources */,
 				261133701EF43C60006AE109 /* SUPublicWebController1.m in Sources */,
 				E929D85020CA6BBB001F833E /* YYCache+CMHHelper.m in Sources */,
 				E92C138620DA54B70022891F /* CMHHTTPRequest.m in Sources */,
 				E951602020C284DB007224DA /* CMHObject.m in Sources */,
+				E92E833D2100A0B4007C2C8D /* CMHFileSource.m in Sources */,
 				6229906F1E4D4CC500E0890E /* MHDeleteController.m in Sources */,
 				261148E61F15416700758DAF /* YYReachability.m in Sources */,
 				622990821E4DAEBF00E0890E /* MHButton.m in Sources */,
 				622BF5F31E56F45D004DFCA2 /* MHYouKuCommentHeaderView.m in Sources */,
 				260D68CC1F1C89DF0045B232 /* Foundation+Log.m in Sources */,
+				E9752AE221193E5A00647656 /* CMHFileSynthetise.m in Sources */,
 				2615EC8C1EEE30D500D6B473 /* SUTableViewController0.m in Sources */,
 				E929D83E20CA53EA001F833E /* CMHExample10ViewController.m in Sources */,
 				261148DF1F15413000758DAF /* YYThreadSafeArray.m in Sources */,
 				620877151E54B33C00183F81 /* MHAccount.m in Sources */,
+				E9372AEF210571BF003CBBFC /* CMHFileView.m in Sources */,
 				260C2E041EF1363B00378885 /* SULoginViewModel1.m in Sources */,
 				260FE1141EF389B300830B07 /* SUGoodsViewModel1.m in Sources */,
 				E92A8F3620CE6EB900EE850F /* CMHSearchTitleView.m in Sources */,
@@ -4115,6 +4320,7 @@
 				260E2E681EEFBC7800A0A50D /* SUGoodsData.m in Sources */,
 				E932AAB720B64B1D00C99B3C /* CMHRefreshFooter.m in Sources */,
 				E933662F20D12DD200B6F51F /* CMHExample07ViewController.m in Sources */,
+				E92E835021017F34007C2C8D /* CMHSource.m in Sources */,
 				620B4BFF1E4A1F6200266A72 /* MHDisplayController.m in Sources */,
 				E951601320C2807C007224DA /* CMHViewController.m in Sources */,
 				6223CEE81E5423B300993A91 /* MHCommentReply.m in Sources */,
@@ -4201,7 +4407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -4249,7 +4455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -4268,7 +4474,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4292,7 +4498,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = MHDevelopExample/MHDevelopExamplePrefixHeader.pch;
 				INFOPLIST_FILE = MHDevelopExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CoderMikeHe.MHDevelopExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -236,7 +236,7 @@ static id service_ = nil;
     if (statusCode == CMHHTTPResponseCodeSuccess) { /// 请求成功
         
         /// 打印成功的信息
-        [self _HTTPRequestLog:task body:parameters error:nil];
+//        [self _HTTPRequestLog:task body:parameters error:nil];
         
         /// 断言：resultClass可以为nil ，或者是CMHObject的子类
         NSParameterAssert((resultClass == nil || [resultClass isSubclassOfClass:CMHObject.class]));
@@ -353,6 +353,9 @@ static id service_ = nil;
         if (task.error != nil) userInfo[NSUnderlyingErrorKey] = task.error;
         
         NSError *requestError = [NSError errorWithDomain:CMHHTTPServiceErrorDomain code:statusCode userInfo:userInfo];
+        
+        /// 回调错误信息
+        !failure ? : failure(task, requestError);
         
         /// log the error info
         [self _HTTPRequestLog:task body:parameters error:requestError];

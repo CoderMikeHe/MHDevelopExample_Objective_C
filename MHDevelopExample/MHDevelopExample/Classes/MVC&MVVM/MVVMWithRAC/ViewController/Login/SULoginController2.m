@@ -79,7 +79,7 @@
     /// 判定数据
     [RACObserve(self.viewModel, avatarUrlString) subscribeNext:^(NSString *avatarUrlString) {
         @strongify(self);
-        [MHWebImageTool setImageWithURL:avatarUrlString placeholderImage:placeholderUserIcon() imageView:self.userAvatar];
+        [MHWebImageTool setImageWithURL:avatarUrlString placeholderImage:MHWebPlaceholderUserIcon() imageView:self.userAvatar];
     }];
    
 /***

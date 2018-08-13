@@ -15,13 +15,12 @@ NSString * const CMHSearchFarmsHistoryCacheKey = @"CMHSearchFarmsHistoryCacheKey
 NSString * _Nullable const CMHExample06RemoteImageCacheKey = @"CMHExample06RemoteImageCacheKey";
 
 /// 整个应用的利用YYCache来做磁盘和内存缓存的文件名称，切记该文件只能使用YYCache来做处理 具有相同名称的多个实例将缓存不稳定
-static NSString *const CMHApplicationYYCacheName = @"CMHYYCache";
+static NSString *const CMHApplicationYYCacheName = @"com.yy.cache";
 /// 整个应用的利用YYCache来做磁盘和内存缓存的文件目录，切记该文件只能使用YYCache来做处理
 static inline NSString * CMHApplicationYYCachePath(){
     NSString *cachePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:CMHApplicationYYCacheName];
     return cachePath;
 }
-
 
 @implementation YYCache (CMHHelper)
 + (instancetype)sharedCache {

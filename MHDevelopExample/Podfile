@@ -56,7 +56,8 @@ pod 'MBProgressHUD'                     , '1.0.0'
 #pod 'JDStatusBarNotification'           , '1.5.5'
 
 # 数据库
-pod 'FMDB'                              , '2.6.2'
+#pod 'FMDB'                              , '2.7.2'
+pod 'BGFMDB'                         , '2.0.12'
 
 # 环形进度条
 #pod 'DACircularProgress'                , '2.3.1'
@@ -156,7 +157,12 @@ pod 'YZDisplayViewController'           , '~> 1.0.6'
 # 苹果内购
 #pod 'RMStore', '0.7.1'
 # 检测内存泄漏
-pod 'MLeaksFinder'                      , '~> 1.0.0'
+#pod 'MLeaksFinder'                      , '~> 1.0.0'
+# 图片选择器
+pod 'TZImagePickerController'           , '2.2.2'
+# 环形进度条
+pod 'UAProgressView', '~> 0.1.4'
+ pod 'DACircularProgress', '~> 2.3.1'
 
     target 'MHDevelopExampleTests' do
     end

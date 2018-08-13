@@ -14,8 +14,8 @@
 FOUNDATION_EXTERN NSString *const CMHViewControllerIDKey;
 /// 传递数据模型的key：例如 商品模型的传递 用户模型的传递...
 FOUNDATION_EXTERN NSString *const CMHViewControllerUtilKey;
-/// 传递webView Request的key：例如 webView request...
-FOUNDATION_EXTERN NSString *const CMHViewControllerRequestKey;
+/// 传递webView Request Url的key：例如 webView request...
+FOUNDATION_EXTERN NSString *const CMHViewControllerRequestUrlKey;
 
 @interface CMHViewController : UIViewController
 

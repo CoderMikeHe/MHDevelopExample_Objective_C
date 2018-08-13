@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="CMHFileUploadCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="116.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JSe-tz-xQ1" userLabel="coverView">
+                        <rect key="frame" x="16" y="0.0" width="107" height="107"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="JSe-tz-xQ1" secondAttribute="height" id="LKs-Nz-hjQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45Q-od-a9f" userLabel="deleteBtn">
+                        <rect key="frame" x="280" y="38.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="CKg-ro-Nfz"/>
+                            <constraint firstAttribute="height" constant="40" id="Pnn-Jw-280"/>
+                        </constraints>
+                        <state key="normal" image="Delete_button"/>
+                        <connections>
+                            <action selector="_deleteBtnDidClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="q2B-Bv-vlL"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一条有味道的说说" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnb-CT-4hC" userLabel="titleLabel">
+                        <rect key="frame" x="131" y="25" width="173" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-07-17 10:38:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC1-NM-4km" userLabel="createAtLabel">
+                        <rect key="frame" x="131" y="51" width="120.5" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-nr-M4b">
+                        <rect key="frame" x="0.0" y="107" width="320" height="10"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="8eT-Fe-Yby"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上传中 99.99%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ex-Vo-JiT" userLabel="progressLabel">
+                        <rect key="frame" x="131" y="74" width="103" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.039215686274509803" green="0.75686274509803919" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="45Q-od-a9f" secondAttribute="trailing" id="7o4-QM-Mcz"/>
+                    <constraint firstItem="JSe-tz-xQ1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="80p-DJ-kmv"/>
+                    <constraint firstItem="HC1-NM-4km" firstAttribute="top" secondItem="Wnb-CT-4hC" secondAttribute="bottom" constant="8" id="Bs1-57-iuS"/>
+                    <constraint firstItem="ovO-nr-M4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jrx-b3-da9"/>
+                    <constraint firstAttribute="trailing" secondItem="ovO-nr-M4b" secondAttribute="trailing" id="LEu-YG-cv9"/>
+                    <constraint firstItem="ovO-nr-M4b" firstAttribute="top" secondItem="JSe-tz-xQ1" secondAttribute="bottom" id="Yv2-hm-79O"/>
+                    <constraint firstItem="HC1-NM-4km" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZQg-PC-XZB"/>
+                    <constraint firstItem="45Q-od-a9f" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="f7g-dr-sg9"/>
+                    <constraint firstItem="5ex-Vo-JiT" firstAttribute="leading" secondItem="JSe-tz-xQ1" secondAttribute="trailing" constant="8" id="fw7-9C-hOs"/>
+                    <constraint firstAttribute="bottom" secondItem="ovO-nr-M4b" secondAttribute="bottom" id="jh0-Lf-5el"/>
+                    <constraint firstItem="HC1-NM-4km" firstAttribute="leading" secondItem="JSe-tz-xQ1" secondAttribute="trailing" constant="8" id="pap-rz-XTN"/>
+                    <constraint firstItem="JSe-tz-xQ1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="s4S-Ha-0ML"/>
+                    <constraint firstAttribute="trailing" secondItem="Wnb-CT-4hC" secondAttribute="trailing" constant="16" id="sDk-Wv-D6m"/>
+                    <constraint firstItem="Wnb-CT-4hC" firstAttribute="leading" secondItem="JSe-tz-xQ1" secondAttribute="trailing" constant="8" id="wZx-Lo-GpC"/>
+                    <constraint firstItem="5ex-Vo-JiT" firstAttribute="top" secondItem="HC1-NM-4km" secondAttribute="bottom" constant="8" id="zrB-M4-Zf0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="coverView" destination="JSe-tz-xQ1" id="C9v-ot-Tge"/>
+                <outlet property="createAtLabel" destination="HC1-NM-4km" id="beO-W0-1iX"/>
+                <outlet property="deleteBtn" destination="45Q-od-a9f" id="876-lJ-UFH"/>
+                <outlet property="progressLabel" destination="5ex-Vo-JiT" id="Odb-P5-KEl"/>
+                <outlet property="titleLabel" destination="Wnb-CT-4hC" id="93S-Br-zls"/>
+            </connections>
+            <point key="canvasLocation" x="-190" y="-29.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Delete_button" width="21" height="21"/>
+    </resources>
+</document>

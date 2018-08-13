@@ -18,6 +18,15 @@
 #import "CMHExample16ViewController.h"
 #import "CMHExample17ViewController.h"
 #import "CMHExample18ViewController.h"
+
+
+/// 文件上传
+#import "CMHFileUploadController.h"
+
+
+
+
+
 @interface CMHContactsViewController ()
 
 @end
@@ -46,6 +55,13 @@
     [super configure];
     
     /// 配置测试数据
+    /// 上传功能
+    CMHExample *uploadExample = [[CMHExample alloc] initWithTitle:@"❤️ 基于AFNetworking的文件上传的断点续传" subtitle:@"详见`CMHFileUploadController`"];
+    uploadExample.destClass = [CMHFileUploadController class];
+    [self.dataSource addObject:uploadExample];
+    
+    
+    //// ----------------- 华丽分割线 -------------------
     CMHExample *example10 = [[CMHExample alloc] initWithTitle:@"10：CMHTableViewController 默认配置" subtitle:@"详见`CMHTableViewController.h`属性介绍"];
     example10.destClass = [CMHExample10ViewController class];
     [self.dataSource addObject:example10];
@@ -111,7 +127,6 @@
     if (example.operation) {  /// 如果有对应操作，则执行操作，优先级高于 destClass
         /// 执行操作
         example.operation();
-        
         return;
     }
     

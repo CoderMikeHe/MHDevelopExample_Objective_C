@@ -1,4 +1,6 @@
 ## MHDevelopExample_Objective_C
+### 下载
+- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/19n3mWjSUuh5LfmPZvepsdQ  密码:ppd7 <PS：不定期更新！！！>
 
 ### 概述
 - 本工程主要是利用`iOS` 的`Objective-C`开发的技术要点汇总；
@@ -28,7 +30,6 @@
 	$ sudo gem update --system
 	$ sudo gem install cocoapods -n/usr/local/bin
 	```
-- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1lh_f9n9Qbg6QyP2sILqgZQ  密码:m1uz <PS：不定期更新！！！>
 
 ### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。

@@ -159,7 +159,7 @@ UICollectionViewDataSource>
     
     
     /// 头像
-    [MHWebImageTool setImageWithURL:viewModel.goods.avatar placeholderImage:placeholderUserIcon() imageView:self.userHeadImageView];
+    [MHWebImageTool setImageWithURL:viewModel.goods.avatar placeholderImage:MHWebPlaceholderUserIcon() imageView:self.userHeadImageView];
     
     /// 昵称
     self.userNameLabel.text = viewModel.goods.nickName;
@@ -216,7 +216,7 @@ UICollectionViewDataSource>
     SUGoods *goods = goodsFrame.goods;
     
     /// 商品头像
-    [MHWebImageTool setImageWithURL:goods.avatar placeholderImage:placeholderUserIcon() imageView:self.userHeadImageView];
+    [MHWebImageTool setImageWithURL:goods.avatar placeholderImage:MHWebPlaceholderUserIcon() imageView:self.userHeadImageView];
     self.realNameIcon.hidden = !goods.iszm;
     
     /// 用户昵称
@@ -393,7 +393,7 @@ UICollectionViewDataSource>
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SUGoodsImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([SUGoodsImageCell class]) forIndexPath:indexPath];
-    [MHWebImageTool setImageWithURL:self.imageURLs[indexPath.row] placeholderImage:placeholderImage() imageView:cell.imageView];
+    [MHWebImageTool setImageWithURL:self.imageURLs[indexPath.row] placeholderImage:MHWebPlaceholderImage() imageView:cell.imageView];
     return cell;
 }
 #pragma mark - Setter & Getter

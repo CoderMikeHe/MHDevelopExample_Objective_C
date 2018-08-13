@@ -280,7 +280,7 @@ static BOOL statusBarHidden_ = NO;
     SDCycleScrollView *headerView = [[SDCycleScrollView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.mh_width, SUGoodsBannerViewHeight)];
     headerView.autoScrollTimeInterval = 5.0f;
     headerView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
-    headerView.placeholderImage = placeholderImage();
+    headerView.placeholderImage = MHWebPlaceholderImage();
     self.headerView = headerView;
     /// default is Hidden until have data to show
     headerView.hidden = YES;

@@ -120,12 +120,12 @@
     /// 这里是假数据 模拟用户输入去本地数据库拉去数据
     if(![NSString mh_isValidMobile:self.inputView.phoneTextField.text])
     {
-        self.userAvatar.image = placeholderUserIcon();
+        self.userAvatar.image = MHWebPlaceholderUserIcon();
         return;
     }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.75f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSString *urlStr = [NSString mh_isValidMobile:self.inputView.phoneTextField.text]?[AppDelegate sharedDelegate].account.avatarUrl:nil;
-        [MHWebImageTool setImageWithURL:urlStr placeholderImage:placeholderUserIcon() imageView:self.userAvatar];
+        [MHWebImageTool setImageWithURL:urlStr placeholderImage:MHWebPlaceholderUserIcon() imageView:self.userAvatar];
     });
 }
 

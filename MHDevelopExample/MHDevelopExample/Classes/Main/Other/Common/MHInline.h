@@ -11,12 +11,12 @@
 
 
 /** 占位颜色图 */
-static inline UIImage *const placeholderImage() {
+static inline UIImage *const MHWebPlaceholderImage() {
     return [UIImage imageNamed:@"placeholder_image"];
 }
 
 /** 占位头像 */
-static inline UIImage *const placeholderUserIcon() {
+static inline UIImage *const MHWebPlaceholderUserIcon() {
     return [UIImage imageNamed:@"placeholder_icon"];
 }
 

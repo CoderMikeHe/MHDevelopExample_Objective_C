@@ -17,7 +17,6 @@
 #import "MHTopicTwoController.h"
 #import "MHYouKuController.h"
 
-
 // UITableView常见的使用场景
 #import "MHSelectsController.h"
 #import "MHDeleteController.h"
@@ -27,6 +26,7 @@
 #import "SULoginController0.h"
 #import "SULoginController1.h"
 #import "SULoginController2.h"
+
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
@@ -46,8 +46,7 @@
 }
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     // 初始化
@@ -168,17 +167,14 @@
 
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return self.examples.count;
 }
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [[self.examples[section] titles] count];
 }
 
-- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
@@ -210,7 +206,6 @@
         [self.navigationController pushViewController:vc animated:YES];
         return;
     }
-    
     if ([vcClassString isEqualToString:@"SULoginController2"]) {
         SULoginViewModel2 *viewModel = [[SULoginViewModel2 alloc] initWithParams:@{SUViewModelTitleKey:@"登录"}];
         SULoginController2 *vc = [[SULoginController2 alloc] initWithViewModel:viewModel];

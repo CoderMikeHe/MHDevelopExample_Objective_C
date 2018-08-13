@@ -453,6 +453,8 @@ static CGFloat const MHDeleteButtonHeight = 50.0f;
         
         // 获取cell编辑状态选中情况下的所有子控件
 //        NSArray *subViews = [[tableView cellForRowAtIndexPath:indexPath] subviews];
+        
+        
         NSIndexPath *indexPathM = self.dataSource[indexPath.row];
         if (![self.selectedDatas containsObject:indexPathM]) {
             [self.selectedDatas addObject:indexPathM];
@@ -461,6 +463,9 @@ static CGFloat const MHDeleteButtonHeight = 50.0f;
         return;
     }
 
+    
+    // 获取cell编辑状态选中情况下的所有子控件
+//    NSArray *subViews = [[tableView cellForRowAtIndexPath:indexPath] subviews];
     
     
     MHOperationController *operation = [[MHOperationController alloc] init];

@@ -12,6 +12,7 @@
 #import "CMHProfileButton.h"
 #import "CMHNavigationController.h"
 #import "CMHWebViewController.h"
+#import "CMHExample35ViewController.h"
 @interface CMHProfileViewController ()
 
 @end
@@ -47,8 +48,7 @@
     
     /// PS: 这里笔者就 统一用 CMHWebViewController , 但是现实中，大多数是 CMHWebViewController 的子类，这里介绍 CMHWebViewController.h 提供的属性的场景
     /// 现实中，你只要组合笔者提供的属性，就会达到满足不同的开发场景，当然你有好的点子，也可以联系笔者哦
-    NSURL *url = [NSURL URLWithString:CMHMyBlogHomepageUrl];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSString *requestUrl = CMHMyBlogHomepageUrl;
     
     @weakify(self);
     
@@ -57,7 +57,7 @@
     CMHExample *example30 = [[CMHExample alloc] initWithTitle:@"30：Web默认情况" subtitle:@"有关闭按钮，self.title = webView.title，无下拉刷新"];
     example30.operation = ^{
         @strongify(self);
-        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];
+        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestUrlKey:requestUrl}];
         [self.navigationController pushViewController:webView animated:YES];
        
     };
@@ -67,7 +67,7 @@
     CMHExample *example31 = [[CMHExample alloc] initWithTitle:@"31：self.title 不等于 webView.title" subtitle:@"shouldDisableWebViewTitle = YES"];
     example31.operation = ^{
         @strongify(self);
-        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];
+        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestUrlKey:requestUrl}];
         /// 让导航栏的title不等于WebViewTitle
         webView.shouldDisableWebViewTitle = YES;
         webView.title = @"自定义Title";
@@ -80,7 +80,7 @@
     CMHExample *example32 = [[CMHExample alloc] initWithTitle:@"32：取消掉导航栏左侧的关闭按钮" subtitle:@"shouldDisableWebViewClose = YES"];
     example32.operation = ^{
         @strongify(self);
-        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];
+        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestUrlKey:requestUrl}];
         /// 去掉导航栏左侧的关闭按钮
         webView.shouldDisableWebViewClose = YES;
         [self.navigationController pushViewController:webView animated:YES];
@@ -91,7 +91,7 @@
     CMHExample *example33 = [[CMHExample alloc] initWithTitle:@"33：支持下拉刷新且一进去就开始刷新" subtitle:@"shouldPullDownToRefresh = YES"];
     example33.operation = ^{
         @strongify(self);
-        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];
+        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestUrlKey:requestUrl}];
         /// 支持下拉刷新
         webView.shouldPullDownToRefresh = YES;
         [self.navigationController pushViewController:webView animated:YES];
@@ -102,7 +102,7 @@
     CMHExample *example34 = [[CMHExample alloc] initWithTitle:@"34：支持下拉刷新且一进去不自动刷新" subtitle:@"shouldPullDownToRefresh = YES && shouldBeginRefreshing = NO"];
     example34.operation = ^{
         @strongify(self);
-        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestKey:request}];
+        CMHWebViewController *webView = [[CMHWebViewController alloc] initWithParams:@{CMHViewControllerRequestUrlKey:requestUrl}];
         /// 支持下拉刷新 且 进去不自动刷新
         webView.shouldPullDownToRefresh = YES;
         webView.shouldBeginRefreshing = NO;
@@ -111,6 +111,19 @@
     [self.dataSource addObject:example34];
     
     /// `contentInset` : 与前面`CMHTableViewController`中的`contentInset`类似，这里就不做复述
+    
+    
+    CMHExample *example35 = [[CMHExample alloc] initWithTitle:@"34：WKWebView系统自带的JS交互" subtitle:@"shouldPullDownToRefresh = YES && shouldBeginRefreshing = NO"];
+    example35.operation = ^{
+        @strongify(self);
+        CMHExample35ViewController *webView = [[CMHExample35ViewController alloc] initWithParams:nil];
+        /// 本地资源
+        NSString *requestUrl = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+        webView.requestUrl = requestUrl;
+        webView.localFile = YES;
+        [self.navigationController pushViewController:webView animated:YES];
+    };
+    [self.dataSource addObject:example35];
     
     
     /// 刷洗数据

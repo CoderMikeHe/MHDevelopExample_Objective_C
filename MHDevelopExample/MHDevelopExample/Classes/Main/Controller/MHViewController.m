@@ -23,9 +23,19 @@
 
 #pragma mark - 私有方法
 // 不要让子类的方法跟这一样 否则覆盖 
-- (void)_baseSetup
-{
+- (void)_baseSetup{
     self.view.backgroundColor = MHGlobalGrayBackgroundColor;
 }
 
+
+
+#pragma mark - Orientation
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {return UIInterfaceOrientationMaskPortrait;}
+- (BOOL)shouldAutorotate {return YES;}
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {return UIInterfaceOrientationPortrait;}
+
+#pragma mark - Status bar
+- (BOOL)prefersStatusBarHidden { return NO; }
+- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleDefault; }
+- (UIStatusBarAnimation)preferredStatusBarUpdateAnimation { return UIStatusBarAnimationFade; }
 @end

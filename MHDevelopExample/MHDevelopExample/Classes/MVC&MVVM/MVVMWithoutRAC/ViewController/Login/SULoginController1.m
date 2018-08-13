@@ -132,7 +132,7 @@
     /// binding self.viewModel.avatarUrlString
     [_KVOController mh_observe:self.viewModel keyPath:@"avatarUrlString" block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
         @strongify(self);
-        [MHWebImageTool setImageWithURL:change[NSKeyValueChangeNewKey] placeholderImage:placeholderUserIcon() imageView:self.userAvatar];
+        [MHWebImageTool setImageWithURL:change[NSKeyValueChangeNewKey] placeholderImage:MHWebPlaceholderUserIcon() imageView:self.userAvatar];
     }];
 }
 

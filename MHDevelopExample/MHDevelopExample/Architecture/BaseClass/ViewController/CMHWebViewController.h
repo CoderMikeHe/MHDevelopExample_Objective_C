@@ -14,8 +14,10 @@
 /// 内容缩进 (64,0,0,0)
 @property (nonatomic, readonly, assign) UIEdgeInsets contentInset;
 
-/// web url quest
-@property (nonatomic, readwrite, copy) NSURLRequest *request;
+/// web url quest 如果localFile == YES , 则requestUrl 为本地路径 ； 反之，requestUrl为远程url str
+@property (nonatomic, readwrite, copy) NSString *requestUrl;
+/// 是否是本地文件 default is NO
+@property (nonatomic , readwrite , assign , getter = isLocalFile) BOOL localFile;
 
 /// 下拉刷新 defalut is NO
 @property (nonatomic, readwrite, assign) BOOL shouldPullDownToRefresh;
@@ -27,5 +29,10 @@
 
 /// 是否取消关闭按钮。默认是不取消，default is NO
 @property (nonatomic, readwrite, assign) BOOL shouldDisableWebViewClose;
+
+/// messageHandlers: 就是你要注册的 JS 调用 OC 的方法名
+@property (nonatomic , readwrite , copy) NSArray <NSString *> *messageHandlers;
+/// 导航栏高度 默认是 系统导航栏的高度
+@property (nonatomic , readwrite , assign) CGFloat navigationBarHeight;
 
 @end

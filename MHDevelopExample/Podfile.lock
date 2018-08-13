@@ -14,6 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - BGFMDB (2.0.12):
+    - BGFMDB/BG (= 2.0.12)
+    - BGFMDB/FMDB (= 2.0.12)
+  - BGFMDB/BG (2.0.12):
+    - BGFMDB/FMDB
+  - BGFMDB/FMDB (2.0.12)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -35,12 +41,9 @@ PODS:
   - Colours (5.13.0):
     - Colours/ObjC (= 5.13.0)
   - Colours/ObjC (5.13.0)
+  - DACircularProgress (2.3.1)
   - DZNEmptyDataSet (1.8.1)
-  - FBRetainCycleDetector (0.1.4)
   - FDFullscreenPopGesture (1.1)
-  - FMDB (2.6.2):
-    - FMDB/standard (= 2.6.2)
-  - FMDB/standard (2.6.2)
   - HJCornerRadius (0.0.1)
   - HYBImageCliped (2.2.4)
   - IQKeyboardManager (6.0.3)
@@ -49,14 +52,14 @@ PODS:
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
-  - MLeaksFinder (1.0.0):
-    - FBRetainCycleDetector
   - pop (1.0.10)
   - ReactiveObjC (3.1.0)
   - SAMKeychain (1.5.2)
   - SDWebImage (4.4.0):
     - SDWebImage/Core (= 4.4.0)
   - SDWebImage/Core (4.4.0)
+  - TZImagePickerController (2.2.2)
+  - UAProgressView (0.1.4)
   - UICollectionViewLeftAlignedLayout (1.0.2)
   - "UIImage+ImageWithColor (1.4.0)"
   - "UITableView+FDTemplateLayoutCell (1.6)"
@@ -79,12 +82,13 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
+  - BGFMDB (= 2.0.12)
   - BlocksKit (= 2.2.5)
   - CHTCollectionViewWaterfallLayout (= 0.9.6)
   - Colours (= 5.13.0)
+  - DACircularProgress (~> 2.3.1)
   - DZNEmptyDataSet (= 1.8.1)
   - FDFullscreenPopGesture (= 1.1)
-  - FMDB (= 2.6.2)
   - HJCornerRadius (from `https://github.com/panghaijiao/HJCornerRadius.git`)
   - HYBImageCliped (= 2.2.4)
   - IQKeyboardManager (= 6.0.3)
@@ -93,11 +97,12 @@ DEPENDENCIES:
   - Masonry (= 1.0.2)
   - MBProgressHUD (= 1.0.0)
   - MJRefresh (= 3.1.12)
-  - MLeaksFinder (~> 1.0.0)
   - pop (= 1.0.10)
   - ReactiveObjC (= 3.1.0)
   - SAMKeychain (= 1.5.2)
   - SDWebImage (= 4.4.0)
+  - TZImagePickerController (= 2.2.2)
+  - UAProgressView (~> 0.1.4)
   - UICollectionViewLeftAlignedLayout (= 1.0.2)
   - "UIImage+ImageWithColor (= 1.4.0)"
   - "UITableView+FDTemplateLayoutCell (= 1.6)"
@@ -114,13 +119,13 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - BGFMDB
     - BlocksKit
     - CHTCollectionViewWaterfallLayout
     - Colours
+    - DACircularProgress
     - DZNEmptyDataSet
-    - FBRetainCycleDetector
     - FDFullscreenPopGesture
-    - FMDB
     - HYBImageCliped
     - IQKeyboardManager
     - JPFPSStatus
@@ -128,11 +133,12 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MJRefresh
-    - MLeaksFinder
     - pop
     - ReactiveObjC
     - SAMKeychain
     - SDWebImage
+    - TZImagePickerController
+    - UAProgressView
     - UICollectionViewLeftAlignedLayout
     - "UIImage+ImageWithColor"
     - "UITableView+FDTemplateLayoutCell"
@@ -156,13 +162,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BGFMDB: cd5e468218d4c7345862d814d313c0888db3a66a
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CHTCollectionViewWaterfallLayout: f4dab06db57b36dcf29e802594175acc76c56615
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   HJCornerRadius: 0af191386b5f2e9c4465739b5db22c0acc52923b
   HYBImageCliped: 22d14431324bc9d056353d6f1490a3bd03fc7dff
   IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
@@ -171,11 +177,12 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
+  TZImagePickerController: 233a868727a813b4ca810a15035320b3bcb94ead
+  UAProgressView: 6796f5aa05037fb2940521636163b9db40a6c534
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
   "UIImage+ImageWithColor": 891401f732f2f332fefe68c2332c6c955c2a879c
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
@@ -188,6 +195,6 @@ SPEC CHECKSUMS:
   YZDisplayViewController: 621f737a9aa3dfbc95a901e89e5e7c4b2ea6ef79
   ZYCornerRadius: f0af817be7805b5c63d793042ca7a03f81e14069
 
-PODFILE CHECKSUM: f54930e2b06d9417b71a3e51582accba8d8c2633
+PODFILE CHECKSUM: 1193358ef79646cdd88ce352d5aee77000b4afff
 
 COCOAPODS: 1.5.0

@@ -21,12 +21,12 @@
     [self mh_showAlertViewWithTitle:title message:message confirmTitle:confirmTitle cancelTitle:nil confirmAction:confirmAction cancelAction:NULL];
 }
 
-+ (void)mh_showAlertViewWithTitle:(NSString *)title message:(NSString *)message confirmTitle:(NSString *)confirmTitle cancelTitle:(NSString *)cancelTitle confirmAction:(void(^)())confirmAction cancelAction:(void(^)())cancelAction {
++ (void)mh_showAlertViewWithTitle:(NSString *)title message:(NSString *)message confirmTitle:(NSString *)confirmTitle cancelTitle:(NSString *)cancelTitle confirmAction:(void(^)(void))confirmAction cancelAction:(void(^)(void))cancelAction {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     /// 配置alertController
-    alertController.titleColor = MHColorFromHexString(@"#3C3E44");
-    alertController.messageColor = MHColorFromHexString(@"#9A9A9C");
+    alertController.titleColor = MHColorFromHexString(@"#333333");
+    alertController.messageColor = MHColorFromHexString(@"#333333");
     
     /// 左边按钮
     if(cancelTitle.length>0){

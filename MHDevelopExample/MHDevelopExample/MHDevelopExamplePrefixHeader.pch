@@ -60,7 +60,7 @@
 #import "MHWebImageTool.h"
 #import "MHSingleton.h"
 #import "Masonry.h"
-
+#import "CMHFileManager.h"
 #import "KVOController.h"
 
 
@@ -142,7 +142,6 @@ typedef id   (^IDBlock_id)  (id);
 #define MH_APPLICATION_STATUS_BAR_HEIGHT (MH_IS_IPHONE_X?44:20.0f)
 
 
-
 // 适配AF
 #ifndef TARGET_OS_IOS
 
@@ -209,6 +208,12 @@ typedef id   (^IDBlock_id)  (id);
 
 // IOS版本
 #define MHIOSVersion [[[UIDevice currentDevice] systemVersion] floatValue]
+#define MH_iOS7_VERSTION_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 7.0)
+#define MH_iOS8_VERSTION_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 8.0)
+#define MH_iOS9_VERSTION_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 9.0)
+#define MH_iOS10_VERSTION_LATER ([UIDevice currentDevice].systemVersion.floatValue >= 10.0)
+
+
 
 // 销毁打印
 #define MHDealloc MHLog(@"\n =========+++ %@  销毁了 +++======== \n",[self class])
