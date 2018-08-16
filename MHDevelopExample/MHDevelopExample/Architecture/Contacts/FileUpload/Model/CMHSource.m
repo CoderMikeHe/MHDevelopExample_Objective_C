@@ -249,11 +249,15 @@ NSString *const CMHCurrentUserIdStr = @"1a2a3a4a5a6a7a8a9a0a";
         for (NSInteger i = 0; i < uploadFileCount; i++) {
             CMHFile *file = self.files[i];
             NSString *fileId = fileIds[i];
+            
+            /// 资源中的文件绑定文件ID
+            file.fileId = fileId;
+            
             /// 文件块
             CMHFileBlock *fileBlcok = [[CMHFileBlock alloc] initFileBlcokAtPath:file.filePath fileId:fileId sourceId:self.sourceId];
             [fileBlocks addObject:fileBlcok];
         }
-        /// 生成文件资源
+        /// 生成上传文件资源
         CMHFileSource *fileSource = [[CMHFileSource alloc] init];
         fileSource.sourceId = self.sourceId;
         fileSource.fileIds = fileIdsStr;

@@ -12,6 +12,9 @@
 
 @interface CMHFile : CMHObject
 
+/// fileId 文件上传ID ,通过`/fileSection/preLoad.do`接口获取
+@property (nonatomic , readwrite , copy) NSString *fileId;
+
 /// fileType
 @property (nonatomic , readwrite , assign) CMHFileType fileType;
 

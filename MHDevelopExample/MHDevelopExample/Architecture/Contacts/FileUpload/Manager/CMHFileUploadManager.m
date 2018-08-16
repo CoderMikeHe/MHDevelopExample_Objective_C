@@ -311,7 +311,7 @@ static dispatch_once_t onceToken;
 
 }
 
-/// 上传资源 核心方法
+/// 上传资源 <核心方法>
 - (void)uploadSource:(NSString *)sourceId{
     
     if (!MHStringIsNotEmpty(sourceId)) { return; }
@@ -393,7 +393,6 @@ static dispatch_once_t onceToken;
         }
         return;
     }
-    
     
     
     /// 0. 这里一定会新建一个新的上传队列，一定会开启一个新的任务

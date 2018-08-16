@@ -238,23 +238,23 @@
             UIImage *thumbImage = photos[i];
             
             /// 这里要去遍历已经获取已经存在资源的文件 内存中
-            BOOL isExitFile = NO;
+            BOOL isExistMemory = NO;
             for (CMHFile *f in srcFiles.reverseObjectEnumerator) {
                 /// 判断是否已经存在路径和文件
                 if ([f.localIdentifier isEqualToString:localIdentifier] && MHStringIsNotEmpty(f.filePath)) {
                     [files addObject:f];
                     [srcFiles removeObject:f];
-                    isExitFile = YES;
+                    isExistMemory = YES;
                     break;
                 }
             }
-            if (isExitFile) {
+            if (isExistMemory) {
                 NSLog(@"++++ 💕文件已经存在内存中💕 ++++");
                 dispatch_group_leave(group);
             }else{
                 //// 视频和图片，需要缓存，这样会明显减缓，应用的内存压力
                 /// 是否已经缓存在沙盒
-                BOOL isCachedFlag = NO;
+                BOOL isExistCache = NO;
                 
                 /// 1. 先去缓存里面去取
                 NSString *filePath = (NSString *)[[YYCache sharedCache] objectForKey:localIdentifier];
@@ -264,7 +264,7 @@
                     NSString * absolutePath = [[CMHFileManager cachesDir] stringByAppendingPathComponent:filePath];
                     if ([CMHFileManager isExistsAtPath:absolutePath]) {
                         /// 3. 文件存在沙盒中，不需要获取了
-                        isCachedFlag = YES;
+                        isExistCache = YES;
                         
                         /// 创建文件模型
                         CMHFile *file = [[CMHFile alloc] init];
@@ -278,7 +278,7 @@
                 }
                 
                 
-                if (isCachedFlag) {
+                if (isExistCache) {
                     NSLog(@"++++ 💕文件已经存在磁盘中💕 ++++");
                     dispatch_group_leave(group);
                 }else{
@@ -375,7 +375,6 @@
     
     /// 默认是五十个资源
     self.maxFileCount = CMHFileMaxCount;
-    
     /// 这里需要容错处理
     if (self.isEditSource) { /// 编辑资源
         NSMutableArray *selectedAssets = [NSMutableArray array];
