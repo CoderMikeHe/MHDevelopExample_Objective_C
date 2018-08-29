@@ -36,6 +36,8 @@
 #import "CMHExample06ViewController.h"
 /// 测试回调
 #import "CMHExample07ViewController.h"
+
+
 @interface CMHMainFrameViewController ()<UINavigationControllerDelegate,UIViewControllerTransitioningDelegate>
 /// 个人中心按钮
 @property (nonatomic , readwrite , strong) CMHProfileButton *profileBtn;
@@ -166,6 +168,11 @@
 }
 
 
+#pragma mark - 事件处理
+- (void)_addMore{
+
+}
+
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -227,6 +234,9 @@
 - (void)_setupNavigationItem{
     /// 设置个人中心
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.profileBtn];
+    
+    /// 添加按钮
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem mh_systemItemWithTitle:nil titleColor:nil imageName:@"barbuttonicon_add_30x30" target:self selector:@selector(_addMore) textType:NO];
 }
 
 #pragma mark - 设置子控件
