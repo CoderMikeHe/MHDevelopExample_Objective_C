@@ -194,6 +194,7 @@
 		DE045E6D21C1534400DC9032 /* MHTitleLeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E6221C1534400DC9032 /* MHTitleLeftButton.m */; };
 		DE045E6E21C1534400DC9032 /* MHTitleRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E6621C1534400DC9032 /* MHTitleRightButton.m */; };
 		DE045E6F21C1534400DC9032 /* MHDivider.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E6921C1534400DC9032 /* MHDivider.m */; };
+		DE045E7621C15A0400DC9032 /* MHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E7521C15A0400DC9032 /* MHObject.m */; };
 		E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E7820CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m */; };
 		E9263E7D20CEC0CE003C8C69 /* CMHExample23ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E7C20CEC0CE003C8C69 /* CMHExample23ViewController.m */; };
 		E9263E8820CEC245003C8C69 /* XLCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E8020CEC245003C8C69 /* XLCardItem.m */; };
@@ -705,6 +706,8 @@
 		DE045E6721C1534400DC9032 /* MHTitleLeftButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTitleLeftButton.h; sourceTree = "<group>"; };
 		DE045E6821C1534400DC9032 /* MHImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHImageView.h; sourceTree = "<group>"; };
 		DE045E6921C1534400DC9032 /* MHDivider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHDivider.m; sourceTree = "<group>"; };
+		DE045E7421C15A0400DC9032 /* MHObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHObject.h; sourceTree = "<group>"; };
+		DE045E7521C15A0400DC9032 /* MHObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHObject.m; sourceTree = "<group>"; };
 		DF4CA6BC05B6740B754109C1 /* Pods-MHDevelopExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E53FC4F542F2116C4E9F74A8 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHDevelopExample_MHDevelopExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9263E7720CEBD4F003C8C69 /* CMHWaterfallDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWaterfallDetailViewController.h; sourceTree = "<group>"; };
@@ -2587,6 +2590,7 @@
 		DE045E5321C1518000DC9032 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				DE045E7321C159D100DC9032 /* Model */,
 				DE045E5D21C1534400DC9032 /* View */,
 				DE045E5421C1521500DC9032 /* ViewController */,
 			);
@@ -2621,6 +2625,15 @@
 				DE045E6621C1534400DC9032 /* MHTitleRightButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DE045E7321C159D100DC9032 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE045E7421C15A0400DC9032 /* MHObject.h */,
+				DE045E7521C15A0400DC9032 /* MHObject.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E9263E7620CEBD1C003C8C69 /* Controller */ = {
@@ -4307,6 +4320,7 @@
 				E92C138D20DA59570022891F /* SAMKeychain+CMHUtil.m in Sources */,
 				E9752B23211D9B9600647656 /* CMHExample35ViewController.m in Sources */,
 				261133701EF43C60006AE109 /* SUPublicWebController1.m in Sources */,
+				DE045E7621C15A0400DC9032 /* MHObject.m in Sources */,
 				E929D85020CA6BBB001F833E /* YYCache+CMHHelper.m in Sources */,
 				E92C138620DA54B70022891F /* CMHHTTPRequest.m in Sources */,
 				E951602020C284DB007224DA /* CMHObject.m in Sources */,
