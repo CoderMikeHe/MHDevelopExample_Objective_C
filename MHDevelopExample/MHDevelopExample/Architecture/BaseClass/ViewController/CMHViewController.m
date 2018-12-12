@@ -159,8 +159,9 @@ NSString *const CMHViewControllerRequestUrlKey = @"CMHViewControllerRequestUrlKe
 #else
     self.automaticallyAdjustsScrollViewInsets = NO;
 #endif
-    
     self.extendedLayoutIncludesOpaqueBars = YES;
+    /// 推荐使用
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     /// backgroundColor
     self.view.backgroundColor = [UIColor colorFromHexString:@"#EFEFF4"];

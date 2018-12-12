@@ -117,7 +117,7 @@ DEPENDENCIES:
   - ZYCornerRadius (= 1.0.2)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - BGFMDB
     - BlocksKit
@@ -197,4 +197,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1193358ef79646cdd88ce352d5aee77000b4afff
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

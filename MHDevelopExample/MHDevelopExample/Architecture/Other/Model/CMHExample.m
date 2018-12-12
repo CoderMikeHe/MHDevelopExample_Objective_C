@@ -16,7 +16,6 @@
     }
     return self;
 }
-
 + (instancetype)exampleWithTitle:(NSString *)title subtitle:(NSString *)subtitle{
     return [[self alloc] initWithTitle:title subtitle:subtitle];
 }
