@@ -27,6 +27,8 @@
 #import "SULoginController1.h"
 #import "SULoginController2.h"
 
+/// 横向滚动、水平布局、分组显示
+#import "MHHorizontalMode0Controller.h"
 
 @interface MHExampleController () <UITableViewDelegate , UITableViewDataSource>
 
@@ -119,6 +121,25 @@
         designPatternsExample.titles = @[@"1.1 MVC的运用实践",@"1.2 MVVM Without ReactiveCococa的运用实践",@"1.3 MVVM With ReactiveCococa的运用实践"];
         designPatternsExample.classes = @[@"SULoginController0",@"SULoginController1",@"SULoginController2"];
         [_examples addObject:designPatternsExample];
+        
+        
+        /**
+         五、横向滚动、水平布局、分组显示
+         5.1 "9个黑块 == 1个Cell" <静态>
+         5.1 "9个黑块 == 1个Cell" <联动>
+         5.2 "1个黑块 == 1个Cell" <静态>
+         5.2 "1个黑块 == 1个Cell" <布局静态>
+         5.2 "1个黑块 == 1个Cell" <联动>
+         5.3 "Cell嵌套CollectionView" <静态>
+         5.3 "Cell嵌套CollectionView" <联动一>
+         5.3 "Cell嵌套CollectionView" <联动二>
+         */
+        MHExample *horizontalExample = [[MHExample alloc] init];
+        horizontalExample.header = @"五、横向滚动、水平布局、分组显示";
+        horizontalExample.titles = @[@"5.1 \"9个黑块 == 1个Cell\" <静态>", @"5.1 \"9个黑块 == 1个Cell\" <联动>" , @"5.2 \"1个黑块 == 1个Cell\" <静态>",@"5.2 \"1个黑块 == 1个Cell\" <布局静态>",@"5.2 \"1个黑块 == 1个Cell\" <联动>", @"5.3 \"Cell嵌套CollectionView\" <静态>",@"5.3 \"Cell嵌套CollectionView\" <联动一>",@"5.3 \"Cell嵌套CollectionView\" <联动二>"];
+        horizontalExample.classes = @[@"MHHorizontalMode0Controller", @"MHHorizontalMode0LinkageController", @"MHHorizontalMode1Controller",@"MHHorizontalMode1LayoutController",@"MHHorizontalMode1LinkageController",@"MHHorizontalMode2Controller",@"MHHorizontalMode2Linkage0Controller",@"MHHorizontalMode2Linkage1Controller"];
+        [_examples addObject:horizontalExample];
+
         
         
     }

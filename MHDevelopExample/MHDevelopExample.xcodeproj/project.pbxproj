@@ -195,6 +195,25 @@
 		DE045E6E21C1534400DC9032 /* MHTitleRightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E6621C1534400DC9032 /* MHTitleRightButton.m */; };
 		DE045E6F21C1534400DC9032 /* MHDivider.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E6921C1534400DC9032 /* MHDivider.m */; };
 		DE045E7621C15A0400DC9032 /* MHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DE045E7521C15A0400DC9032 /* MHObject.m */; };
+		DE049DA521D26D8A00B812C8 /* MHHorizontalEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE049DA421D26D8A00B812C8 /* MHHorizontalEmptyCell.m */; };
+		DE049DAB21D27A3400B812C8 /* MHHorizontalMode2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DE049DAA21D27A3400B812C8 /* MHHorizontalMode2Controller.m */; };
+		DE049DAF21D27BA600B812C8 /* MHHorizontalMode2Cell0.m in Sources */ = {isa = PBXBuildFile; fileRef = DE049DAE21D27BA600B812C8 /* MHHorizontalMode2Cell0.m */; };
+		DE0E096021D66E94006A5303 /* MHHorizontalMode2Cell2.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E095F21D66E94006A5303 /* MHHorizontalMode2Cell2.m */; };
+		DE0E096321D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E096221D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.m */; };
+		DE24934121C54DD2007FE714 /* MHHorizontalMode0Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24934021C54DD2007FE714 /* MHHorizontalMode0Controller.m */; };
+		DE24934621C54FAB007FE714 /* MHHorizontalGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24934521C54FAB007FE714 /* MHHorizontalGroup.m */; };
+		DE24934921C5505E007FE714 /* MHHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24934821C5505E007FE714 /* MHHorizontal.m */; };
+		DEFB0BDA21D5081400BF1561 /* MHHorizontalMode0LinkageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BD921D5081400BF1561 /* MHHorizontalMode0LinkageController.m */; };
+		DEFB0BDD21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BDC21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m */; };
+		DEFB0BE021D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BDF21D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m */; };
+		DEFB0BE321D5094B00BF1561 /* MHHorizontalMode1LayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BE221D5094B00BF1561 /* MHHorizontalMode1LayoutController.m */; };
+		DEFB0BE621D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BE521D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.m */; };
+		DEFB0BEA21D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BE921D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.m */; };
+		DEFB3C0D21D3D31300F78C67 /* MHHorizontalMode2Cell1.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB3C0C21D3D31300F78C67 /* MHHorizontalMode2Cell1.m */; };
+		DEFB687A21CFB1C3000983B5 /* MHHorizontalMode1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB687921CFB1C3000983B5 /* MHHorizontalMode1Controller.m */; };
+		DEFB687D21CFB404000983B5 /* MHHorizontalMode1Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB687C21CFB404000983B5 /* MHHorizontalMode1Cell.m */; };
+		DEFF956321C93EF1001CC68A /* MHHorizontalMode0Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF956221C93EF1001CC68A /* MHHorizontalMode0Cell.m */; };
+		DEFF956721C94139001CC68A /* MHHorizontalConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFF956621C94139001CC68A /* MHHorizontalConstant.m */; };
 		E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E7820CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m */; };
 		E9263E7D20CEC0CE003C8C69 /* CMHExample23ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E7C20CEC0CE003C8C69 /* CMHExample23ViewController.m */; };
 		E9263E8820CEC245003C8C69 /* XLCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E9263E8020CEC245003C8C69 /* XLCardItem.m */; };
@@ -690,6 +709,7 @@
 		AEDCA7C76AEE3874760C2CBB /* Pods-MHDevelopExample-MHDevelopExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample-MHDevelopExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample-MHDevelopExampleTests/Pods-MHDevelopExample-MHDevelopExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C29D318BEF67D2C4638E0D /* Pods_MHDevelopExample_MHDevelopExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHDevelopExample_MHDevelopExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D709199DA67C0E6BC2500608 /* Pods-MHDevelopExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.release.xcconfig"; sourceTree = "<group>"; };
+		DE00743321CBDB2500847FA4 /* MHHorizontalCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalCellDelegate.h; sourceTree = "<group>"; };
 		DE045E5521C1532600DC9032 /* MHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHNavigationController.m; sourceTree = "<group>"; };
 		DE045E5621C1532600DC9032 /* MHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHNavigationController.h; sourceTree = "<group>"; };
 		DE045E5721C1532600DC9032 /* MHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHViewController.h; sourceTree = "<group>"; };
@@ -708,6 +728,44 @@
 		DE045E6921C1534400DC9032 /* MHDivider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHDivider.m; sourceTree = "<group>"; };
 		DE045E7421C15A0400DC9032 /* MHObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHObject.h; sourceTree = "<group>"; };
 		DE045E7521C15A0400DC9032 /* MHObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHObject.m; sourceTree = "<group>"; };
+		DE049DA321D26D8A00B812C8 /* MHHorizontalEmptyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalEmptyCell.h; sourceTree = "<group>"; };
+		DE049DA421D26D8A00B812C8 /* MHHorizontalEmptyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalEmptyCell.m; sourceTree = "<group>"; };
+		DE049DA921D27A3400B812C8 /* MHHorizontalMode2Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2Controller.h; sourceTree = "<group>"; };
+		DE049DAA21D27A3400B812C8 /* MHHorizontalMode2Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2Controller.m; sourceTree = "<group>"; };
+		DE049DAD21D27BA600B812C8 /* MHHorizontalMode2Cell0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2Cell0.h; sourceTree = "<group>"; };
+		DE049DAE21D27BA600B812C8 /* MHHorizontalMode2Cell0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2Cell0.m; sourceTree = "<group>"; };
+		DE0E095E21D66E94006A5303 /* MHHorizontalMode2Cell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2Cell2.h; sourceTree = "<group>"; };
+		DE0E095F21D66E94006A5303 /* MHHorizontalMode2Cell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2Cell2.m; sourceTree = "<group>"; };
+		DE0E096121D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2Linkage1Controller.h; sourceTree = "<group>"; };
+		DE0E096221D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2Linkage1Controller.m; sourceTree = "<group>"; };
+		DE24933F21C54DD2007FE714 /* MHHorizontalMode0Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode0Controller.h; sourceTree = "<group>"; };
+		DE24934021C54DD2007FE714 /* MHHorizontalMode0Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode0Controller.m; sourceTree = "<group>"; };
+		DE24934421C54FAB007FE714 /* MHHorizontalGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalGroup.h; sourceTree = "<group>"; };
+		DE24934521C54FAB007FE714 /* MHHorizontalGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalGroup.m; sourceTree = "<group>"; };
+		DE24934721C5505E007FE714 /* MHHorizontal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontal.h; sourceTree = "<group>"; };
+		DE24934821C5505E007FE714 /* MHHorizontal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontal.m; sourceTree = "<group>"; };
+		DEFB0BD821D5081400BF1561 /* MHHorizontalMode0LinkageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode0LinkageController.h; sourceTree = "<group>"; };
+		DEFB0BD921D5081400BF1561 /* MHHorizontalMode0LinkageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode0LinkageController.m; sourceTree = "<group>"; };
+		DEFB0BDB21D508AB00BF1561 /* MHHorizontalMode1LinkageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode1LinkageController.h; sourceTree = "<group>"; };
+		DEFB0BDC21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode1LinkageController.m; sourceTree = "<group>"; };
+		DEFB0BDE21D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2Linkage0Controller.h; sourceTree = "<group>"; };
+		DEFB0BDF21D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2Linkage0Controller.m; sourceTree = "<group>"; };
+		DEFB0BE121D5094B00BF1561 /* MHHorizontalMode1LayoutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode1LayoutController.h; sourceTree = "<group>"; };
+		DEFB0BE221D5094B00BF1561 /* MHHorizontalMode1LayoutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode1LayoutController.m; sourceTree = "<group>"; };
+		DEFB0BE421D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2LinkageCell.h; sourceTree = "<group>"; };
+		DEFB0BE521D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2LinkageCell.m; sourceTree = "<group>"; };
+		DEFB0BE821D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHCollectionViewHorizontalFlowLayout.h; sourceTree = "<group>"; };
+		DEFB0BE921D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHCollectionViewHorizontalFlowLayout.m; sourceTree = "<group>"; };
+		DEFB3C0B21D3D31300F78C67 /* MHHorizontalMode2Cell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode2Cell1.h; sourceTree = "<group>"; };
+		DEFB3C0C21D3D31300F78C67 /* MHHorizontalMode2Cell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode2Cell1.m; sourceTree = "<group>"; };
+		DEFB687821CFB1C3000983B5 /* MHHorizontalMode1Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode1Controller.h; sourceTree = "<group>"; };
+		DEFB687921CFB1C3000983B5 /* MHHorizontalMode1Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode1Controller.m; sourceTree = "<group>"; };
+		DEFB687B21CFB404000983B5 /* MHHorizontalMode1Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode1Cell.h; sourceTree = "<group>"; };
+		DEFB687C21CFB404000983B5 /* MHHorizontalMode1Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode1Cell.m; sourceTree = "<group>"; };
+		DEFF956121C93EF1001CC68A /* MHHorizontalMode0Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode0Cell.h; sourceTree = "<group>"; };
+		DEFF956221C93EF1001CC68A /* MHHorizontalMode0Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode0Cell.m; sourceTree = "<group>"; };
+		DEFF956521C94139001CC68A /* MHHorizontalConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalConstant.h; sourceTree = "<group>"; };
+		DEFF956621C94139001CC68A /* MHHorizontalConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalConstant.m; sourceTree = "<group>"; };
 		DF4CA6BC05B6740B754109C1 /* Pods-MHDevelopExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHDevelopExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MHDevelopExample/Pods-MHDevelopExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E53FC4F542F2116C4E9F74A8 /* Pods_MHDevelopExample_MHDevelopExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHDevelopExample_MHDevelopExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9263E7720CEBD4F003C8C69 /* CMHWaterfallDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMHWaterfallDetailViewController.h; sourceTree = "<group>"; };
@@ -2346,6 +2404,7 @@
 		627A95491E496C3F004A1ED2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DE24933C21C54B44007FE714 /* Horizontal */,
 				DE045E5321C1518000DC9032 /* BaseClass */,
 				260D8D6C1EED37CB00B47B3D /* MVC&MVVM */,
 				2613094D1E977FCC0095BE0E /* ReactiveCocoa */,
@@ -2587,6 +2646,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE00743221CBD8F800847FA4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DE00743321CBDB2500847FA4 /* MHHorizontalCellDelegate.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		DE045E5321C1518000DC9032 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -2634,6 +2701,164 @@
 				DE045E7521C15A0400DC9032 /* MHObject.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DE049DA221D26D6800B812C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE049DA321D26D8A00B812C8 /* MHHorizontalEmptyCell.h */,
+				DE049DA421D26D8A00B812C8 /* MHHorizontalEmptyCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE049DA721D279EA00B812C8 /* Mode_2 */ = {
+			isa = PBXGroup;
+			children = (
+				DE049DAC21D27B5A00B812C8 /* View */,
+				DE049DA821D279FE00B812C8 /* Controller */,
+			);
+			path = Mode_2;
+			sourceTree = "<group>";
+		};
+		DE049DA821D279FE00B812C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE049DA921D27A3400B812C8 /* MHHorizontalMode2Controller.h */,
+				DE049DAA21D27A3400B812C8 /* MHHorizontalMode2Controller.m */,
+				DEFB0BDE21D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.h */,
+				DEFB0BDF21D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m */,
+				DE0E096121D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.h */,
+				DE0E096221D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE049DAC21D27B5A00B812C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE049DAD21D27BA600B812C8 /* MHHorizontalMode2Cell0.h */,
+				DE049DAE21D27BA600B812C8 /* MHHorizontalMode2Cell0.m */,
+				DEFB3C0B21D3D31300F78C67 /* MHHorizontalMode2Cell1.h */,
+				DEFB3C0C21D3D31300F78C67 /* MHHorizontalMode2Cell1.m */,
+				DE0E095E21D66E94006A5303 /* MHHorizontalMode2Cell2.h */,
+				DE0E095F21D66E94006A5303 /* MHHorizontalMode2Cell2.m */,
+				DEFB0BE421D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.h */,
+				DEFB0BE521D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE24933C21C54B44007FE714 /* Horizontal */ = {
+			isa = PBXGroup;
+			children = (
+				DE24933D21C54C9C007FE714 /* Mode_0 */,
+				DEFB687521CFB0A6000983B5 /* Mode_1 */,
+				DE049DA721D279EA00B812C8 /* Mode_2 */,
+				DEFF956421C940EF001CC68A /* Other */,
+				DE24934221C54E29007FE714 /* BaseClass */,
+			);
+			path = Horizontal;
+			sourceTree = "<group>";
+		};
+		DE24933D21C54C9C007FE714 /* Mode_0 */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF956021C93EC5001CC68A /* View */,
+				DE24933E21C54D21007FE714 /* Controller */,
+			);
+			path = Mode_0;
+			sourceTree = "<group>";
+		};
+		DE24933E21C54D21007FE714 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE24933F21C54DD2007FE714 /* MHHorizontalMode0Controller.h */,
+				DE24934021C54DD2007FE714 /* MHHorizontalMode0Controller.m */,
+				DEFB0BD821D5081400BF1561 /* MHHorizontalMode0LinkageController.h */,
+				DEFB0BD921D5081400BF1561 /* MHHorizontalMode0LinkageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE24934221C54E29007FE714 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				DE049DA221D26D6800B812C8 /* View */,
+				DE00743221CBD8F800847FA4 /* Protocol */,
+				DE24934321C54F4D007FE714 /* Model */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		DE24934321C54F4D007FE714 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE24934421C54FAB007FE714 /* MHHorizontalGroup.h */,
+				DE24934521C54FAB007FE714 /* MHHorizontalGroup.m */,
+				DE24934721C5505E007FE714 /* MHHorizontal.h */,
+				DE24934821C5505E007FE714 /* MHHorizontal.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEFB0BE721D50B3400BF1561 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEFB0BE821D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.h */,
+				DEFB0BE921D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DEFB687521CFB0A6000983B5 /* Mode_1 */ = {
+			isa = PBXGroup;
+			children = (
+				DEFB0BE721D50B3400BF1561 /* Model */,
+				DEFB687721CFB0C7000983B5 /* Controller */,
+				DEFB687621CFB0BE000983B5 /* View */,
+			);
+			path = Mode_1;
+			sourceTree = "<group>";
+		};
+		DEFB687621CFB0BE000983B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEFB687B21CFB404000983B5 /* MHHorizontalMode1Cell.h */,
+				DEFB687C21CFB404000983B5 /* MHHorizontalMode1Cell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEFB687721CFB0C7000983B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEFB687821CFB1C3000983B5 /* MHHorizontalMode1Controller.h */,
+				DEFB687921CFB1C3000983B5 /* MHHorizontalMode1Controller.m */,
+				DEFB0BE121D5094B00BF1561 /* MHHorizontalMode1LayoutController.h */,
+				DEFB0BE221D5094B00BF1561 /* MHHorizontalMode1LayoutController.m */,
+				DEFB0BDB21D508AB00BF1561 /* MHHorizontalMode1LinkageController.h */,
+				DEFB0BDC21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DEFF956021C93EC5001CC68A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF956121C93EF1001CC68A /* MHHorizontalMode0Cell.h */,
+				DEFF956221C93EF1001CC68A /* MHHorizontalMode0Cell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEFF956421C940EF001CC68A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DEFF956521C94139001CC68A /* MHHorizontalConstant.h */,
+				DEFF956621C94139001CC68A /* MHHorizontalConstant.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		E9263E7620CEBD1C003C8C69 /* Controller */ = {
@@ -3650,7 +3875,7 @@
 		627A950B1E4968E0004A1ED2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = CMH;
+				CLASSPREFIX = MH;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = CoderMikeHe;
 				TargetAttributes = {
@@ -4107,6 +4332,7 @@
 				260D8D851EED37CB00B47B3D /* SUGoodsImage.m in Sources */,
 				E92AB25220C551D70067D0B6 /* CMHPingInvertTransition.m in Sources */,
 				E92A8F4820CE8A3300EE850F /* CMHWaterfallCell.m in Sources */,
+				DEFB0BE321D5094B00BF1561 /* MHHorizontalMode1LayoutController.m in Sources */,
 				627A958E1E49B0B0004A1ED2 /* MHTopicController.m in Sources */,
 				261133671EF43923006AE109 /* SUWebViewController1.m in Sources */,
 				620877121E54B0B900183F81 /* MHYouKuCommentButton.m in Sources */,
@@ -4115,12 +4341,14 @@
 				625B73BE1E4C598C006A8E86 /* NSDateFormatter+Extension.m in Sources */,
 				E92A8F1B20CE308A00EE850F /* CMHExample20ViewController.m in Sources */,
 				E92A8F2820CE4F7400EE850F /* CMHCollectionViewCell.m in Sources */,
+				DE24934921C5505E007FE714 /* MHHorizontal.m in Sources */,
 				2615ECD01EEE919900D6B473 /* TAPageControl.m in Sources */,
 				260FC4D71EF7849000390A8E /* SUGoodsViewModel2.m in Sources */,
 				E95CA13B20D8A9FF005D9DB5 /* UIView+CMHEmptyView.m in Sources */,
 				E92E835421018901007C2C8D /* CMHEditTitleController.m in Sources */,
 				627A95721E49A694004A1ED2 /* MHBuDeJieController.m in Sources */,
 				260FE1091EF37B8B00830B07 /* FBKVOController+MHExtension.m in Sources */,
+				DEFB687A21CFB1C3000983B5 /* MHHorizontalMode1Controller.m in Sources */,
 				622E33461E553800001FB056 /* UIImage+MHBlur.m in Sources */,
 				2615ECD71EEE980300D6B473 /* UIScrollView+MHRefresh.m in Sources */,
 				627A95791E49AD30004A1ED2 /* UIBarButtonItem+MHExtension.m in Sources */,
@@ -4128,10 +4356,12 @@
 				622637651E4B08E1007F9360 /* NSObject+MHRandom.m in Sources */,
 				260E59601EF6CCA200C323CB /* SUViewModel2.m in Sources */,
 				E951601720C280A6007224DA /* CMHView.m in Sources */,
+				DEFB3C0D21D3D31300F78C67 /* MHHorizontalMode2Cell1.m in Sources */,
 				6226375D1E4AF925007F9360 /* NSString+MHSize.m in Sources */,
 				E95CA13520D8A04F005D9DB5 /* CMHEmptyDataView.m in Sources */,
 				261133731EF43D27006AE109 /* SUPublicWebViewModel1.m in Sources */,
 				E92E833F2100A0B4007C2C8D /* CMHFileFragment.m in Sources */,
+				DEFF956321C93EF1001CC68A /* MHHorizontalMode0Cell.m in Sources */,
 				622E33731E5591F6001FB056 /* MHYouKuTopicController.m in Sources */,
 				E951601120C2807C007224DA /* CMHTabBarController.m in Sources */,
 				E932AAE220B68E1800C99B3C /* CMHMainFrameViewController.m in Sources */,
@@ -4147,6 +4377,7 @@
 				2615ECB31EEE6ECE00D6B473 /* NSError+MHExtension.m in Sources */,
 				E929D84320CA54B3001F833E /* CMHExampleTableTestCell.m in Sources */,
 				260E2E6B1EEFBEAE00A0A50D /* SUGoodsFrame.m in Sources */,
+				DE0E096021D66E94006A5303 /* MHHorizontalMode2Cell2.m in Sources */,
 				260D8D861EED37CB00B47B3D /* SUGoodsCell.m in Sources */,
 				260D8D881EED37CB00B47B3D /* SUGoodsHeaderView.m in Sources */,
 				2615ECD31EEE919900D6B473 /* UIView+SDExtension.m in Sources */,
@@ -4168,12 +4399,15 @@
 				E929642420CF57380048CDFF /* CMHCard.m in Sources */,
 				E951601020C2807C007224DA /* CMHTableViewController.m in Sources */,
 				627A95611E4973D2004A1ED2 /* MHConstant.m in Sources */,
+				DEFF956721C94139001CC68A /* MHHorizontalConstant.m in Sources */,
 				625B73B51E4C4BA6006A8E86 /* MHTopicTwoController.m in Sources */,
 				E929D86020CAA1EC001F833E /* CMHExample14ViewController.m in Sources */,
 				E929D85C20CA8F64001F833E /* CMHExample13ViewController.m in Sources */,
 				261BC8101EF22FEB003E41F9 /* SUConstant.m in Sources */,
 				E927C15120CB58600093E144 /* CMHOperationToolBarItem.m in Sources */,
 				E92A8F2B20CE4F9400EE850F /* CMHExampleCollectTestCell.m in Sources */,
+				DE0E096321D67CD8006A5303 /* MHHorizontalMode2Linkage1Controller.m in Sources */,
+				DEFB0BDD21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m in Sources */,
 				E92F2FCE20C7D11E002070C3 /* CMHInteractiveTransition.m in Sources */,
 				2615EC9E1EEE4C1700D6B473 /* RegexKitLite.m in Sources */,
 				E929642720CF58040048CDFF /* CMHCardCell.m in Sources */,
@@ -4211,10 +4445,13 @@
 				622E33721E5591F6001FB056 /* MHYouKuTopicDetailController.m in Sources */,
 				E92C138720DA54B70022891F /* CMHKeyedSubscript.m in Sources */,
 				260FE1211EF3CEB400830B07 /* SUGoodsItemViewModel.m in Sources */,
+				DE049DAB21D27A3400B812C8 /* MHHorizontalMode2Controller.m in Sources */,
 				622637611E4B0325007F9360 /* MHWebImageTool.m in Sources */,
 				260FE1111EF3890A00830B07 /* SUGoodsController1.m in Sources */,
+				DE049DA521D26D8A00B812C8 /* MHHorizontalEmptyCell.m in Sources */,
 				E932AABA20B65BF700C99B3C /* CAAnimation+CMHRefresh.m in Sources */,
 				2615EC891EEE308200D6B473 /* SUViewController0.m in Sources */,
+				DE24934621C54FAB007FE714 /* MHHorizontalGroup.m in Sources */,
 				260FC4DA1EF784B900390A8E /* SUGoodsController2.m in Sources */,
 				261148EB1F1541FE00758DAF /* YYTimer.m in Sources */,
 				622BF5F01E56E88A004DFCA2 /* MHYouKuAnthologyItem.m in Sources */,
@@ -4224,6 +4461,7 @@
 				625B73BD1E4C598C006A8E86 /* NSDate+Extension.m in Sources */,
 				2615ECB41EEE6ECE00D6B473 /* UITableView+MHExtension.m in Sources */,
 				2615ECD11EEE919900D6B473 /* SDCollectionViewCell.m in Sources */,
+				DEFB0BE021D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m in Sources */,
 				2615ECB81EEE75C000D6B473 /* SUGoodsController0.m in Sources */,
 				261BC8311EF29965003E41F9 /* SULoginViewModel2.m in Sources */,
 				E929D84B20CA59DC001F833E /* CMHExample06ViewController.m in Sources */,
@@ -4254,6 +4492,7 @@
 				260C2DFE1EF1315900378885 /* SULoginController1.m in Sources */,
 				E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */,
 				E929D85420CA8753001F833E /* CMHExample11ViewController.m in Sources */,
+				DE049DAF21D27BA600B812C8 /* MHHorizontalMode2Cell0.m in Sources */,
 				E9263E8B20CEC245003C8C69 /* XLCard.m in Sources */,
 				E929D84720CA550B001F833E /* CMHExampleTableTest.m in Sources */,
 				622E33711E5591F6001FB056 /* MHYouKuCommentController.m in Sources */,
@@ -4277,11 +4516,13 @@
 				623D2A851E5298B30038BB9B /* MHYouKuController.m in Sources */,
 				627A95841E49AE5B004A1ED2 /* UIView+MHFrame.m in Sources */,
 				6226372D1E4AAB50007F9360 /* MHTopic.m in Sources */,
+				DEFB0BE621D50A2A00BF1561 /* MHHorizontalMode2LinkageCell.m in Sources */,
 				E933662820D0F75F00B6F51F /* MHReflection.m in Sources */,
 				DE045E6C21C1534400DC9032 /* MHImageView.m in Sources */,
 				E92A8F1420CE081800EE850F /* CMHExample16ViewController.m in Sources */,
 				E95CA16820D9079F005D9DB5 /* CMHExample17ViewController.m in Sources */,
 				E9263E8920CEC245003C8C69 /* XLCardSwitch.m in Sources */,
+				DEFB0BDA21D5081400BF1561 /* MHHorizontalMode0LinkageController.m in Sources */,
 				622BF5DE1E569E47004DFCA2 /* MHYouKuMediaSummary.m in Sources */,
 				E92BC9B421132EB9003AF3F3 /* CMHUploadFileConstant.m in Sources */,
 				261148DA1F1540CF00758DAF /* YYGestureRecognizer.m in Sources */,
@@ -4291,11 +4532,13 @@
 				6208770C1E5483DD00183F81 /* MHYouKuBottomToolBar.m in Sources */,
 				E92AB23120C512480067D0B6 /* CMHExample01ViewController.m in Sources */,
 				625B73B61E4C4BA6006A8E86 /* MHTopicCell.m in Sources */,
+				DEFB687D21CFB404000983B5 /* MHHorizontalMode1Cell.m in Sources */,
 				E92C137E20DA54850022891F /* CMHHTTPResponse.m in Sources */,
 				622E33541E554603001FB056 /* MHYouKuCommentToolBar.m in Sources */,
 				E9650BED20DB9A410069F8BB /* CMHExample18ViewController.m in Sources */,
 				622BF5EA1E56E6A4004DFCA2 /* MHYouKuAnthologyHeaderView.m in Sources */,
 				E92E833B2100A0B4007C2C8D /* CMHFileUploadController.m in Sources */,
+				DE24934121C54DD2007FE714 /* MHHorizontalMode0Controller.m in Sources */,
 				E92BC9A2211150D3003AF3F3 /* CMHFileManager.m in Sources */,
 				6226373C1E4AB8D4007F9360 /* MHTopicOneController.m in Sources */,
 				622637391E4AAD96007F9360 /* MHCommentFrame.m in Sources */,
@@ -4312,6 +4555,7 @@
 				622BF5E11E569EC3004DFCA2 /* MHYouKuMediaDetail.m in Sources */,
 				E92A8F2F20CE6AA300EE850F /* CMHExample21ViewController.m in Sources */,
 				260FE1401EF3EEEE00830B07 /* SUPublicViewModel1.m in Sources */,
+				DEFB0BEA21D50B6700BF1561 /* MHCollectionViewHorizontalFlowLayout.m in Sources */,
 				260FC4C11EF7812900390A8E /* SUWebViewModel2.m in Sources */,
 				2615ECD21EEE919900D6B473 /* SDCycleScrollView.m in Sources */,
 				E9263E7920CEBD4F003C8C69 /* CMHWaterfallDetailViewController.m in Sources */,

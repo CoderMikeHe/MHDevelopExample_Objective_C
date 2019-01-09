@@ -15,13 +15,13 @@
 #import "JPFPSStatus.h"
 #endif
 
+/// 1 -- 进入基于MVC设计模式的基类设计
+/// 0 -- 进入常用的开发Demo
+#define CMHDEBUG 0
+
 @interface AppDelegate ()
-/**
- *  用户数据 只读
- */
+/// 用户数据 只读
 @property (nonatomic, readwrite, strong) MHAccount *account;
-
-
 @end
 
 @implementation AppDelegate
@@ -54,13 +54,10 @@
     self.window.rootViewController = [[MHNavigationController alloc] initWithRootViewController:[[MHExampleController alloc] init]];
 #endif
     
-    
     [self.window makeKeyAndVisible];
-    
-    
 
 #if defined(DEBUG)||defined(_DEBUG)
-//    [self _configDebugModelTools];
+    [self _configDebugModelTools];
 #endif
     
     return YES;
@@ -103,6 +100,4 @@
     [[JPFPSStatus sharedInstance] open];
     
 }
-
-
 @end

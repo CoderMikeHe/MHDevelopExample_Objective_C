@@ -10,12 +10,6 @@
 #define CMHMacros_h
 
 
-/// 1 -- 进入基于MVC设计模式的基类设计
-/// 0 -- 进入常用的开发Demo
-#define CMHDEBUG 1
-
-
-
 /// ---- WeChat --
 /// 全局青色 tintColor
 #define CMH_MAIN_TINTCOLOR [UIColor colorWithRed:(10 / 255.0) green:(193 / 255.0) blue:(42 / 255.0) alpha:1]

@@ -1,7 +1,7 @@
 ## MHDevelopExample_Objective_C
 
 ### 下载
-- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/19n3mWjSUuh5LfmPZvepsdQ  密码:ppd7 <PS：不定期更新！！！>
+- 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1xbyYfD6Zy9jRPgoAsdcGSA  密码:luxc <PS：不定期更新！！！>
 
 ### 概述
 - 本工程主要是利用`iOS` 的`Objective-C`开发的技术要点汇总；

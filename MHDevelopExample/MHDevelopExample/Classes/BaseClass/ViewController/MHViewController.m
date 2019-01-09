@@ -14,6 +14,10 @@
 
 @implementation MHViewController
 
+- (void)dealloc{
+    MHDealloc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
