@@ -39,62 +39,25 @@
 - 简书地址：<http://www.jianshu.com/u/126498da7523>
 
 
-### 功能模块
-1. **父子控制器的使用**
-    * 仿百思不得姐的架构实现
-    
-    	- 效果图
-    		
-    		![BaiSiBuDeJie.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/BaiSiBuDeJie.gif)
-    		
-    	- 说明文档：（TOOD...）
-    	
-    * 仿网易新闻的架构实现（TODO...）
-    
-    	- 效果图
-    	
-    		![NetEaseNews.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/NetEaseNews.gif)
-    	
-    	- 说明文档：（TOOD...）
-  
-2. **仿微信朋友圈的评论回复功能**
-	* 利用UITableView的段头+Cell+段尾实现
-		
-		- 效果图
-		
-			![comment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/comment.gif)
-			
-		- 说明文档：[iOS实现微信朋友圈评论回复功能（一）](http://www.jianshu.com/p/395bac3648a7)
-		
-		
-	* 利用UITableViewCell嵌套UITableView实现
-		- 效果图
-		
-			![comment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/comment.gif)
-			
-		- 说明文档：[iOS实现微信朋友圈评论回复功能（二）](http://www.jianshu.com/p/733733fd042d)
-	
-	* 利用UITableView的段头+Cell+段尾实现优酷的视频的评论回复功能
-		- 效果图
-	
-			![youkuComment.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/youkuComment.gif)
-			
-		- 说明文档：[iOS 实现优酷视频的评论回复功能](http://www.jianshu.com/p/feb14f4eee1c)
-		
-	
-3. **UITableView的使用**
-	* UITableView的侧滑删除功能
-		- 效果图
-		
-			![tableView_del.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/tableView_del.gif)
-		
-		- 说明文档：[iOS UITableView删除功能](http://www.jianshu.com/p/4c53901062eb)
-		
-	* UITableView的的多选、删除功能
-		- 效果图
-			
-			![tableView_sel.gif](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C/blob/master/MHDevelopExample/SnapShot/tableView_sel.gif)
-			
-		- 说明文档：[iOS UITableView 多选删除功能](http://www.jianshu.com/p/1d82befe9988)
+### 博文
+- [iOS 玩转UISlider](https://www.jianshu.com/p/9dc78695302b)
+- [iOS 利用AFNetworking实现大文件分片上传](https://www.jianshu.com/p/7919c620967e)
+- [iOS 基于MVC设计模式的基类设计](https://www.jianshu.com/p/1078a8d5d415)
+- [iOS 基于MVVM设计模式的微信朋友圈开发](https://www.jianshu.com/p/2f161f6a310f)
+- [iOS 基于MVVM + RAC + ViewModel-Based Navigation的微信开发（二）](https://www.jianshu.com/p/8c35fc02f47b)
+- [iOS 基于MVVM + RAC + ViewModel-Based Navigation的微信开发（一）](https://www.jianshu.com/p/fd407a4ecb8e)
+- [iOS 关于MVVM With ReactiveCocoa设计模式的那些事](https://www.jianshu.com/p/a0c22492a620)
+- [iOS 关于MVVM Without ReactiveCocoa设计模式的那些事](https://www.jianshu.com/p/db8400e1d40e)
+- [iOS 关于MVC和MVVM设计模式的那些事](https://www.jianshu.com/p/caaa173071f3)
+- [iOS UITableView 表头、表尾、段头、段尾 的坑（二）
+](https://www.jianshu.com/p/127bc31e1519)
+- [iOS 实现优酷视频的评论回复功能](https://www.jianshu.com/p/feb14f4eee1c)
+- [iOS 如何完全抓取出ipa包内的所有图片资源](https://www.jianshu.com/p/e6d7e1170ae6)
+- [iOS 实现微信朋友圈评论回复功能（二）](https://www.jianshu.com/p/733733fd042d)
+- [iOS UITableView 多选删除功能](https://www.jianshu.com/p/1d82befe9988)
+- [iOS 实现微信朋友圈评论回复功能（一）](https://www.jianshu.com/p/395bac3648a7)
+- [iOS UITableView左滑删除功能](https://www.jianshu.com/p/4c53901062eb)
+- [iOS 父子控制器的使用](https://www.jianshu.com/p/ef48ddb4d7e3)
+- [iOS UITableView 表头、表尾、段头、段尾 的坑（一）](https://www.jianshu.com/p/f1001599de49)
 
 
