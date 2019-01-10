@@ -40,6 +40,7 @@
 
 
 ### 博文
+- [iOS 横向滚动、水平布局、分组显示](https://www.jianshu.com/p/b21f48e1abbb)
 - [iOS 玩转UISlider](https://www.jianshu.com/p/9dc78695302b)
 - [iOS 利用AFNetworking实现大文件分片上传](https://www.jianshu.com/p/7919c620967e)
 - [iOS 基于MVC设计模式的基类设计](https://www.jianshu.com/p/1078a8d5d415)
