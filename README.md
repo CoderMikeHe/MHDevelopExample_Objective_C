@@ -38,6 +38,11 @@
 - 如果通过该工程的使用和说明文档的阅读，对您在开发中有一点帮助，码字不易，还请点击右上角`star`按钮，谢谢；
 - 简书地址：<http://www.jianshu.com/u/126498da7523>
 
+### 商业互吹
+- [iOS开发技术要点汇总](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C)
+- [Flutter版WeChat](https://github.com/CoderMikeHe/flutter_wechat)
+- [Vue版WeChat](https://github.com/CoderMikeHe/vue-wechat)
+- [WeChat资源汇总](https://github.com/CoderMikeHe/WeChat_Resource)
 
 ### 博文
 - [iOS 横向滚动、水平布局、分组显示](https://www.jianshu.com/p/b21f48e1abbb)
@@ -50,8 +55,7 @@
 - [iOS 关于MVVM With ReactiveCocoa设计模式的那些事](https://www.jianshu.com/p/a0c22492a620)
 - [iOS 关于MVVM Without ReactiveCocoa设计模式的那些事](https://www.jianshu.com/p/db8400e1d40e)
 - [iOS 关于MVC和MVVM设计模式的那些事](https://www.jianshu.com/p/caaa173071f3)
-- [iOS UITableView 表头、表尾、段头、段尾 的坑（二）
-](https://www.jianshu.com/p/127bc31e1519)
+- [iOS UITableView 表头、表尾、段头、段尾 的坑（二）](https://www.jianshu.com/p/127bc31e1519)
 - [iOS 实现优酷视频的评论回复功能](https://www.jianshu.com/p/feb14f4eee1c)
 - [iOS 如何完全抓取出ipa包内的所有图片资源](https://www.jianshu.com/p/e6d7e1170ae6)
 - [iOS 实现微信朋友圈评论回复功能（二）](https://www.jianshu.com/p/733733fd042d)
