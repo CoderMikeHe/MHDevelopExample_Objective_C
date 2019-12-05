@@ -3,10 +3,14 @@
 ### 下载
 - 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1xbyYfD6Zy9jRPgoAsdcGSA  密码:luxc <PS：不定期更新！！！>
 
+---
+
 ### 概述
 - 本工程主要是利用`iOS` 的`Objective-C`开发的技术要点汇总；
 - 涵盖了开发中踩坑的原因，以及填坑的技术分享；
 - 抛砖引玉，取长补短，希望能够提供一点思路，避免少走一些弯路。
+
+---
 
 ### 使用
 - **特别说明：** 使用前可以全局搜索 `CMHDEBUG` 字段，找到该字段的宏定义。可以修改其值，来获取自己想看的业务场景。具体场景说明如下：
@@ -31,6 +35,7 @@
 	$ sudo gem update --system
 	$ sudo gem install cocoapods -n/usr/local/bin
 	```
+---
 
 ### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。
@@ -38,11 +43,15 @@
 - 如果通过该工程的使用和说明文档的阅读，对您在开发中有一点帮助，码字不易，还请点击右上角`star`按钮，谢谢；
 - 简书地址：<http://www.jianshu.com/u/126498da7523>
 
+---
+
 ### 商业互吹
-- [iOS开发技术要点汇总](https://github.com/CoderMikeHe/MHDevelopExample_Objective_C)
+
 - [Flutter版WeChat](https://github.com/CoderMikeHe/flutter_wechat)
 - [Vue版WeChat](https://github.com/CoderMikeHe/vue-wechat)
 - [WeChat资源汇总](https://github.com/CoderMikeHe/WeChat_Resource)
+
+---
 
 ### 博文
 - [iOS 横向滚动、水平布局、分组显示](https://www.jianshu.com/p/b21f48e1abbb)
