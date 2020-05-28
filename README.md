@@ -46,7 +46,7 @@
 ---
 
 ### 商业互吹
-
+- [iOS版WeChat](https://github.com/CoderMikeHe/WeChat)
 - [Flutter版WeChat](https://github.com/CoderMikeHe/flutter_wechat)
 - [Vue版WeChat](https://github.com/CoderMikeHe/vue-wechat)
 - [WeChat资源汇总](https://github.com/CoderMikeHe/WeChat_Resource)
