@@ -203,6 +203,7 @@
 		DE24934121C54DD2007FE714 /* MHHorizontalMode0Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24934021C54DD2007FE714 /* MHHorizontalMode0Controller.m */; };
 		DE24934621C54FAB007FE714 /* MHHorizontalGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24934521C54FAB007FE714 /* MHHorizontalGroup.m */; };
 		DE24934921C5505E007FE714 /* MHHorizontal.m in Sources */ = {isa = PBXBuildFile; fileRef = DE24934821C5505E007FE714 /* MHHorizontal.m */; };
+		DEA1616024A21C8A0054E718 /* MHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA1615F24A21C8A0054E718 /* MHRootViewController.m */; };
 		DEFB0BDA21D5081400BF1561 /* MHHorizontalMode0LinkageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BD921D5081400BF1561 /* MHHorizontalMode0LinkageController.m */; };
 		DEFB0BDD21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BDC21D508AB00BF1561 /* MHHorizontalMode1LinkageController.m */; };
 		DEFB0BE021D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFB0BDF21D5091F00BF1561 /* MHHorizontalMode2Linkage0Controller.m */; };
@@ -744,6 +745,8 @@
 		DE24934521C54FAB007FE714 /* MHHorizontalGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalGroup.m; sourceTree = "<group>"; };
 		DE24934721C5505E007FE714 /* MHHorizontal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontal.h; sourceTree = "<group>"; };
 		DE24934821C5505E007FE714 /* MHHorizontal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontal.m; sourceTree = "<group>"; };
+		DEA1615E24A21C8A0054E718 /* MHRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHRootViewController.h; sourceTree = "<group>"; };
+		DEA1615F24A21C8A0054E718 /* MHRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHRootViewController.m; sourceTree = "<group>"; };
 		DEFB0BD821D5081400BF1561 /* MHHorizontalMode0LinkageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode0LinkageController.h; sourceTree = "<group>"; };
 		DEFB0BD921D5081400BF1561 /* MHHorizontalMode0LinkageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHHorizontalMode0LinkageController.m; sourceTree = "<group>"; };
 		DEFB0BDB21D508AB00BF1561 /* MHHorizontalMode1LinkageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHHorizontalMode1LinkageController.h; sourceTree = "<group>"; };
@@ -2362,8 +2365,8 @@
 			children = (
 				627A95191E4968E0004A1ED2 /* AppDelegate.h */,
 				627A951A1E4968E0004A1ED2 /* AppDelegate.m */,
-				627A951C1E4968E0004A1ED2 /* MHExampleController.h */,
-				627A951D1E4968E0004A1ED2 /* MHExampleController.m */,
+				DEA1615E24A21C8A0054E718 /* MHRootViewController.h */,
+				DEA1615F24A21C8A0054E718 /* MHRootViewController.m */,
 				627A95491E496C3F004A1ED2 /* Classes */,
 				E92CC2DB20B3EE96003938F7 /* Architecture */,
 				627A95621E497824004A1ED2 /* Assets.xcassets */,
@@ -2404,6 +2407,8 @@
 		627A95491E496C3F004A1ED2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				627A951C1E4968E0004A1ED2 /* MHExampleController.h */,
+				627A951D1E4968E0004A1ED2 /* MHExampleController.m */,
 				DE24933C21C54B44007FE714 /* Horizontal */,
 				DE045E5321C1518000DC9032 /* BaseClass */,
 				260D8D6C1EED37CB00B47B3D /* MVC&MVVM */,
@@ -3903,6 +3908,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -4491,6 +4497,7 @@
 				627A951B1E4968E0004A1ED2 /* AppDelegate.m in Sources */,
 				260C2DFE1EF1315900378885 /* SULoginController1.m in Sources */,
 				E92F2FC420C794FD002070C3 /* CMHExample05ViewController.m in Sources */,
+				DEA1616024A21C8A0054E718 /* MHRootViewController.m in Sources */,
 				E929D85420CA8753001F833E /* CMHExample11ViewController.m in Sources */,
 				DE049DAF21D27BA600B812C8 /* MHHorizontalMode2Cell0.m in Sources */,
 				E9263E8B20CEC245003C8C69 /* XLCard.m in Sources */,

@@ -63,6 +63,11 @@
 }
 #pragma mark - 公共方法
 
+#pragma mark - 事件处理
+- (void)_goHome{
+    /// 发通知
+    [MHNotificationCenter postNotificationName:MHSwitchRootViewControllerNotification object:nil userInfo:@{MHSwitchRootViewControllerUserInfoKey: @(MHSwitchToRootTypeDefault)}];
+}
 
 #pragma mark - 私有方法
 
@@ -139,8 +144,6 @@
         horizontalExample.titles = @[@"5.1 \"9个黑块 == 1个Cell\" <静态>", @"5.1 \"9个黑块 == 1个Cell\" <联动>" , @"5.2 \"1个黑块 == 1个Cell\" <静态>",@"5.2 \"1个黑块 == 1个Cell\" <布局静态>",@"5.2 \"1个黑块 == 1个Cell\" <联动>", @"5.3 \"Cell嵌套CollectionView\" <静态>",@"5.3 \"Cell嵌套CollectionView\" <联动一>",@"5.3 \"Cell嵌套CollectionView\" <联动二>"];
         horizontalExample.classes = @[@"MHHorizontalMode0Controller", @"MHHorizontalMode0LinkageController", @"MHHorizontalMode1Controller",@"MHHorizontalMode1LayoutController",@"MHHorizontalMode1LinkageController",@"MHHorizontalMode2Controller",@"MHHorizontalMode2Linkage0Controller",@"MHHorizontalMode2Linkage1Controller"];
         [_examples addObject:horizontalExample];
-
-        
         
     }
     return _examples;
@@ -155,7 +158,17 @@
 #pragma mark - 设置导航栏
 - (void)_setupNavigationItem
 {
-    self.title = @"CoderMikeHe";
+    self.title = @"iOS实用开发Demo";
+    
+    /// 添加按钮
+    UIButton *button = [[UIButton alloc] init];
+    [button setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"tabbar_home_selected"] forState:UIControlStateHighlighted];
+    button.frame = CGRectMake(0, 0, 43, 44);
+    // 监听按钮点击
+    [button addTarget:self action:@selector(_goHome) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 #pragma mark - 设置子控件

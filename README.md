@@ -13,13 +13,6 @@
 ---
 
 ### 使用
-- **特别说明：** 使用前可以全局搜索 `CMHDEBUG` 字段，找到该字段的宏定义。可以修改其值，来获取自己想看的业务场景。具体场景说明如下：
-
-	```
-	/// 1 -- 进入基于MVC设计模式的基类设计
-	/// 0 -- 进入常用的开发Demo
-	#define CMHDEBUG 1
-	```
 - [Cocoapods安装教程](https://www.cnblogs.com/chuancheng/p/8443677.html) 
 - 本`Demo`利用`Cocoapods`管理第三方框架，若第一次使用本项目，请使用终端`cd`到如下图所示的文件夹，执行`pod install`命令即可。
 

@@ -79,17 +79,13 @@
     // 设置导航栏的样式
     [appearance setBarStyle:UIBarStyleDefault];
     //设置导航栏文字按钮的渲染色
-    [appearance setTintColor:[UIColor whiteColor]];
-    // 设置导航栏的背景渲染色
-    // 设置导航栏的背景渲染色
-    CGFloat rgb = 0.1;
-    [appearance setBarTintColor:[UIColor colorWithRed:rgb green:rgb blue:rgb alpha:0.65]];
+    [appearance setTintColor:MHColorFromHexString(@"#181818")];
     // 设置导航栏的背景渲染色或背景图片
     //    [appearance setBackgroundImage:[UIImage imageNamed:@"NavBackGround"] forBarMetrics:UIBarMetricsDefault];
     // 设置文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSFontAttributeName] = MHMediumFont(18);
-    textAttrs[NSForegroundColorAttributeName] = MHColorFromHexString(@"#FFFFFF");
+    textAttrs[NSForegroundColorAttributeName] = MHColorFromHexString(@"#181818");
     
     // UIOffsetZero是结构体, 只要包装成NSValue对象, 才能放进字典\数组中
     NSShadow *shadow = [[NSShadow alloc] init];
@@ -99,7 +95,6 @@
     
     /// 去掉导航栏的阴影图片
     [appearance setShadowImage:[UIImage new]];
-    
 }
 
 /**
@@ -115,7 +110,7 @@
     /**设置文字属性**/
     // 设置普通状态的文字属性
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
-    textAttrs[NSForegroundColorAttributeName] = MHColorFromHexString(@"#FFFFFF");
+    textAttrs[NSForegroundColorAttributeName] = MHColorFromHexString(@"#181818");
     textAttrs[NSFontAttributeName] = MHRegularFont(fontSize);
     NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowOffset =  CGSizeZero;
@@ -125,12 +120,12 @@
     
     // 设置高亮状态的文字属性
     NSMutableDictionary *highTextAttrs = [NSMutableDictionary dictionaryWithDictionary:textAttrs];
-    highTextAttrs[NSForegroundColorAttributeName] = [MHColorFromHexString(@"#FFFFFF") colorWithAlphaComponent:.5f];
+    highTextAttrs[NSForegroundColorAttributeName] = [MHColorFromHexString(@"#181818") colorWithAlphaComponent:.5f];
     [appearance setTitleTextAttributes:highTextAttrs forState:UIControlStateHighlighted];
     
     // 设置不可用状态(disable)的文字属性
     NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionaryWithDictionary:textAttrs];
-    disableTextAttrs[NSForegroundColorAttributeName] = [MHColorFromHexString(@"#FFFFFF") colorWithAlphaComponent:.5f];
+    disableTextAttrs[NSForegroundColorAttributeName] = [MHColorFromHexString(@"#181818") colorWithAlphaComponent:.5f];
     [appearance setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
 }
 
@@ -170,7 +165,8 @@
         [viewController.navigationItem setHidesBackButton:YES];
         
         // 4.这里可以设置导航栏的左右按钮 统一管理方法
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem mh_backItemWithTitle:@"返回" imageName:@"barbuttonicon_back_15x30" target:self action:@selector(_backItemDidClicked)];
+        UIBarButtonItem *backItem = [UIBarButtonItem mh_itemWithImageName:@"navigationButtonReturn" highImageName:@"navigationButtonReturnClick" target:self action:@selector(_backItemDidClicked)];
+        viewController.navigationItem.leftBarButtonItem = backItem;
     }
     
     // push

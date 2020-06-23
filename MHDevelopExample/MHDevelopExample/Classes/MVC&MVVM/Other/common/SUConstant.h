@@ -96,3 +96,8 @@ FOUNDATION_EXTERN NSString *const SUViewModelUtilKey;
 /// 传递webView Request的key：例如 webView request...
 FOUNDATION_EXTERN NSString *const SUViewModelRequestKey;
 
+
+/// 切换根控制器的通知 新特性
+FOUNDATION_EXTERN NSString * const MHSwitchRootViewControllerNotification ;
+/// 切换根控制器的通知 UserInfo key
+FOUNDATION_EXTERN NSString * const MHSwitchRootViewControllerUserInfoKey ;
