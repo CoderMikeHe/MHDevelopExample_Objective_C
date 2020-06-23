@@ -3,10 +3,14 @@
 ### 下载
 - 若`pod install`很漫长或有问题，请戳百度网盘链接:https://pan.baidu.com/s/1xbyYfD6Zy9jRPgoAsdcGSA  密码:luxc <PS：不定期更新！！！>
 
+---
+
 ### 概述
 - 本工程主要是利用`iOS` 的`Objective-C`开发的技术要点汇总；
 - 涵盖了开发中踩坑的原因，以及填坑的技术分享；
 - 抛砖引玉，取长补短，希望能够提供一点思路，避免少走一些弯路。
+
+---
 
 ### 使用
 - [Cocoapods安装教程](https://www.cnblogs.com/chuancheng/p/8443677.html) 
@@ -24,6 +28,7 @@
 	$ sudo gem update --system
 	$ sudo gem install cocoapods -n/usr/local/bin
 	```
+---
 
 ### 期待
 - 如果在使用过程中遇到BUG，希望你能Issues我，谢谢（或者尝试下载最新的代码看看BUG修复没有）。
@@ -31,8 +36,26 @@
 - 如果通过该工程的使用和说明文档的阅读，对您在开发中有一点帮助，码字不易，还请点击右上角`star`按钮，谢谢；
 - 简书地址：<http://www.jianshu.com/u/126498da7523>
 
+---
+
+### 主页
+
+|                   GitHub                   |                            掘金                             |                        简书                        |                     CSDN                     | 知乎                                                 |
+| :----------------------------------------: | :---------------------------------------------------------: | :------------------------------------------------: | :------------------------------------------: | ---------------------------------------------------- |
+| [点击进入](https://github.com/CoderMikeHe) | [点击进入](https://juejin.im/user/59128ee21b69e6006868d639) | [点击进入](https://www.jianshu.com/u/126498da7523) | [点击进入](https://blog.csdn.net/u011581932) | [点击进入](https://www.zhihu.com/people/codermikehe) |
+
+---
+
+### 商业互吹
+- [iOS版WeChat](https://github.com/CoderMikeHe/WeChat)
+- [Flutter版WeChat](https://github.com/CoderMikeHe/flutter_wechat)
+- [Vue版WeChat](https://github.com/CoderMikeHe/vue-wechat)
+- [WeChat资源汇总](https://github.com/CoderMikeHe/WeChat_Resource)
+
+---
 
 ### 博文
+- [iOS 横向滚动、水平布局、分组显示](https://www.jianshu.com/p/b21f48e1abbb)
 - [iOS 玩转UISlider](https://www.jianshu.com/p/9dc78695302b)
 - [iOS 利用AFNetworking实现大文件分片上传](https://www.jianshu.com/p/7919c620967e)
 - [iOS 基于MVC设计模式的基类设计](https://www.jianshu.com/p/1078a8d5d415)
@@ -42,8 +65,7 @@
 - [iOS 关于MVVM With ReactiveCocoa设计模式的那些事](https://www.jianshu.com/p/a0c22492a620)
 - [iOS 关于MVVM Without ReactiveCocoa设计模式的那些事](https://www.jianshu.com/p/db8400e1d40e)
 - [iOS 关于MVC和MVVM设计模式的那些事](https://www.jianshu.com/p/caaa173071f3)
-- [iOS UITableView 表头、表尾、段头、段尾 的坑（二）
-](https://www.jianshu.com/p/127bc31e1519)
+- [iOS UITableView 表头、表尾、段头、段尾 的坑（二）](https://www.jianshu.com/p/127bc31e1519)
 - [iOS 实现优酷视频的评论回复功能](https://www.jianshu.com/p/feb14f4eee1c)
 - [iOS 如何完全抓取出ipa包内的所有图片资源](https://www.jianshu.com/p/e6d7e1170ae6)
 - [iOS 实现微信朋友圈评论回复功能（二）](https://www.jianshu.com/p/733733fd042d)
