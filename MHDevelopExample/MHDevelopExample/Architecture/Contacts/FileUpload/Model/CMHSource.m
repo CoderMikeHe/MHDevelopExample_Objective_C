@@ -252,7 +252,6 @@ NSString *const CMHCurrentUserIdStr = @"1a2a3a4a5a6a7a8a9a0a";
             
             /// 资源中的文件绑定文件ID
             file.fileId = fileId;
-            
             /// 文件块
             CMHFileBlock *fileBlcok = [[CMHFileBlock alloc] initFileBlcokAtPath:file.filePath fileId:fileId sourceId:self.sourceId];
             [fileBlocks addObject:fileBlcok];

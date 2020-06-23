@@ -203,7 +203,7 @@ NSString *const CMHViewControllerRequestUrlKey = @"CMHViewControllerRequestUrlKe
 
 #pragma mark - Status bar
 - (BOOL)prefersStatusBarHidden { return NO; }
-- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; }
+- (UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleDefault; }
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation { return UIStatusBarAnimationFade; }
 
 

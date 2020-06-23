@@ -452,7 +452,14 @@ static NSString * const CMHWebViewKVOEstimatedProgress = @"estimatedProgress";
 
 - (UIBarButtonItem *)backItem{
     if (_backItem == nil) {
-        _backItem = [UIBarButtonItem mh_backItemWithTitle:@"返回" imageName:@"barbuttonicon_back_15x30" target:self action:@selector(_backItemDidClicked)];
+        /// 添加按钮
+        UIButton *button = [[UIButton alloc] init];
+        [button setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+        button.frame = CGRectMake(0, 0, 15, 44);
+        // 监听按钮点击
+        [button addTarget:self action:@selector(_backItemDidClicked) forControlEvents:UIControlEventTouchUpInside];
+        _backItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     }
     return _backItem;
 }

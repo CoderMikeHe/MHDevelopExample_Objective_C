@@ -48,7 +48,7 @@
     ({
         /// 设置普通状态的文字属性
         item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:target action:selector];
-        titleColor = titleColor?titleColor:[UIColor whiteColor];
+        titleColor = titleColor?titleColor:MHColorFromHexString(@"#181818");
         NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
         textAttrs[NSForegroundColorAttributeName] = titleColor;
         textAttrs[NSFontAttributeName] = MHRegularFont(16.0f);

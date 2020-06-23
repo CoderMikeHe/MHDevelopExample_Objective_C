@@ -60,8 +60,10 @@ NSString *const SUViewModelUtilKey = @"SUViewModelUtilKey";
 NSString *const SUViewModelRequestKey = @"SUViewModelRequestKey";
 
 
-
-
+/// 切换根控制器的通知 新特性
+NSString * const MHSwitchRootViewControllerNotification = @"MHSwitchRootViewControllerNotification";
+/// 切换根控制器的通知 UserInfo key
+NSString * const MHSwitchRootViewControllerUserInfoKey = @"MHSwitchRootViewControllerUserInfoKey";
 
 
 

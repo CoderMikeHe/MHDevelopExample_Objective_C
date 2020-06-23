@@ -10,14 +10,11 @@
 #import "MHNavigationController.h"
 #import "MHExampleController.h"
 #import "CMHHomePageViewController.h"
+#import "MHRootViewController.h"
 
 #if defined(DEBUG)||defined(_DEBUG)
 #import "JPFPSStatus.h"
 #endif
-
-/// 1 -- 进入基于MVC设计模式的基类设计
-/// 0 -- 进入常用的开发Demo
-#define CMHDEBUG 0
 
 @interface AppDelegate ()
 /// 用户数据 只读
@@ -43,19 +40,18 @@
     
     /// 初始化UI之前配置
     [self _configureApplication:application initialParamsBeforeInitUI:launchOptions];
-
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-#if CMHDEBUG
-    self.window.rootViewController = [[CMHHomePageViewController alloc] initWithParams:nil];
-#else
-    self.window.rootViewController = [[MHNavigationController alloc] initWithRootViewController:[[MHExampleController alloc] init]];
-#endif
+    self.window.rootViewController = [[MHNavigationController alloc] initWithRootViewController:[[MHRootViewController alloc] init]];
     
     [self.window makeKeyAndVisible];
-
+    
+    /// 初始化UI后配置
+    [self _configureApplication:application initialParamsAfterInitUI:launchOptions];
+    
 #if defined(DEBUG)||defined(_DEBUG)
     [self _configDebugModelTools];
 #endif
@@ -90,7 +86,7 @@
 - (void)_configureYYWebImage {
     /// CoderMikeHe Fixed Bug : 解决 SDWebImage & YYWebImage 加载不出http://img3.imgtn.bdimg.com/it/u=965183317,1784857244&fm=27&gp=0.jpg的BUG
     NSMutableDictionary *header = [YYWebImageManager sharedManager].headers.mutableCopy;
-    header[@"User-Agent"] = @"iPhone"; 
+    header[@"User-Agent"] = @"iPhone";
     [YYWebImageManager sharedManager].headers = header;
 }
 
@@ -99,5 +95,39 @@
     /// 显示FPS
     [[JPFPSStatus sharedInstance] open];
     
+}
+
+#pragma mark - 在初始化UI之后配置
+- (void)_configureApplication:(UIApplication *)application initialParamsAfterInitUI:(NSDictionary *)launchOptions
+{
+    @weakify(self);
+    /// 监听切换根控制器的通知
+    [[MHNotificationCenter rac_addObserverForName:MHSwitchRootViewControllerNotification object:nil] subscribeNext:^(NSNotification * note) {
+        /// 这里切换根控制器
+        @strongify(self);
+        MHSwitchToRootType type = [note.userInfo[MHSwitchRootViewControllerUserInfoKey] integerValue];
+        switch (type) {
+            case MHSwitchToRootTypeDefault:
+            {
+                /// 根控制器
+                self.window.rootViewController = [[MHNavigationController alloc] initWithRootViewController:[[MHRootViewController alloc] init]];
+            }
+                break;
+            case MHSwitchToRootTypeModule:
+            {
+                /// 切换到常用功能模块
+                self.window.rootViewController = [[MHNavigationController alloc] initWithRootViewController:[[MHExampleController alloc] init]];
+            }
+                break;
+            case MHSwitchToRootTypeArchitecture:
+            {
+                /// mvc 基本结构
+                self.window.rootViewController = [[CMHHomePageViewController alloc] initWithParams:nil];
+            }
+                break;
+            default:
+                break;
+        }
+    }];
 }
 @end

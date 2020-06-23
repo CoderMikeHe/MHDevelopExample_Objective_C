@@ -48,7 +48,7 @@
     
     /// PS: 这里笔者就 统一用 CMHWebViewController , 但是现实中，大多数是 CMHWebViewController 的子类，这里介绍 CMHWebViewController.h 提供的属性的场景
     /// 现实中，你只要组合笔者提供的属性，就会达到满足不同的开发场景，当然你有好的点子，也可以联系笔者哦
-    NSString *requestUrl = @"http://192.168.1.200:8080";//CMHMyBlogHomepageUrl;
+    NSString *requestUrl = CMHMyBlogHomepageUrl;
     
     @weakify(self);
     

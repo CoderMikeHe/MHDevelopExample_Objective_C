@@ -17,4 +17,11 @@ typedef NS_ENUM(NSUInteger, CMHTabBarItemTagType) {
     CMHTabBarItemTagTypeProfile,          /// 我的
 };
 
+
+typedef NS_ENUM(NSUInteger, MHSwitchToRootType) {
+    MHSwitchToRootTypeDefault = 0,        /// 默认
+    MHSwitchToRootTypeModule,             /// 常用开发模块
+    MHSwitchToRootTypeArchitecture,       /// mvc基本架构
+};
+
 #endif /* CMHConstEnum_h */

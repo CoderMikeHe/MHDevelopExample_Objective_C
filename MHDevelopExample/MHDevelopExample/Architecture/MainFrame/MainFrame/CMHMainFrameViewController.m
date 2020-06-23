@@ -169,8 +169,9 @@
 
 
 #pragma mark - 事件处理
-- (void)_addMore{
-
+- (void)_goHome{
+    /// 发通知
+    [MHNotificationCenter postNotificationName:MHSwitchRootViewControllerNotification object:nil userInfo:@{MHSwitchRootViewControllerUserInfoKey: @(MHSwitchToRootTypeDefault)}];
 }
 
 #pragma mark - UITableViewDelegate
@@ -236,7 +237,14 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.profileBtn];
     
     /// 添加按钮
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem mh_systemItemWithTitle:nil titleColor:nil imageName:@"barbuttonicon_add_30x30" target:self selector:@selector(_addMore) textType:NO];
+    UIButton *button = [[UIButton alloc] init];
+    [button setImage:[UIImage imageNamed:@"tabbar_home"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"tabbar_home_selected"] forState:UIControlStateHighlighted];
+    button.frame = CGRectMake(0, 0, 43, 44);
+    // 监听按钮点击
+    [button addTarget:self action:@selector(_goHome) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 #pragma mark - 设置子控件
