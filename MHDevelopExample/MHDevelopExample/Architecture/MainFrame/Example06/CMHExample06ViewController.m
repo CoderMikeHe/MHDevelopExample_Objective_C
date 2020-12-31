@@ -93,14 +93,15 @@
     /// sub class can override ，且不用调用 super， 直接重写覆盖
     @weakify(self);
     /// 异步
-    [[YYCache sharedCache] objectForKey:CMHExample06RemoteImageCacheKey withBlock:^(NSString * _Nonnull key, UIImage *  _Nonnull object) {
+    [[YYCache sharedCache] objectForKey:CMHExample06RemoteImageCacheKey withBlock:^(NSString * _Nonnull key, id<NSCoding> object) {
         @strongify(self);
+        UIImage *image = (UIImage *)object;
         // 子线程执行任务（比如获取较大数据）
         dispatch_async(dispatch_get_main_queue(), ^{
             // 通知主线程刷新 神马的
-            self.localView.image = object;
+            self.localView.image = image;
             
-            self.navigationItem.rightBarButtonItem = MHObjectIsNil(object)?nil:self.clearItem;
+            self.navigationItem.rightBarButtonItem = MHObjectIsNil(image)?nil:self.clearItem;
             
         });
     }];
