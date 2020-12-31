@@ -83,7 +83,7 @@ static NSUInteger const CMHSearchGoodsHistoryMaxCount  = 30;
 
 - (id)fetchLocalData{
     @weakify(self);
-    [[YYCache sharedCache] objectForKey:CMHSearchFarmsHistoryCacheKey withBlock:^(NSString * _Nonnull key, NSArray <NSCoding>   * _Nullable  object) {
+    [[YYCache sharedCache] objectForKey:CMHSearchFarmsHistoryCacheKey withBlock:^(NSString * _Nonnull key, id<NSCoding> object) {
         @strongify(self);
         // 子线程执行任务（比如获取较大数据）
         dispatch_async(dispatch_get_main_queue(), ^{
