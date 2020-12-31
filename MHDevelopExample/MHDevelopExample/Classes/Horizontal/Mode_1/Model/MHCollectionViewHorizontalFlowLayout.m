@@ -170,7 +170,7 @@ static CGFloat MHFloorCGFloat(CGFloat value) {
     CGFloat itemX = sectionInset.left + (itemW + minimumInteritemSpacing) * (indexPath.item % self.columnCount) + currentPage * width;
     itemX = sectionHomepageX + itemX;
     
-    CGFloat itemY = sectionInset.top + (itemH + minimumLineSpacing) * ((indexPath.item - self.pageSize * currentPage) / self.rowCount);
+    CGFloat itemY = sectionInset.top + (itemH + minimumLineSpacing) * ((indexPath.item - self.pageSize * currentPage) / self.columnCount);
     
     /// 获取原布局
     UICollectionViewLayoutAttributes* attributes = [[super layoutAttributesForItemAtIndexPath:indexPath] copy];
